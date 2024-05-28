@@ -1,0 +1,58 @@
+{
+    "name": "shell/data-and-reporting-sdk",
+    "description": "Data And Reporting product consists of API's which provides details of transaction and invoice informations about shell cards. The Shell Card Transaction and Invoice API is REST-based and employs Basic authentication in Version 1 and Oauth authentication in Version 2 end points. The API endpoints accept JSON-encoded request bodies, return JSON-encoded responses and use standard HTTP response codes. All resources are located in the Shell Card Platform. The Shell Card Platform is the overall platform that encompasses all the internal Shell systems used to manage resources.",
+    "type": "library",
+    "keywords": [
+        "Shell",
+        "DataAndReporting",
+        "APIMatic",
+        "SDKs",
+        "APIs"
+    ],
+    "homepage": "https://www.shell.com/",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "developer sdksio",
+            "email": "developer+sdksio@apimatic.io"
+        }
+    ],
+    "support": {},
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "apimatic/unirest-php": "^4.0.0",
+        "apimatic/core-interfaces": "~0.1.5",
+        "apimatic/core": "~0.3.9"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.4.2",
+        "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShellDataReportingAPIsLib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShellDataReportingAPIsLib\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html=coverage",
+        "lint-src": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-src-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "lint-tests": "phpcs --standard=phpcs-ruleset.xml tests/",
+        "lint-tests-fix": "phpcbf --standard=phpcs-ruleset.xml tests/",
+        "analyze": "phan --allow-polyfill-parser",
+        "lint": [
+            "@lint-src",
+            "@lint-tests"
+        ]
+    }
+}
