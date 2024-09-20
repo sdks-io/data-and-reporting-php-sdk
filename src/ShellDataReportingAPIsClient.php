@@ -53,15 +53,8 @@ class ShellDataReportingAPIsClient implements ConfigurationInterface
     public function __construct(array $config = [])
     {
         $this->config = array_merge(ConfigurationDefaults::_ALL, CoreHelper::clone($config));
-        $this->basicAuthManager = new BasicAuthManager(
-            $this->config['username'] ?? ConfigurationDefaults::USERNAME,
-            $this->config['password'] ?? ConfigurationDefaults::PASSWORD
-        );
-        $this->bearerTokenManager = new BearerTokenManager(
-            $this->config['oAuthClientId'] ?? ConfigurationDefaults::O_AUTH_CLIENT_ID,
-            $this->config['oAuthClientSecret'] ?? ConfigurationDefaults::O_AUTH_CLIENT_SECRET,
-            $this->config['oAuthToken']
-        );
+        $this->basicAuthManager = new BasicAuthManager($this->config);
+        $this->bearerTokenManager = new BearerTokenManager($this->config);
         $this->client = ClientBuilder::init(new HttpClient(Configuration::init($this)))
             ->converter(new CompatibilityConverter())
             ->jsonHelper(ApiHelper::getJsonHelper())

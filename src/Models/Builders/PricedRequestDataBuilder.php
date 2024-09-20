@@ -33,9 +33,9 @@ class PricedRequestDataBuilder
     /**
      * Initializes a new priced request data Builder object.
      */
-    public static function init(): self
+    public static function init(array $invoiceStatus): self
     {
-        return new self(new PricedRequestData());
+        return new self(new PricedRequestData($invoiceStatus));
     }
 
     /**
@@ -44,15 +44,6 @@ class PricedRequestDataBuilder
     public function colCoCode(?string $value): self
     {
         $this->instance->setColCoCode($value);
-        return $this;
-    }
-
-    /**
-     * Sets invoice status field.
-     */
-    public function invoiceStatus(?string $value): self
-    {
-        $this->instance->setInvoiceStatus($value);
         return $this;
     }
 

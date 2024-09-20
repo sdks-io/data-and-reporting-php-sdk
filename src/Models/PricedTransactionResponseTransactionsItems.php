@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricedTransactionResponseTransactionsItems implements \JsonSerializable
@@ -205,7 +206,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     private $siteCountry = [];
 
     /**
-     * @var array<PricedTransactionItemsLocationItems|null>|null
+     * @var array<array|null|PricedTransactionItemsLocationItems>|null
      */
     private $location;
 
@@ -647,7 +648,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      */
     public function getType(): ?string
@@ -661,7 +661,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      *
      * @maps Type
@@ -674,7 +673,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      */
     public function unsetType(): void
@@ -895,9 +893,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getFleetIdInput(): ?string
@@ -911,9 +907,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps FleetIdInput
@@ -926,9 +920,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetFleetIdInput(): void
@@ -939,9 +931,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getOdometerInput(): ?int
@@ -955,9 +945,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps OdometerInput
@@ -970,9 +958,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetOdometerInput(): void
@@ -983,7 +969,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      */
     public function getDriverName(): ?string
@@ -997,7 +982,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      *
      * @maps DriverName
@@ -1010,7 +994,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      */
     public function unsetDriverName(): void
@@ -1021,7 +1004,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Vehicle Registration.
      * Vehicle Registration Number embossed on the card
-     *
      * Example: MV65YLH
      */
     public function getVehicleRegistration(): ?string
@@ -1035,7 +1017,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Vehicle Registration.
      * Vehicle Registration Number embossed on the card
-     *
      * Example: MV65YLH
      *
      * @maps VehicleRegistration
@@ -1048,7 +1029,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Vehicle Registration.
      * Vehicle Registration Number embossed on the card
-     *
      * Example: MV65YLH
      */
     public function unsetVehicleRegistration(): void
@@ -1167,7 +1147,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      */
     public function getTransactionCurrencySymbol(): ?string
@@ -1181,7 +1160,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      *
      * @maps TransactionCurrencySymbol
@@ -1194,7 +1172,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      */
     public function unsetTransactionCurrencySymbol(): void
@@ -1371,7 +1348,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      */
     public function getInvoiceGrossAmount(): ?float
@@ -1385,7 +1361,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      *
      * @maps InvoiceGrossAmount
@@ -1398,7 +1373,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      */
     public function unsetInvoiceGrossAmount(): void
@@ -1735,7 +1709,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getUnitDiscountInvoiceCurrency(): ?float
@@ -1749,7 +1722,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps UnitDiscountInvoiceCurrency
@@ -1762,7 +1734,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetUnitDiscountInvoiceCurrency(): void
@@ -1805,7 +1776,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Invoice Number.
      * Invoice Number if invoiced
-     *
      * S04500493
      */
     public function getInvoiceNumber(): ?string
@@ -1819,7 +1789,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Invoice Number.
      * Invoice Number if invoiced
-     *
      * S04500493
      *
      * @maps InvoiceNumber
@@ -1832,7 +1801,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Invoice Number.
      * Invoice Number if invoiced
-     *
      * S04500493
      */
     public function unsetInvoiceNumber(): void
@@ -1881,12 +1849,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      */
     public function getSiteCode(): ?string
     {
@@ -1899,12 +1864,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      *
      * @maps SiteCode
      */
@@ -1916,12 +1878,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      */
     public function unsetSiteCode(): void
     {
@@ -1931,12 +1890,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      */
     public function getSiteName(): ?string
     {
@@ -1949,12 +1905,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      *
      * @maps SiteName
      */
@@ -1966,12 +1919,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
      */
     public function unsetSiteName(): void
     {
@@ -1981,13 +1931,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Site Country.
      * Site Country
-     *
      * Example: France, Germany
-     *
      * Note: - The value could be null/blank for fees item.
-     *
      * Geography Location entity for Site Location
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getSiteCountry(): ?string
@@ -2001,13 +1947,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Site Country.
      * Site Country
-     *
      * Example: France, Germany
-     *
      * Note: - The value could be null/blank for fees item.
-     *
      * Geography Location entity for Site Location
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps SiteCountry
@@ -2020,13 +1962,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Site Country.
      * Site Country
-     *
      * Example: France, Germany
-     *
      * Note: - The value could be null/blank for fees item.
-     *
      * Geography Location entity for Site Location
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetSiteCountry(): void
@@ -2037,10 +1975,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Location.
      * Geography Location entity for Site Location
-     *
      * Note: - The value could be null/blank for fees item
      *
-     * @return array<PricedTransactionItemsLocationItems|null>|null
+     * @return array<array|null|PricedTransactionItemsLocationItems>|null
      */
     public function getLocation(): ?array
     {
@@ -2050,12 +1987,12 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Location.
      * Geography Location entity for Site Location
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps Location
+     * @mapsBy anyOf(oneOf(anyOf(array,null),PricedTransactionItemsLocationItems)[],null)
      *
-     * @param array<PricedTransactionItemsLocationItems|null>|null $location
+     * @param array<array|null|PricedTransactionItemsLocationItems>|null $location
      */
     public function setLocation(?array $location): void
     {
@@ -2129,14 +2066,10 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
-     *
-     * 13 Ferries
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
+     * 13    Ferries
      */
     public function getProductCode(): ?string
     {
@@ -2149,14 +2082,10 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
-     *
-     * 13 Ferries
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
+     * 13    Ferries
      *
      * @maps ProductCode
      */
@@ -2168,14 +2097,10 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
-     *
-     * 13 Ferries
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
+     * 13    Ferries
      */
     public function unsetProductCode(): void
     {
@@ -2185,13 +2110,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Product Name.
      * Product Name
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      */
     public function getProductName(): ?string
@@ -2205,13 +2126,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Product Name.
      * Product Name
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      *
      * @maps ProductName
@@ -2224,13 +2141,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Product Name.
      * Product Name
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      */
     public function unsetProductName(): void
@@ -2244,17 +2157,17 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      */
     public function getProductGroupId(): ?int
     {
@@ -2270,17 +2183,17 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
      * @maps ProductGroupId
      */
@@ -2295,17 +2208,17 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      */
     public function unsetProductGroupId(): void
     {
@@ -2318,19 +2231,19 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      */
     public function getProductGroupName(): ?string
     {
@@ -2346,19 +2259,19 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      *
      * @maps ProductGroupName
      */
@@ -2373,19 +2286,19 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      */
     public function unsetProductGroupName(): void
     {
@@ -2459,7 +2372,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIsShellSite(): ?bool
@@ -2473,7 +2385,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IsShellSite
@@ -2486,7 +2397,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIsShellSite(): void
@@ -2497,13 +2407,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Network.
      * Network as configured in GFN (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item
      */
     public function getNetwork(): ?string
@@ -2517,13 +2423,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Network.
      * Network as configured in GFN (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item
      *
      * @maps Network
@@ -2536,13 +2438,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Network.
      * Network as configured in GFN (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item
      */
     public function unsetNetwork(): void
@@ -2553,9 +2451,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getSiteGroupId(): ?int
@@ -2569,9 +2465,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps SiteGroupId
@@ -2584,9 +2478,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetSiteGroupId(): void
@@ -2597,7 +2489,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      */
     public function getSiteGroupName(): ?string
@@ -2611,7 +2502,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      *
      * @maps SiteGroupName
@@ -2624,7 +2514,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      */
     public function unsetSiteGroupName(): void
@@ -2635,7 +2524,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      */
     public function getPostingDate(): ?string
@@ -2649,7 +2537,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      *
      * @maps PostingDate
@@ -2662,7 +2549,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      */
     public function unsetPostingDate(): void
@@ -2717,7 +2603,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
      */
     public function getPurchasedInCountryCode(): ?string
@@ -2731,7 +2616,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
      *
      * @maps PurchasedInCountryCode
@@ -2744,7 +2628,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
      */
     public function unsetPurchasedInCountryCode(): void
@@ -2979,7 +2862,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
      */
     public function getVATRate(): ?float
@@ -2993,7 +2875,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
      *
      * @maps VATRate
@@ -3006,7 +2887,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
      */
     public function unsetVATRate(): void
@@ -3017,11 +2897,8 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      */
     public function getVATCategory(): ?string
@@ -3035,11 +2912,8 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      *
      * @maps VATCategory
@@ -3052,11 +2926,8 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      */
     public function unsetVATCategory(): void
@@ -3099,9 +2970,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEffectiveDiscountInTrxCurrency(): ?float
@@ -3115,9 +2984,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EffectiveDiscountInTrxCurrency
@@ -3130,9 +2997,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEffectiveDiscountInTrxCurrency(): void
@@ -3143,9 +3008,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getTransactionType(): ?string
@@ -3159,9 +3022,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps TransactionType
@@ -3174,9 +3035,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetTransactionType(): void
@@ -3263,7 +3122,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      */
     public function getNetInvoiceIndicator(): ?string
@@ -3277,7 +3135,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      *
      * @maps NetInvoiceIndicator
@@ -3290,7 +3147,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      */
     public function unsetNetInvoiceIndicator(): void
@@ -3365,7 +3221,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEffectiveUnitDiscountInCustomerCurrency(): ?float
@@ -3379,7 +3234,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EffectiveUnitDiscountInCustomerCurrency
@@ -3392,7 +3246,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEffectiveUnitDiscountInCustomerCurrency(): void
@@ -3403,7 +3256,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getEffectiveDiscountInCustomerCurrency(): ?float
@@ -3417,7 +3269,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps EffectiveDiscountInCustomerCurrency
@@ -3430,7 +3281,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetEffectiveDiscountInCustomerCurrency(): void
@@ -3473,13 +3323,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDiscountType(): ?string
@@ -3493,13 +3339,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DiscountType
@@ -3512,13 +3354,9 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDiscountType(): void
@@ -3529,9 +3367,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function getTransactionStatus(): ?string
@@ -3545,9 +3381,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      *
      * @maps TransactionStatus
@@ -3560,9 +3394,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function unsetTransactionStatus(): void
@@ -3573,9 +3405,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      */
     public function getSalesItemId(): ?int
@@ -3589,9 +3419,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      *
      * @maps SalesItemId
@@ -3604,9 +3432,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      */
     public function unsetSalesItemId(): void
@@ -3841,7 +3667,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      */
     public function getPayerName(): ?string
@@ -3855,7 +3680,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      *
      * @maps PayerName
@@ -3868,7 +3692,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      */
     public function unsetPayerName(): void
@@ -3911,9 +3734,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getAuthorisationCode(): ?string
@@ -3927,9 +3748,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps AuthorisationCode
@@ -3942,9 +3761,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetAuthorisationCode(): void
@@ -4019,9 +3836,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getAllowClearing(): ?string
@@ -4035,9 +3850,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps AllowClearing
@@ -4050,9 +3863,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetAllowClearing(): void
@@ -4063,7 +3874,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns C RM Number.
      * CRM Case number if the sales item is in dispute
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getCRMNumber(): ?string
@@ -4077,7 +3887,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets C RM Number.
      * CRM Case number if the sales item is in dispute
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps CRMNumber
@@ -4090,7 +3899,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets C RM Number.
      * CRM Case number if the sales item is in dispute
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetCRMNumber(): void
@@ -4101,21 +3909,13 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
-     *
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      * Note: - The value could be null/blank for fees item.
      */
     public function getDisputeStatus(): ?string
@@ -4129,21 +3929,13 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
-     *
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      * Note: - The value could be null/blank for fees item.
      *
      * @maps DisputeStatus
@@ -4156,21 +3948,13 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
-     *
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetDisputeStatus(): void
@@ -4181,9 +3965,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getRebateRate(): ?float
@@ -4197,9 +3979,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps RebateRate
@@ -4212,9 +3992,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetRebateRate(): void
@@ -4225,9 +4003,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelCoToColCoExchangeRate(): ?float
@@ -4241,9 +4017,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelCoToColCoExchangeRate
@@ -4256,9 +4030,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelCoToColCoExchangeRate(): void
@@ -4269,9 +4041,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getNetEuroAmount(): ?float
@@ -4285,9 +4055,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps NetEuroAmount
@@ -4300,9 +4068,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetNetEuroAmount(): void
@@ -4313,9 +4079,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getEuroRebateAmount(): ?float
@@ -4329,9 +4093,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps EuroRebateAmount
@@ -4344,9 +4106,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetEuroRebateAmount(): void
@@ -4357,9 +4117,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getEuroVATAmount(): ?float
@@ -4373,9 +4131,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps EuroVATAmount
@@ -4388,9 +4144,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetEuroVATAmount(): void
@@ -4497,9 +4251,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIncomingSiteNumber(): ?string
@@ -4513,9 +4265,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IncomingSiteNumber
@@ -4528,9 +4278,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIncomingSiteNumber(): void
@@ -4541,9 +4289,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIncomingSiteDescription(): ?string
@@ -4557,9 +4303,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IncomingSiteDescription
@@ -4572,9 +4316,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIncomingSiteDescription(): void
@@ -4585,9 +4327,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getIncomingCurrencyCode(): ?string
@@ -4601,9 +4341,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps IncomingCurrencyCode
@@ -4616,9 +4354,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetIncomingCurrencyCode(): void
@@ -4629,7 +4365,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      */
     public function getIncomingProductCode(): ?string
@@ -4643,7 +4378,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      *
      * @maps IncomingProductCode
@@ -4656,7 +4390,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      */
     public function unsetIncomingProductCode(): void
@@ -4667,9 +4400,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      */
     public function getCreditDebitCode(): ?string
@@ -4683,9 +4414,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      *
      * @maps CreditDebitCode
@@ -4698,9 +4427,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      */
     public function unsetCreditDebitCode(): void
@@ -4711,9 +4438,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * The value could be null/blank for fees item.
      */
     public function getCorrectionFlag(): ?string
@@ -4727,9 +4452,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * The value could be null/blank for fees item.
      *
      * @maps CorrectionFlag
@@ -4742,9 +4465,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * The value could be null/blank for fees item.
      */
     public function unsetCorrectionFlag(): void
@@ -4883,9 +4604,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount In Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getRebateonNetAmountInCustomerCurrency(): ?float
@@ -4899,9 +4618,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount In Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps RebateonNetAmountInCustomerCurrency
@@ -4914,9 +4631,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount In Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetRebateonNetAmountInCustomerCurrency(): void
@@ -4927,9 +4642,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount In Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getRebateonNetAmountInTransactionCurrency(): ?float
@@ -4943,9 +4656,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount In Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps RebateonNetAmountInTransactionCurrency
@@ -4958,9 +4669,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount In Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetRebateonNetAmountInTransactionCurrency(): void
@@ -4971,9 +4680,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getNetworkCode(): ?string
@@ -4987,9 +4694,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps NetworkCode
@@ -5002,9 +4707,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetNetworkCode(): void
@@ -5079,7 +4782,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
      */
     public function getDelcoListPriceUnitNet(): ?float
@@ -5093,7 +4795,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
      *
      * @maps DelcoListPriceUnitNet
@@ -5106,7 +4807,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
      */
     public function unsetDelcoListPriceUnitNet(): void
@@ -5117,7 +4817,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
      */
     public function getDelcoRetailPriceUnitNet(): ?float
@@ -5131,7 +4830,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
      *
      * @maps DelcoRetailPriceUnitNet
@@ -5144,7 +4842,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
      */
     public function unsetDelcoRetailPriceUnitNet(): void
@@ -5315,7 +5012,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Customer Retail Value Total Net.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Retail net price (or net pump price) in customer currency
      */
     public function getCustomerRetailValueTotalNet(): ?float
@@ -5329,7 +5025,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Customer Retail Value Total Net.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Retail net price (or net pump price) in customer currency
      *
      * @maps CustomerRetailValueTotalNet
@@ -5342,7 +5037,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Customer Retail Value Total Net.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Retail net price (or net pump price) in customer currency
      */
     public function unsetCustomerRetailValueTotalNet(): void
@@ -5353,7 +5047,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Returns Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getTransactionTypeDescription(): ?string
@@ -5367,7 +5060,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Sets Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps TransactionTypeDescription
@@ -5380,7 +5072,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     /**
      * Unsets Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetTransactionTypeDescription(): void
@@ -5553,7 +5244,11 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
             $json['SiteCountry']                             = $this->siteCountry['value'];
         }
         if (isset($this->location)) {
-            $json['Location']                                = $this->location;
+            $json['Location']                                =
+                ApiHelper::getJsonHelper()->verifyTypes(
+                    $this->location,
+                    'anyOf(oneOf(anyOf(array,null),PricedTransactionItemsLocationItems)[],null)'
+                );
         }
         if (!empty($this->cardGroupName)) {
             $json['CardGroupName']                           = $this->cardGroupName['value'];

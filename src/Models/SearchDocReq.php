@@ -97,9 +97,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Mandatory
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -110,9 +108,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Mandatory
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber
@@ -125,11 +121,8 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number of the customer.
-     *
      * Mandatory for customer users else optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: GB000000123
      */
     public function getAccountNumber(): ?string
@@ -143,11 +136,8 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number of the customer.
-     *
      * Mandatory for customer users else optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: GB000000123
      *
      * @maps AccountNumber
@@ -160,11 +150,8 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Account Number.
      * Account Number of the customer.
-     *
      * Mandatory for customer users else optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: GB000000123
      */
     public function unsetAccountNumber(): void
@@ -283,18 +270,12 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Invoice Status.
      * The status of the invoices
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      */
     public function getInvoiceStatus(): ?string
     {
@@ -307,18 +288,12 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Invoice Status.
      * The status of the invoices
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      *
      * @maps InvoiceStatus
      */
@@ -330,18 +305,12 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Invoice Status.
      * The status of the invoices
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      */
     public function unsetInvoiceStatus(): void
     {
@@ -351,9 +320,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Issuing Date From.
      * Invoice Issuing Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function getIssuingDateFrom(): ?string
@@ -367,9 +334,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Issuing Date From.
      * Invoice Issuing Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      *
      * @maps IssuingDateFrom
@@ -382,9 +347,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Issuing Date From.
      * Invoice Issuing Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function unsetIssuingDateFrom(): void
@@ -395,9 +358,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Issuing Date To.
      * Invoice Issuing Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function getIssuingDateTo(): ?string
@@ -411,9 +372,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Issuing Date To.
      * Invoice Issuing Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      *
      * @maps IssuingDateTo
@@ -426,9 +385,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Issuing Date To.
      * Invoice Issuing Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function unsetIssuingDateTo(): void
@@ -439,9 +396,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Due Date From.
      * Invoice Due Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function getDueDateFrom(): ?string
@@ -455,9 +410,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Due Date From.
      * Invoice Due Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      *
      * @maps DueDateFrom
@@ -470,9 +423,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Due Date From.
      * Invoice Due Date Range/From
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function unsetDueDateFrom(): void
@@ -483,9 +434,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Due Date To.
      * Invoice Due Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function getDueDateTo(): ?string
@@ -499,9 +448,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Due Date To.
      * Invoice Due Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      *
      * @maps DueDateTo
@@ -514,9 +461,7 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Due Date To.
      * Invoice Due Date Range/To
-     *
      * Optional
-     *
      * Format: yyyy/MM/dd
      */
     public function unsetDueDateTo(): void
@@ -527,7 +472,6 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Gross Amount.
      * Gross amount of the bill.
-     *
      * Optional
      */
     public function getGrossAmount(): ?string
@@ -541,7 +485,6 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Gross Amount.
      * Gross amount of the bill.
-     *
      * Optional
      *
      * @maps GrossAmount
@@ -554,7 +497,6 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Gross Amount.
      * Gross amount of the bill.
-     *
      * Optional
      */
     public function unsetGrossAmount(): void
@@ -566,26 +508,18 @@ class SearchDocReq implements \JsonSerializable
      * Returns Gross Amount Operator.
      * Criteria on the gross amount, for instance use GT when to retrieve the invoices for that gross
      * amount is greater than the given amount on GrossAmount parameter above.
-     *
      * Optional
-     *
      *
      *
      * This parameter will be ignored if GrossAmount parameter is not set.
      *
      *
-     *
      * One of the following values:
-     *
-     * • LT (Less Than)
-     *
-     * • LE (Lesser or Equal)
-     *
-     * • EQ (equal)
-     *
-     * • GE (Greater or equal)
-     *
-     * • GT (Greater than)
+     * •    LT (Less Than)
+     * •    LE (Lesser or Equal)
+     * •    EQ (equal)
+     * •    GE (Greater or equal)
+     * •    GT (Greater than)
      */
     public function getGrossAmountOperator(): ?string
     {
@@ -599,26 +533,18 @@ class SearchDocReq implements \JsonSerializable
      * Sets Gross Amount Operator.
      * Criteria on the gross amount, for instance use GT when to retrieve the invoices for that gross
      * amount is greater than the given amount on GrossAmount parameter above.
-     *
      * Optional
-     *
      *
      *
      * This parameter will be ignored if GrossAmount parameter is not set.
      *
      *
-     *
      * One of the following values:
-     *
-     * • LT (Less Than)
-     *
-     * • LE (Lesser or Equal)
-     *
-     * • EQ (equal)
-     *
-     * • GE (Greater or equal)
-     *
-     * • GT (Greater than)
+     * •    LT (Less Than)
+     * •    LE (Lesser or Equal)
+     * •    EQ (equal)
+     * •    GE (Greater or equal)
+     * •    GT (Greater than)
      *
      * @maps GrossAmountOperator
      */
@@ -631,26 +557,18 @@ class SearchDocReq implements \JsonSerializable
      * Unsets Gross Amount Operator.
      * Criteria on the gross amount, for instance use GT when to retrieve the invoices for that gross
      * amount is greater than the given amount on GrossAmount parameter above.
-     *
      * Optional
-     *
      *
      *
      * This parameter will be ignored if GrossAmount parameter is not set.
      *
      *
-     *
      * One of the following values:
-     *
-     * • LT (Less Than)
-     *
-     * • LE (Lesser or Equal)
-     *
-     * • EQ (equal)
-     *
-     * • GE (Greater or equal)
-     *
-     * • GT (Greater than)
+     * •    LT (Less Than)
+     * •    LE (Lesser or Equal)
+     * •    EQ (equal)
+     * •    GE (Greater or equal)
+     * •    GT (Greater than)
      */
     public function unsetGrossAmountOperator(): void
     {
@@ -660,16 +578,11 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Returns Document Type.
      * Document Type
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      */
     public function getDocumentType(): ?string
     {
@@ -682,16 +595,11 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Sets Document Type.
      * Document Type
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      *
      * @maps DocumentType
      */
@@ -703,16 +611,11 @@ class SearchDocReq implements \JsonSerializable
     /**
      * Unsets Document Type.
      * Document Type
-     *
      * Optional
-     *
      * One of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      */
     public function unsetDocumentType(): void
     {

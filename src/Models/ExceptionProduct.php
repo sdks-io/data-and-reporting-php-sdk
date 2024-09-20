@@ -27,7 +27,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Returns Productid.
      * Product Id
-     *
      * Optional if ProductCode is passed else Mandatory.
      */
     public function getProductid(): ?int
@@ -41,7 +40,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Sets Productid.
      * Product Id
-     *
      * Optional if ProductCode is passed else Mandatory.
      *
      * @maps Productid
@@ -54,7 +52,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Unsets Productid.
      * Product Id
-     *
      * Optional if ProductCode is passed else Mandatory.
      */
     public function unsetProductid(): void
@@ -65,7 +62,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Returns Product Code.
      * Product Code
-     *
      * Optional if ProductId is passed else Mandatory.
      */
     public function getProductCode(): ?string
@@ -79,7 +75,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Sets Product Code.
      * Product Code
-     *
      * Optional if ProductId is passed else Mandatory.
      *
      * @maps ProductCode
@@ -92,7 +87,6 @@ class ExceptionProduct implements \JsonSerializable
     /**
      * Unsets Product Code.
      * Product Code
-     *
      * Optional if ProductId is passed else Mandatory.
      */
     public function unsetProductCode(): void

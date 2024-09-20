@@ -66,9 +66,7 @@ class InvoiceDownloadReq implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Mandatory
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -79,9 +77,7 @@ class InvoiceDownloadReq implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Mandatory
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber

@@ -122,13 +122,13 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Examples:
      *
-     * 10 TMF Charges
+     * 10    TMF Charges
      *
-     * 11 Tunnel/Bridges
+     * 11    Tunnel/Bridges
      *
-     * 12 Motorway toll
+     * 12    Motorway toll
      *
-     * 13 Ferries
+     * 13    Ferries
      */
     public function getProductCode(): ?string
     {
@@ -144,13 +144,13 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Examples:
      *
-     * 10 TMF Charges
+     * 10    TMF Charges
      *
-     * 11 Tunnel/Bridges
+     * 11    Tunnel/Bridges
      *
-     * 12 Motorway toll
+     * 12    Motorway toll
      *
-     * 13 Ferries
+     * 13    Ferries
      *
      * @maps ProductCode
      */
@@ -165,13 +165,13 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Examples:
      *
-     * 10 TMF Charges
+     * 10    TMF Charges
      *
-     * 11 Tunnel/Bridges
+     * 11    Tunnel/Bridges
      *
-     * 12 Motorway toll
+     * 12    Motorway toll
      *
-     * 13 Ferries
+     * 13    Ferries
      */
     public function unsetProductCode(): void
     {
@@ -246,17 +246,17 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      */
     public function getProductGroupId(): ?int
     {
@@ -272,17 +272,17 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
      * @maps ProductGroupId
      */
@@ -297,17 +297,17 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      */
     public function unsetProductGroupId(): void
     {
@@ -320,19 +320,19 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      */
     public function getProductGroupName(): ?string
     {
@@ -348,19 +348,19 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      *
      * @maps ProductGroupName
      */
@@ -375,19 +375,19 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
-     * 6 CNG
+     * 6    CNG
      *
-     * 7 Automotive Gas Oil
+     * 7    Automotive Gas Oil
      */
     public function unsetProductGroupName(): void
     {
@@ -397,7 +397,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Returns Site Group Id.
      * Site Group Id
-     *
      * Example: 202
      */
     public function getSiteGroupId(): ?int
@@ -411,7 +410,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Sets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
      *
      * @maps SiteGroupId
@@ -424,7 +422,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Unsets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
      */
     public function unsetSiteGroupId(): void
@@ -435,7 +432,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Returns Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      */
     public function getSiteGroupName(): ?string
@@ -449,7 +445,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Sets Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      *
      * @maps SiteGroupName
@@ -462,7 +457,6 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     /**
      * Unsets Site Group Name.
      * Site Group Name
-     *
      * Example: CZ 9100 ECONOMY NETWORK
      */
     public function unsetSiteGroupName(): void

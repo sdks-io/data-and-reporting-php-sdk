@@ -37,9 +37,7 @@ class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      */
     public function getPayerId(): ?int
@@ -50,9 +48,7 @@ class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      *
      * @maps PayerId
@@ -65,9 +61,7 @@ class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -78,9 +72,7 @@ class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber

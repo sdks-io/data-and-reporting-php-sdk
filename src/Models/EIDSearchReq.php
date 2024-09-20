@@ -94,7 +94,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Returns Account Group Country.
      * Country code (colco code) of the account group.
-     *
      * Mandatory
      */
     public function getAccountGroupCountry(): ?int
@@ -105,7 +104,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Sets Account Group Country.
      * Country code (colco code) of the account group.
-     *
      * Mandatory
      *
      * @maps AccountGroupCountry
@@ -145,9 +143,7 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Returns Account Group Name.
      * Account group name
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getAccountGroupName(): ?string
@@ -161,9 +157,7 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Sets Account Group Name.
      * Account group name
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps AccountGroupName
@@ -176,9 +170,7 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Unsets Account Group Name.
      * Account group name
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetAccountGroupName(): void
@@ -189,7 +181,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Returns From Date.
      * EID date searched from this date.
-     *
      * Optional.
      */
     public function getFromDate(): ?string
@@ -203,7 +194,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Sets From Date.
      * EID date searched from this date.
-     *
      * Optional.
      *
      * @maps FromDate
@@ -216,7 +206,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Unsets From Date.
      * EID date searched from this date.
-     *
      * Optional.
      */
     public function unsetFromDate(): void
@@ -227,7 +216,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Returns To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
      */
     public function getToDate(): ?string
@@ -241,7 +229,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Sets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
      *
      * @maps ToDate
@@ -254,7 +241,6 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Unsets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
      */
     public function unsetToDate(): void
@@ -265,14 +251,10 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Returns Invoice Type.
      * Invoice type.
-     *
      * Optional.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      */
     public function getInvoiceType(): ?string
     {
@@ -285,14 +267,10 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Sets Invoice Type.
      * Invoice type.
-     *
      * Optional.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      *
      * @maps InvoiceType
      */
@@ -304,14 +282,10 @@ class EIDSearchReq implements \JsonSerializable
     /**
      * Unsets Invoice Type.
      * Invoice type.
-     *
      * Optional.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      */
     public function unsetInvoiceType(): void
     {
@@ -326,13 +300,13 @@ class EIDSearchReq implements \JsonSerializable
      *
      * Possible values:
      *
-     * • NEW
+     * •    NEW
      *
-     * • VIEWED
+     * •    VIEWED
      *
-     * • DOWNLOADED
+     * •    DOWNLOADED
      *
-     * • RESTORED
+     * •    RESTORED
      */
     public function getInvoiceStatus(): ?string
     {
@@ -350,13 +324,13 @@ class EIDSearchReq implements \JsonSerializable
      *
      * Possible values:
      *
-     * • NEW
+     * •    NEW
      *
-     * • VIEWED
+     * •    VIEWED
      *
-     * • DOWNLOADED
+     * •    DOWNLOADED
      *
-     * • RESTORED
+     * •    RESTORED
      *
      * @maps InvoiceStatus
      */
@@ -373,13 +347,13 @@ class EIDSearchReq implements \JsonSerializable
      *
      * Possible values:
      *
-     * • NEW
+     * •    NEW
      *
-     * • VIEWED
+     * •    VIEWED
      *
-     * • DOWNLOADED
+     * •    DOWNLOADED
      *
-     * • RESTORED
+     * •    RESTORED
      */
     public function unsetInvoiceStatus(): void
     {

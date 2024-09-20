@@ -197,9 +197,7 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Date.
      * Date on which the price is applicable.
-     *
      * Format: yyyyMMdd
-     *
      * E.g.: 20180131
      */
     public function getDate(): ?string
@@ -213,9 +211,7 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Date.
      * Date on which the price is applicable.
-     *
      * Format: yyyyMMdd
-     *
      * E.g.: 20180131
      *
      * @maps Date
@@ -228,9 +224,7 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Date.
      * Date on which the price is applicable.
-     *
      * Format: yyyyMMdd
-     *
      * E.g.: 20180131
      */
     public function unsetDate(): void
@@ -241,7 +235,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Day.
      * Day on which the price is applicable.
-     *
      * E.g.: Sunday, Monday etc.
      */
     public function getDay(): ?string
@@ -255,7 +248,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Day.
      * Day on which the price is applicable.
-     *
      * E.g.: Sunday, Monday etc.
      *
      * @maps Day
@@ -268,7 +260,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Day.
      * Day on which the price is applicable.
-     *
      * E.g.: Sunday, Monday etc.
      */
     public function unsetDay(): void
@@ -279,7 +270,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Type.
      * Price list type.
-     *
      * E.g., List, Shell Standard International List
      */
     public function getType(): ?string
@@ -293,7 +283,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Type.
      * Price list type.
-     *
      * E.g., List, Shell Standard International List
      *
      * @maps Type
@@ -306,7 +295,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Type.
      * Price list type.
-     *
      * E.g., List, Shell Standard International List
      */
     public function unsetType(): void
@@ -349,7 +337,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Price List Description.
      * Price list description
-     *
      * E.g., UK Fuels CRT Reseller List Price
      */
     public function getPriceListDescription(): ?string
@@ -363,7 +350,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Price List Description.
      * Price list description
-     *
      * E.g., UK Fuels CRT Reseller List Price
      *
      * @maps PriceListDescription
@@ -376,7 +362,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Price List Description.
      * Price list description
-     *
      * E.g., UK Fuels CRT Reseller List Price
      */
     public function unsetPriceListDescription(): void
@@ -483,7 +468,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Country Code.
      * Country ISO Code
-     *
      * E.g., UK, NL, etc.,
      */
     public function getCountryCode(): ?string
@@ -497,7 +481,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Country Code.
      * Country ISO Code
-     *
      * E.g., UK, NL, etc.,
      *
      * @maps CountryCode
@@ -510,7 +493,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Country Code.
      * Country ISO Code
-     *
      * E.g., UK, NL, etc.,
      */
     public function unsetCountryCode(): void
@@ -521,7 +503,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Country.
      * Country
-     *
      * E.g., United Kingdom, Netherlands etc
      */
     public function getCountry(): ?string
@@ -535,7 +516,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Country.
      * Country
-     *
      * E.g., United Kingdom, Netherlands etc
      *
      * @maps Country
@@ -548,7 +528,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Country.
      * Country
-     *
      * E.g., United Kingdom, Netherlands etc
      */
     public function unsetCountry(): void
@@ -751,7 +730,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Currency Code.
      * Currency Code.
-     *
      * Format : 3 digit ISO code
      */
     public function getCurrencyCode(): ?string
@@ -765,7 +743,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Currency Code.
      * Currency Code.
-     *
      * Format : 3 digit ISO code
      *
      * @maps CurrencyCode
@@ -778,7 +755,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Currency Code.
      * Currency Code.
-     *
      * Format : 3 digit ISO code
      */
     public function unsetCurrencyCode(): void
@@ -789,7 +765,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Currency Symbol.
      * Currency Symbol
-     *
      * Example: £
      */
     public function getCurrencySymbol(): ?string
@@ -803,7 +778,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Currency Symbol.
      * Currency Symbol
-     *
      * Example: £
      *
      * @maps CurrencySymbol
@@ -816,7 +790,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Currency Symbol.
      * Currency Symbol
-     *
      * Example: £
      */
     public function unsetCurrencySymbol(): void
@@ -827,16 +800,12 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Price Type.
      * Price Type
-     *
      * Possible Values are:
-     *
-     * • Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
-     *
-     * • TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from ColcoId.
-     *
-     * • NetworkPrice – Price rule defined at Fuel Network level.
-     *
-     * • Other – Price rule defined at either Site or SiteGroup level.
+     * •    Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
+     * •    TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from
+     * ColcoId.
+     * •    NetworkPrice – Price rule defined at Fuel Network level.
+     * •    Other – Price rule defined at either Site or SiteGroup level.
      */
     public function getPriceType(): ?string
     {
@@ -849,16 +818,12 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Price Type.
      * Price Type
-     *
      * Possible Values are:
-     *
-     * • Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
-     *
-     * • TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from ColcoId.
-     *
-     * • NetworkPrice – Price rule defined at Fuel Network level.
-     *
-     * • Other – Price rule defined at either Site or SiteGroup level.
+     * •    Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
+     * •    TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from
+     * ColcoId.
+     * •    NetworkPrice – Price rule defined at Fuel Network level.
+     * •    Other – Price rule defined at either Site or SiteGroup level.
      *
      * @maps PriceType
      */
@@ -870,16 +835,12 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Price Type.
      * Price Type
-     *
      * Possible Values are:
-     *
-     * • Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
-     *
-     * • TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from ColcoId.
-     *
-     * • NetworkPrice – Price rule defined at Fuel Network level.
-     *
-     * • Other – Price rule defined at either Site or SiteGroup level.
+     * •    Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.
+     * •    TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from
+     * ColcoId.
+     * •    NetworkPrice – Price rule defined at Fuel Network level.
+     * •    Other – Price rule defined at either Site or SiteGroup level.
      */
     public function unsetPriceType(): void
     {
@@ -889,7 +850,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Site Group Id.
      * Site-Group ID
-     *
      * E.g.: 100007
      */
     public function getSiteGroupId(): ?int
@@ -903,7 +863,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Site Group Id.
      * Site-Group ID
-     *
      * E.g.: 100007
      *
      * @maps SiteGroupId
@@ -916,7 +875,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Site Group Id.
      * Site-Group ID
-     *
      * E.g.: 100007
      */
     public function unsetSiteGroupId(): void
@@ -1156,11 +1114,11 @@ class PriceList implements \JsonSerializable
      *
      * E.g.:
      *
-     * • Pilipinas Shell Petroleum Corp
+     * •    Pilipinas Shell Petroleum Corp
      *
-     * • Shell U.K. Oil Products Limited
+     * •    Shell U.K. Oil Products Limited
      *
-     * • G & V SERVICE STATIONS NV
+     * •    G & V SERVICE STATIONS NV
      */
     public function getPriceRuleDelcoName(): ?string
     {
@@ -1178,11 +1136,11 @@ class PriceList implements \JsonSerializable
      *
      * E.g.:
      *
-     * • Pilipinas Shell Petroleum Corp
+     * •    Pilipinas Shell Petroleum Corp
      *
-     * • Shell U.K. Oil Products Limited
+     * •    Shell U.K. Oil Products Limited
      *
-     * • G & V SERVICE STATIONS NV
+     * •    G & V SERVICE STATIONS NV
      *
      * @maps PriceRuleDelcoName
      */
@@ -1199,11 +1157,11 @@ class PriceList implements \JsonSerializable
      *
      * E.g.:
      *
-     * • Pilipinas Shell Petroleum Corp
+     * •    Pilipinas Shell Petroleum Corp
      *
-     * • Shell U.K. Oil Products Limited
+     * •    Shell U.K. Oil Products Limited
      *
-     * • G & V SERVICE STATIONS NV
+     * •    G & V SERVICE STATIONS NV
      */
     public function unsetPriceRuleDelcoName(): void
     {
@@ -1213,7 +1171,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Price Rule Country.
      * PriceRuleCountry
-     *
      * E.g.: United Kingdom
      */
     public function getPriceRuleCountry(): ?string
@@ -1227,7 +1184,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Price Rule Country.
      * PriceRuleCountry
-     *
      * E.g.: United Kingdom
      *
      * @maps PriceRuleCountry
@@ -1240,7 +1196,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Price Rule Country.
      * PriceRuleCountry
-     *
      * E.g.: United Kingdom
      */
     public function unsetPriceRuleCountry(): void
@@ -1251,7 +1206,6 @@ class PriceList implements \JsonSerializable
     /**
      * Returns Price Rule Country Code.
      * ISO Code of PriceRuleCountry
-     *
      * E.g.: UK, NL, etc.,
      */
     public function getPriceRuleCountryCode(): ?string
@@ -1265,7 +1219,6 @@ class PriceList implements \JsonSerializable
     /**
      * Sets Price Rule Country Code.
      * ISO Code of PriceRuleCountry
-     *
      * E.g.: UK, NL, etc.,
      *
      * @maps PriceRuleCountryCode
@@ -1278,7 +1231,6 @@ class PriceList implements \JsonSerializable
     /**
      * Unsets Price Rule Country Code.
      * ISO Code of PriceRuleCountry
-     *
      * E.g.: UK, NL, etc.,
      */
     public function unsetPriceRuleCountryCode(): void

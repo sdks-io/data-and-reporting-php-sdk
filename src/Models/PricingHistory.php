@@ -42,7 +42,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Returns From Date.
      * Pricing History Period Start date and should be the first date of the month.
-     *
      * Format: YYYYMMDD
      */
     public function getFromDate(): ?string
@@ -56,7 +55,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Sets From Date.
      * Pricing History Period Start date and should be the first date of the month.
-     *
      * Format: YYYYMMDD
      *
      * @maps FromDate
@@ -69,7 +67,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Unsets From Date.
      * Pricing History Period Start date and should be the first date of the month.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFromDate(): void
@@ -80,7 +77,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Returns To Date.
      * Pricing History Period end date and should be the last date of the period month.
-     *
      * Format: YYYYMMDD
      */
     public function getToDate(): ?string
@@ -94,7 +90,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Sets To Date.
      * Pricing History Period end date and should be the last date of the period month.
-     *
      * Format: YYYYMMDD
      *
      * @maps ToDate
@@ -107,7 +102,6 @@ class PricingHistory implements \JsonSerializable
     /**
      * Unsets To Date.
      * Pricing History Period end date and should be the last date of the period month.
-     *
      * Format: YYYYMMDD
      */
     public function unsetToDate(): void

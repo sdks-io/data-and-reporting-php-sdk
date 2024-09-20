@@ -637,7 +637,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      */
     public function getType(): ?string
@@ -651,7 +650,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      *
      * @maps Type
@@ -664,7 +662,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Type.
      * TransactionType is the type of transaction.
-     *
      * Example: SalesItem /FeeItem
      */
     public function unsetType(): void
@@ -675,7 +672,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Card Id.
      * Unique Card Id in GFN
-     *
      * Example: 275549
      */
     public function getCardId(): ?int
@@ -689,7 +685,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Card Id.
      * Unique Card Id in GFN
-     *
      * Example: 275549
      *
      * @maps CardId
@@ -702,7 +697,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Card Id.
      * Unique Card Id in GFN
-     *
      * Example: 275549
      */
     public function unsetCardId(): void
@@ -713,10 +707,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Card PAN.
      * Card PAN
-     *
      * Mask PAN if enabled at Microservices configuration (Mask all digits except the Last 6 digits of the
      * PAN)
-     *
      * Example: 7002051006629890645
      */
     public function getCardPAN(): ?string
@@ -730,10 +722,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Card PAN.
      * Card PAN
-     *
      * Mask PAN if enabled at Microservices configuration (Mask all digits except the Last 6 digits of the
      * PAN)
-     *
      * Example: 7002051006629890645
      *
      * @maps CardPAN
@@ -746,10 +736,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Card PAN.
      * Card PAN
-     *
      * Mask PAN if enabled at Microservices configuration (Mask all digits except the Last 6 digits of the
      * PAN)
-     *
      * Example: 7002051006629890645
      */
     public function unsetCardPAN(): void
@@ -760,7 +748,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      */
     public function getCardExpiry(): ?string
@@ -774,7 +761,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      *
      * @maps CardExpiry
@@ -787,7 +773,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      */
     public function unsetCardExpiry(): void
@@ -848,9 +833,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
-     *
      *
      *
      * Note: For a fee item, this parameter will be populated with fee date.
@@ -866,9 +849,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
-     *
      *
      *
      * Note: For a fee item, this parameter will be populated with fee date.
@@ -883,9 +864,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
-     *
      *
      *
      * Note: For a fee item, this parameter will be populated with fee date.
@@ -942,9 +921,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getFleetIdInput(): ?string
@@ -958,9 +935,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps FleetIdInput
@@ -973,9 +948,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Fleet Id Input.
      * Fleet Id Input as entered by the drivers at the time of transaction
-     *
      * Example: XYZ1234
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetFleetIdInput(): void
@@ -986,9 +959,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getOdometerInput(): ?int
@@ -1002,9 +973,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps OdometerInput
@@ -1017,9 +986,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Odometer Input.
      * Odometer Input as entered by the drivers at the time of transaction
-     *
      * Example: 12345
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetOdometerInput(): void
@@ -1030,7 +997,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      */
     public function getDriverName(): ?string
@@ -1044,7 +1010,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      *
      * @maps DriverName
@@ -1057,7 +1022,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Driver Name.
      * Driver Name embossed on the card
-     *
      * Example:  ANDREW GILBERRY
      */
     public function unsetDriverName(): void
@@ -1170,7 +1134,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Currency Code.
      * ISO currency code
-     *
      * Example: GBP
      */
     public function getTransactionCurrencyCode(): ?string
@@ -1184,7 +1147,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Currency Code.
      * ISO currency code
-     *
      * Example: GBP
      *
      * @maps TransactionCurrencyCode
@@ -1197,7 +1159,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Currency Code.
      * ISO currency code
-     *
      * Example: GBP
      */
     public function unsetTransactionCurrencyCode(): void
@@ -1208,7 +1169,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      */
     public function getTransactionCurrencySymbol(): ?string
@@ -1222,7 +1182,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      *
      * @maps TransactionCurrencySymbol
@@ -1235,7 +1194,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Currency Symbol.
      * Currency symbol of the Transaction Currency Code
-     *
      * Example: £, $
      */
     public function unsetTransactionCurrencySymbol(): void
@@ -1412,7 +1370,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      */
     public function getInvoiceGrossAmount(): ?int
@@ -1426,7 +1383,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      *
      * @maps InvoiceGrossAmount
@@ -1439,7 +1395,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Invoice Gross Amount.
      * Invoice Gross Amount
-     *
      * Note: For a fee item, this parameter will be populated with fee InvoiceGrossAmount.
      */
     public function unsetInvoiceGrossAmount(): void
@@ -1686,7 +1641,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Unit Price in Transaction Currency.
      * Product Unit Price in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getUnitPriceInTransactionCurrency(): ?int
@@ -1700,7 +1654,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Unit Price in Transaction Currency.
      * Product Unit Price in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps UnitPriceInTransactionCurrency
@@ -1713,7 +1666,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Unit Price in Transaction Currency.
      * Product Unit Price in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetUnitPriceInTransactionCurrency(): void
@@ -1724,7 +1676,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Unit Price in Invoice Currency.
      * Product Unit Price in invoice currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getUnitPriceInInvoiceCurrency(): ?int
@@ -1738,7 +1689,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Unit Price in Invoice Currency.
      * Product Unit Price in invoice currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps UnitPriceInInvoiceCurrency
@@ -1751,7 +1701,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Unit Price in Invoice Currency.
      * Product Unit Price in invoice currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetUnitPriceInInvoiceCurrency(): void
@@ -1762,7 +1711,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Unit Discount Transaction Currency.
      * Unit Discount in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getUnitDiscountTransactionCurrency(): ?int
@@ -1776,7 +1724,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Unit Discount Transaction Currency.
      * Unit Discount in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps UnitDiscountTransactionCurrency
@@ -1789,7 +1736,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Unit Discount Transaction Currency.
      * Unit Discount in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetUnitDiscountTransactionCurrency(): void
@@ -1800,7 +1746,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getUnitDiscountInvoiceCurrency(): ?int
@@ -1814,7 +1759,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps UnitDiscountInvoiceCurrency
@@ -1827,7 +1771,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Unit Discount Invoice Currency.
      * Unit Discount in invoice currency
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetUnitDiscountInvoiceCurrency(): void
@@ -1870,13 +1813,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Invoice Number.
      * Invoice Number if invoiced
-     *
      * Example:
-     *
      * S04500493
-     *
      * S04478304
-     *
      * S04490319
      */
     public function getInvoiceNumber(): ?string
@@ -1890,13 +1829,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Invoice Number.
      * Invoice Number if invoiced
-     *
      * Example:
-     *
      * S04500493
-     *
      * S04478304
-     *
      * S04490319
      *
      * @maps InvoiceNumber
@@ -1909,13 +1844,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Invoice Number.
      * Invoice Number if invoiced
-     *
      * Example:
-     *
      * S04500493
-     *
      * S04478304
-     *
      * S04490319
      */
     public function unsetInvoiceNumber(): void
@@ -1964,10 +1895,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      */
     public function getSiteCode(): ?string
     {
@@ -1980,10 +1909,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      *
      * @maps SiteCode
      */
@@ -1995,10 +1922,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Site Code.
      * Site Code
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      */
     public function unsetSiteCode(): void
     {
@@ -2008,10 +1933,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      */
     public function getSiteName(): ?string
     {
@@ -2024,10 +1947,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      *
      * @maps SiteName
      */
@@ -2039,10 +1960,8 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Site Name.
      * Site Name
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
      */
     public function unsetSiteName(): void
     {
@@ -2052,7 +1971,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Site Country.
      * Site Country
-     *
      * Example: France, Germany
      */
     public function getSiteCountry(): ?string
@@ -2066,7 +1984,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Site Country.
      * Site Country
-     *
      * Example: France, Germany
      *
      * @maps SiteCountry
@@ -2079,7 +1996,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Site Country.
      * Site Country
-     *
      * Example: France, Germany
      */
     public function unsetSiteCountry(): void
@@ -2176,12 +2092,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
      */
     public function getProductCode(): ?string
     {
@@ -2194,12 +2107,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
      *
      * @maps ProductCode
      */
@@ -2211,12 +2121,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Product Code.
      * Product Code
-     *
-     * 10 TMF Charges
-     *
-     * 11 Tunnel/Bridges
-     *
-     * 12 Motorway toll
+     * 10    TMF Charges
+     * 11    Tunnel/Bridges
+     * 12    Motorway toll
      */
     public function unsetProductCode(): void
     {
@@ -2226,17 +2133,12 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Product Name.
      * Product Name
-     *
      * Example:
      *
      *
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      */
     public function getProductName(): ?string
@@ -2250,17 +2152,12 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Product Name.
      * Product Name
-     *
      * Example:
      *
      *
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      *
      * @maps ProductName
@@ -2273,17 +2170,12 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Product Name.
      * Product Name
-     *
      * Example:
      *
      *
-     *
      * Unleaded - High octane
-     *
      * Unleaded - Medium octane
-     *
      * Unleaded - Low octane
-     *
      * Unleaded Environmental
      */
     public function unsetProductName(): void
@@ -2297,15 +2189,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      */
     public function getProductGroupId(): ?int
     {
@@ -2321,15 +2213,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
      * @maps ProductGroupId
      */
@@ -2344,15 +2236,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      */
     public function unsetProductGroupId(): void
     {
@@ -2365,15 +2257,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      */
     public function getProductGroupName(): ?string
     {
@@ -2389,15 +2281,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      *
      * @maps ProductGroupName
      */
@@ -2412,15 +2304,15 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
      *
      * Example:
      *
-     * 1 Parent Product Group
+     * 1    Parent Product Group
      *
-     * 2 All Fuels
+     * 2    All Fuels
      *
-     * 3 Motor gasoline
+     * 3    Motor gasoline
      *
-     * 4 2 stroke
+     * 4    2 stroke
      *
-     * 5 Autogas
+     * 5    Autogas
      */
     public function unsetProductGroupName(): void
     {
@@ -2430,7 +2322,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Del Co Exchange Rate.
      * DelCo Exchange Rate (Site exchange rate)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getDelCoExchangeRate(): ?float
@@ -2444,7 +2335,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Del Co Exchange Rate.
      * DelCo Exchange Rate (Site exchange rate)
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps DelCoExchangeRate
@@ -2457,7 +2347,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Del Co Exchange Rate.
      * DelCo Exchange Rate (Site exchange rate)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetDelCoExchangeRate(): void
@@ -2500,7 +2389,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIsShellSite(): ?bool
@@ -2514,7 +2402,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IsShellSite
@@ -2527,7 +2414,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Is Shell Site.
      * True when transaction occurred at a Shell site else return False
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIsShellSite(): void
@@ -2538,13 +2424,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Network.
      * Network  (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item.
      */
     public function getNetwork(): ?string
@@ -2558,13 +2440,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Network.
      * Network  (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item.
      *
      * @maps Network
@@ -2577,13 +2455,9 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Network.
      * Network  (Shell PH, ESSO, etc.,)
-     *
-     * 100013 STEINDORFER
-     *
-     * 100015 S.A. BELGIAN SHELL N.V.
-     *
-     * 100016 ESSO BE
-     *
+     * 100013    STEINDORFER
+     * 100015    S.A. BELGIAN SHELL N.V.
+     * 100016    ESSO BE
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetNetwork(): void
@@ -2594,9 +2468,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getSiteGroupId(): ?int
@@ -2610,9 +2482,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps SiteGroupId
@@ -2625,9 +2495,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Site Group Id.
      * Site Group Id
-     *
      * Example: 202
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetSiteGroupId(): void
@@ -2638,9 +2506,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Site Group Name.
      * Site GroupName
-     *
      * Example: CZ 9100 ECONOMY NETWORK
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getSiteGroupName(): ?string
@@ -2654,9 +2520,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Site Group Name.
      * Site GroupName
-     *
      * Example: CZ 9100 ECONOMY NETWORK
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps SiteGroupName
@@ -2669,9 +2533,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Site Group Name.
      * Site GroupName
-     *
      * Example: CZ 9100 ECONOMY NETWORK
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetSiteGroupName(): void
@@ -2682,7 +2544,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      */
     public function getPostingDate(): ?string
@@ -2696,7 +2557,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      *
      * @maps PostingDate
@@ -2709,7 +2569,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Posting Date.
      * Transaction Posting Date
-     *
      * Format: yyyyMMdd HHmmss
      */
     public function unsetPostingDate(): void
@@ -2758,9 +2617,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getPurchasedInCountryCode(): ?string
@@ -2774,9 +2631,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps PurchasedInCountryCode
@@ -2789,9 +2644,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Purchased in Country Code.
      * ISO code of the country where the transaction took place
-     *
      * Example: “NL”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetPurchasedInCountryCode(): void
@@ -2802,7 +2655,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Country Code.
      * ISO code of the Customer Country
-     *
      * Example: NL
      */
     public function getCustomerCountryCode(): ?string
@@ -2816,7 +2668,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Country Code.
      * ISO code of the Customer Country
-     *
      * Example: NL
      *
      * @maps CustomerCountryCode
@@ -2829,7 +2680,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Country Code.
      * ISO code of the Customer Country
-     *
      * Example: NL
      */
     public function unsetCustomerCountryCode(): void
@@ -2840,7 +2690,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Country.
      * Name of the Customer Country
-     *
      * Example: Netherlands
      */
     public function getCustomerCountry(): ?string
@@ -2854,7 +2703,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Country.
      * Name of the Customer Country
-     *
      * Example: Netherlands
      *
      * @maps CustomerCountry
@@ -2867,7 +2715,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Country.
      * Name of the Customer Country
-     *
      * Example: Netherlands
      */
     public function unsetCustomerCountry(): void
@@ -2878,7 +2725,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Release Code.
      * Release code, 7th Digit of the Card PAN
-     *
      * Example: 8 for 7021882
      */
     public function getReleaseCode(): ?string
@@ -2892,7 +2738,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Release Code.
      * Release code, 7th Digit of the Card PAN
-     *
      * Example: 8 for 7021882
      *
      * @maps ReleaseCode
@@ -2905,7 +2750,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Release Code.
      * Release code, 7th Digit of the Card PAN
-     *
      * Example: 8 for 7021882
      */
     public function unsetReleaseCode(): void
@@ -3044,9 +2888,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
-     *
      * Note: This parameter will be populated in the response for both SalesItem and FeeItem
      */
     public function getVATRate(): ?float
@@ -3060,9 +2902,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
-     *
      * Note: This parameter will be populated in the response for both SalesItem and FeeItem
      *
      * @maps VATRate
@@ -3075,9 +2915,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets V at Rate.
      * VAT Percentage
-     *
      * 0.20 for 20%
-     *
      * Note: This parameter will be populated in the response for both SalesItem and FeeItem
      */
     public function unsetVATRate(): void
@@ -3088,7 +2926,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
      */
     public function getVATCategory(): ?string
@@ -3102,7 +2939,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
      *
      * @maps VATCategory
@@ -3115,7 +2951,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
      */
     public function unsetVATCategory(): void
@@ -3126,7 +2961,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns V at Country.
      * VAT Country
-     *
      * Example: Netherlands
      */
     public function getVATCountry(): ?string
@@ -3140,7 +2974,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets V at Country.
      * VAT Country
-     *
      * Example: Netherlands
      *
      * @maps VATCountry
@@ -3153,7 +2986,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets V at Country.
      * VAT Country
-     *
      * Example: Netherlands
      */
     public function unsetVATCountry(): void
@@ -3164,7 +2996,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
      */
     public function getEffectiveDiscountInTrxCurrency(): ?float
@@ -3178,7 +3009,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
      *
      * @maps EffectiveDiscountInTrxCurrency
@@ -3191,7 +3021,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Effective Discount in Trx Currency.
      * Effective Discount (excluding VAT, in transaction currency) 4 digits
-     *
      * Example: 0.0000
      */
     public function unsetEffectiveDiscountInTrxCurrency(): void
@@ -3202,9 +3031,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getTransactionType(): ?string
@@ -3218,9 +3045,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps TransactionType
@@ -3233,9 +3058,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Type.
      * Transaction Type
-     *
      * Example: Purchase when Card is Present else Blank
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetTransactionType(): void
@@ -3290,7 +3113,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * Example: “Y” or “N”
      */
     public function getVATApplicable(): ?string
@@ -3304,7 +3126,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * Example: “Y” or “N”
      *
      * @maps VATApplicable
@@ -3317,7 +3138,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * Example: “Y” or “N”
      */
     public function unsetVATApplicable(): void
@@ -3328,9 +3148,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getNetInvoiceIndicator(): ?string
@@ -3344,9 +3162,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps NetInvoiceIndicator
@@ -3359,9 +3175,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetNetInvoiceIndicator(): void
@@ -3372,7 +3186,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Currency Code.
      * Customer currency code
-     *
      * Example: GBP
      */
     public function getCustomerCurrencyCode(): ?string
@@ -3386,7 +3199,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Currency Code.
      * Customer currency code
-     *
      * Example: GBP
      *
      * @maps CustomerCurrencyCode
@@ -3399,7 +3211,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Currency Code.
      * Customer currency code
-     *
      * Example: GBP
      */
     public function unsetCustomerCurrencyCode(): void
@@ -3442,7 +3253,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEffectiveUnitDiscountInCustomerCurrency(): ?int
@@ -3456,7 +3266,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EffectiveUnitDiscountInCustomerCurrency
@@ -3469,7 +3278,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Effective Unit Discount in Customer Currency.
      * Effective Unit Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEffectiveUnitDiscountInCustomerCurrency(): void
@@ -3480,7 +3288,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEffectiveDiscountInCustomerCurrency(): ?int
@@ -3494,7 +3301,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EffectiveDiscountInCustomerCurrency
@@ -3507,7 +3313,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Effective Discount in Customer Currency.
      * Effective Discount (excluding VAT in Customer currency)
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEffectiveDiscountInCustomerCurrency(): void
@@ -3550,9 +3355,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
      */
     public function getDiscountType(): ?string
@@ -3566,9 +3369,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
      *
      * @maps DiscountType
@@ -3581,9 +3382,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
      */
     public function unsetDiscountType(): void
@@ -3594,9 +3393,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function getTransactionStatus(): ?string
@@ -3610,9 +3407,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      *
      * @maps TransactionStatus
@@ -3625,9 +3420,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Status.
      * Transaction status "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function unsetTransactionStatus(): void
@@ -3638,9 +3431,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      */
     public function getSalesItemId(): ?int
@@ -3654,9 +3445,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      *
      * @maps SalesItemId
@@ -3669,9 +3458,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Sales Item Id.
      * Unique Sales Item Identifier
-     *
      * Example: 18315958002
-     *
      * Note: For a fee item, this parameter will be populated with SalesItemId.
      */
     public function unsetSalesItemId(): void
@@ -3746,7 +3533,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Refund Flag.
      * Refund Flag “N” for Not Refunded and “Y” for Refunded.
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getRefundFlag(): ?string
@@ -3760,7 +3546,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Refund Flag.
      * Refund Flag “N” for Not Refunded and “Y” for Refunded.
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps RefundFlag
@@ -3773,7 +3558,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Refund Flag.
      * Refund Flag “N” for Not Refunded and “Y” for Refunded.
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetRefundFlag(): void
@@ -3816,7 +3600,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Name.
      * Delco Name
-     *
      * Example: SHELL NEDERLAND VERKOOPMAATSCHAPPIJ BV
      */
     public function getDelcoName(): ?string
@@ -3830,7 +3613,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Name.
      * Delco Name
-     *
      * Example: SHELL NEDERLAND VERKOOPMAATSCHAPPIJ BV
      *
      * @maps DelcoName
@@ -3843,7 +3625,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Name.
      * Delco Name
-     *
      * Example: SHELL NEDERLAND VERKOOPMAATSCHAPPIJ BV
      */
     public function unsetDelcoName(): void
@@ -3854,7 +3635,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Code.
      * Delco Code
-     *
      * 014, 018, etc.,
      */
     public function getDelcoCode(): ?string
@@ -3868,7 +3648,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Code.
      * Delco Code
-     *
      * 014, 018, etc.,
      *
      * @maps DelcoCode
@@ -3881,7 +3660,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Code.
      * Delco Code
-     *
      * 014, 018, etc.,
      */
     public function unsetDelcoCode(): void
@@ -3892,7 +3670,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Payer Number.
      * Payer number (Country code+8 digits)
-     *
      * Example: NL10042616
      */
     public function getPayerNumber(): ?string
@@ -3906,7 +3683,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Payer Number.
      * Payer number (Country code+8 digits)
-     *
      * Example: NL10042616
      *
      * @maps PayerNumber
@@ -3919,7 +3695,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Payer Number.
      * Payer number (Country code+8 digits)
-     *
      * Example: NL10042616
      */
     public function unsetPayerNumber(): void
@@ -3930,7 +3705,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      */
     public function getPayerName(): ?string
@@ -3944,7 +3718,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      *
      * @maps PayerName
@@ -3957,7 +3730,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Payer Name.
      * Payer name
-     *
      * Example: V.M. LE COMTE
      */
     public function unsetPayerName(): void
@@ -3968,7 +3740,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Card Expiry Period.
      * Year/Month of the Card Expiry captured on the transaction
-     *
      * Example: 1901
      */
     public function getCardExpiryPeriod(): ?string
@@ -3982,7 +3753,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Card Expiry Period.
      * Year/Month of the Card Expiry captured on the transaction
-     *
      * Example: 1901
      *
      * @maps CardExpiryPeriod
@@ -3995,7 +3765,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Card Expiry Period.
      * Year/Month of the Card Expiry captured on the transaction
-     *
      * Example: 1901
      */
     public function unsetCardExpiryPeriod(): void
@@ -4006,9 +3775,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getAuthorisationCode(): ?string
@@ -4022,9 +3789,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps AuthorisationCode
@@ -4037,9 +3802,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Authorisation Code.
      * Authorisation code of the transaction
-     *
      * Example: 011256
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetAuthorisationCode(): void
@@ -4050,9 +3813,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Id.
      * Unique id of the transaction that may include one or more salesitems
-     *
      * Example: io9KVXk1UkW57XWKyeaHHg
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getTransactionId(): ?string
@@ -4066,9 +3827,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Id.
      * Unique id of the transaction that may include one or more salesitems
-     *
      * Example: io9KVXk1UkW57XWKyeaHHg
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps TransactionId
@@ -4081,9 +3840,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Id.
      * Unique id of the transaction that may include one or more salesitems
-     *
      * Example: io9KVXk1UkW57XWKyeaHHg
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetTransactionId(): void
@@ -4094,9 +3851,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Line.
      * Transaction line item number
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getTransactionLine(): ?string
@@ -4110,9 +3865,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Line.
      * Transaction line item number
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps TransactionLine
@@ -4125,9 +3878,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Line.
      * Transaction line item number
-     *
      * Example: 1
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetTransactionLine(): void
@@ -4138,9 +3889,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getAllowClearing(): ?string
@@ -4154,9 +3903,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps AllowClearing
@@ -4169,9 +3916,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetAllowClearing(): void
@@ -4182,7 +3927,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns C RM Number.
      * CRM Case number if the sales item is in dispute.
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getCRMNumber(): ?string
@@ -4196,7 +3940,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets C RM Number.
      * CRM Case number if the sales item is in dispute.
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps CRMNumber
@@ -4209,7 +3952,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets C RM Number.
      * CRM Case number if the sales item is in dispute.
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetCRMNumber(): void
@@ -4220,20 +3962,13 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      */
     public function getDisputeStatus(): ?string
     {
@@ -4246,20 +3981,13 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      *
      * @maps DisputeStatus
      */
@@ -4271,20 +3999,13 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      */
     public function unsetDisputeStatus(): void
     {
@@ -4294,7 +4015,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
      */
     public function getRebateRate(): ?float
@@ -4308,7 +4028,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
      *
      * @maps RebateRate
@@ -4321,7 +4040,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Rebate Rate.
      * Unit discount in customer currency.
-     *
      * Example: 28.279000
      */
     public function unsetRebateRate(): void
@@ -4332,7 +4050,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
      */
     public function getDelCoToColCoExchangeRate(): ?int
@@ -4346,7 +4063,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
      *
      * @maps DelCoToColCoExchangeRate
@@ -4359,7 +4075,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Del Co to Col Co Exchange Rate.
      * Exchange rate from transaction currency to customer currency.
-     *
      * Example: 1
      */
     public function unsetDelCoToColCoExchangeRate(): void
@@ -4370,9 +4085,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getNetEuroAmount(): ?float
@@ -4386,9 +4099,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps NetEuroAmount
@@ -4401,9 +4112,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Net Euro Amount.
      * Net euro amount.
-     *
      * Example: 37.93
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetNetEuroAmount(): void
@@ -4414,9 +4123,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEuroRebateAmount(): ?int
@@ -4430,9 +4137,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EuroRebateAmount
@@ -4445,9 +4150,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Euro Rebate Amount.
      * Euro rebate amount.
-     *
      * Example: 0
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEuroRebateAmount(): void
@@ -4458,9 +4161,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getEuroVATAmount(): ?float
@@ -4474,9 +4175,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps EuroVATAmount
@@ -4489,9 +4188,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Euro VAT Amount.
      * Euro VAT amount.
-     *
      * Example: 7.96
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetEuroVATAmount(): void
@@ -4598,9 +4295,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIncomingSiteNumber(): ?string
@@ -4614,9 +4309,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IncomingSiteNumber
@@ -4629,9 +4322,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Incoming Site Number.
      * Incoming Site Number
-     *
      * Example: 100021
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIncomingSiteNumber(): void
@@ -4642,9 +4333,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIncomingSiteDescription(): ?string
@@ -4658,9 +4347,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IncomingSiteDescription
@@ -4673,9 +4360,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Incoming Site Description.
      * Incoming Site Description
-     *
      * Example: HN3 INTI_02-82.02
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIncomingSiteDescription(): void
@@ -4686,9 +4371,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getIncomingCurrencyCode(): ?string
@@ -4702,9 +4385,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps IncomingCurrencyCode
@@ -4717,9 +4398,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Incoming Currency Code.
      * Incoming Currency Code
-     *
      * Example: GBP
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetIncomingCurrencyCode(): void
@@ -4730,7 +4409,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      */
     public function getIncomingProductCode(): ?string
@@ -4744,7 +4422,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      *
      * @maps IncomingProductCode
@@ -4757,7 +4434,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Incoming Product Code.
      * Incoming Product Code
-     *
      * Example: 30
      */
     public function unsetIncomingProductCode(): void
@@ -4768,9 +4444,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      */
     public function getCreditDebitCode(): ?string
@@ -4784,9 +4458,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      *
      * @maps CreditDebitCode
@@ -4799,9 +4471,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Credit Debit Code.
      * Credit Debit Code
-     *
      * Example: “D” or “C”
-     *
      * The value could be null/blank for fees item.
      */
     public function unsetCreditDebitCode(): void
@@ -4812,9 +4482,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getCorrectionFlag(): ?string
@@ -4828,9 +4496,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps CorrectionFlag
@@ -4843,9 +4509,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Correction Flag.
      * Correction Flag
-     *
      * Example: “Y” or “N”
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetCorrectionFlag(): void
@@ -4984,9 +4648,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount in Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getRebateonNetAmountInCustomerCurrency(): ?float
@@ -5000,9 +4662,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount in Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps RebateonNetAmountInCustomerCurrency
@@ -5015,9 +4675,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Rebateon Net Amount in Customer Currency.
      * Rebate on Net Amount in Customer Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetRebateonNetAmountInCustomerCurrency(): void
@@ -5028,9 +4686,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount in Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getRebateonNetAmountInTransactionCurrency(): ?float
@@ -5044,9 +4700,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount in Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps RebateonNetAmountInTransactionCurrency
@@ -5059,9 +4713,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Rebateon Net Amount in Transaction Currency.
      * Rebate on Net Amount in Transaction Currency
-     *
      * Example: -0.735000000000
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetRebateonNetAmountInTransactionCurrency(): void
@@ -5072,9 +4724,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getNetworkCode(): ?string
@@ -5088,9 +4738,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps NetworkCode
@@ -5103,9 +4751,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Network Code.
      * Network Code
-     *
      * Example: AVEE PTUAZONW CUBFAO COSFS
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetNetworkCode(): void
@@ -5180,9 +4826,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelcoListPriceUnitNet(): ?float
@@ -5196,9 +4840,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelcoListPriceUnitNet
@@ -5211,9 +4853,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco List Price Unit Net.
      * Delco List Price Unit Net
-     *
      * Example: 30.500000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelcoListPriceUnitNet(): void
@@ -5224,9 +4864,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelcoRetailPriceUnitNet(): ?float
@@ -5240,9 +4878,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelcoRetailPriceUnitNet
@@ -5255,9 +4891,7 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Retail Price Unit Net.
      * Retail Net Price (or pump net price) per Unit in transaction currency
-     *
      * Example: 1.921000
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelcoRetailPriceUnitNet(): void
@@ -5268,7 +4902,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelcoRetailPriceUnitGross(): ?float
@@ -5282,7 +4915,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelcoRetailPriceUnitGross
@@ -5295,7 +4927,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelcoRetailPriceUnitGross(): void
@@ -5306,7 +4937,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Retail Value Total Net.
      * Retail net price (or net pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelcoRetailValueTotalNet(): ?float
@@ -5320,7 +4950,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Retail Value Total Net.
      * Retail net price (or net pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelcoRetailValueTotalNet
@@ -5333,7 +4962,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Retail Value Total Net.
      * Retail net price (or net pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelcoRetailValueTotalNet(): void
@@ -5344,7 +4972,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Delco Retail Value Total Gross.
      * Retail gross price (or gross pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getDelcoRetailValueTotalGross(): ?float
@@ -5358,7 +4985,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Delco Retail Value Total Gross.
      * Retail gross price (or gross pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps DelcoRetailValueTotalGross
@@ -5371,7 +4997,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Delco Retail Value Total Gross.
      * Retail gross price (or gross pump price) in transaction currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetDelcoRetailValueTotalGross(): void
@@ -5382,7 +5007,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getCustomerRetailPriceUnitGross(): ?float
@@ -5396,7 +5020,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps CustomerRetailPriceUnitGross
@@ -5409,7 +5032,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Retail Price Unit Gross.
      * Retail gross price (or pump gross price) per unit in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetCustomerRetailPriceUnitGross(): void
@@ -5420,7 +5042,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Retail Value Total Gross.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getCustomerRetailValueTotalGross(): ?float
@@ -5434,7 +5055,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Retail Value Total Gross.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps CustomerRetailValueTotalGross
@@ -5447,7 +5067,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Retail Value Total Gross.
      * Retail gross price (or gross pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetCustomerRetailValueTotalGross(): void
@@ -5458,7 +5077,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Customer Retail Value Total Net.
      * Retail net price (or net pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getCustomerRetailValueTotalNet(): ?float
@@ -5472,7 +5090,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Customer Retail Value Total Net.
      * Retail net price (or net pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps CustomerRetailValueTotalNet
@@ -5485,7 +5102,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Customer Retail Value Total Net.
      * Retail net price (or net pump price) in customer currency
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetCustomerRetailValueTotalNet(): void
@@ -5496,7 +5112,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Returns Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function getTransactionTypeDescription(): ?string
@@ -5510,7 +5125,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Sets Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      *
      * @maps TransactionTypeDescription
@@ -5523,7 +5137,6 @@ class MultiPricedTransactionResponseTransactionsItems implements \JsonSerializab
     /**
      * Unsets Transaction Type Description.
      * Transaction Type Description
-     *
      * Note: - The value could be null/blank for fees item
      */
     public function unsetTransactionTypeDescription(): void

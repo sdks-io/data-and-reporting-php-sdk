@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\LastStatementOfAccount;
+use ShellDataReportingAPIsLib\Models\LastStatementOfAccount2;
 use ShellDataReportingAPIsLib\Models\StatementOfAccountResp;
 
 /**
@@ -42,7 +42,7 @@ class StatementOfAccountRespBuilder
     /**
      * Sets last statement of account field.
      */
-    public function lastStatementOfAccount(?LastStatementOfAccount $value): self
+    public function lastStatementOfAccount(?LastStatementOfAccount2 $value): self
     {
         $this->instance->setLastStatementOfAccount($value);
         return $this;

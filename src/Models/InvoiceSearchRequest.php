@@ -92,13 +92,13 @@ class InvoiceSearchRequest implements \JsonSerializable
      * Returns Sort By.
      * Sort option –
      *
-     * 1. InvoiceDate ASC
+     * 1.    InvoiceDate ASC
      *
-     * 2. InvoiceDate DESC
+     * 2.    InvoiceDate DESC
      *
-     * 3. NetAmountCustomerCurrency ASC
+     * 3.    NetAmountCustomerCurrency ASC
      *
-     * 4. NetAmountCustomerCurrency DESC
+     * 4.    NetAmountCustomerCurrency DESC
      *
      * Optional
      *
@@ -123,13 +123,13 @@ class InvoiceSearchRequest implements \JsonSerializable
      * Sets Sort By.
      * Sort option –
      *
-     * 1. InvoiceDate ASC
+     * 1.    InvoiceDate ASC
      *
-     * 2. InvoiceDate DESC
+     * 2.    InvoiceDate DESC
      *
-     * 3. NetAmountCustomerCurrency ASC
+     * 3.    NetAmountCustomerCurrency ASC
      *
-     * 4. NetAmountCustomerCurrency DESC
+     * 4.    NetAmountCustomerCurrency DESC
      *
      * Optional
      *

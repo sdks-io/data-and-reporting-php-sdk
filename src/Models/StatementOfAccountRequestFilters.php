@@ -105,7 +105,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory.
      */
     public function getPayerId(): ?int
@@ -119,7 +118,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory.
      *
      * @maps PayerId
@@ -132,7 +130,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory.
      */
     public function unsetPayerId(): void
@@ -143,7 +140,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      */
     public function getPayerNumber(): ?string
@@ -157,7 +153,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      *
      * @maps PayerNumber
@@ -170,7 +165,6 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      */
     public function unsetPayerNumber(): void
@@ -181,9 +175,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Include Monthly Invoice Trend.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past 13 monthly invoice trend to be included as part of the response. Else false.
      */
     public function getIncludeMonthlyInvoiceTrend(): ?bool
@@ -197,9 +189,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Include Monthly Invoice Trend.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past 13 monthly invoice trend to be included as part of the response. Else false.
      *
      * @maps IncludeMonthlyInvoiceTrend
@@ -212,9 +202,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Include Monthly Invoice Trend.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past 13 monthly invoice trend to be included as part of the response. Else false.
      */
     public function unsetIncludeMonthlyInvoiceTrend(): void
@@ -225,9 +213,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Include Past Statement of Accounts.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past X SOA documents are to be included as part of the response. Else false.
      */
     public function getIncludePastStatementOfAccounts(): ?bool
@@ -241,9 +227,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Include Past Statement of Accounts.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past X SOA documents are to be included as part of the response. Else false.
      *
      * @maps IncludePastStatementOfAccounts
@@ -256,9 +240,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Include Past Statement of Accounts.
      * True/False.
-     *
      * Optional. Default is False.
-     *
      * True if the past X SOA documents are to be included as part of the response. Else false.
      */
     public function unsetIncludePastStatementOfAccounts(): void
@@ -269,9 +251,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Due or Over Due SOA Documents Only.
      * True/False
-     *
      * Optional Default is False.
-     *
      * If true PastStatementOfAccounts entity on this API output should contain the SOA documents that are
      * due or overdue only.
      */
@@ -286,9 +266,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Due or Over Due SOA Documents Only.
      * True/False
-     *
      * Optional Default is False.
-     *
      * If true PastStatementOfAccounts entity on this API output should contain the SOA documents that are
      * due or overdue only.
      *
@@ -302,9 +280,7 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Due or Over Due SOA Documents Only.
      * True/False
-     *
      * Optional Default is False.
-     *
      * If true PastStatementOfAccounts entity on this API output should contain the SOA documents that are
      * due or overdue only.
      */
@@ -348,11 +324,8 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Returns Include Account Invoices Summary.
      * True/False
-     *
      * Optional.
-     *
      * Default value is false.
-     *
      * When true InvoicesSummaries list will be returned in the API output.
      */
     public function getIncludeAccountInvoicesSummary(): ?bool
@@ -366,11 +339,8 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Sets Include Account Invoices Summary.
      * True/False
-     *
      * Optional.
-     *
      * Default value is false.
-     *
      * When true InvoicesSummaries list will be returned in the API output.
      *
      * @maps IncludeAccountInvoicesSummary
@@ -383,11 +353,8 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     /**
      * Unsets Include Account Invoices Summary.
      * True/False
-     *
      * Optional.
-     *
      * Default value is false.
-     *
      * When true InvoicesSummaries list will be returned in the API output.
      */
     public function unsetIncludeAccountInvoicesSummary(): void

@@ -30,9 +30,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Returns Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getLatitude(): ?string
@@ -46,9 +44,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Sets Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps Latitude
@@ -61,9 +57,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Unsets Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetLatitude(): void
@@ -74,9 +68,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Returns Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getLongitude(): ?string
@@ -90,9 +82,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Sets Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps Longitude
@@ -105,9 +95,7 @@ class SiteLocation implements \JsonSerializable
     /**
      * Unsets Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetLongitude(): void

@@ -50,7 +50,7 @@
 | `siteCode` | `?string` | Optional | Site Code | getSiteCode(): ?string | setSiteCode(?string siteCode): void |
 | `siteName` | `?string` | Optional | Site Name | getSiteName(): ?string | setSiteName(?string siteName): void |
 | `siteCountry` | `?string` | Optional | Site Country | getSiteCountry(): ?string | setSiteCountry(?string siteCountry): void |
-| `location` | [`?ExceptionSiteLocation`](../../doc/models/exception-site-location.md) | Optional | Geography Location entity for Site Location | getLocation(): ?ExceptionSiteLocation | setLocation(?ExceptionSiteLocation location): void |
+| `location` | [`?Location`](../../doc/models/location.md) | Optional | - | getLocation(): ?Location | setLocation(?Location location): void |
 | `cardGroupName` | `?string` | Optional | Card Group Name | getCardGroupName(): ?string | setCardGroupName(?string cardGroupName): void |
 | `receiptNumber` | `?string` | Optional | Receipt Number | getReceiptNumber(): ?string | setReceiptNumber(?string receiptNumber): void |
 | `productCode` | `?string` | Optional | Product Code | getProductCode(): ?string | setProductCode(?string productCode): void |
@@ -100,7 +100,7 @@
 | `transactionLine` | `?string` | Optional | Transaction line item number | getTransactionLine(): ?string | setTransactionLine(?string transactionLine): void |
 | `allowClearing` | `?string` | Optional | Is the Sales Item allowed for clearing? i.e. not written off<br>Example: “Y” or “N” | getAllowClearing(): ?string | setAllowClearing(?string allowClearing): void |
 | `cRMNumber` | `?string` | Optional | CRM Case number if the sales item is in dispute | getCRMNumber(): ?string | setCRMNumber(?string cRMNumber): void |
-| `disputeStatus` | `?string` | Optional | Sales Item Dispute Status if disputed<br>0	No Dispute<br>1	In Dispute<br>2	Re-Instated<br>3	Adjusted<br>4	Written Off by Colco<br>5	Written Off by Delco<br>6	Charged Back to Site | getDisputeStatus(): ?string | setDisputeStatus(?string disputeStatus): void |
+| `disputeStatus` | `?string` | Optional | Sales Item Dispute Status if disputed<br>0    No Dispute<br>1    In Dispute<br>2    Re-Instated<br>3    Adjusted<br>4    Written Off by Colco<br>5    Written Off by Delco<br>6    Charged Back to Site | getDisputeStatus(): ?string | setDisputeStatus(?string disputeStatus): void |
 | `rebateRate` | `?float` | Optional | Unit discount in customer currency | getRebateRate(): ?float | setRebateRate(?float rebateRate): void |
 | `delCoToColCoExchangeRate` | `?float` | Optional | Exchange rate from transaction currency to customer currency. | getDelCoToColCoExchangeRate(): ?float | setDelCoToColCoExchangeRate(?float delCoToColCoExchangeRate): void |
 | `netEuroAmount` | `?float` | Optional | Net euro amount. | getNetEuroAmount(): ?float | setNetEuroAmount(?float netEuroAmount): void |

@@ -232,9 +232,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      */
     public function getPayerId(): ?int
@@ -248,9 +246,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      *
      * @maps PayerId
@@ -263,9 +259,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      */
     public function unsetPayerId(): void
@@ -276,7 +270,6 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -290,7 +283,6 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -303,7 +295,6 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function unsetPayerNumber(): void
@@ -389,9 +380,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Card PAN.
      * Full Card PAN
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have all the fee items
      * under the selected payer or account or card group.
      */
@@ -406,9 +395,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Card PAN.
      * Full Card PAN
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have all the fee items
      * under the selected payer or account or card group.
      *
@@ -422,9 +409,7 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Card PAN.
      * Full Card PAN
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have all the fee items
      * under the selected payer or account or card group.
      */
@@ -436,15 +421,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Invoice Status.
      * Invoice status of the fee items
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
      */
     public function getInvoiceStatus(): ?string
@@ -458,15 +438,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Invoice Status.
      * Invoice status of the fee items
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
      *
      * @maps InvoiceStatus
@@ -479,15 +454,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Invoice Status.
      * Invoice status of the fee items
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
      */
     public function unsetInvoiceStatus(): void
@@ -498,15 +468,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Fee Type Group.
      * Fee type group in under which the Fee item is generated.
-     *
      * Optional.
-     *
      * Allowed values:
-     *
      * - Account Charges
-     *
      * - Card Charges
-     *
      * - Others Charges
      */
     public function getFeeTypeGroup(): ?string
@@ -520,15 +485,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Fee Type Group.
      * Fee type group in under which the Fee item is generated.
-     *
      * Optional.
-     *
      * Allowed values:
-     *
      * - Account Charges
-     *
      * - Card Charges
-     *
      * - Others Charges
      *
      * @maps FeeTypeGroup
@@ -541,15 +501,10 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Fee Type Group.
      * Fee type group in under which the Fee item is generated.
-     *
      * Optional.
-     *
      * Allowed values:
-     *
      * - Account Charges
-     *
      * - Card Charges
-     *
      * - Others Charges
      */
     public function unsetFeeTypeGroup(): void
@@ -738,13 +693,13 @@ class TransactionFeesRequest implements \JsonSerializable
      * Returns Period.
      * Fee items Period. This is ignored when FromDate/Todate is supplied on the request.
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
-     * 4. Last 180 Days
+     * 4.    Last 180 Days
      *
      * Example : Pass 1 for Last 7 days fee items
      */
@@ -760,13 +715,13 @@ class TransactionFeesRequest implements \JsonSerializable
      * Sets Period.
      * Fee items Period. This is ignored when FromDate/Todate is supplied on the request.
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
-     * 4. Last 180 Days
+     * 4.    Last 180 Days
      *
      * Example : Pass 1 for Last 7 days fee items
      *
@@ -781,13 +736,13 @@ class TransactionFeesRequest implements \JsonSerializable
      * Unsets Period.
      * Fee items Period. This is ignored when FromDate/Todate is supplied on the request.
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
-     * 4. Last 180 Days
+     * 4.    Last 180 Days
      *
      * Example : Pass 1 for Last 7 days fee items
      */
@@ -831,20 +786,13 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Product Id.
      * Product Id
-     *
      * Optional
-     *
      * Example: Sample list of product ids and description.
-     *
-     * 100 Service fee
-     *
-     * 102 Invoice production fee
-     *
-     * 103 Account fee
-     *
-     * 104 Transaction fee
-     *
-     * 105 Card membership fee
+     * 100    Service fee
+     * 102    Invoice production fee
+     * 103    Account fee
+     * 104    Transaction fee
+     * 105    Card membership fee
      */
     public function getProductId(): ?int
     {
@@ -857,20 +805,13 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Product Id.
      * Product Id
-     *
      * Optional
-     *
      * Example: Sample list of product ids and description.
-     *
-     * 100 Service fee
-     *
-     * 102 Invoice production fee
-     *
-     * 103 Account fee
-     *
-     * 104 Transaction fee
-     *
-     * 105 Card membership fee
+     * 100    Service fee
+     * 102    Invoice production fee
+     * 103    Account fee
+     * 104    Transaction fee
+     * 105    Card membership fee
      *
      * @maps ProductId
      */
@@ -882,20 +823,13 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Product Id.
      * Product Id
-     *
      * Optional
-     *
      * Example: Sample list of product ids and description.
-     *
-     * 100 Service fee
-     *
-     * 102 Invoice production fee
-     *
-     * 103 Account fee
-     *
-     * 104 Transaction fee
-     *
-     * 105 Card membership fee
+     * 100    Service fee
+     * 102    Invoice production fee
+     * 103    Account fee
+     * 104    Transaction fee
+     * 105    Card membership fee
      */
     public function unsetProductId(): void
     {
@@ -979,11 +913,8 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Line Item Description.
      * Line item description.
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Those fee items that have the entered value at any part of the line item description will be
      * returned.
      */
@@ -998,11 +929,8 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Line Item Description.
      * Line item description.
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Those fee items that have the entered value at any part of the line item description will be
      * returned.
      *
@@ -1016,11 +944,8 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Line Item Description.
      * Line item description.
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Those fee items that have the entered value at any part of the line item description will be
      * returned.
      */
@@ -1032,17 +957,11 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Returns Sort Order.
      * Allowed Sorting Options:
-     *
-     * • FeeDateAscending
-     *
-     * • FeeDateDescending
-     *
-     * • NetAmountAscending
-     *
-     * • NetAmountDescending
-     *
+     * •    FeeDateAscending
+     * •    FeeDateDescending
+     * •    NetAmountAscending
+     * •    NetAmountDescending
      * Optional.
-     *
      * Default: 1
      */
     public function getSortOrder(): ?string
@@ -1056,17 +975,11 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Sets Sort Order.
      * Allowed Sorting Options:
-     *
-     * • FeeDateAscending
-     *
-     * • FeeDateDescending
-     *
-     * • NetAmountAscending
-     *
-     * • NetAmountDescending
-     *
+     * •    FeeDateAscending
+     * •    FeeDateDescending
+     * •    NetAmountAscending
+     * •    NetAmountDescending
      * Optional.
-     *
      * Default: 1
      *
      * @maps SortOrder
@@ -1079,17 +992,11 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * Unsets Sort Order.
      * Allowed Sorting Options:
-     *
-     * • FeeDateAscending
-     *
-     * • FeeDateDescending
-     *
-     * • NetAmountAscending
-     *
-     * • NetAmountDescending
-     *
+     * •    FeeDateAscending
+     * •    FeeDateDescending
+     * •    NetAmountAscending
+     * •    NetAmountDescending
      * Optional.
-     *
      * Default: 1
      */
     public function unsetSortOrder(): void

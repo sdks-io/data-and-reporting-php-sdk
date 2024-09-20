@@ -23,12 +23,7 @@ class ClientFactory
         $clientBuilder = ShellDataReportingAPIsClientBuilder::init();
         $clientBuilder = self::addConfigurationFromEnvironment($clientBuilder);
         $clientBuilder = self::addTestConfiguration($clientBuilder);
-        $client = $clientBuilder->httpCallback($httpCallback)->build();
-        $oAuthToken = $client->getBearerTokenCredentials()->fetchToken();
-        $clientBuilder->bearerTokenCredentials(
-            $client->getBearerTokenCredentialsBuilder()->oAuthToken($oAuthToken)
-        );
-        return $clientBuilder->build();
+        return $clientBuilder->httpCallback($httpCallback)->build();
     }
 
     public static function addTestConfiguration(

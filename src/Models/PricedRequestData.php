@@ -24,7 +24,7 @@ class PricedRequestData implements \JsonSerializable
     private $colCoCode;
 
     /**
-     * @var string|null
+     * @var array
      */
     private $invoiceStatus;
 
@@ -204,6 +204,14 @@ class PricedRequestData implements \JsonSerializable
     private $transactionId = [];
 
     /**
+     * @param array $invoiceStatus
+     */
+    public function __construct(array $invoiceStatus)
+    {
+        $this->invoiceStatus = $invoiceStatus;
+    }
+
+    /**
      * Returns Col Co Code.
      * Collecting Company Code (Shell Code) of the selected payer.
      */
@@ -225,23 +233,19 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Returns Invoice Status.
-     * Invoice status of the transactions. Mandatory Possible options:I - Invoiced, U – Un-Invoiced, A –
-     * All
      */
-    public function getInvoiceStatus(): ?string
+    public function getInvoiceStatus(): array
     {
         return $this->invoiceStatus;
     }
 
     /**
      * Sets Invoice Status.
-     * Invoice status of the transactions. Mandatory Possible options:I - Invoiced, U – Un-Invoiced, A –
-     * All
      *
+     * @required
      * @maps InvoiceStatus
-     * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionReqV2InvoiceStatusEnum::checkValue
      */
-    public function setInvoiceStatus(?string $invoiceStatus): void
+    public function setInvoiceStatus(array $invoiceStatus): void
     {
         $this->invoiceStatus = $invoiceStatus;
     }
@@ -840,13 +844,6 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Returns Sort Order.
-     * Allowed Sorting Options
-     * 1.    TransactionDateAscending
-     * 2.    TransactionDateDescending
-     * 3.    GrossAmountDescending
-     * 4.    GrossAmountAscending
-     * 5.    NetAmountAscending
-     * 6.    NetAmountDescensding
      */
     public function getSortOrder(): ?string
     {
@@ -855,13 +852,6 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Sets Sort Order.
-     * Allowed Sorting Options
-     * 1.    TransactionDateAscending
-     * 2.    TransactionDateDescending
-     * 3.    GrossAmountDescending
-     * 4.    GrossAmountAscending
-     * 5.    NetAmountAscending
-     * 6.    NetAmountDescensding
      *
      * @maps SortOrder
      * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionReqV2SortOrderEnum::checkValue
@@ -937,10 +927,6 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Returns Period.
-     * Pass below one of the value as per the required transaction period
-     * 1. Last 7 Days
-     * 2. Last 30 Days
-     * 3. Last 90 Days
      */
     public function getPeriod(): ?int
     {
@@ -949,10 +935,6 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Sets Period.
-     * Pass below one of the value as per the required transaction period
-     * 1. Last 7 Days
-     * 2. Last 30 Days
-     * 3. Last 90 Days
      *
      * @maps Period
      * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionReqV2PeriodEnum::checkValue
@@ -1360,10 +1342,7 @@ class PricedRequestData implements \JsonSerializable
     {
         $json = [];
         $json['ColCoCode']                          = $this->colCoCode;
-        $json['InvoiceStatus']                      =
-            PricedTransactionReqV2InvoiceStatusEnum::checkValue(
-                $this->invoiceStatus
-            );
+        $json['InvoiceStatus']                      = $this->invoiceStatus;
         $json['PayerNumber']                        = $this->payerNumber;
         if (!empty($this->accountId)) {
             $json['AccountId']                      = $this->accountId['value'];

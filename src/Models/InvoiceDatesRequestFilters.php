@@ -167,7 +167,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -181,7 +180,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -194,7 +192,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function unsetPayerId(): void
@@ -205,7 +202,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -219,7 +215,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -232,7 +227,6 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function unsetPayerNumber(): void
@@ -243,11 +237,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Returns From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      */
     public function getFromDate(): ?string
@@ -261,11 +252,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Sets From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      *
      * @maps FromDate
@@ -278,11 +266,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Unsets From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      */
     public function unsetFromDate(): void
@@ -293,11 +278,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Returns To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      */
     public function getToDate(): ?string
@@ -311,11 +293,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Sets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      *
      * @maps ToDate
@@ -328,11 +307,8 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     /**
      * Unsets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
      */
     public function unsetToDate(): void

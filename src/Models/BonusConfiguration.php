@@ -334,7 +334,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Fee Rule Date Effective.
      * The bonus or association bonus configuration becomes effective on the payer from this date.
-     *
      * Format: YYYYMMDD
      */
     public function getFeeRuleDateEffective(): ?string
@@ -348,7 +347,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Fee Rule Date Effective.
      * The bonus or association bonus configuration becomes effective on the payer from this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps FeeRuleDateEffective
@@ -361,7 +359,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Fee Rule Date Effective.
      * The bonus or association bonus configuration becomes effective on the payer from this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFeeRuleDateEffective(): void
@@ -372,7 +369,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Fee Rule Date Terminated.
      * The bonus or association bonus configuration is terminated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function getFeeRuleDateTerminated(): ?string
@@ -386,7 +382,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Fee Rule Date Terminated.
      * The bonus or association bonus configuration is terminated for the payer on this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps FeeRuleDateTerminated
@@ -399,7 +394,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Fee Rule Date Terminated.
      * The bonus or association bonus configuration is terminated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFeeRuleDateTerminated(): void
@@ -612,15 +606,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Frequency.
      * Frequency of the configuration.
-     *
      * Format: ID-Description
-     *
      * Examples:
-     *
      * 1-Daily (all days)
-     *
      * 2-Daily (only working days)
-     *
      * 3-Weekly – Monday
      */
     public function getFrequency(): ?string
@@ -634,15 +623,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Frequency.
      * Frequency of the configuration.
-     *
      * Format: ID-Description
-     *
      * Examples:
-     *
      * 1-Daily (all days)
-     *
      * 2-Daily (only working days)
-     *
      * 3-Weekly – Monday
      *
      * @maps Frequency
@@ -655,15 +639,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Frequency.
      * Frequency of the configuration.
-     *
      * Format: ID-Description
-     *
      * Examples:
-     *
      * 1-Daily (all days)
-     *
      * 2-Daily (only working days)
-     *
      * 3-Weekly – Monday
      */
     public function unsetFrequency(): void
@@ -674,7 +653,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Next Calculation Date.
      * The next bonus is calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function getNextCalculationDate(): ?string
@@ -688,7 +666,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Next Calculation Date.
      * The next bonus is calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps NextCalculationDate
@@ -701,7 +678,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Next Calculation Date.
      * The next bonus is calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetNextCalculationDate(): void
@@ -712,7 +688,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Previous Calculated Date.
      * The previous bonus was calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function getPreviousCalculatedDate(): ?string
@@ -726,7 +701,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Previous Calculated Date.
      * The previous bonus was calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps PreviousCalculatedDate
@@ -739,7 +713,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Previous Calculated Date.
      * The previous bonus was calculated for the payer on this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetPreviousCalculatedDate(): void
@@ -750,15 +723,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Fee Rule Basis.
      * Fee Rule Basis configured.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      */
     public function getFeeRuleBasis(): ?string
@@ -772,15 +740,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Fee Rule Basis.
      * Fee Rule Basis configured.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      *
      * @maps FeeRuleBasis
@@ -793,15 +756,10 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Fee Rule Basis.
      * Fee Rule Basis configured.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      */
     public function unsetFeeRuleBasis(): void
@@ -876,7 +834,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Fee Rule Available From.
      * This bonus or association bonus is available from this date.
-     *
      * Format: YYYYMMDD
      */
     public function getFeeRuleAvailableFrom(): ?string
@@ -890,7 +847,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Fee Rule Available From.
      * This bonus or association bonus is available from this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps FeeRuleAvailableFrom
@@ -903,7 +859,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Fee Rule Available From.
      * This bonus or association bonus is available from this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFeeRuleAvailableFrom(): void
@@ -914,7 +869,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Returns Fee Rule Available To.
      * This bonus or association bonus configuration will not be available from this date.
-     *
      * Format: YYYYMMDD
      */
     public function getFeeRuleAvailableTo(): ?string
@@ -928,7 +882,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Sets Fee Rule Available To.
      * This bonus or association bonus configuration will not be available from this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps FeeRuleAvailableTo
@@ -941,7 +894,6 @@ class BonusConfiguration implements \JsonSerializable
     /**
      * Unsets Fee Rule Available To.
      * This bonus or association bonus configuration will not be available from this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFeeRuleAvailableTo(): void

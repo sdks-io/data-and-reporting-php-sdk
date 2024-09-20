@@ -27,7 +27,7 @@
 | `pricePerUnit` | `?float` | Optional | Price per unit | getPricePerUnit(): ?float | setPricePerUnit(?float pricePerUnit): void |
 | `currencyCode` | `?string` | Optional | Currency Code.<br>Format : 3 digit ISO code | getCurrencyCode(): ?string | setCurrencyCode(?string currencyCode): void |
 | `currencySymbol` | `?string` | Optional | Currency Symbol<br>Example: £ | getCurrencySymbol(): ?string | setCurrencySymbol(?string currencySymbol): void |
-| `priceType` | `?string` | Optional | Price Type<br>Possible Values are:<br>•	Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.<br>•	TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from ColcoId.<br>•	NetworkPrice – Price rule defined at Fuel Network level.<br>•	Other – Price rule defined at either Site or SiteGroup level. | getPriceType(): ?string | setPriceType(?string priceType): void |
+| `priceType` | `?string` | Optional | Price Type<br>Possible Values are:<br>•    Country– Price rule defined at country whereas Price Rule DelcoId same as ColcoId.<br>•    TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId is different from ColcoId.<br>•    NetworkPrice – Price rule defined at Fuel Network level.<br>•    Other – Price rule defined at either Site or SiteGroup level. | getPriceType(): ?string | setPriceType(?string priceType): void |
 | `siteGroupId` | `?int` | Optional | Site-Group ID<br>E.g.: 100007 | getSiteGroupId(): ?int | setSiteGroupId(?int siteGroupId): void |
 | `siteGroupName` | `?string` | Optional | Site-Group name | getSiteGroupName(): ?string | setSiteGroupName(?string siteGroupName): void |
 | `siteCode` | `?int` | Optional | Site Code | getSiteCode(): ?int | setSiteCode(?int siteCode): void |
@@ -36,7 +36,7 @@
 | `fuelNetworkId` | `?int` | Optional | Fuel Network ID | getFuelNetworkId(): ?int | setFuelNetworkId(?int fuelNetworkId): void |
 | `networkName` | `?string` | Optional | Network Name | getNetworkName(): ?string | setNetworkName(?string networkName): void |
 | `priceRuleDelcoId` | `?int` | Optional | PriceRuleDelcoId | getPriceRuleDelcoId(): ?int | setPriceRuleDelcoId(?int priceRuleDelcoId): void |
-| `priceRuleDelcoName` | `?string` | Optional | Company Name of the price rule DelCo.<br><br>E.g.:<br>•	Pilipinas Shell Petroleum Corp<br>•	Shell U.K. Oil Products Limited<br>•	G & V SERVICE STATIONS NV | getPriceRuleDelcoName(): ?string | setPriceRuleDelcoName(?string priceRuleDelcoName): void |
+| `priceRuleDelcoName` | `?string` | Optional | Company Name of the price rule DelCo.<br><br>E.g.:<br>•    Pilipinas Shell Petroleum Corp<br>•    Shell U.K. Oil Products Limited<br>•    G & V SERVICE STATIONS NV | getPriceRuleDelcoName(): ?string | setPriceRuleDelcoName(?string priceRuleDelcoName): void |
 | `priceRuleCountry` | `?string` | Optional | PriceRuleCountry<br>E.g.: United Kingdom | getPriceRuleCountry(): ?string | setPriceRuleCountry(?string priceRuleCountry): void |
 | `priceRuleCountryCode` | `?string` | Optional | ISO Code of PriceRuleCountry<br>E.g.: UK, NL, etc., | getPriceRuleCountryCode(): ?string | setPriceRuleCountryCode(?string priceRuleCountryCode): void |
 | `priceRuleBasisId` | `?int` | Optional | PriceRuleBasisId | getPriceRuleBasisId(): ?int | setPriceRuleBasisId(?int priceRuleBasisId): void |

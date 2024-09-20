@@ -207,7 +207,6 @@ class PricingCurrentVolume implements \JsonSerializable
     /**
      * Returns Next Fee Creation Date.
      * Next Fee Rule Creation Date for that is associated to the payer.
-     *
      * Format: YYYYMMDD
      */
     public function getNextFeeCreationDate(): ?string
@@ -221,7 +220,6 @@ class PricingCurrentVolume implements \JsonSerializable
     /**
      * Sets Next Fee Creation Date.
      * Next Fee Rule Creation Date for that is associated to the payer.
-     *
      * Format: YYYYMMDD
      *
      * @maps NextFeeCreationDate
@@ -234,7 +232,6 @@ class PricingCurrentVolume implements \JsonSerializable
     /**
      * Unsets Next Fee Creation Date.
      * Next Fee Rule Creation Date for that is associated to the payer.
-     *
      * Format: YYYYMMDD
      */
     public function unsetNextFeeCreationDate(): void

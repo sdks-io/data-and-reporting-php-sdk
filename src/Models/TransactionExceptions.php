@@ -220,7 +220,7 @@ class TransactionExceptions implements \JsonSerializable
     private $siteCountry = [];
 
     /**
-     * @var ExceptionSiteLocation|null
+     * @var Location|null
      */
     private $location;
 
@@ -645,7 +645,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Transaction Date.
      * Local Transaction Date  of where the transaction took place
-     *
      * Format: yyyyMMdd
      */
     public function getTransactionDate(): ?string
@@ -659,7 +658,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Transaction Date.
      * Local Transaction Date  of where the transaction took place
-     *
      * Format: yyyyMMdd
      *
      * @maps TransactionDate
@@ -672,7 +670,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Transaction Date.
      * Local Transaction Date  of where the transaction took place
-     *
      * Format: yyyyMMdd
      */
     public function unsetTransactionDate(): void
@@ -715,7 +712,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Card PAN.
      * Card PAN number
-     *
      * Returns masked PAN number when masking is enabled at the Microservices configuration (Mask all
      * digits except the last 6 digits of the PAN)
      */
@@ -730,7 +726,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Card PAN.
      * Card PAN number
-     *
      * Returns masked PAN number when masking is enabled at the Microservices configuration (Mask all
      * digits except the last 6 digits of the PAN)
      *
@@ -744,7 +739,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Card PAN.
      * Card PAN number
-     *
      * Returns masked PAN number when masking is enabled at the Microservices configuration (Mask all
      * digits except the last 6 digits of the PAN)
      */
@@ -756,7 +750,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      */
     public function getCardExpiry(): ?string
@@ -770,7 +763,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      *
      * @maps CardExpiry
@@ -783,7 +775,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Card Expiry.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      */
     public function unsetCardExpiry(): void
@@ -794,7 +785,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      */
     public function getTransactionTime(): ?string
@@ -808,7 +798,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      *
      * @maps TransactionTime
@@ -821,7 +810,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Transaction Time.
      * Local Transaction Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      */
     public function unsetTransactionTime(): void
@@ -833,7 +821,6 @@ class TransactionExceptions implements \JsonSerializable
      * Returns U TC Offset.
      * UTC Offset extracted from GFN Sales Date time. Note: This may not be accurate for all TPN
      * transactions
-     *
      * Format: +/-HH:mm:ss (24 hours format)
      */
     public function getUTCOffset(): ?string
@@ -848,7 +835,6 @@ class TransactionExceptions implements \JsonSerializable
      * Sets U TC Offset.
      * UTC Offset extracted from GFN Sales Date time. Note: This may not be accurate for all TPN
      * transactions
-     *
      * Format: +/-HH:mm:ss (24 hours format)
      *
      * @maps UTCOffset
@@ -862,7 +848,6 @@ class TransactionExceptions implements \JsonSerializable
      * Unsets U TC Offset.
      * UTC Offset extracted from GFN Sales Date time. Note: This may not be accurate for all TPN
      * transactions
-     *
      * Format: +/-HH:mm:ss (24 hours format)
      */
     public function unsetUTCOffset(): void
@@ -1870,20 +1855,18 @@ class TransactionExceptions implements \JsonSerializable
 
     /**
      * Returns Location.
-     * Geography Location entity for Site Location
      */
-    public function getLocation(): ?ExceptionSiteLocation
+    public function getLocation(): ?Location
     {
         return $this->location;
     }
 
     /**
      * Sets Location.
-     * Geography Location entity for Site Location
      *
      * @maps Location
      */
-    public function setLocation(?ExceptionSiteLocation $location): void
+    public function setLocation(?Location $location): void
     {
         $this->location = $location;
     }
@@ -2639,11 +2622,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      */
     public function getVATCategory(): ?string
@@ -2657,11 +2637,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      *
      * @maps VATCategory
@@ -2674,11 +2651,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets V at Category.
      * VAT Category Id-Description
-     *
      * 1-Zero Rated
-     *
      * 2-A1 PH-O 12% Sales Domestic
-     *
      * 3-VAT exempt
      */
     public function unsetVATCategory(): void
@@ -2785,7 +2759,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * “Y” or “N”
      */
     public function getVATApplicable(): ?string
@@ -2799,7 +2772,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * “Y” or “N”
      *
      * @maps VATApplicable
@@ -2812,7 +2784,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets V at Applicable.
      * Is VAT Applicable for this transaction
-     *
      * “Y” or “N”
      */
     public function unsetVATApplicable(): void
@@ -2823,7 +2794,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      */
     public function getNetInvoiceIndicator(): ?string
@@ -2837,7 +2807,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      *
      * @maps NetInvoiceIndicator
@@ -2850,7 +2819,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Net Invoice Indicator.
      * Net Invoice Indicator, Will the customer receive an invoice without VAT?
-     *
      * Example: “Y” or “N”
      */
     public function unsetNetInvoiceIndicator(): void
@@ -3021,11 +2989,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
      */
     public function getDiscountType(): ?string
@@ -3039,11 +3004,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
      *
      * @maps DiscountType
@@ -3056,11 +3018,8 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Discount Type.
      * Discount Type
-     *
      * Example: 1-None
-     *
      * 2-Pence per unit
-     *
      * 3-Percentage
      */
     public function unsetDiscountType(): void
@@ -3071,9 +3030,7 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Transaction Status.
      * Transaction status  "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function getTransactionStatus(): ?string
@@ -3087,9 +3044,7 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Transaction Status.
      * Transaction status  "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      *
      * @maps TransactionStatus
@@ -3102,9 +3057,7 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Transaction Status.
      * Transaction status  "U" or "I"
-     *
      * “U” stands for Uninvoiced
-     *
      * “I” stands for Invoiced
      */
     public function unsetTransactionStatus(): void
@@ -3467,7 +3420,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
      */
     public function getAllowClearing(): ?string
@@ -3481,7 +3433,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
      *
      * @maps AllowClearing
@@ -3494,7 +3445,6 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Allow Clearing.
      * Is the Sales Item allowed for clearing? i.e. not written off
-     *
      * Example: “Y” or “N”
      */
     public function unsetAllowClearing(): void
@@ -3537,20 +3487,13 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Returns Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      */
     public function getDisputeStatus(): ?string
     {
@@ -3563,20 +3506,13 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Sets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      *
      * @maps DisputeStatus
      */
@@ -3588,20 +3524,13 @@ class TransactionExceptions implements \JsonSerializable
     /**
      * Unsets Dispute Status.
      * Sales Item Dispute Status if disputed
-     *
-     * 0 No Dispute
-     *
-     * 1 In Dispute
-     *
-     * 2 Re-Instated
-     *
-     * 3 Adjusted
-     *
-     * 4 Written Off by Colco
-     *
-     * 5 Written Off by Delco
-     *
-     * 6 Charged Back to Site
+     * 0    No Dispute
+     * 1    In Dispute
+     * 2    Re-Instated
+     * 3    Adjusted
+     * 4    Written Off by Colco
+     * 5    Written Off by Delco
+     * 6    Charged Back to Site
      */
     public function unsetDisputeStatus(): void
     {

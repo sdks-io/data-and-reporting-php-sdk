@@ -177,7 +177,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -191,7 +190,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -204,7 +202,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function unsetPayerId(): void
@@ -215,7 +212,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -229,7 +225,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -242,7 +237,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function unsetPayerNumber(): void
@@ -253,7 +247,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Account Id.
      * Account ID of the customer.
-     *
      * Optional if account number is passed else mandatory.
      */
     public function getAccountId(): ?int
@@ -267,7 +260,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Account Id.
      * Account ID of the customer.
-     *
      * Optional if account number is passed else mandatory.
      *
      * @maps AccountId
@@ -280,7 +272,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Account Id.
      * Account ID of the customer.
-     *
      * Optional if account number is passed else mandatory.
      */
     public function unsetAccountId(): void
@@ -291,7 +282,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number of the customer.
-     *
      * Optional if Account ID is passed else mandatory.
      */
     public function getAccountNumber(): ?string
@@ -305,7 +295,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number of the customer.
-     *
      * Optional if Account ID is passed else mandatory.
      *
      * @maps AccountNumber
@@ -318,7 +307,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Account Number.
      * Account Number of the customer.
-     *
      * Optional if Account ID is passed else mandatory.
      */
     public function unsetAccountNumber(): void
@@ -329,7 +317,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Card Id.
      * Card Id of the card.
-     *
      * Optional if PAN is passed, else Mandatory.
      */
     public function getCardId(): ?int
@@ -343,7 +330,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Card Id.
      * Card Id of the card.
-     *
      * Optional if PAN is passed, else Mandatory.
      *
      * @maps CardId
@@ -356,7 +342,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Card Id.
      * Card Id of the card.
-     *
      * Optional if PAN is passed, else Mandatory.
      */
     public function unsetCardId(): void
@@ -367,7 +352,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns P AN.
      * PAN of the card.
-     *
      * Optional if CardId is passed, else Mandatory.
      */
     public function getPAN(): ?string
@@ -381,7 +365,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets P AN.
      * PAN of the card.
-     *
      * Optional if CardId is passed, else Mandatory.
      *
      * @maps PAN
@@ -394,7 +377,6 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets P AN.
      * PAN of the card.
-     *
      * Optional if CardId is passed, else Mandatory.
      */
     public function unsetPAN(): void
@@ -405,11 +387,8 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Returns Card Expiry Date.
      * Expiry date of the card.
-     *
      * Mandatory if Card ID is not provided, else optional.
-     *
      * Format: yyyyMMdd
-     *
      * Example: 20170930
      */
     public function getCardExpiryDate(): ?string
@@ -423,11 +402,8 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Sets Card Expiry Date.
      * Expiry date of the card.
-     *
      * Mandatory if Card ID is not provided, else optional.
-     *
      * Format: yyyyMMdd
-     *
      * Example: 20170930
      *
      * @maps CardExpiryDate
@@ -440,11 +416,8 @@ class CardUsageSummaryRequest implements \JsonSerializable
     /**
      * Unsets Card Expiry Date.
      * Expiry date of the card.
-     *
      * Mandatory if Card ID is not provided, else optional.
-     *
      * Format: yyyyMMdd
-     *
      * Example: 20170930
      */
     public function unsetCardExpiryDate(): void

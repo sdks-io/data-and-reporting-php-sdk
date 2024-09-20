@@ -166,12 +166,9 @@ class EIDDocument implements \JsonSerializable
     /**
      * Returns Document Type.
      * Document type.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      */
     public function getDocumentType(): ?string
     {
@@ -184,12 +181,9 @@ class EIDDocument implements \JsonSerializable
     /**
      * Sets Document Type.
      * Document type.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      *
      * @maps DocumentType
      */
@@ -201,12 +195,9 @@ class EIDDocument implements \JsonSerializable
     /**
      * Unsets Document Type.
      * Document type.
-     *
      * Possible values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
+     * •    NAT (National)
+     * •    INT (International)
      */
     public function unsetDocumentType(): void
     {
@@ -248,7 +239,6 @@ class EIDDocument implements \JsonSerializable
     /**
      * Returns Document Date.
      * Document date.
-     *
      * Example: 20170101
      */
     public function getDocumentDate(): ?string
@@ -262,7 +252,6 @@ class EIDDocument implements \JsonSerializable
     /**
      * Sets Document Date.
      * Document date.
-     *
      * Example: 20170101
      *
      * @maps DocumentDate
@@ -275,7 +264,6 @@ class EIDDocument implements \JsonSerializable
     /**
      * Unsets Document Date.
      * Document date.
-     *
      * Example: 20170101
      */
     public function unsetDocumentDate(): void
@@ -350,16 +338,11 @@ class EIDDocument implements \JsonSerializable
     /**
      * Returns Document Status.
      * Document status.
-     *
      * Possible values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      */
     public function getDocumentStatus(): ?string
     {
@@ -372,16 +355,11 @@ class EIDDocument implements \JsonSerializable
     /**
      * Sets Document Status.
      * Document status.
-     *
      * Possible values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      *
      * @maps DocumentStatus
      */
@@ -393,16 +371,11 @@ class EIDDocument implements \JsonSerializable
     /**
      * Unsets Document Status.
      * Document status.
-     *
      * Possible values:
-     *
-     * • NEW
-     *
-     * • VIEWED
-     *
-     * • DOWNLOADED
-     *
-     * • RESTORED
+     * •    NEW
+     * •    VIEWED
+     * •    DOWNLOADED
+     * •    RESTORED
      */
     public function unsetDocumentStatus(): void
     {

@@ -439,13 +439,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      *
      * E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      */
@@ -464,13 +464,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      *
      * E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      *
@@ -488,13 +488,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      *
      * E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      */
@@ -542,13 +542,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      * Returns Billing Run Frequency.
      * Frequency at which the billing process is triggered. E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      */
@@ -564,13 +564,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      * Sets Billing Run Frequency.
      * Frequency at which the billing process is triggered. E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      *
@@ -585,13 +585,13 @@ class AccountResponseAccountsItems implements \JsonSerializable
      * Unsets Billing Run Frequency.
      * Frequency at which the billing process is triggered. E.g.:
      *
-     * 1 Daily (all days)
+     * 1    Daily (all days)
      *
-     * 2 Daily (only working days)
+     * 2    Daily (only working days)
      *
-     * 3 Weekly - Monday
+     * 3    Weekly - Monday
      *
-     * 4 Weekly – Tuesday
+     * 4    Weekly – Tuesday
      *
      * Etc.
      */
@@ -603,7 +603,6 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Returns Billing Run Frequency Type Id.
      * Frequency at which the billing process is triggered.
-     *
      * E.g.: 1, 2, 3, etc.
      */
     public function getBillingRunFrequencyTypeId(): ?int
@@ -617,7 +616,6 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Sets Billing Run Frequency Type Id.
      * Frequency at which the billing process is triggered.
-     *
      * E.g.: 1, 2, 3, etc.
      *
      * @maps BillingRunFrequencyTypeId
@@ -630,7 +628,6 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Unsets Billing Run Frequency Type Id.
      * Frequency at which the billing process is triggered.
-     *
      * E.g.: 1, 2, 3, etc.
      */
     public function unsetBillingRunFrequencyTypeId(): void
@@ -877,17 +874,11 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Returns Frequency Type.
      * Frequency type unit id & description
-     *
      * E.g.:
-     *
      * 1 - Daily
-     *
      * 2 - Weekly
-     *
      * 3 - Monthly
-     *
      * 4 - Invoicing
-     *
      * 6 - Calendar quarter
      */
     public function getFrequencyType(): ?string
@@ -901,17 +892,11 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Sets Frequency Type.
      * Frequency type unit id & description
-     *
      * E.g.:
-     *
      * 1 - Daily
-     *
      * 2 - Weekly
-     *
      * 3 - Monthly
-     *
      * 4 - Invoicing
-     *
      * 6 - Calendar quarter
      *
      * @maps FrequencyType
@@ -924,17 +909,11 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Unsets Frequency Type.
      * Frequency type unit id & description
-     *
      * E.g.:
-     *
      * 1 - Daily
-     *
      * 2 - Weekly
-     *
      * 3 - Monthly
-     *
      * 4 - Invoicing
-     *
      * 6 - Calendar quarter
      */
     public function unsetFrequencyType(): void
@@ -1959,9 +1938,7 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Returns Is Partner Card.
      * The account / sub-account is partner card account or not.
-     *
      * Possible values (1= Non-PC account, 2= PC account, 3= PC Payer with Card Types, 4= PC Payer)
-     *
      * Note: A partner card account is assumed to have only partner card card-types associated
      */
     public function getIsPartnerCard(): ?int
@@ -1975,9 +1952,7 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Sets Is Partner Card.
      * The account / sub-account is partner card account or not.
-     *
      * Possible values (1= Non-PC account, 2= PC account, 3= PC Payer with Card Types, 4= PC Payer)
-     *
      * Note: A partner card account is assumed to have only partner card card-types associated
      *
      * @maps IsPartnerCard
@@ -1990,9 +1965,7 @@ class AccountResponseAccountsItems implements \JsonSerializable
     /**
      * Unsets Is Partner Card.
      * The account / sub-account is partner card account or not.
-     *
      * Possible values (1= Non-PC account, 2= PC account, 3= PC Payer with Card Types, 4= PC Payer)
-     *
      * Note: A partner card account is assumed to have only partner card card-types associated
      */
     public function unsetIsPartnerCard(): void

@@ -62,9 +62,7 @@ class Tier implements \JsonSerializable
     /**
      * Returns Tier Price List Id.
      * The price list if reference price is list price.
-     *
      * Only used when the Price Rule category is set to.
-     *
      * ‘Tiered Pricing’.
      */
     public function getTierPriceListId(): ?int
@@ -78,9 +76,7 @@ class Tier implements \JsonSerializable
     /**
      * Sets Tier Price List Id.
      * The price list if reference price is list price.
-     *
      * Only used when the Price Rule category is set to.
-     *
      * ‘Tiered Pricing’.
      *
      * @maps TierPriceListId
@@ -93,9 +89,7 @@ class Tier implements \JsonSerializable
     /**
      * Unsets Tier Price List Id.
      * The price list if reference price is list price.
-     *
      * Only used when the Price Rule category is set to.
-     *
      * ‘Tiered Pricing’.
      */
     public function unsetTierPriceListId(): void
@@ -138,7 +132,6 @@ class Tier implements \JsonSerializable
     /**
      * Returns Tier Min.
      * Minimum tier volume
-     *
      * E.g., 500
      */
     public function getTierMin(): ?int
@@ -152,7 +145,6 @@ class Tier implements \JsonSerializable
     /**
      * Sets Tier Min.
      * Minimum tier volume
-     *
      * E.g., 500
      *
      * @maps TierMin
@@ -165,7 +157,6 @@ class Tier implements \JsonSerializable
     /**
      * Unsets Tier Min.
      * Minimum tier volume
-     *
      * E.g., 500
      */
     public function unsetTierMin(): void
@@ -176,7 +167,6 @@ class Tier implements \JsonSerializable
     /**
      * Returns Tier Max.
      * Maximum tier volume
-     *
      * E.g., 1000
      */
     public function getTierMax(): ?int
@@ -190,7 +180,6 @@ class Tier implements \JsonSerializable
     /**
      * Sets Tier Max.
      * Maximum tier volume
-     *
      * E.g., 1000
      *
      * @maps TierMax
@@ -203,7 +192,6 @@ class Tier implements \JsonSerializable
     /**
      * Unsets Tier Max.
      * Maximum tier volume
-     *
      * E.g., 1000
      */
     public function unsetTierMax(): void
@@ -246,16 +234,11 @@ class Tier implements \JsonSerializable
     /**
      * Returns Tiered Pricing Group Period.
      * Tiered pricing group period.
-     *
      * Possible Values
-     *
-     * 1. Monthly
-     *
-     * 2. Quarterly
-     *
-     * 3. Semi Annually
-     *
-     * 4. Annual
+     * 1.    Monthly
+     * 2.    Quarterly
+     * 3.    Semi Annually
+     * 4.    Annual
      */
     public function getTieredPricingGroupPeriod(): ?string
     {
@@ -268,16 +251,11 @@ class Tier implements \JsonSerializable
     /**
      * Sets Tiered Pricing Group Period.
      * Tiered pricing group period.
-     *
      * Possible Values
-     *
-     * 1. Monthly
-     *
-     * 2. Quarterly
-     *
-     * 3. Semi Annually
-     *
-     * 4. Annual
+     * 1.    Monthly
+     * 2.    Quarterly
+     * 3.    Semi Annually
+     * 4.    Annual
      *
      * @maps TieredPricingGroupPeriod
      */
@@ -289,16 +267,11 @@ class Tier implements \JsonSerializable
     /**
      * Unsets Tiered Pricing Group Period.
      * Tiered pricing group period.
-     *
      * Possible Values
-     *
-     * 1. Monthly
-     *
-     * 2. Quarterly
-     *
-     * 3. Semi Annually
-     *
-     * 4. Annual
+     * 1.    Monthly
+     * 2.    Quarterly
+     * 3.    Semi Annually
+     * 4.    Annual
      */
     public function unsetTieredPricingGroupPeriod(): void
     {

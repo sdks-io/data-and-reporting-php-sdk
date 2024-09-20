@@ -10,7 +10,6 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
-use ShellDataReportingAPIsLib\Utils\DateTimeHelper;
 use stdClass;
 
 class PricedResponseData implements \JsonSerializable
@@ -1275,7 +1274,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Card Expiry.
      * Card Expiry Date
      */
-    public function getCardExpiry(): ?\DateTime
+    public function getCardExpiry(): ?string
     {
         if (count($this->cardExpiry) == 0) {
             return null;
@@ -1288,9 +1287,8 @@ class PricedResponseData implements \JsonSerializable
      * Card Expiry Date
      *
      * @maps CardExpiry
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setCardExpiry(?\DateTime $cardExpiry): void
+    public function setCardExpiry(?string $cardExpiry): void
     {
         $this->cardExpiry['value'] = $cardExpiry;
     }
@@ -2842,7 +2840,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Posting Date.
      * Date of Posting
      */
-    public function getPostingDate(): ?\DateTime
+    public function getPostingDate(): ?string
     {
         if (count($this->postingDate) == 0) {
             return null;
@@ -2855,9 +2853,8 @@ class PricedResponseData implements \JsonSerializable
      * Date of Posting
      *
      * @maps PostingDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setPostingDate(?\DateTime $postingDate): void
+    public function setPostingDate(?string $postingDate): void
     {
         $this->postingDate['value'] = $postingDate;
     }
@@ -2875,7 +2872,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Posting Time.
      * Time whern posting happened
      */
-    public function getPostingTime(): ?\DateTime
+    public function getPostingTime(): ?string
     {
         if (count($this->postingTime) == 0) {
             return null;
@@ -2888,9 +2885,8 @@ class PricedResponseData implements \JsonSerializable
      * Time whern posting happened
      *
      * @maps PostingTime
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromRfc3339DateTime
      */
-    public function setPostingTime(?\DateTime $postingTime): void
+    public function setPostingTime(?string $postingTime): void
     {
         $this->postingTime['value'] = $postingTime;
     }
@@ -3231,7 +3227,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Invoice Date.
      * Date on which the invoice was raised
      */
-    public function getInvoiceDate(): ?\DateTime
+    public function getInvoiceDate(): ?string
     {
         if (count($this->invoiceDate) == 0) {
             return null;
@@ -3244,9 +3240,8 @@ class PricedResponseData implements \JsonSerializable
      * Date on which the invoice was raised
      *
      * @maps InvoiceDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setInvoiceDate(?\DateTime $invoiceDate): void
+    public function setInvoiceDate(?string $invoiceDate): void
     {
         $this->invoiceDate['value'] = $invoiceDate;
     }
@@ -4126,7 +4121,6 @@ class PricedResponseData implements \JsonSerializable
 
     /**
      * Returns Refund Flag.
-     * Flag to check if there is any refund
      */
     public function getRefundFlag(): ?string
     {
@@ -4135,7 +4129,6 @@ class PricedResponseData implements \JsonSerializable
 
     /**
      * Sets Refund Flag.
-     * Flag to check if there is any refund
      *
      * @maps RefundFlag
      * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionRespV2RefundFlagEnum::checkValue
@@ -4533,7 +4526,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Transaction Date.
      * Date of transaction
      */
-    public function getTransactionDate(): ?\DateTime
+    public function getTransactionDate(): ?string
     {
         if (count($this->transactionDate) == 0) {
             return null;
@@ -4546,9 +4539,8 @@ class PricedResponseData implements \JsonSerializable
      * Date of transaction
      *
      * @maps TransactionDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setTransactionDate(?\DateTime $transactionDate): void
+    public function setTransactionDate(?string $transactionDate): void
     {
         $this->transactionDate['value'] = $transactionDate;
     }
@@ -4566,7 +4558,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Transaction Time.
      * Time of transaction
      */
-    public function getTransactionTime(): ?\DateTime
+    public function getTransactionTime(): ?string
     {
         if (count($this->transactionTime) == 0) {
             return null;
@@ -4579,9 +4571,8 @@ class PricedResponseData implements \JsonSerializable
      * Time of transaction
      *
      * @maps TransactionTime
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromRfc3339DateTime
      */
-    public function setTransactionTime(?\DateTime $transactionTime): void
+    public function setTransactionTime(?string $transactionTime): void
     {
         $this->transactionTime['value'] = $transactionTime;
     }
@@ -5172,7 +5163,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns Original Transaction Item Invoice Date.
      * Original treansaction date
      */
-    public function getOriginalTransactionItemInvoiceDate(): ?\DateTime
+    public function getOriginalTransactionItemInvoiceDate(): ?string
     {
         if (count($this->originalTransactionItemInvoiceDate) == 0) {
             return null;
@@ -5185,9 +5176,8 @@ class PricedResponseData implements \JsonSerializable
      * Original treansaction date
      *
      * @maps OriginalTransactionItemInvoiceDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setOriginalTransactionItemInvoiceDate(?\DateTime $originalTransactionItemInvoiceDate): void
+    public function setOriginalTransactionItemInvoiceDate(?string $originalTransactionItemInvoiceDate): void
     {
         $this->originalTransactionItemInvoiceDate['value'] = $originalTransactionItemInvoiceDate;
     }
@@ -5365,7 +5355,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns System Entry Date.
      * Entry date in the system
      */
-    public function getSystemEntryDate(): ?\DateTime
+    public function getSystemEntryDate(): ?string
     {
         if (count($this->systemEntryDate) == 0) {
             return null;
@@ -5378,9 +5368,8 @@ class PricedResponseData implements \JsonSerializable
      * Entry date in the system
      *
      * @maps SystemEntryDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setSystemEntryDate(?\DateTime $systemEntryDate): void
+    public function setSystemEntryDate(?string $systemEntryDate): void
     {
         $this->systemEntryDate['value'] = $systemEntryDate;
     }
@@ -5398,7 +5387,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns System Entry Time.
      * Entry time in the system
      */
-    public function getSystemEntryTime(): ?\DateTime
+    public function getSystemEntryTime(): ?string
     {
         if (count($this->systemEntryTime) == 0) {
             return null;
@@ -5411,9 +5400,8 @@ class PricedResponseData implements \JsonSerializable
      * Entry time in the system
      *
      * @maps SystemEntryTime
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromRfc3339DateTime
      */
-    public function setSystemEntryTime(?\DateTime $systemEntryTime): void
+    public function setSystemEntryTime(?string $systemEntryTime): void
     {
         $this->systemEntryTime['value'] = $systemEntryTime;
     }
@@ -5975,7 +5963,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns E V Charge Start Date.
      * EvCharging start Date
      */
-    public function getEVChargeStartDate(): ?\DateTime
+    public function getEVChargeStartDate(): ?string
     {
         if (count($this->eVChargeStartDate) == 0) {
             return null;
@@ -5988,9 +5976,8 @@ class PricedResponseData implements \JsonSerializable
      * EvCharging start Date
      *
      * @maps EVChargeStartDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setEVChargeStartDate(?\DateTime $eVChargeStartDate): void
+    public function setEVChargeStartDate(?string $eVChargeStartDate): void
     {
         $this->eVChargeStartDate['value'] = $eVChargeStartDate;
     }
@@ -6008,7 +5995,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns E V Charge Start Time.
      * EvCharging start time
      */
-    public function getEVChargeStartTime(): ?\DateTime
+    public function getEVChargeStartTime(): ?string
     {
         if (count($this->eVChargeStartTime) == 0) {
             return null;
@@ -6021,9 +6008,8 @@ class PricedResponseData implements \JsonSerializable
      * EvCharging start time
      *
      * @maps EVChargeStartTime
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromRfc3339DateTime
      */
-    public function setEVChargeStartTime(?\DateTime $eVChargeStartTime): void
+    public function setEVChargeStartTime(?string $eVChargeStartTime): void
     {
         $this->eVChargeStartTime['value'] = $eVChargeStartTime;
     }
@@ -6041,7 +6027,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns E V Charge End Date.
      * EvCharging End Date
      */
-    public function getEVChargeEndDate(): ?\DateTime
+    public function getEVChargeEndDate(): ?string
     {
         if (count($this->eVChargeEndDate) == 0) {
             return null;
@@ -6054,9 +6040,8 @@ class PricedResponseData implements \JsonSerializable
      * EvCharging End Date
      *
      * @maps EVChargeEndDate
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromSimpleDate
      */
-    public function setEVChargeEndDate(?\DateTime $eVChargeEndDate): void
+    public function setEVChargeEndDate(?string $eVChargeEndDate): void
     {
         $this->eVChargeEndDate['value'] = $eVChargeEndDate;
     }
@@ -6074,7 +6059,7 @@ class PricedResponseData implements \JsonSerializable
      * Returns E V Charge End Time.
      * EvCharging End time
      */
-    public function getEVChargeEndTime(): ?\DateTime
+    public function getEVChargeEndTime(): ?string
     {
         if (count($this->eVChargeEndTime) == 0) {
             return null;
@@ -6087,9 +6072,8 @@ class PricedResponseData implements \JsonSerializable
      * EvCharging End time
      *
      * @maps EVChargeEndTime
-     * @factory \ShellDataReportingAPIsLib\Utils\DateTimeHelper::fromRfc3339DateTime
      */
-    public function setEVChargeEndTime(?\DateTime $eVChargeEndTime): void
+    public function setEVChargeEndTime(?string $eVChargeEndTime): void
     {
         $this->eVChargeEndTime['value'] = $eVChargeEndTime;
     }
@@ -6242,7 +6226,7 @@ class PricedResponseData implements \JsonSerializable
             $json['CardExpiryPeriod']                        = $this->cardExpiryPeriod['value'];
         }
         if (!empty($this->cardExpiry)) {
-            $json['CardExpiry']                              = DateTimeHelper::toSimpleDate($this->cardExpiry['value']);
+            $json['CardExpiry']                              = $this->cardExpiry['value'];
         }
         if (!empty($this->cardGroupId)) {
             $json['CardGroupId']                             = $this->cardGroupId['value'];
@@ -6392,16 +6376,10 @@ class PricedResponseData implements \JsonSerializable
             $json['IncomingProductCode']                     = $this->incomingProductCode['value'];
         }
         if (!empty($this->postingDate)) {
-            $json['PostingDate']                             =
-                DateTimeHelper::toSimpleDate(
-                    $this->postingDate['value']
-                );
+            $json['PostingDate']                             = $this->postingDate['value'];
         }
         if (!empty($this->postingTime)) {
-            $json['PostingTime']                             =
-                DateTimeHelper::toRfc3339DateTime(
-                    $this->postingTime['value']
-                );
+            $json['PostingTime']                             = $this->postingTime['value'];
         }
         if (!empty($this->productCode)) {
             $json['ProductCode']                             = $this->productCode['value'];
@@ -6434,10 +6412,7 @@ class PricedResponseData implements \JsonSerializable
             $json['InvoiceCurrencyCode']                     = $this->invoiceCurrencyCode['value'];
         }
         if (!empty($this->invoiceDate)) {
-            $json['InvoiceDate']                             =
-                DateTimeHelper::toSimpleDate(
-                    $this->invoiceDate['value']
-                );
+            $json['InvoiceDate']                             = $this->invoiceDate['value'];
         }
         if (!empty($this->invoiceNumber)) {
             $json['InvoiceNumber']                           = $this->invoiceNumber['value'];
@@ -6563,16 +6538,10 @@ class PricedResponseData implements \JsonSerializable
             $json['CreditDebitCode']                         = $this->creditDebitCode['value'];
         }
         if (!empty($this->transactionDate)) {
-            $json['TransactionDate']                         =
-                DateTimeHelper::toSimpleDate(
-                    $this->transactionDate['value']
-                );
+            $json['TransactionDate']                         = $this->transactionDate['value'];
         }
         if (!empty($this->transactionTime)) {
-            $json['TransactionTime']                         =
-                DateTimeHelper::toRfc3339DateTime(
-                    $this->transactionTime['value']
-                );
+            $json['TransactionTime']                         = $this->transactionTime['value'];
         }
         if (!empty($this->transactionItemId)) {
             $json['TransactionItemId']                       = $this->transactionItemId['value'];
@@ -6629,10 +6598,7 @@ class PricedResponseData implements \JsonSerializable
             $json['OriginalExchangeRate']                    = $this->originalExchangeRate['value'];
         }
         if (!empty($this->originalTransactionItemInvoiceDate)) {
-            $json['OriginalTransactionItemInvoiceDate']      =
-                DateTimeHelper::toSimpleDate(
-                    $this->originalTransactionItemInvoiceDate['value']
-                );
+            $json['OriginalTransactionItemInvoiceDate']      = $this->originalTransactionItemInvoiceDate['value'];
         }
         if (!empty($this->feeTypeId)) {
             $json['FeeTypeId']                               = $this->feeTypeId['value'];
@@ -6650,16 +6616,10 @@ class PricedResponseData implements \JsonSerializable
             $json['FeeRuleId']                               = $this->feeRuleId['value'];
         }
         if (!empty($this->systemEntryDate)) {
-            $json['SystemEntryDate']                         =
-                DateTimeHelper::toSimpleDate(
-                    $this->systemEntryDate['value']
-                );
+            $json['SystemEntryDate']                         = $this->systemEntryDate['value'];
         }
         if (!empty($this->systemEntryTime)) {
-            $json['SystemEntryTime']                         =
-                DateTimeHelper::toRfc3339DateTime(
-                    $this->systemEntryTime['value']
-                );
+            $json['SystemEntryTime']                         = $this->systemEntryTime['value'];
         }
         if (!empty($this->isManual)) {
             $json['IsManual']                                = $this->isManual['value'];
@@ -6713,28 +6673,16 @@ class PricedResponseData implements \JsonSerializable
             $json['EVChargeDuration']                        = $this->eVChargeDuration['value'];
         }
         if (!empty($this->eVChargeStartDate)) {
-            $json['EVChargeStartDate']                       =
-                DateTimeHelper::toSimpleDate(
-                    $this->eVChargeStartDate['value']
-                );
+            $json['EVChargeStartDate']                       = $this->eVChargeStartDate['value'];
         }
         if (!empty($this->eVChargeStartTime)) {
-            $json['EVChargeStartTime']                       =
-                DateTimeHelper::toRfc3339DateTime(
-                    $this->eVChargeStartTime['value']
-                );
+            $json['EVChargeStartTime']                       = $this->eVChargeStartTime['value'];
         }
         if (!empty($this->eVChargeEndDate)) {
-            $json['EVChargeEndDate']                         =
-                DateTimeHelper::toSimpleDate(
-                    $this->eVChargeEndDate['value']
-                );
+            $json['EVChargeEndDate']                         = $this->eVChargeEndDate['value'];
         }
         if (!empty($this->eVChargeEndTime)) {
-            $json['EVChargeEndTime']                         =
-                DateTimeHelper::toRfc3339DateTime(
-                    $this->eVChargeEndTime['value']
-                );
+            $json['EVChargeEndTime']                         = $this->eVChargeEndTime['value'];
         }
         if (!empty($this->hostingCollectingCompanyNumber)) {
             $json['HostingCollectingCompanyNumber']          = $this->hostingCollectingCompanyNumber['value'];

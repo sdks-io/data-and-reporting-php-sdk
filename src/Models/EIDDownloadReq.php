@@ -94,7 +94,6 @@ class EIDDownloadReq implements \JsonSerializable
     /**
      * Returns Account Group Country.
      * ColCo code associated with the Account Group IDs of the given EID/EDI files.
-     *
      * Mandatory
      */
     public function getAccountGroupCountry(): ?int
@@ -105,7 +104,6 @@ class EIDDownloadReq implements \JsonSerializable
     /**
      * Sets Account Group Country.
      * ColCo code associated with the Account Group IDs of the given EID/EDI files.
-     *
      * Mandatory
      *
      * @maps AccountGroupCountry

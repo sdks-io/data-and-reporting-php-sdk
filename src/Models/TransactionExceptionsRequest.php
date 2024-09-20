@@ -184,7 +184,6 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -195,7 +194,6 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -208,7 +206,6 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -219,7 +216,6 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -254,11 +250,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Transactions From Date.
      * Exceptions to be searched in transactions from date.
-     *
      * Should be with in last 24 months from the ToDate parameter.
-     *
      * Mandatory
-     *
      * Format: yyyyMMdd
      */
     public function getTransactionsFromDate(): string
@@ -269,11 +262,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Transactions From Date.
      * Exceptions to be searched in transactions from date.
-     *
      * Should be with in last 24 months from the ToDate parameter.
-     *
      * Mandatory
-     *
      * Format: yyyyMMdd
      *
      * @required
@@ -417,16 +407,11 @@ class TransactionExceptionsRequest implements \JsonSerializable
      * Period in which the Exceptions such as Monthly/Weekly or Daily volume, value or usage to be
      * identified in the given transactions date range. It is only applied when the Output Type is
      * specified as "Cards".
-     *
      * Mandatory when Output Type is Cards
-     *
-     * 1. Month
-     *
-     * 2. Week
-     *
-     * 3. Day
-     *
-     * 4. Date Range
+     * 1.    Month
+     * 2.    Week
+     * 3.    Day
+     * 4.    Date Range
      */
     public function getExceptionPeriod(): ?int
     {
@@ -438,16 +423,11 @@ class TransactionExceptionsRequest implements \JsonSerializable
      * Period in which the Exceptions such as Monthly/Weekly or Daily volume, value or usage to be
      * identified in the given transactions date range. It is only applied when the Output Type is
      * specified as "Cards".
-     *
      * Mandatory when Output Type is Cards
-     *
-     * 1. Month
-     *
-     * 2. Week
-     *
-     * 3. Day
-     *
-     * 4. Date Range
+     * 1.    Month
+     * 2.    Week
+     * 3.    Day
+     * 4.    Date Range
      *
      * @maps ExceptionPeriod
      */
@@ -459,14 +439,10 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Output Type.
      * Output Type for Exceptions.
-     *
      * Mandatory.
-     *
      * Possible values:
-     *
-     * 1. Transactions
-     *
-     * 2. Cards
+     * 1.    Transactions
+     * 2.    Cards
      */
     public function getOutputType(): int
     {
@@ -476,14 +452,10 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Output Type.
      * Output Type for Exceptions.
-     *
      * Mandatory.
-     *
      * Possible values:
-     *
-     * 1. Transactions
-     *
-     * 2. Cards
+     * 1.    Transactions
+     * 2.    Cards
      *
      * @required
      * @maps OutputType
@@ -532,11 +504,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Site Group Ids.
      * SiteGroupIds to be applied to the Filter Condition.
-     *
      * Optional
-     *
      * When not passed, ignored.
-     *
      * When passed, transactions that are matching with the provided list of site group id’s are only
      * returned.
      *
@@ -550,11 +519,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Site Group Ids.
      * SiteGroupIds to be applied to the Filter Condition.
-     *
      * Optional
-     *
      * When not passed, ignored.
-     *
      * When passed, transactions that are matching with the provided list of site group id’s are only
      * returned.
      *
@@ -570,11 +536,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Returns Use Field Id.
      * True/False
-     *
      * Optional
-     *
      * Default value – False.
-     *
      * When set to True, the property names in the output will be replaced by Field IDs.
      */
     public function getUseFieldId(): ?bool
@@ -585,11 +548,8 @@ class TransactionExceptionsRequest implements \JsonSerializable
     /**
      * Sets Use Field Id.
      * True/False
-     *
      * Optional
-     *
      * Default value – False.
-     *
      * When set to True, the property names in the output will be replaced by Field IDs.
      *
      * @maps UseFieldId

@@ -168,9 +168,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      */
     public function getPayerId(): ?int
@@ -184,9 +182,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      *
      * @maps PayerId
@@ -199,9 +195,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
-     *
      * Example: 123456
      */
     public function unsetPayerId(): void
@@ -212,9 +206,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -228,9 +220,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber
@@ -243,9 +233,7 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      */
     public function unsetPayerNumber(): void
@@ -356,17 +344,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
-     *
      * Example: 20170830
-     *
      * Note: This criterion is ignored if ‘Period’ is given.
-     *
      * Also, this criterion is ignored if ‘ToDate’ is not provided.
      */
     public function getFromDate(): ?string
@@ -380,17 +362,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
-     *
      * Example: 20170830
-     *
      * Note: This criterion is ignored if ‘Period’ is given.
-     *
      * Also, this criterion is ignored if ‘ToDate’ is not provided.
      *
      * @maps FromDate
@@ -403,17 +379,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets From Date.
      * Invoice date searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyyMMdd
-     *
      * Example: 20170830
-     *
      * Note: This criterion is ignored if ‘Period’ is given.
-     *
      * Also, this criterion is ignored if ‘ToDate’ is not provided.
      */
     public function unsetFromDate(): void
@@ -548,11 +518,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Summary Document Id.
      * Summary document id
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      */
     public function getSummaryDocumentId(): ?int
@@ -566,11 +533,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Summary Document Id.
      * Summary document id
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      *
      * @maps SummaryDocumentId
@@ -583,11 +547,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Summary Document Id.
      * Summary document id
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      */
     public function unsetSummaryDocumentId(): void
@@ -598,11 +559,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Summary Document Number.
      * Summary document number
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: ‘0/CZ0000000123456/2017’
      */
     public function getSummaryDocumentNumber(): ?string
@@ -616,11 +574,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Summary Document Number.
      * Summary document number
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: ‘0/CZ0000000123456/2017’
      *
      * @maps SummaryDocumentNumber
@@ -633,11 +588,8 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Summary Document Number.
      * Summary document number
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: ‘0/CZ0000000123456/2017’
      */
     public function unsetSummaryDocumentNumber(): void
@@ -748,17 +700,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Period.
      * Invoice date search period. Valid values –
-     *
-     * 1. Last 7 days – Issued in last 7 days.
-     *
-     * 2. Last 30 days – Issued in last 30 days.
-     *
-     * 3. Last 90 days – Issued in last 90 days.
-     *
+     * 1.    Last 7 days – Issued in last 7 days.
+     * 2.    Last 30 days – Issued in last 30 days.
+     * 3.    Last 90 days – Issued in last 90 days.
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      */
     public function getPeriod(): ?int
@@ -772,17 +718,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Period.
      * Invoice date search period. Valid values –
-     *
-     * 1. Last 7 days – Issued in last 7 days.
-     *
-     * 2. Last 30 days – Issued in last 30 days.
-     *
-     * 3. Last 90 days – Issued in last 90 days.
-     *
+     * 1.    Last 7 days – Issued in last 7 days.
+     * 2.    Last 30 days – Issued in last 30 days.
+     * 3.    Last 90 days – Issued in last 90 days.
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      *
      * @maps Period
@@ -795,17 +735,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Period.
      * Invoice date search period. Valid values –
-     *
-     * 1. Last 7 days – Issued in last 7 days.
-     *
-     * 2. Last 30 days – Issued in last 30 days.
-     *
-     * 3. Last 90 days – Issued in last 90 days.
-     *
+     * 1.    Last 7 days – Issued in last 7 days.
+     * 2.    Last 30 days – Issued in last 30 days.
+     * 3.    Last 90 days – Issued in last 90 days.
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Example: 1
      */
     public function unsetPeriod(): void
@@ -816,19 +750,12 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Invoice Status.
      * Status of the invoice. Valid values –
-     *
-     * • Due – Invoices due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices.
-     *
-     * • Overdue – Invoices due of payment and has crossed the due date.
-     *
-     * • CreditNote – Credit notes
-     *
-     * • CreditStatement
-     *
+     * •    Due – Invoices due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices.
+     * •    Overdue – Invoices due of payment and has crossed the due date.
+     * •    CreditNote – Credit notes
+     * •    CreditStatement
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getInvoiceStatus(): ?string
@@ -842,19 +769,12 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Invoice Status.
      * Status of the invoice. Valid values –
-     *
-     * • Due – Invoices due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices.
-     *
-     * • Overdue – Invoices due of payment and has crossed the due date.
-     *
-     * • CreditNote – Credit notes
-     *
-     * • CreditStatement
-     *
+     * •    Due – Invoices due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices.
+     * •    Overdue – Invoices due of payment and has crossed the due date.
+     * •    CreditNote – Credit notes
+     * •    CreditStatement
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps InvoiceStatus
@@ -867,19 +787,12 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Invoice Status.
      * Status of the invoice. Valid values –
-     *
-     * • Due – Invoices due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices.
-     *
-     * • Overdue – Invoices due of payment and has crossed the due date.
-     *
-     * • CreditNote – Credit notes
-     *
-     * • CreditStatement
-     *
+     * •    Due – Invoices due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices.
+     * •    Overdue – Invoices due of payment and has crossed the due date.
+     * •    CreditNote – Credit notes
+     * •    CreditStatement
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetInvoiceStatus(): void
@@ -890,7 +803,6 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * Optional
      */
     public function getInvoicedOnBehalfOf(): ?string
@@ -904,7 +816,6 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * Optional
      *
      * @maps InvoicedOnBehalfOf
@@ -917,7 +828,6 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * Optional
      */
     public function unsetInvoicedOnBehalfOf(): void
@@ -933,9 +843,9 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
      *
      * The parameters that are populated
      *
-     * • DocumentReference
+     * •    DocumentReference
      *
-     * • AdditionalDocuments
+     * •    AdditionalDocuments
      *
      * The above fields will not be present in the response when the respective data is not available in
      * the source system.
@@ -956,9 +866,9 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
      *
      * The parameters that are populated
      *
-     * • DocumentReference
+     * •    DocumentReference
      *
-     * • AdditionalDocuments
+     * •    AdditionalDocuments
      *
      * The above fields will not be present in the response when the respective data is not available in
      * the source system.
@@ -978,9 +888,9 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
      *
      * The parameters that are populated
      *
-     * • DocumentReference
+     * •    DocumentReference
      *
-     * • AdditionalDocuments
+     * •    AdditionalDocuments
      *
      * The above fields will not be present in the response when the respective data is not available in
      * the source system.
@@ -1071,17 +981,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Returns Type.
      * Invoice type. Allowed values –
-     *
-     * • Original – Original document.
-     *
-     * • Reversal – Reversed document.
-     *
-     * • Replacement – Replaced document.
-     *
+     * •    Original – Original document.
+     * •    Reversal – Reversed document.
+     * •    Replacement – Replaced document.
      * Optional. (When not passed all invoice, types are considered for search)
-     *
      * This input is a search criterion, if given.
-     *
      * Example: Original
      */
     public function getType(): ?string
@@ -1095,17 +999,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Sets Type.
      * Invoice type. Allowed values –
-     *
-     * • Original – Original document.
-     *
-     * • Reversal – Reversed document.
-     *
-     * • Replacement – Replaced document.
-     *
+     * •    Original – Original document.
+     * •    Reversal – Reversed document.
+     * •    Replacement – Replaced document.
      * Optional. (When not passed all invoice, types are considered for search)
-     *
      * This input is a search criterion, if given.
-     *
      * Example: Original
      *
      * @maps Type
@@ -1118,17 +1016,11 @@ class InvoiceSummaryRequestFilters implements \JsonSerializable
     /**
      * Unsets Type.
      * Invoice type. Allowed values –
-     *
-     * • Original – Original document.
-     *
-     * • Reversal – Reversed document.
-     *
-     * • Replacement – Replaced document.
-     *
+     * •    Original – Original document.
+     * •    Reversal – Reversed document.
+     * •    Replacement – Replaced document.
      * Optional. (When not passed all invoice, types are considered for search)
-     *
      * This input is a search criterion, if given.
-     *
      * Example: Original
      */
     public function unsetType(): void

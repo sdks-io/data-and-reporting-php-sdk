@@ -146,7 +146,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id  of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -157,7 +156,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id  of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -170,7 +168,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -181,7 +178,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -216,9 +212,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns Card Group Id.
      * Card Group Id in GFN
-     *
      * Optional
-     *
      * Example: 200
      */
     public function getCardGroupId(): ?int
@@ -229,9 +223,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets Card Group Id.
      * Card Group Id in GFN
-     *
      * Optional
-     *
      * Example: 200
      *
      * @maps CardGroupId
@@ -244,9 +236,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns Card Group Name.
      * Card Group Name
-     *
      * Optional
-     *
      * This input is a search criterion, if given.
      */
     public function getCardGroupName(): ?string
@@ -257,9 +247,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets Card Group Name.
      * Card Group Name
-     *
      * Optional
-     *
      * This input is a search criterion, if given.
      *
      * @maps CardGroupName
@@ -294,7 +282,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns From Date.
      * Transactions from Date
-     *
      * Optional – ‘Period’ will be considered when this field is not provided.
      */
     public function getFromDate(): ?string
@@ -305,7 +292,6 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets From Date.
      * Transactions from Date
-     *
      * Optional – ‘Period’ will be considered when this field is not provided.
      *
      * @maps FromDate
@@ -318,9 +304,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Returns To Date.
      * Transactions to Date
-     *
      * Optional
-     *
      * Format: yyyyMMdd
      */
     public function getToDate(): ?string
@@ -331,9 +315,7 @@ class FuelConsumptionRequest implements \JsonSerializable
     /**
      * Sets To Date.
      * Transactions to Date
-     *
      * Optional
-     *
      * Format: yyyyMMdd
      *
      * @maps ToDate
@@ -349,11 +331,11 @@ class FuelConsumptionRequest implements \JsonSerializable
      *
      * Allowed values :
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
      * Optional - When FromDate/ToDate and Period are not provided, ‘Last 7 Days’ value is considered as
      * default Period.
@@ -369,11 +351,11 @@ class FuelConsumptionRequest implements \JsonSerializable
      *
      * Allowed values :
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
      * Optional - When FromDate/ToDate and Period are not provided, ‘Last 7 Days’ value is considered as
      * default Period.

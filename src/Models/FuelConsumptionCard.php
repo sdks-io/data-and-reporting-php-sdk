@@ -56,7 +56,6 @@ class FuelConsumptionCard implements \JsonSerializable
     /**
      * Returns P AN.
      * Full Card PAN
-     *
      * Optional, when CardId is provided else mandatory.
      */
     public function getPAN(): ?string
@@ -67,7 +66,6 @@ class FuelConsumptionCard implements \JsonSerializable
     /**
      * Sets P AN.
      * Full Card PAN
-     *
      * Optional, when CardId is provided else mandatory.
      *
      * @maps PAN
@@ -80,7 +78,6 @@ class FuelConsumptionCard implements \JsonSerializable
     /**
      * Returns Expiry Date.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      */
     public function getExpiryDate(): ?string
@@ -91,7 +88,6 @@ class FuelConsumptionCard implements \JsonSerializable
     /**
      * Sets Expiry Date.
      * Card Expiry Date
-     *
      * Format: yyyyMMdd
      *
      * @maps ExpiryDate

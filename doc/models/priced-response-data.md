@@ -22,7 +22,7 @@
 | `transactionStatus` | `?string` | Optional | Status of the transaction<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getTransactionStatus(): ?string | setTransactionStatus(?string transactionStatus): void |
 | `driverName` | `?string` | Optional | Driver Name of Card record<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getDriverName(): ?string | setDriverName(?string driverName): void |
 | `cardExpiryPeriod` | `?int` | Optional | Expiry period of the card<br>**Constraints**: `>= 1`, `<= 9999` | getCardExpiryPeriod(): ?int | setCardExpiryPeriod(?int cardExpiryPeriod): void |
-| `cardExpiry` | `?DateTime` | Optional | Card Expiry Date | getCardExpiry(): ?\DateTime | setCardExpiry(?\DateTime cardExpiry): void |
+| `cardExpiry` | `?string` | Optional | Card Expiry Date | getCardExpiry(): ?string | setCardExpiry(?string cardExpiry): void |
 | `cardGroupId` | `?int` | Optional | Card Group Code<br>**Constraints**: `>= 1`, `<= 99999` | getCardGroupId(): ?int | setCardGroupId(?int cardGroupId): void |
 | `cardGroupName` | `?string` | Optional | Group nmae of the card | getCardGroupName(): ?string | setCardGroupName(?string cardGroupName): void |
 | `issuerCode` | `?int` | Optional | Issuer code<br>**Constraints**: `>= 1`, `<= 9999` | getIssuerCode(): ?int | setIssuerCode(?int issuerCode): void |
@@ -72,8 +72,8 @@
 | `isShellSite` | `?bool` | Optional | Is it a shell sites?True or False<br>**Default**: `false` | getIsShellSite(): ?bool | setIsShellSite(?bool isShellSite): void |
 | `fleetIdInput` | `?string` | Optional | Fleet identifier | getFleetIdInput(): ?string | setFleetIdInput(?string fleetIdInput): void |
 | `incomingProductCode` | `?int` | Optional | In coming product code | getIncomingProductCode(): ?int | setIncomingProductCode(?int incomingProductCode): void |
-| `postingDate` | `?DateTime` | Optional | Date of Posting | getPostingDate(): ?\DateTime | setPostingDate(?\DateTime postingDate): void |
-| `postingTime` | `?DateTime` | Optional | Time whern posting happened | getPostingTime(): ?\DateTime | setPostingTime(?\DateTime postingTime): void |
+| `postingDate` | `?string` | Optional | Date of Posting | getPostingDate(): ?string | setPostingDate(?string postingDate): void |
+| `postingTime` | `?string` | Optional | Time whern posting happened | getPostingTime(): ?string | setPostingTime(?string postingTime): void |
 | `productCode` | `?int` | Optional | Product Code - 21 Unleaded - High octane,22 Unleaded - Medium octane,23 Unleaded - Low octane,24 Unleaded Environmental | getProductCode(): ?int | setProductCode(?int productCode): void |
 | `productName` | `?string` | Optional | Name of the product<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `30` | getProductName(): ?string | setProductName(?string productName): void |
 | `productGroupId` | `?int` | Optional | Id of the product to which group it belongs | getProductGroupId(): ?int | setProductGroupId(?int productGroupId): void |
@@ -84,7 +84,7 @@
 | `siteCode` | `?int` | Optional | Shell site code | getSiteCode(): ?int | setSiteCode(?int siteCode): void |
 | `incomingSiteNumber` | `?int` | Optional | In coming site number | getIncomingSiteNumber(): ?int | setIncomingSiteNumber(?int incomingSiteNumber): void |
 | `invoiceCurrencyCode` | `?string` | Optional | Currency code on which the invoice is raised<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getInvoiceCurrencyCode(): ?string | setInvoiceCurrencyCode(?string invoiceCurrencyCode): void |
-| `invoiceDate` | `?DateTime` | Optional | Date on which the invoice was raised | getInvoiceDate(): ?\DateTime | setInvoiceDate(?\DateTime invoiceDate): void |
+| `invoiceDate` | `?string` | Optional | Date on which the invoice was raised | getInvoiceDate(): ?string | setInvoiceDate(?string invoiceDate): void |
 | `invoiceNumber` | `?float` | Optional | Invoice number | getInvoiceNumber(): ?float | setInvoiceNumber(?float invoiceNumber): void |
 | `fuelProduct` | `?bool` | Optional | Is it a fuel product? True or False | getFuelProduct(): ?bool | setFuelProduct(?bool fuelProduct): void |
 | `vATApplicable` | `?string` | Optional | Is VAT applicable?Y or N<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getVATApplicable(): ?string | setVATApplicable(?string vATApplicable): void |
@@ -112,7 +112,7 @@
 | `quantity` | `?float` | Optional | Quantity of the product | getQuantity(): ?float | setQuantity(?float quantity): void |
 | `rebateRate` | `?float` | Optional | Rebate rate if any | getRebateRate(): ?float | setRebateRate(?float rebateRate): void |
 | `receiptNumber` | `?int` | Optional | Reciept number | getReceiptNumber(): ?int | setReceiptNumber(?int receiptNumber): void |
-| `refundFlag` | [`?string(PricedTransactionRespV2RefundFlagEnum)`](../../doc/models/priced-transaction-resp-v2-refund-flag-enum.md) | Optional | Flag to check if there is any refund<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getRefundFlag(): ?string | setRefundFlag(?string refundFlag): void |
+| `refundFlag` | [`?string(PricedTransactionRespV2RefundFlagEnum)`](../../doc/models/priced-transaction-resp-v2-refund-flag-enum.md) | Optional | **Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getRefundFlag(): ?string | setRefundFlag(?string refundFlag): void |
 | `siteGroupId` | `?int` | Optional | Group identifier for the site | getSiteGroupId(): ?int | setSiteGroupId(?int siteGroupId): void |
 | `siteGroupName` | `?string` | Optional | Name of the Site group | getSiteGroupName(): ?string | setSiteGroupName(?string siteGroupName): void |
 | `latitude` | `?float` | Optional | Latitude of the site | getLatitude(): ?float | setLatitude(?float latitude): void |
@@ -125,8 +125,8 @@
 | `isInvoiced` | `?bool` | Optional | Is invoice raised<br>**Default**: `false` | getIsInvoiced(): ?bool | setIsInvoiced(?bool isInvoiced): void |
 | `transactionCurrencyCode` | `?string` | Optional | Transaction currency code | getTransactionCurrencyCode(): ?string | setTransactionCurrencyCode(?string transactionCurrencyCode): void |
 | `creditDebitCode` | `?string` | Optional | Is it Credit or debit C for credit D for Debit | getCreditDebitCode(): ?string | setCreditDebitCode(?string creditDebitCode): void |
-| `transactionDate` | `?DateTime` | Optional | Date of transaction | getTransactionDate(): ?\DateTime | setTransactionDate(?\DateTime transactionDate): void |
-| `transactionTime` | `?DateTime` | Optional | Time of transaction | getTransactionTime(): ?\DateTime | setTransactionTime(?\DateTime transactionTime): void |
+| `transactionDate` | `?string` | Optional | Date of transaction | getTransactionDate(): ?string | setTransactionDate(?string transactionDate): void |
+| `transactionTime` | `?string` | Optional | Time of transaction | getTransactionTime(): ?string | setTransactionTime(?string transactionTime): void |
 | `transactionItemId` | `?string` | Optional | Identifier of the Iem in transaction | getTransactionItemId(): ?string | setTransactionItemId(?string transactionItemId): void |
 | `trnIdentifier` | `?string` | Optional | Transaction identifier | getTrnIdentifier(): ?string | setTrnIdentifier(?string trnIdentifier): void |
 | `type` | `?string` | Optional | Transaction type for Delco | getType(): ?string | setType(?string type): void |
@@ -145,14 +145,14 @@
 | `originalVATAmount` | `?float` | Optional | Original VAT amount | getOriginalVATAmount(): ?float | setOriginalVATAmount(?float originalVATAmount): void |
 | `embossText` | `?string` | Optional | Comapany name embosses in text<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEmbossText(): ?string | setEmbossText(?string embossText): void |
 | `originalExchangeRate` | `?float` | Optional | Orginal exchange rate | getOriginalExchangeRate(): ?float | setOriginalExchangeRate(?float originalExchangeRate): void |
-| `originalTransactionItemInvoiceDate` | `?DateTime` | Optional | Original treansaction date | getOriginalTransactionItemInvoiceDate(): ?\DateTime | setOriginalTransactionItemInvoiceDate(?\DateTime originalTransactionItemInvoiceDate): void |
+| `originalTransactionItemInvoiceDate` | `?string` | Optional | Original treansaction date | getOriginalTransactionItemInvoiceDate(): ?string | setOriginalTransactionItemInvoiceDate(?string originalTransactionItemInvoiceDate): void |
 | `feeTypeId` | `?int` | Optional | Fee type identifier<br>**Constraints**: `>= 1`, `<= 1` | getFeeTypeId(): ?int | setFeeTypeId(?int feeTypeId): void |
 | `lineItemDescription` | `?bool` | Optional | Line item identifier of the product<br>**Default**: `false` | getLineItemDescription(): ?bool | setLineItemDescription(?bool lineItemDescription): void |
 | `feeRuleDescription` | `?string` | Optional | Fee rule description<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `25` | getFeeRuleDescription(): ?string | setFeeRuleDescription(?string feeRuleDescription): void |
 | `frequency` | `?int` | Optional | Frequency of transaction<br>**Constraints**: `>= 1`, `<= 1` | getFrequency(): ?int | setFrequency(?int frequency): void |
 | `feeRuleId` | `?int` | Optional | Fee rule identifier<br>**Constraints**: `>= 1`, `<= 1` | getFeeRuleId(): ?int | setFeeRuleId(?int feeRuleId): void |
-| `systemEntryDate` | `?DateTime` | Optional | Entry date in the system | getSystemEntryDate(): ?\DateTime | setSystemEntryDate(?\DateTime systemEntryDate): void |
-| `systemEntryTime` | `?DateTime` | Optional | Entry time in the system | getSystemEntryTime(): ?\DateTime | setSystemEntryTime(?\DateTime systemEntryTime): void |
+| `systemEntryDate` | `?string` | Optional | Entry date in the system | getSystemEntryDate(): ?string | setSystemEntryDate(?string systemEntryDate): void |
+| `systemEntryTime` | `?string` | Optional | Entry time in the system | getSystemEntryTime(): ?string | setSystemEntryTime(?string systemEntryTime): void |
 | `isManual` | `?string` | Optional | Checking if its manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getIsManual(): ?string | setIsManual(?string isManual): void |
 | `originalTransactionItemId` | `?string` | Optional | Is it manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalTransactionItemId(): ?string | setOriginalTransactionItemId(?string originalTransactionItemId): void |
 | `originalTransactionItemInvoiceNumber` | `?int` | Optional | Original invoice transaction number | getOriginalTransactionItemInvoiceNumber(): ?int | setOriginalTransactionItemInvoiceNumber(?int originalTransactionItemInvoiceNumber): void |
@@ -170,10 +170,10 @@
 | `eVChargePointConnectorType` | `?int` | Optional | Ev chariging connector type | getEVChargePointConnectorType(): ?int | setEVChargePointConnectorType(?int eVChargePointConnectorType): void |
 | `eVChargePointConnectorTypeDescription` | `?string` | Optional | EV charging point connector type description | getEVChargePointConnectorTypeDescription(): ?string | setEVChargePointConnectorTypeDescription(?string eVChargePointConnectorTypeDescription): void |
 | `eVChargeDuration` | `?string` | Optional | Ev charging Duration | getEVChargeDuration(): ?string | setEVChargeDuration(?string eVChargeDuration): void |
-| `eVChargeStartDate` | `?DateTime` | Optional | EvCharging start Date | getEVChargeStartDate(): ?\DateTime | setEVChargeStartDate(?\DateTime eVChargeStartDate): void |
-| `eVChargeStartTime` | `?DateTime` | Optional | EvCharging start time | getEVChargeStartTime(): ?\DateTime | setEVChargeStartTime(?\DateTime eVChargeStartTime): void |
-| `eVChargeEndDate` | `?DateTime` | Optional | EvCharging End Date | getEVChargeEndDate(): ?\DateTime | setEVChargeEndDate(?\DateTime eVChargeEndDate): void |
-| `eVChargeEndTime` | `?DateTime` | Optional | EvCharging End time | getEVChargeEndTime(): ?\DateTime | setEVChargeEndTime(?\DateTime eVChargeEndTime): void |
+| `eVChargeStartDate` | `?string` | Optional | EvCharging start Date | getEVChargeStartDate(): ?string | setEVChargeStartDate(?string eVChargeStartDate): void |
+| `eVChargeStartTime` | `?string` | Optional | EvCharging start time | getEVChargeStartTime(): ?string | setEVChargeStartTime(?string eVChargeStartTime): void |
+| `eVChargeEndDate` | `?string` | Optional | EvCharging End Date | getEVChargeEndDate(): ?string | setEVChargeEndDate(?string eVChargeEndDate): void |
+| `eVChargeEndTime` | `?string` | Optional | EvCharging End time | getEVChargeEndTime(): ?string | setEVChargeEndTime(?string eVChargeEndTime): void |
 | `hostingCollectingCompanyNumber` | `?int` | Optional | - | getHostingCollectingCompanyNumber(): ?int | setHostingCollectingCompanyNumber(?int hostingCollectingCompanyNumber): void |
 | `transactionId` | `?float` | Optional | - | getTransactionId(): ?float | setTransactionId(?float transactionId): void |
 | `fuelOnly` | `?bool` | Optional | - | getFuelOnly(): ?bool | setFuelOnly(?bool fuelOnly): void |
@@ -278,7 +278,6 @@
   "Quantity": 43.28,
   "RebateRate": 0.0022,
   "ReceiptNumber": 6803,
-  "RefundFlag": "Y",
   "SiteGroupId": 202,
   "SiteGroupName": "CZ 9100 ECONOMY NETWORK",
   "Latitude": 53.83606,

@@ -283,7 +283,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      */
     public function getCreditLimitCurrencyCode(): ?string
@@ -297,7 +296,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      *
      * @maps CreditLimitCurrencyCode
@@ -310,7 +308,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      */
     public function unsetCreditLimitCurrencyCode(): void
@@ -321,7 +318,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      */
     public function getCreditLimitCurrencySymbol(): ?string
@@ -335,7 +331,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      *
      * @maps CreditLimitCurrencySymbol
@@ -348,7 +343,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      */
     public function unsetCreditLimitCurrencySymbol(): void
@@ -359,7 +353,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * **Note**: For currency details refer the parameters CurrencyCode & CurrencySymbol in the
      * StatementOfAccount response.
      */
@@ -374,7 +367,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * **Note**: For currency details refer the parameters CurrencyCode & CurrencySymbol in the
      * StatementOfAccount response.
      *
@@ -388,7 +380,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * **Note**: For currency details refer the parameters CurrencyCode & CurrencySymbol in the
      * StatementOfAccount response.
      */
@@ -747,15 +738,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      */
     public function getPaymentMethod(): ?string
     {
@@ -771,15 +762,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      *
      * @maps PaymentMethod
      */
@@ -794,15 +785,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      */
     public function unsetPaymentMethod(): void
     {
@@ -815,15 +806,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      */
     public function getPaymentMethodId(): ?int
     {
@@ -839,15 +830,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      *
      * @maps PaymentMethodId
      */
@@ -862,15 +853,15 @@ class LastStatementOfAccount implements \JsonSerializable
      *
      * Example: Id & Description
      *
-     * • Incoming - Direct Debit
+     * •    Incoming - Direct Debit
      *
-     * • Incoming - Cheque
+     * •    Incoming - Cheque
      *
-     * • Incoming - Direct Debit A
+     * •    Incoming - Direct Debit A
      *
-     * • Incoming - Bank Transfer
+     * •    Incoming - Bank Transfer
      *
-     * • Incoming - Cash
+     * •    Incoming - Cash
      */
     public function unsetPaymentMethodId(): void
     {
@@ -880,28 +871,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Payment Terms.
      * Payment terms description of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      */
     public function getPaymentTerms(): ?string
     {
@@ -914,28 +894,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Payment Terms.
      * Payment terms description of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      *
      * @maps PaymentTerms
      */
@@ -947,28 +916,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Payment Terms.
      * Payment terms description of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      */
     public function unsetPaymentTerms(): void
     {
@@ -978,28 +936,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Payment Terms Id.
      * Payment terms Id of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      */
     public function getPaymentTermsId(): ?int
     {
@@ -1012,28 +959,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Payment Terms Id.
      * Payment terms Id of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      *
      * @maps PaymentTermsId
      */
@@ -1045,28 +981,17 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Payment Terms Id.
      * Payment terms Id of the Payer.
-     *
      * Example: Id & Description
-     *
-     * • 14 days after Invoice
-     *
-     * • 15 days after Invoice
-     *
-     * • 21 days after Invoice
-     *
-     * • 30 days after Invoice
-     *
-     * • 45 days after Invoice
-     *
-     * • 0 days after invoice
-     *
-     * • days after invoice
-     *
-     * • days after invoice
-     *
-     * • 7 days after invoice
-     *
-     * • 10th of the following month
+     * •    14 days after Invoice
+     * •    15 days after Invoice
+     * •    21 days after Invoice
+     * •    30 days after Invoice
+     * •    45 days after Invoice
+     * •    0 days after invoice
+     * •    days after invoice
+     * •    days after invoice
+     * •    7 days after invoice
+     * •    10th of the following month
      */
     public function unsetPaymentTermsId(): void
     {
@@ -1108,7 +1033,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function getStatementDate(): ?string
@@ -1122,7 +1046,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      *
      * @maps StatementDate
@@ -1135,7 +1058,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function unsetStatementDate(): void
@@ -1146,7 +1068,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Returns Statement of Account Id.
      * Statement of account identifier,
-     *
      * Example: 1
      */
     public function getStatementOfAccountId(): ?int
@@ -1160,7 +1081,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Sets Statement of Account Id.
      * Statement of account identifier,
-     *
      * Example: 1
      *
      * @maps StatementOfAccountId
@@ -1173,7 +1093,6 @@ class LastStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Statement of Account Id.
      * Statement of account identifier,
-     *
      * Example: 1
      */
     public function unsetStatementOfAccountId(): void

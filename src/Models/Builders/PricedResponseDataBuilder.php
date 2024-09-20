@@ -275,7 +275,7 @@ class PricedResponseDataBuilder
     /**
      * Sets card expiry field.
      */
-    public function cardExpiry(?\DateTime $value): self
+    public function cardExpiry(?string $value): self
     {
         $this->instance->setCardExpiry($value);
         return $this;
@@ -1148,7 +1148,7 @@ class PricedResponseDataBuilder
     /**
      * Sets posting date field.
      */
-    public function postingDate(?\DateTime $value): self
+    public function postingDate(?string $value): self
     {
         $this->instance->setPostingDate($value);
         return $this;
@@ -1166,7 +1166,7 @@ class PricedResponseDataBuilder
     /**
      * Sets posting time field.
      */
-    public function postingTime(?\DateTime $value): self
+    public function postingTime(?string $value): self
     {
         $this->instance->setPostingTime($value);
         return $this;
@@ -1364,7 +1364,7 @@ class PricedResponseDataBuilder
     /**
      * Sets invoice date field.
      */
-    public function invoiceDate(?\DateTime $value): self
+    public function invoiceDate(?string $value): self
     {
         $this->instance->setInvoiceDate($value);
         return $this;
@@ -2093,7 +2093,7 @@ class PricedResponseDataBuilder
     /**
      * Sets transaction date field.
      */
-    public function transactionDate(?\DateTime $value): self
+    public function transactionDate(?string $value): self
     {
         $this->instance->setTransactionDate($value);
         return $this;
@@ -2111,7 +2111,7 @@ class PricedResponseDataBuilder
     /**
      * Sets transaction time field.
      */
-    public function transactionTime(?\DateTime $value): self
+    public function transactionTime(?string $value): self
     {
         $this->instance->setTransactionTime($value);
         return $this;
@@ -2453,7 +2453,7 @@ class PricedResponseDataBuilder
     /**
      * Sets original transaction item invoice date field.
      */
-    public function originalTransactionItemInvoiceDate(?\DateTime $value): self
+    public function originalTransactionItemInvoiceDate(?string $value): self
     {
         $this->instance->setOriginalTransactionItemInvoiceDate($value);
         return $this;
@@ -2561,7 +2561,7 @@ class PricedResponseDataBuilder
     /**
      * Sets system entry date field.
      */
-    public function systemEntryDate(?\DateTime $value): self
+    public function systemEntryDate(?string $value): self
     {
         $this->instance->setSystemEntryDate($value);
         return $this;
@@ -2579,7 +2579,7 @@ class PricedResponseDataBuilder
     /**
      * Sets system entry time field.
      */
-    public function systemEntryTime(?\DateTime $value): self
+    public function systemEntryTime(?string $value): self
     {
         $this->instance->setSystemEntryTime($value);
         return $this;
@@ -2903,7 +2903,7 @@ class PricedResponseDataBuilder
     /**
      * Sets evcharge start date field.
      */
-    public function eVChargeStartDate(?\DateTime $value): self
+    public function eVChargeStartDate(?string $value): self
     {
         $this->instance->setEVChargeStartDate($value);
         return $this;
@@ -2921,7 +2921,7 @@ class PricedResponseDataBuilder
     /**
      * Sets evcharge start time field.
      */
-    public function eVChargeStartTime(?\DateTime $value): self
+    public function eVChargeStartTime(?string $value): self
     {
         $this->instance->setEVChargeStartTime($value);
         return $this;
@@ -2939,7 +2939,7 @@ class PricedResponseDataBuilder
     /**
      * Sets evcharge end date field.
      */
-    public function eVChargeEndDate(?\DateTime $value): self
+    public function eVChargeEndDate(?string $value): self
     {
         $this->instance->setEVChargeEndDate($value);
         return $this;
@@ -2957,7 +2957,7 @@ class PricedResponseDataBuilder
     /**
      * Sets evcharge end time field.
      */
-    public function eVChargeEndTime(?\DateTime $value): self
+    public function eVChargeEndTime(?string $value): self
     {
         $this->instance->setEVChargeEndTime($value);
         return $this;

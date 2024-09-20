@@ -203,7 +203,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Returns Account Short Name.
      * Account Short Name
-     *
      * Example: GB Earth Movers-SN
      */
     public function getAccountShortName(): ?string
@@ -217,7 +216,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Sets Account Short Name.
      * Account Short Name
-     *
      * Example: GB Earth Movers-SN
      *
      * @maps AccountShortName
@@ -230,7 +228,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Unsets Account Short Name.
      * Account Short Name
-     *
      * Example: GB Earth Movers-SN
      */
     public function unsetAccountShortName(): void
@@ -241,7 +238,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Returns Summary Document Id.
      * Summary billing document reference id.
-     *
      * Example: 2
      */
     public function getSummaryDocumentId(): ?int
@@ -255,7 +251,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Sets Summary Document Id.
      * Summary billing document reference id.
-     *
      * Example: 2
      *
      * @maps SummaryDocumentId
@@ -268,7 +263,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Unsets Summary Document Id.
      * Summary billing document reference id.
-     *
      * Example: 2
      */
     public function unsetSummaryDocumentId(): void
@@ -483,7 +477,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Returns Payment Date.
      * Date of payment.
-     *
      * Format: YYYYMMDD
      */
     public function getPaymentDate(): ?string
@@ -497,7 +490,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Sets Payment Date.
      * Date of payment.
-     *
      * Format: YYYYMMDD
      *
      * @maps PaymentDate
@@ -510,7 +502,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     /**
      * Unsets Payment Date.
      * Date of payment.
-     *
      * Format: YYYYMMDD
      */
     public function unsetPaymentDate(): void
@@ -759,7 +750,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      */
     public function getLocalCurrencyCode(): ?string
@@ -775,7 +765,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      *
      * @maps LocalCurrencyCode
@@ -790,7 +779,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      */
     public function unsetLocalCurrencyCode(): void
@@ -803,7 +791,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      */
     public function getLocalCurrencySymbol(): ?string
@@ -819,7 +806,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      *
      * @maps LocalCurrencySymbol
@@ -834,7 +820,6 @@ class PaymentsSinceLastSOA implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      */
     public function unsetLocalCurrencySymbol(): void

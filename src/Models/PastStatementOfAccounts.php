@@ -379,7 +379,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Billing Currency Code.
      * Billing currency ISO code.
-     *
      * Example: EUR
      */
     public function getBillingCurrencyCode(): ?string
@@ -393,7 +392,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Billing Currency Code.
      * Billing currency ISO code.
-     *
      * Example: EUR
      *
      * @maps BillingCurrencyCode
@@ -406,7 +404,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Billing Currency Code.
      * Billing currency ISO code.
-     *
      * Example: EUR
      */
     public function unsetBillingCurrencyCode(): void
@@ -417,7 +414,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      */
     public function getBillingCurrencySymbol(): ?string
@@ -431,7 +427,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      *
      * @maps BillingCurrencySymbol
@@ -444,7 +439,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      */
     public function unsetBillingCurrencySymbol(): void
@@ -487,7 +481,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      */
     public function getCreditLimitCurrencyCode(): ?string
@@ -501,7 +494,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      *
      * @maps CreditLimitCurrencyCode
@@ -514,7 +506,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Credit Limit Currency Code.
      * ISO code of the credit limit’s currency.
-     *
      * Example: EUR
      */
     public function unsetCreditLimitCurrencyCode(): void
@@ -525,7 +516,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      */
     public function getCreditLimitCurrencySymbol(): ?string
@@ -539,7 +529,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      *
      * @maps CreditLimitCurrencySymbol
@@ -552,7 +541,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Credit Limit Currency Symbol.
      * Symbol of the credit limit’s currency.
-     *
      * Example: €
      */
     public function unsetCreditLimitCurrencySymbol(): void
@@ -563,7 +551,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * Note: For currency details refer the parameters CurrencyCode & CurrencySymbol in the SOADetail
      * response.
      */
@@ -578,7 +565,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * Note: For currency details refer the parameters CurrencyCode & CurrencySymbol in the SOADetail
      * response.
      *
@@ -592,7 +578,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Credit Limit in Customer Currency.
      * Credit limit in Customer currency.
-     *
      * Note: For currency details refer the parameters CurrencyCode & CurrencySymbol in the SOADetail
      * response.
      */
@@ -1018,7 +1003,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function getStatementDate(): ?string
@@ -1032,7 +1016,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      *
      * @maps StatementDate
@@ -1045,7 +1028,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function unsetStatementDate(): void
@@ -1250,7 +1232,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      */
     public function getLocalCurrencyCode(): ?string
@@ -1266,7 +1247,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      *
      * @maps LocalCurrencyCode
@@ -1281,7 +1261,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency ISO code of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencyCode, only in the case of serviced OUs.
-     *
      * Example: EUR
      */
     public function unsetLocalCurrencyCode(): void
@@ -1294,7 +1273,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      */
     public function getLocalCurrencySymbol(): ?string
@@ -1310,7 +1288,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      *
      * @maps LocalCurrencySymbol
@@ -1325,7 +1302,6 @@ class PastStatementOfAccounts implements \JsonSerializable
      * Currency Symbol of the local country. It is derived based on CountryCode from microservice
      * configuration. This field is expected to have different value than the previously mentioned field
      * CurrencySymbol, only in the case of serviced OUs.
-     *
      * Example: €
      */
     public function unsetLocalCurrencySymbol(): void
@@ -1336,7 +1312,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Returns Local Currency Exchange Rate.
      * Exchange rate from Billing currency to local currency.
-     *
      * Example: 1.2
      */
     public function getLocalCurrencyExchangeRate(): ?float
@@ -1350,7 +1325,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Sets Local Currency Exchange Rate.
      * Exchange rate from Billing currency to local currency.
-     *
      * Example: 1.2
      *
      * @maps LocalCurrencyExchangeRate
@@ -1363,7 +1337,6 @@ class PastStatementOfAccounts implements \JsonSerializable
     /**
      * Unsets Local Currency Exchange Rate.
      * Exchange rate from Billing currency to local currency.
-     *
      * Example: 1.2
      */
     public function unsetLocalCurrencyExchangeRate(): void

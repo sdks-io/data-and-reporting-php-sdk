@@ -14,7 +14,7 @@
 | `payerName` | `?string` | Optional | Customer payer name | getPayerName(): ?string | setPayerName(?string payerName): void |
 | `accountNumber` | `?string` | Optional | Account Number<br>Example: GB99215176 | getAccountNumber(): ?string | setAccountNumber(?string accountNumber): void |
 | `accountName` | `?string` | Optional | Invoice account name | getAccountName(): ?string | setAccountName(?string accountName): void |
-| `documentType` | `?string` | Optional | Document type<br>String containing one of the following values:<br>•	NAT (National)<br>•	INT (International)<br>•	SOA (Statement of Account) | getDocumentType(): ?string | setDocumentType(?string documentType): void |
+| `documentType` | `?string` | Optional | Document type<br>String containing one of the following values:<br>•    NAT (National)<br>•    INT (International)<br>•    SOA (Statement of Account) | getDocumentType(): ?string | setDocumentType(?string documentType): void |
 | `grossAmount` | `?float` | Optional | Included tax amount in the invoice | getGrossAmount(): ?float | setGrossAmount(?float grossAmount): void |
 | `netAmount` | `?float` | Optional | - | getNetAmount(): ?float | setNetAmount(?float netAmount): void |
 | `taxAmount` | `?float` | Optional | - | getTaxAmount(): ?float | setTaxAmount(?float taxAmount): void |

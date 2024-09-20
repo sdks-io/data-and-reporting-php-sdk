@@ -135,7 +135,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -149,7 +148,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -162,7 +160,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payer Id of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function unsetPayerId(): void
@@ -173,7 +170,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function getPayerNumber(): ?string
@@ -187,7 +183,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      *
      * @maps PayerNumber
@@ -200,7 +195,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
      */
     public function unsetPayerNumber(): void
@@ -211,7 +205,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Account Id.
      * Account Id of the customer.
-     *
      * Optional
      */
     public function getAccountId(): ?int
@@ -225,7 +218,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Account Id.
      * Account Id of the customer.
-     *
      * Optional
      *
      * @maps AccountId
@@ -238,7 +230,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Account Id.
      * Account Id of the customer.
-     *
      * Optional
      */
     public function unsetAccountId(): void
@@ -249,7 +240,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number of the customer.
-     *
      * Optional
      */
     public function getAccountNumber(): ?string
@@ -263,7 +253,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number of the customer.
-     *
      * Optional
      *
      * @maps AccountNumber
@@ -276,7 +265,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Account Number.
      * Account Number of the customer.
-     *
      * Optional
      */
     public function unsetAccountNumber(): void
@@ -322,17 +310,12 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Price List Type.
      * Specifies the type of price lists to be included in the response.
-     *
      * Optional – default value is zero.
      *
      *
-     *
      * Allowed values:
-     *
      * 0 – All
-     *
      * 1 – National Only
-     *
      * 2 – International Only
      */
     public function getPriceListType(): ?int
@@ -346,17 +329,12 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Price List Type.
      * Specifies the type of price lists to be included in the response.
-     *
      * Optional – default value is zero.
      *
      *
-     *
      * Allowed values:
-     *
      * 0 – All
-     *
      * 1 – National Only
-     *
      * 2 – International Only
      *
      * @maps PriceListType
@@ -369,17 +347,12 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Price List Type.
      * Specifies the type of price lists to be included in the response.
-     *
      * Optional – default value is zero.
      *
      *
-     *
      * Allowed values:
-     *
      * 0 – All
-     *
      * 1 – National Only
-     *
      * 2 – International Only
      */
     public function unsetPriceListType(): void
@@ -390,7 +363,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Del Co Id.
      * Delivering Company ID
-     *
      * Optional.
      */
     public function getDelCoId(): ?int
@@ -404,7 +376,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Del Co Id.
      * Delivering Company ID
-     *
      * Optional.
      *
      * @maps DelCoId
@@ -417,7 +388,6 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Del Co Id.
      * Delivering Company ID
-     *
      * Optional.
      */
     public function unsetDelCoId(): void
@@ -456,11 +426,8 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns To Date.
      * End date to fetch the price lists, discount values on pump prices and VAT rates.
-     *
      * Mandatory and greater than or equal to FromDate.
-     *
      * Maximum of 30 (configurable) day’s duration is allowed between ‘From’ and ‘To’ dates.
-     *
      * Format: yyyyMMdd
      */
     public function getToDate(): ?string
@@ -471,11 +438,8 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets To Date.
      * End date to fetch the price lists, discount values on pump prices and VAT rates.
-     *
      * Mandatory and greater than or equal to FromDate.
-     *
      * Maximum of 30 (configurable) day’s duration is allowed between ‘From’ and ‘To’ dates.
-     *
      * Format: yyyyMMdd
      *
      * @maps ToDate
@@ -488,12 +452,9 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Returns Include Pump Price Discounts.
      * True / False.
-     *
      * A flag to request the discount information set on pump prices for the customer to be included in the
      * response.
-     *
      * Optional
-     *
      * Default value: False
      */
     public function getIncludePumpPriceDiscounts(): ?bool
@@ -507,12 +468,9 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Sets Include Pump Price Discounts.
      * True / False.
-     *
      * A flag to request the discount information set on pump prices for the customer to be included in the
      * response.
-     *
      * Optional
-     *
      * Default value: False
      *
      * @maps IncludePumpPriceDiscounts
@@ -525,12 +483,9 @@ class CustomerPriceListRequest implements \JsonSerializable
     /**
      * Unsets Include Pump Price Discounts.
      * True / False.
-     *
      * A flag to request the discount information set on pump prices for the customer to be included in the
      * response.
-     *
      * Optional
-     *
      * Default value: False
      */
     public function unsetIncludePumpPriceDiscounts(): void

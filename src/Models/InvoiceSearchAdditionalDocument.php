@@ -69,12 +69,9 @@ class InvoiceSearchAdditionalDocument implements \JsonSerializable
     /**
      * Returns Type.
      * Type of the additional document.
-     *
      * Mandatory
-     *
      * Possible values:
-     *
-     * • KSeF - Applicable for Poland market.
+     * •    KSeF - Applicable for Poland market.
      */
     public function getType(): ?string
     {
@@ -87,12 +84,9 @@ class InvoiceSearchAdditionalDocument implements \JsonSerializable
     /**
      * Sets Type.
      * Type of the additional document.
-     *
      * Mandatory
-     *
      * Possible values:
-     *
-     * • KSeF - Applicable for Poland market.
+     * •    KSeF - Applicable for Poland market.
      *
      * @maps Type
      */
@@ -104,12 +98,9 @@ class InvoiceSearchAdditionalDocument implements \JsonSerializable
     /**
      * Unsets Type.
      * Type of the additional document.
-     *
      * Mandatory
-     *
      * Possible values:
-     *
-     * • KSeF - Applicable for Poland market.
+     * •    KSeF - Applicable for Poland market.
      */
     public function unsetType(): void
     {

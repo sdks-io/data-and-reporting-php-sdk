@@ -15,7 +15,51 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Dates400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Dates401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Dates403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Dates404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Dates500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Download400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Download401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Download403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Download404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Download500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eiddownload400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eiddownload401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eiddownload403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eiddownload404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eiddownload500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eidsearch400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eidsearch401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eidsearch403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eidsearch404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Eidsearch500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Search400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Search401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Search403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Search404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Search500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchdocuments400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchdocuments401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchdocuments403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchdocuments404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchdocuments500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchstatementofaccount400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchstatementofaccount401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchstatementofaccount403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchstatementofaccount404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Searchstatementofaccount500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Statementofaccount400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Statementofaccount401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Statementofaccount403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Statementofaccount404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Statementofaccount500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Summary400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Summary401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Summary403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Summary404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\InvoiceManagementV1Summary500ErrorException;
 use ShellDataReportingAPIsLib\Models\EIDDocumentResponse;
 use ShellDataReportingAPIsLib\Models\EIDDownloadRequest;
 use ShellDataReportingAPIsLib\Models\EIDSearchRequest;
@@ -86,35 +130,35 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Search400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Search401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', InvoiceManagementV1Search403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Search404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Search500ErrorException::class
                 )
             )
             ->type(InvoiceSearchResponse::class);
@@ -172,35 +216,35 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Summary400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Summary401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', InvoiceManagementV1Summary403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Summary404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Summary500ErrorException::class
                 )
             )
             ->type(InvoiceSummaryResponse::class);
@@ -255,35 +299,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Statementofaccount400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Statementofaccount401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Statementofaccount403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Statementofaccount404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Statementofaccount500ErrorException::class
                 )
             )
             ->type(StatementOfAccountResponse::class);
@@ -317,35 +364,35 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Dates400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Dates401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', InvoiceManagementV1Dates403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Dates404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Dates500ErrorException::class
                 )
             )
             ->type(InvoiceDatesResponseData::class);
@@ -383,35 +430,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Searchstatementofaccount400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Searchstatementofaccount401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Searchstatementofaccount403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Searchstatementofaccount404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Searchstatementofaccount500ErrorException::class
                 )
             )
             ->type(SearchStatementOfAccountResponse::class);
@@ -445,35 +495,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Searchdocuments400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Searchdocuments401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Searchdocuments403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Searchdocuments404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Searchdocuments500ErrorException::class
                 )
             )
             ->type(SearchDocumentsResponse::class);
@@ -507,35 +560,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Eidsearch400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Eidsearch401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Eidsearch403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Eidsearch404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Eidsearch500ErrorException::class
                 )
             )
             ->type(EIDDocumentResponse::class);
@@ -569,35 +625,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Download400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Download401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Download403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Download404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Download500ErrorException::class
                 )
             );
 
@@ -634,35 +693,38 @@ class InvoiceController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    InvoiceManagementV1Eiddownload400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    InvoiceManagementV1Eiddownload401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', InvoiceManagementV1Eiddownload403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    InvoiceManagementV1Eiddownload404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    InvoiceManagementV1Eiddownload500ErrorException::class
                 )
             );
 

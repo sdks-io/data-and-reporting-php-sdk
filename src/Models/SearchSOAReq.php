@@ -104,7 +104,6 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      */
     public function getPayerNumber(): ?string
@@ -118,7 +117,6 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      *
      * @maps PayerNumber
@@ -131,7 +129,6 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payer Number of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory.
      */
     public function unsetPayerNumber(): void
@@ -142,9 +139,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns Invoice Number.
      * Invoice number.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getInvoiceNumber(): ?string
@@ -158,9 +153,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets Invoice Number.
      * Invoice number.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps InvoiceNumber
@@ -173,9 +166,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets Invoice Number.
      * Invoice number.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetInvoiceNumber(): void
@@ -186,11 +177,8 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns From Date.
      * SOA searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyy/MM/dd
      */
     public function getFromDate(): ?string
@@ -204,11 +192,8 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets From Date.
      * SOA searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyy/MM/dd
      *
      * @maps FromDate
@@ -221,11 +206,8 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets From Date.
      * SOA searched from this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
-     *
      * Date format: yyyy/MM/dd
      */
     public function unsetFromDate(): void
@@ -236,9 +218,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getToDate(): ?string
@@ -252,9 +232,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps ToDate
@@ -267,9 +245,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets To Date.
      * Invoice date searched until this date.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetToDate(): void
@@ -280,15 +256,10 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns Period.
      * Invoice date search period. Valid values -
-     *
      * Last 7 days – Issued in last 7 days.
-     *
      * Last 30 days – Issued in last 30 days.
-     *
      * Last 90 days – Issued in last 90 days.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getPeriod(): ?int
@@ -302,15 +273,10 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets Period.
      * Invoice date search period. Valid values -
-     *
      * Last 7 days – Issued in last 7 days.
-     *
      * Last 30 days – Issued in last 30 days.
-     *
      * Last 90 days – Issued in last 90 days.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps Period
@@ -323,15 +289,10 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets Period.
      * Invoice date search period. Valid values -
-     *
      * Last 7 days – Issued in last 7 days.
-     *
      * Last 30 days – Issued in last 30 days.
-     *
      * Last 90 days – Issued in last 90 days.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetPeriod(): void
@@ -342,9 +303,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Returns Invoice Date.
      * Date of invoicing.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function getInvoiceDate(): ?string
@@ -358,9 +317,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Sets Invoice Date.
      * Date of invoicing.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      *
      * @maps InvoiceDate
@@ -373,9 +330,7 @@ class SearchSOAReq implements \JsonSerializable
     /**
      * Unsets Invoice Date.
      * Date of invoicing.
-     *
      * Optional.
-     *
      * This input is a search criterion, if given.
      */
     public function unsetInvoiceDate(): void

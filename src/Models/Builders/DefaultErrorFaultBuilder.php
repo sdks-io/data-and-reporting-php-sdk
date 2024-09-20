@@ -12,7 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\DefaultErrorFault;
-use ShellDataReportingAPIsLib\Models\DefaultErrorFaultDetail;
+use ShellDataReportingAPIsLib\Models\Detail;
 
 /**
  * Builder for model DefaultErrorFault
@@ -51,7 +51,7 @@ class DefaultErrorFaultBuilder
     /**
      * Sets detail field.
      */
-    public function detail(?DefaultErrorFaultDetail $value): self
+    public function detail(?Detail $value): self
     {
         $this->instance->setDetail($value);
         return $this;

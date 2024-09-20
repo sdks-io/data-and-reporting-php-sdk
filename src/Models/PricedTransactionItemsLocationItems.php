@@ -27,9 +27,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Returns Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getLatitude(): ?string
@@ -43,9 +41,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Sets Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps Latitude
@@ -58,9 +54,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Unsets Latitude.
      * Latitude for the Site Geographic Location
-     *
      * Example: 37.4224764
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetLatitude(): void
@@ -71,9 +65,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Returns Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function getLongitude(): ?string
@@ -87,9 +79,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Sets Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      *
      * @maps Longitude
@@ -102,9 +92,7 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     /**
      * Unsets Longitude.
      * Longitude for the Site Geographic Location
-     *
      * Example: 122.0842499
-     *
      * Note: - The value could be null/blank for fees item.
      */
     public function unsetLongitude(): void

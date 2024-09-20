@@ -1041,7 +1041,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Fee Item Date.
      * Local Fee Item Date of when the transaction took place
-     *
      * Format: yyyyMMdd
      */
     public function getFeeItemDate(): ?string
@@ -1055,7 +1054,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Fee Item Date.
      * Local Fee Item Date of when the transaction took place
-     *
      * Format: yyyyMMdd
      *
      * @maps FeeItemDate
@@ -1068,7 +1066,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Fee Item Date.
      * Local Fee Item Date of when the transaction took place
-     *
      * Format: yyyyMMdd
      */
     public function unsetFeeItemDate(): void
@@ -1079,7 +1076,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Fee Item Time.
      * Local Fee Item Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      */
     public function getFeeItemTime(): ?string
@@ -1093,7 +1089,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Fee Item Time.
      * Local Fee Item Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      *
      * @maps FeeItemTime
@@ -1106,7 +1101,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Fee Item Time.
      * Local Fee Item Time of where the transaction took place
-     *
      * Format: HH:mm:ss (24 hours format)
      */
     public function unsetFeeItemTime(): void
@@ -1117,7 +1111,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Is Manual.
      * True/False.
-     *
      * Is manual
      */
     public function getIsManual(): ?bool
@@ -1131,7 +1124,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Is Manual.
      * True/False.
-     *
      * Is manual
      *
      * @maps IsManual
@@ -1144,7 +1136,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Is Manual.
      * True/False.
-     *
      * Is manual
      */
     public function unsetIsManual(): void
@@ -1155,7 +1146,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Is Cancelled.
      * True/False.
-     *
      * Is cancelled
      */
     public function getIsCancelled(): ?bool
@@ -1169,7 +1159,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Is Cancelled.
      * True/False.
-     *
      * Is cancelled
      *
      * @maps IsCancelled
@@ -1182,7 +1171,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Is Cancelled.
      * True/False.
-     *
      * Is cancelled
      */
     public function unsetIsCancelled(): void
@@ -1269,17 +1257,11 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Product Id.
      * Product Id
-     *
      * Example: Sample list of product ids and description.
-     *
      * 100 Service fee
-     *
      * 102 Invoice production fee
-     *
      * 103 Account fee
-     *
      * 104 Transaction fee
-     *
      * 105 Card membership fee
      */
     public function getProductId(): ?int
@@ -1293,17 +1275,11 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Product Id.
      * Product Id
-     *
      * Example: Sample list of product ids and description.
-     *
      * 100 Service fee
-     *
      * 102 Invoice production fee
-     *
      * 103 Account fee
-     *
      * 104 Transaction fee
-     *
      * 105 Card membership fee
      *
      * @maps ProductId
@@ -1316,17 +1292,11 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Product Id.
      * Product Id
-     *
      * Example: Sample list of product ids and description.
-     *
      * 100 Service fee
-     *
      * 102 Invoice production fee
-     *
      * 103 Account fee
-     *
      * 104 Transaction fee
-     *
      * 105 Card membership fee
      */
     public function unsetProductId(): void
@@ -1405,11 +1375,8 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Product Name.
      * Product Name
-     *
      * Example: Sample list of product ids and description.
-     *
      * Service fee
-     *
      * Invoice production fee
      */
     public function getProductName(): ?string
@@ -1423,11 +1390,8 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Product Name.
      * Product Name
-     *
      * Example: Sample list of product ids and description.
-     *
      * Service fee
-     *
      * Invoice production fee
      *
      * @maps ProductName
@@ -1440,11 +1404,8 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Product Name.
      * Product Name
-     *
      * Example: Sample list of product ids and description.
-     *
      * Service fee
-     *
      * Invoice production fee
      */
     public function unsetProductName(): void
@@ -1455,12 +1416,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Product Group Id.
      * Product Group Id
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      */
     public function getProductGroupId(): ?int
     {
@@ -1473,12 +1431,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Product Group Id.
      * Product Group Id
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      *
      * @maps ProductGroupId
      */
@@ -1490,12 +1445,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Product Group Id.
      * Product Group Id
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      */
     public function unsetProductGroupId(): void
     {
@@ -1505,12 +1457,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Product Group Name.
      * Product Group Name
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      */
     public function getProductGroupName(): ?string
     {
@@ -1523,12 +1472,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Product Group Name.
      * Product Group Name
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      *
      * @maps ProductGroupName
      */
@@ -1540,12 +1486,9 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Product Group Name.
      * Product Group Name
-     *
      * Example: Sample list
-     *
-     * 22 Card related fees
-     *
-     * 23 Monetary Adjustment
+     * 22    Card related fees
+     * 23    Monetary Adjustment
      */
     public function unsetProductGroupName(): void
     {
@@ -1622,7 +1565,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Is Invoiced.
      * True/False.
-     *
      * Is fee item invoiced
      */
     public function getIsInvoiced(): ?bool
@@ -1636,7 +1578,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Is Invoiced.
      * True/False.
-     *
      * Is fee item invoiced
      *
      * @maps IsInvoiced
@@ -1649,7 +1590,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Is Invoiced.
      * True/False.
-     *
      * Is fee item invoiced
      */
     public function unsetIsInvoiced(): void
@@ -2338,7 +2278,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Reverse Charge.
      * True/False.
-     *
      * Reverse charge.
      */
     public function getReverseCharge(): ?bool
@@ -2352,7 +2291,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Reverse Charge.
      * True/False.
-     *
      * Reverse charge.
      *
      * @maps ReverseCharge
@@ -2365,7 +2303,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Reverse Charge.
      * True/False.
-     *
      * Reverse charge.
      */
     public function unsetReverseCharge(): void
@@ -2796,7 +2733,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Original Fee Item Invoice Id.
      * Invoice Id/ Billing Document Id of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      */
     public function getOriginalFeeItemInvoiceId(): ?int
@@ -2810,7 +2746,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Original Fee Item Invoice Id.
      * Invoice Id/ Billing Document Id of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      *
      * @maps OriginalFeeItemInvoiceId
@@ -2823,7 +2758,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Original Fee Item Invoice Id.
      * Invoice Id/ Billing Document Id of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      */
     public function unsetOriginalFeeItemInvoiceId(): void
@@ -2834,7 +2768,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Original Fee Item Invoice Number.
      * Invoice Number of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      */
     public function getOriginalFeeItemInvoiceNumber(): ?string
@@ -2848,7 +2781,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Original Fee Item Invoice Number.
      * Invoice Number of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      *
      * @maps OriginalFeeItemInvoiceNumber
@@ -2861,7 +2793,6 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Original Fee Item Invoice Number.
      * Invoice Number of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
      */
     public function unsetOriginalFeeItemInvoiceNumber(): void
@@ -2872,9 +2803,7 @@ class FeeItem implements \JsonSerializable
     /**
      * Returns Original Fee Item Invoice Date.
      * Invoice Date of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
-     *
      * Format: yyyyMMdd
      */
     public function getOriginalFeeItemInvoiceDate(): ?string
@@ -2888,9 +2817,7 @@ class FeeItem implements \JsonSerializable
     /**
      * Sets Original Fee Item Invoice Date.
      * Invoice Date of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
-     *
      * Format: yyyyMMdd
      *
      * @maps OriginalFeeItemInvoiceDate
@@ -2903,9 +2830,7 @@ class FeeItem implements \JsonSerializable
     /**
      * Unsets Original Fee Item Invoice Date.
      * Invoice Date of the original fee item (when not null).
-     *
      * Applicable only for fee items that are refund to an original fee item that is already invoiced.
-     *
      * Format: yyyyMMdd
      */
     public function unsetOriginalFeeItemInvoiceDate(): void

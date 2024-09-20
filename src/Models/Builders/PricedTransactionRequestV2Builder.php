@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\PricedRequestData;
+use ShellDataReportingAPIsLib\Models\Filters;
 use ShellDataReportingAPIsLib\Models\PricedTransactionRequestV2;
 
 /**
@@ -42,7 +42,7 @@ class PricedTransactionRequestV2Builder
     /**
      * Sets filters field.
      */
-    public function filters(?PricedRequestData $value): self
+    public function filters(?Filters $value): self
     {
         $this->instance->setFilters($value);
         return $this;

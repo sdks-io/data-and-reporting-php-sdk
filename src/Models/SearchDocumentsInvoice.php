@@ -88,7 +88,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
      * Returns Document Reference.
      * Unique Invoice Reference id of the invoice for downloading the zip file containing PDF and proofing
      * elements.
-     *
      * Example: 123456
      */
     public function getDocumentReference(): ?int
@@ -100,7 +99,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
      * Sets Document Reference.
      * Unique Invoice Reference id of the invoice for downloading the zip file containing PDF and proofing
      * elements.
-     *
      * Example: 123456
      *
      * @maps DocumentReference
@@ -113,7 +111,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Returns Invoice Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      */
     public function getInvoiceNumber(): ?string
@@ -127,7 +124,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Sets Invoice Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      *
      * @maps InvoiceNumber
@@ -140,7 +136,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Unsets Invoice Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      */
     public function unsetInvoiceNumber(): void
@@ -183,7 +178,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number
-     *
      * Example: GB99215176
      */
     public function getAccountNumber(): ?string
@@ -197,7 +191,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number
-     *
      * Example: GB99215176
      *
      * @maps AccountNumber
@@ -210,7 +203,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Unsets Account Number.
      * Account Number
-     *
      * Example: GB99215176
      */
     public function unsetAccountNumber(): void
@@ -253,14 +245,10 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Returns Document Type.
      * Document type
-     *
      * String containing one of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      */
     public function getDocumentType(): ?string
     {
@@ -273,14 +261,10 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Sets Document Type.
      * Document type
-     *
      * String containing one of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      *
      * @maps DocumentType
      */
@@ -292,14 +276,10 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * Unsets Document Type.
      * Document type
-     *
      * String containing one of the following values:
-     *
-     * • NAT (National)
-     *
-     * • INT (International)
-     *
-     * • SOA (Statement of Account)
+     * •    NAT (National)
+     * •    INT (International)
+     * •    SOA (Statement of Account)
      */
     public function unsetDocumentType(): void
     {

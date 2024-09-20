@@ -184,7 +184,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Returns Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      */
     public function getCustomerCurrencyCode(): ?string
@@ -198,7 +197,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Sets Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      *
      * @maps CustomerCurrencyCode
@@ -211,7 +209,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Unsets Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      */
     public function unsetCustomerCurrencyCode(): void
@@ -222,7 +219,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Returns Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      */
     public function getCustomerCurrencySymbol(): ?string
@@ -236,7 +232,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Sets Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      *
      * @maps CustomerCurrencySymbol
@@ -249,7 +244,6 @@ class InvoiceSummaryDetails implements \JsonSerializable
     /**
      * Unsets Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      */
     public function unsetCustomerCurrencySymbol(): void

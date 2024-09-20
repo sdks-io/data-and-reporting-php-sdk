@@ -119,7 +119,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id (i.e. Customer Id of the Payment Customer in Cards Platform) of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -130,7 +129,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id (i.e. Customer Id of the Payment Customer in Cards Platform) of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -143,7 +141,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Returns Account Id.
      * Account Id (i.e. Customer Id of the Sub Account in GFN) of the selected account.
-     *
      * Optional if AccountNumber is passed else Mandatory
      */
     public function getAccountId(): ?int
@@ -154,7 +151,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Sets Account Id.
      * Account Id (i.e. Customer Id of the Sub Account in GFN) of the selected account.
-     *
      * Optional if AccountNumber is passed else Mandatory
      *
      * @maps AccountId
@@ -167,7 +163,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number (ex: GB000000123) of the selected account.
-     *
      * Optional if AccountId is passed else Mandatory
      */
     public function getAccountNumber(): ?string
@@ -178,7 +173,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number (ex: GB000000123) of the selected account.
-     *
      * Optional if AccountId is passed else Mandatory
      *
      * @maps AccountNumber
@@ -213,11 +207,8 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Returns Notify Caller.
      * True/False.
-     *
      * Optional.
-     *
      * Default: False
-     *
      * If true, the caller would be notified back with the status as success or failure after the update
      * odometer is processed.
      */
@@ -229,11 +220,8 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Sets Notify Caller.
      * True/False.
-     *
      * Optional.
-     *
      * Default: False
-     *
      * If true, the caller would be notified back with the status as success or failure after the update
      * odometer is processed.
      *
@@ -247,7 +235,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Returns Caller.
      * The caller to be notified with the status of the update odometer.
-     *
      * Mandatory, if NotifyCaller is true.
      */
     public function getCaller(): ?string
@@ -258,7 +245,6 @@ class UpdateOdometerRequest implements \JsonSerializable
     /**
      * Sets Caller.
      * The caller to be notified with the status of the update odometer.
-     *
      * Mandatory, if NotifyCaller is true.
      *
      * @maps Caller

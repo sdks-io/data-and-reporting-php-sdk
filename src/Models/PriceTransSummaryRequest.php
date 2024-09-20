@@ -241,7 +241,6 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payer Id  of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      */
     public function getPayerId(): ?int
@@ -252,7 +251,6 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payer Id  of the selected payer.
-     *
      * Optional if PayerNumber is passed else Mandatory
      *
      * @maps PayerId
@@ -265,9 +263,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -278,9 +274,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payer Number (Ex: GB000000123) of the selected payer.
-     *
      * Optional if PayerId is passed else Mandatory
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber
@@ -311,9 +305,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Card Id.
      * Card Id (i.e. Unique Card Id in GFN)
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have transactions of
      * all cards under the selected payer or account
      */
@@ -325,9 +317,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Card Id.
      * Card Id (i.e. Unique Card Id in GFN)
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have transactions of
      * all cards under the selected payer or account
      *
@@ -341,9 +331,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Card PAN.
      * Full Card PAN
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have transactions of
      * all cards under the selected payer or account.
      */
@@ -355,9 +343,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Card PAN.
      * Full Card PAN
-     *
      * Optional
-     *
      * When both Card Id and Card PAN are not present on request, the response will have transactions of
      * all cards under the selected payer or account.
      *
@@ -371,11 +357,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Driver Name.
      * Driver Name (of Card record)
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Transactions of the card having the entered value at any part of the Driver Name will be returned
      */
     public function getDriverName(): ?string
@@ -386,11 +369,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Driver Name.
      * Driver Name (of Card record)
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Transactions of the card having the entered value at any part of the Driver Name will be returned
      *
      * @maps DriverName
@@ -403,11 +383,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Vehicle Registration Number.
      * Vehicle Registration (of Card record)
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Transactions of the card having the entered value at any part of the VRN will be returned
      */
     public function getVehicleRegistrationNumber(): ?string
@@ -418,11 +395,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Vehicle Registration Number.
      * Vehicle Registration (of Card record)
-     *
      * Optional
-     *
      * Minimum of 4 characters should be provided else not considered
-     *
      * Transactions of the card having the entered value at any part of the VRN will be returned
      *
      * @maps VehicleRegistrationNumber
@@ -435,15 +409,10 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Invoice Status.
      * Invoice status of the transactions.
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
      */
     public function getInvoiceStatus(): ?string
@@ -454,15 +423,10 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Invoice Status.
      * Invoice status of the transactions.
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
      *
      * @maps InvoiceStatus
@@ -478,13 +442,13 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Example:
      *
-     * 21 Unleaded - High octane
+     * 21    Unleaded - High octane
      *
-     * 22 Unleaded - Medium octane
+     * 22    Unleaded - Medium octane
      *
-     * 23 Unleaded - Low octane
+     * 23    Unleaded - Low octane
      *
-     * 24 Unleaded Environmental
+     * 24    Unleaded Environmental
      */
     public function getProductId(): ?int
     {
@@ -497,13 +461,13 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Example:
      *
-     * 21 Unleaded - High octane
+     * 21    Unleaded - High octane
      *
-     * 22 Unleaded - Medium octane
+     * 22    Unleaded - Medium octane
      *
-     * 23 Unleaded - Low octane
+     * 23    Unleaded - Low octane
      *
-     * 24 Unleaded Environmental
+     * 24    Unleaded Environmental
      *
      * @maps ProductId
      */
@@ -522,13 +486,13 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Example:
      *
-     * 10 TMF Charges
+     * 10    TMF Charges
      *
-     * 11 Tunnel/Bridges
+     * 11    Tunnel/Bridges
      *
-     * 12 Motorway toll
+     * 12    Motorway toll
      *
-     * 13 Ferries
+     * 13    Ferries
      */
     public function getProductCode(): ?string
     {
@@ -545,13 +509,13 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Example:
      *
-     * 10 TMF Charges
+     * 10    TMF Charges
      *
-     * 11 Tunnel/Bridges
+     * 11    Tunnel/Bridges
      *
-     * 12 Motorway toll
+     * 12    Motorway toll
      *
-     * 13 Ferries
+     * 13    Ferries
      *
      * @maps ProductCode
      */
@@ -565,7 +529,6 @@ class PriceTransSummaryRequest implements \JsonSerializable
      * ISO Country Code (ex: UK, FR)
      *
      *
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      */
     public function getPurchasedInCountry(): ?string
@@ -576,7 +539,6 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Purchased in Country.
      * ISO Country Code (ex: UK, FR)
-     *
      *
      *
      * Note: If IncludeFees is true then this filter will be ignored
@@ -694,11 +656,11 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Possible values are:
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
      * Optional - Refer introduction section of this operation for the priority and sequence of different
      * date and invoice number filters that are conditionally applied.
@@ -714,11 +676,11 @@ class PriceTransSummaryRequest implements \JsonSerializable
      *
      * Possible values are:
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
      * Optional - Refer introduction section of this operation for the priority and sequence of different
      * date and invoice number filters that are conditionally applied.
@@ -733,17 +695,11 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Site Code.
      * Site Code as configured in GFN
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
-     *
-     * 050005 - HARTSHEAD MOOR EASTBOUND MWSA 0761.
-     *
-     * 050006 - HARTSHEAD MOOR WESTBOUND MWSA.
-     *
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050005 -    HARTSHEAD MOOR EASTBOUND MWSA 0761.
+     * 050006 -    HARTSHEAD MOOR WESTBOUND MWSA.
      * Note: If IncludeFees is true then this filter will be ignored
      */
     public function getSiteCode(): ?string
@@ -754,17 +710,11 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Site Code.
      * Site Code as configured in GFN
-     *
      * Example:
-     *
-     * 050001 - CHARNOCK RICHARD NTHBOUND MWSA 0755
-     *
-     * 050002 - CHARNOCK RICHARD STHBOUND MWSA 0755
-     *
-     * 050005 - HARTSHEAD MOOR EASTBOUND MWSA 0761.
-     *
-     * 050006 - HARTSHEAD MOOR WESTBOUND MWSA.
-     *
+     * 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+     * 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
+     * 050005 -    HARTSHEAD MOOR EASTBOUND MWSA 0761.
+     * 050006 -    HARTSHEAD MOOR WESTBOUND MWSA.
      * Note: If IncludeFees is true then this filter will be ignored
      *
      * @maps SiteCode
@@ -777,11 +727,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Site Group Id.
      * Site Group Id in GFN
-     *
      * Optional
-     *
      * Example: 202
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      */
     public function getSiteGroupId(): ?int
@@ -792,11 +739,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Site Group Id.
      * Site Group Id in GFN
-     *
      * Optional
-     *
      * Example: 202
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      *
      * @maps SiteGroupId
@@ -811,14 +755,10 @@ class PriceTransSummaryRequest implements \JsonSerializable
      * Transaction Posting Date/time in the Cards Platform - From Date/time.
      *
      *
-     *
      * Note:
-     *
      * 1) When the value of both PostingDateFrom and PostingDateTo are present in the request then the
      * value of PostingDateFrom must be less than PostingDateTo.
-     *
      * 2) If IncludeFees is true then this filter will be ignored
-     *
      * Format: yyyyMMdd HH:mm:ss
      */
     public function getPostingDateFrom(): ?string
@@ -831,14 +771,10 @@ class PriceTransSummaryRequest implements \JsonSerializable
      * Transaction Posting Date/time in the Cards Platform - From Date/time.
      *
      *
-     *
      * Note:
-     *
      * 1) When the value of both PostingDateFrom and PostingDateTo are present in the request then the
      * value of PostingDateFrom must be less than PostingDateTo.
-     *
      * 2) If IncludeFees is true then this filter will be ignored
-     *
      * Format: yyyyMMdd HH:mm:ss
      *
      * @maps PostingDateFrom
@@ -893,9 +829,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Sales Item Id.
      * Unique SalesItemId (Either Billed on Unbilled)
-     *
      * Optional
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      */
     public function getSalesItemId(): ?string
@@ -906,9 +840,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Sales Item Id.
      * Unique SalesItemId (Either Billed on Unbilled)
-     *
      * Optional
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      *
      * @maps SalesItemId
@@ -921,9 +853,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Transaction Id.
      * Unique Transaction Id
-     *
      * Optional
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      */
     public function getTransactionId(): ?string
@@ -934,9 +864,7 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Transaction Id.
      * Unique Transaction Id
-     *
      * Optional
-     *
      * Note: If IncludeFees is true then this filter will be ignored
      *
      * @maps TransactionId
@@ -1189,11 +1117,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Returns Include Fees.
      * True/False
-     *
      * Optional
-     *
      * Default value: False
-     *
      * When passed as ‘True’ then  ignore few filters, all sales items along with fees included on the same
      * response
      */
@@ -1205,11 +1130,8 @@ class PriceTransSummaryRequest implements \JsonSerializable
     /**
      * Sets Include Fees.
      * True/False
-     *
      * Optional
-     *
      * Default value: False
-     *
      * When passed as ‘True’ then  ignore few filters, all sales items along with fees included on the same
      * response
      *

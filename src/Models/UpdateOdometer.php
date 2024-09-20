@@ -27,7 +27,6 @@ class UpdateOdometer implements \JsonSerializable
     /**
      * Returns Sales Item Id.
      * Unique SalesItemId (Either Billed on Unbilled)
-     *
      * Mandatory
      */
     public function getSalesItemId(): ?string
@@ -38,7 +37,6 @@ class UpdateOdometer implements \JsonSerializable
     /**
      * Sets Sales Item Id.
      * Unique SalesItemId (Either Billed on Unbilled)
-     *
      * Mandatory
      *
      * @maps SalesItemId

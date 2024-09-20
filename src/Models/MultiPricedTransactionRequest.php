@@ -205,14 +205,15 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      * Mandatory.
      *
-     * • Max number of payers allowed in the input is 10, if it exceeds in the input it will throw an error.
+     * •    Max number of payers allowed in the input is 10, if it exceeds in the input it will throw an
+     * error.
      *
-     * • This value is configurable. Initial configuration will be 100 and will change to 10 once SFH
+     * •    This value is configurable. Initial configuration will be 100 and will change to 10 once SFH
      * changes are integrated.
      *
      * Note:
      *
-     * 1. At least one payer should be present.
+     * 1.    At least one payer should be present.
      *
      * Accounts information are optional.
      *
@@ -229,14 +230,15 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      * Mandatory.
      *
-     * • Max number of payers allowed in the input is 10, if it exceeds in the input it will throw an error.
+     * •    Max number of payers allowed in the input is 10, if it exceeds in the input it will throw an
+     * error.
      *
-     * • This value is configurable. Initial configuration will be 100 and will change to 10 once SFH
+     * •    This value is configurable. Initial configuration will be 100 and will change to 10 once SFH
      * changes are integrated.
      *
      * Note:
      *
-     * 1. At least one payer should be present.
+     * 1.    At least one payer should be present.
      *
      * Accounts information are optional.
      *
@@ -253,17 +255,11 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Invoice Status.
      * Invoice status of the transactions
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
-     *
      * Max Length: 1
      */
     public function getInvoiceStatus(): ?string
@@ -274,17 +270,11 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Invoice Status.
      * Invoice status of the transactions
-     *
      * Mandatory
-     *
      * Possible options:
-     *
      * I - Invoiced
-     *
      * U – Un-Invoiced
-     *
      * A – All
-     *
      * Max Length: 1
      *
      * @maps InvoiceStatus
@@ -297,9 +287,7 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Purchased in Country.
      * ISO Country Code (ex: UK, FR)
-     *
      * Optional
-     *
      *
      *
      * Note: If IncludeFees is true then this filter will be ignored
@@ -312,9 +300,7 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Purchased in Country.
      * ISO Country Code (ex: UK, FR)
-     *
      * Optional
-     *
      *
      *
      * Note: If IncludeFees is true then this filter will be ignored
@@ -406,11 +392,11 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      * Possible values are:
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      */
     public function getPeriod(): ?int
     {
@@ -423,11 +409,11 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      * Possible values are:
      *
-     * 1. Last 7 Days
+     * 1.    Last 7 Days
      *
-     * 2. Last 30 Days
+     * 2.    Last 30 Days
      *
-     * 3. Last 90 Days
+     * 3.    Last 90 Days
      *
      * @maps Period
      */
@@ -443,14 +429,10 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      *
      *
-     *
      * Note:
-     *
      * 1) When the value of both PostingDateFrom and PostingDateTo are present in the request then the
      * value of PostingDateFrom must be less than PostingDateTo.
-     *
      * 2) If IncludeFees is true then this filter will be ignored
-     *
      *
      *
      * Format: yyyyMMdd HH:mm:ss
@@ -467,14 +449,10 @@ class MultiPricedTransactionRequest implements \JsonSerializable
      *
      *
      *
-     *
      * Note:
-     *
      * 1) When the value of both PostingDateFrom and PostingDateTo are present in the request then the
      * value of PostingDateFrom must be less than PostingDateTo.
-     *
      * 2) If IncludeFees is true then this filter will be ignored
-     *
      *
      *
      * Format: yyyyMMdd HH:mm:ss
@@ -799,11 +777,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Include Fees.
      * True/False
-     *
      * Optional
-     *
      * Default value: False
-     *
      * When passed as ‘True’ then  ignore complex filters, all sales items along with fees included on the
      * same response
      */
@@ -815,11 +790,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Include Fees.
      * True/False
-     *
      * Optional
-     *
      * Default value: False
-     *
      * When passed as ‘True’ then  ignore complex filters, all sales items along with fees included on the
      * same response
      *
@@ -833,21 +805,13 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Sort Order.
      * Allowed Sorting Options:
-     *
-     * 1. TransactionDateAscending
-     *
-     * 2. TransactionDateDescending
-     *
-     * 3. GrossAmountDescending
-     *
-     * 4. GrossAmountAscending
-     *
-     * 5. NetAmountAscending
-     *
-     * 6. NetAmountDescensding
-     *
+     * 1.    TransactionDateAscending
+     * 2.    TransactionDateDescending
+     * 3.    GrossAmountDescending
+     * 4.    GrossAmountAscending
+     * 5.    NetAmountAscending
+     * 6.    NetAmountDescensding
      * Example value to be passed: 1,3
-     *
      * Note: If IncludeFees is ‘True’ then sorting is not allowed. This parameter will be ignored.
      */
     public function getSortOrder(): ?string
@@ -858,21 +822,13 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Sort Order.
      * Allowed Sorting Options:
-     *
-     * 1. TransactionDateAscending
-     *
-     * 2. TransactionDateDescending
-     *
-     * 3. GrossAmountDescending
-     *
-     * 4. GrossAmountAscending
-     *
-     * 5. NetAmountAscending
-     *
-     * 6. NetAmountDescensding
-     *
+     * 1.    TransactionDateAscending
+     * 2.    TransactionDateDescending
+     * 3.    GrossAmountDescending
+     * 4.    GrossAmountAscending
+     * 5.    NetAmountAscending
+     * 6.    NetAmountDescensding
      * Example value to be passed: 1,3
-     *
      * Note: If IncludeFees is ‘True’ then sorting is not allowed. This parameter will be ignored.
      *
      * @maps SortOrder
@@ -885,11 +841,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Current Page.
      * Page Number (as shown to the users)
-     *
      * Optional
-     *
      * Default value 1
-     *
      * Note: If IncludeFees is ‘True’ then pagination is not allowed. This parameter will be ignored.
      */
     public function getCurrentPage(): ?int
@@ -900,11 +853,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Current Page.
      * Page Number (as shown to the users)
-     *
      * Optional
-     *
      * Default value 1
-     *
      * Note: If IncludeFees is ‘True’ then pagination is not allowed. This parameter will be ignored.
      *
      * @maps CurrentPage
@@ -917,11 +867,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Returns Page Size.
      * Page Size – Number of records to show on a page
-     *
      * Optional
-     *
      * Default value 50
-     *
      *
      *
      * Note: If IncludeFees is ‘True’ then pagination is not allowed. This parameter will be ignored.
@@ -934,11 +881,8 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     /**
      * Sets Page Size.
      * Page Size – Number of records to show on a page
-     *
      * Optional
-     *
      * Default value 50
-     *
      *
      *
      * Note: If IncludeFees is ‘True’ then pagination is not allowed. This parameter will be ignored.

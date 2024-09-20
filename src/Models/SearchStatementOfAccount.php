@@ -151,7 +151,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Returns Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function getStatementDate(): ?string
@@ -165,7 +164,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Sets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      *
      * @maps StatementDate
@@ -178,7 +176,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Statement Date.
      * Date on which the SOA was generated.
-     *
      * Format: yyyyMMdd
      */
     public function unsetStatementDate(): void
@@ -390,9 +387,9 @@ class SearchStatementOfAccount implements \JsonSerializable
      *
      * Note:
      *
-     * • Clients to convert this to appropriate DateTime type.
+     * •    Clients to convert this to appropriate DateTime type.
      *
-     * • SoA due date is considered as the latest due date of the invoices within the SoA
+     * •    SoA due date is considered as the latest due date of the invoices within the SoA
      */
     public function getDueDate(): ?string
     {
@@ -408,9 +405,9 @@ class SearchStatementOfAccount implements \JsonSerializable
      *
      * Note:
      *
-     * • Clients to convert this to appropriate DateTime type.
+     * •    Clients to convert this to appropriate DateTime type.
      *
-     * • SoA due date is considered as the latest due date of the invoices within the SoA
+     * •    SoA due date is considered as the latest due date of the invoices within the SoA
      *
      * @maps DueDate
      */
@@ -425,9 +422,9 @@ class SearchStatementOfAccount implements \JsonSerializable
      *
      * Note:
      *
-     * • Clients to convert this to appropriate DateTime type.
+     * •    Clients to convert this to appropriate DateTime type.
      *
-     * • SoA due date is considered as the latest due date of the invoices within the SoA
+     * •    SoA due date is considered as the latest due date of the invoices within the SoA
      */
     public function unsetDueDate(): void
     {
@@ -437,7 +434,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Returns Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * This is the value of the first invoice within the SoA. It may not be same for all the invoices
      * within the SoA.
      */
@@ -452,7 +448,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Sets Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * This is the value of the first invoice within the SoA. It may not be same for all the invoices
      * within the SoA.
      *
@@ -466,7 +461,6 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Invoiced on Behalf Of.
      * ISO code of the country i.e., UK, DE, MY, etc.
-     *
      * This is the value of the first invoice within the SoA. It may not be same for all the invoices
      * within the SoA.
      */
@@ -478,12 +472,9 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Returns Status.
      * Status of the document. Valid values –
-     *
-     * 1. Paid – Fully paid all Invoices with in the SOA.
-     *
-     * 2. Overdue – At least one invoice payment due date is less than current date with in the SOA.
-     *
-     * 3. Due – At least one invoice is due for payment and is within the due date. There is no invoice
+     * 1.    Paid – Fully paid all Invoices with in the SOA.
+     * 2.    Overdue – At least one invoice payment due date is less than current date with in the SOA.
+     * 3.    Due – At least one invoice is due for payment and is within the due date. There is no invoice
      * overdue for payment.
      */
     public function getStatus(): ?string
@@ -497,12 +488,9 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Sets Status.
      * Status of the document. Valid values –
-     *
-     * 1. Paid – Fully paid all Invoices with in the SOA.
-     *
-     * 2. Overdue – At least one invoice payment due date is less than current date with in the SOA.
-     *
-     * 3. Due – At least one invoice is due for payment and is within the due date. There is no invoice
+     * 1.    Paid – Fully paid all Invoices with in the SOA.
+     * 2.    Overdue – At least one invoice payment due date is less than current date with in the SOA.
+     * 3.    Due – At least one invoice is due for payment and is within the due date. There is no invoice
      * overdue for payment.
      *
      * @maps Status
@@ -515,12 +503,9 @@ class SearchStatementOfAccount implements \JsonSerializable
     /**
      * Unsets Status.
      * Status of the document. Valid values –
-     *
-     * 1. Paid – Fully paid all Invoices with in the SOA.
-     *
-     * 2. Overdue – At least one invoice payment due date is less than current date with in the SOA.
-     *
-     * 3. Due – At least one invoice is due for payment and is within the due date. There is no invoice
+     * 1.    Paid – Fully paid all Invoices with in the SOA.
+     * 2.    Overdue – At least one invoice payment due date is less than current date with in the SOA.
+     * 3.    Due – At least one invoice is due for payment and is within the due date. There is no invoice
      * overdue for payment.
      */
     public function unsetStatus(): void

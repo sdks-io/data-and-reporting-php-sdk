@@ -322,7 +322,6 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Returns Allow Fleet Id Input.
      * True/False.
-     *
      * When false, users should not be allowed to enable Fleet Id prompt option while ordering cards under
      * this account.
      */
@@ -334,7 +333,6 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Sets Allow Fleet Id Input.
      * True/False.
-     *
      * When false, users should not be allowed to enable Fleet Id prompt option while ordering cards under
      * this account.
      *
@@ -348,15 +346,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Returns Band.
      * Band Id and Description of the Payer in Card Platform
-     *
      * e.g. (Id – Description):
-     *
      * 1-Platinum
-     *
      * 2-Gold
-     *
      * 3-Silver
-     *
      * 4-Bronze
      */
     public function getBand(): ?string
@@ -370,15 +363,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Sets Band.
      * Band Id and Description of the Payer in Card Platform
-     *
      * e.g. (Id – Description):
-     *
      * 1-Platinum
-     *
      * 2-Gold
-     *
      * 3-Silver
-     *
      * 4-Bronze
      *
      * @maps Band
@@ -391,15 +379,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Unsets Band.
      * Band Id and Description of the Payer in Card Platform
-     *
      * e.g. (Id – Description):
-     *
      * 1-Platinum
-     *
      * 2-Gold
-     *
      * 3-Silver
-     *
      * 4-Bronze
      */
     public function unsetBand(): void
@@ -428,10 +411,8 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Returns Card Group Position.
      * Card group position at –
-     *
-     * • Payer – Payer level
-     *
-     * • Account – Account level
+     * •    Payer – Payer level
+     * •    Account – Account level
      */
     public function getCardGroupPosition(): ?string
     {
@@ -444,10 +425,8 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Sets Card Group Position.
      * Card group position at –
-     *
-     * • Payer – Payer level
-     *
-     * • Account – Account level
+     * •    Payer – Payer level
+     * •    Account – Account level
      *
      * @maps CardGroupPosition
      */
@@ -459,10 +438,8 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Unsets Card Group Position.
      * Card group position at –
-     *
-     * • Payer – Payer level
-     *
-     * • Account – Account level
+     * •    Payer – Payer level
+     * •    Account – Account level
      */
     public function unsetCardGroupPosition(): void
     {
@@ -660,15 +637,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Returns Marketing Segmentation.
      * Marketing Segmentation id and description
-     *
      * e.g. (Id – Description):
-     *
      * 1-National CRT
-     *
      * 2-International CRT & IKAs
-     *
      * 3-Small Customers
-     *
      * 4-National/International Fleet/IKA
      */
     public function getMarketingSegmentation(): ?string
@@ -682,15 +654,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Sets Marketing Segmentation.
      * Marketing Segmentation id and description
-     *
      * e.g. (Id – Description):
-     *
      * 1-National CRT
-     *
      * 2-International CRT & IKAs
-     *
      * 3-Small Customers
-     *
      * 4-National/International Fleet/IKA
      *
      * @maps MarketingSegmentation
@@ -703,15 +670,10 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Unsets Marketing Segmentation.
      * Marketing Segmentation id and description
-     *
      * e.g. (Id – Description):
-     *
      * 1-National CRT
-     *
      * 2-International CRT & IKAs
-     *
      * 3-Small Customers
-     *
      * 4-National/International Fleet/IKA
      */
     public function unsetMarketingSegmentation(): void
@@ -950,16 +912,11 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Returns Default PIN Advice Type.
      * Default PIN AdviceType of the customer.
-     *
      * Possible Values:
-     *
-     * 1. Paper
-     *
-     * 2. Email
-     *
-     * 3. SMS
-     *
-     * 4. None
+     * 1.    Paper
+     * 2.    Email
+     * 3.    SMS
+     * 4.    None
      */
     public function getDefaultPINAdviceType(): ?int
     {
@@ -972,16 +929,11 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Sets Default PIN Advice Type.
      * Default PIN AdviceType of the customer.
-     *
      * Possible Values:
-     *
-     * 1. Paper
-     *
-     * 2. Email
-     *
-     * 3. SMS
-     *
-     * 4. None
+     * 1.    Paper
+     * 2.    Email
+     * 3.    SMS
+     * 4.    None
      *
      * @maps DefaultPINAdviceType
      */
@@ -993,16 +945,11 @@ class CustomerDetailResponse implements \JsonSerializable
     /**
      * Unsets Default PIN Advice Type.
      * Default PIN AdviceType of the customer.
-     *
      * Possible Values:
-     *
-     * 1. Paper
-     *
-     * 2. Email
-     *
-     * 3. SMS
-     *
-     * 4. None
+     * 1.    Paper
+     * 2.    Email
+     * 3.    SMS
+     * 4.    None
      */
     public function unsetDefaultPINAdviceType(): void
     {

@@ -625,7 +625,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns From Date.
      * Bonus was calculated from this date.
-     *
      * Format: YYYYMMDD
      */
     public function getFromDate(): ?string
@@ -639,7 +638,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets From Date.
      * Bonus was calculated from this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps FromDate
@@ -652,7 +650,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets From Date.
      * Bonus was calculated from this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetFromDate(): void
@@ -663,7 +660,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns To Date.
      * Bonus was calculated till this date.
-     *
      * Format: YYYYMMDD
      */
     public function getToDate(): ?string
@@ -677,7 +673,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets To Date.
      * Bonus was calculated till this date.
-     *
      * Format: YYYYMMDD
      *
      * @maps ToDate
@@ -690,7 +685,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets To Date.
      * Bonus was calculated till this date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetToDate(): void
@@ -807,15 +801,10 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns Fee Rule Basis.
      * Fee Rule Basis of the bonus fee item.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      */
     public function getFeeRuleBasis(): ?string
@@ -829,15 +818,10 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets Fee Rule Basis.
      * Fee Rule Basis of the bonus fee item.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      *
      * @maps FeeRuleBasis
@@ -850,15 +834,10 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets Fee Rule Basis.
      * Fee Rule Basis of the bonus fee item.
-     *
      * Format: ID-Description
-     *
      * Example:
-     *
      * 1-Currency Per Unit
-     *
      * 2-Percentage of Uplift
-     *
      * 3-Lump Sum
      */
     public function unsetFeeRuleBasis(): void
@@ -869,7 +848,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns Fee Item Currency Code.
      * ISO currency code of the currency in which Bonus is paid.
-     *
      * Example: GBP
      */
     public function getFeeItemCurrencyCode(): ?string
@@ -883,7 +861,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets Fee Item Currency Code.
      * ISO currency code of the currency in which Bonus is paid.
-     *
      * Example: GBP
      *
      * @maps FeeItemCurrencyCode
@@ -896,7 +873,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets Fee Item Currency Code.
      * ISO currency code of the currency in which Bonus is paid.
-     *
      * Example: GBP
      */
     public function unsetFeeItemCurrencyCode(): void
@@ -1003,9 +979,7 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns Fee Product.
      * Product as shown in the invoice for the bonus paid.
-     *
      * Format: ID-Description
-     *
      * Example: 1562-Bonus diesel Shell Netherlands on agreed site(s)
      */
     public function getFeeProduct(): ?string
@@ -1019,9 +993,7 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets Fee Product.
      * Product as shown in the invoice for the bonus paid.
-     *
      * Format: ID-Description
-     *
      * Example: 1562-Bonus diesel Shell Netherlands on agreed site(s)
      *
      * @maps FeeProduct
@@ -1034,9 +1006,7 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets Fee Product.
      * Product as shown in the invoice for the bonus paid.
-     *
      * Format: ID-Description
-     *
      * Example: 1562-Bonus diesel Shell Netherlands on agreed site(s)
      */
     public function unsetFeeProduct(): void
@@ -1143,7 +1113,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Returns Is Fee Cancelled.
      * True/False
-     *
      * True if bonus is generated but cancelled. When true, consider this as not paid.
      */
     public function getIsFeeCancelled(): ?bool
@@ -1157,7 +1126,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Sets Is Fee Cancelled.
      * True/False
-     *
      * True if bonus is generated but cancelled. When true, consider this as not paid.
      *
      * @maps IsFeeCancelled
@@ -1170,7 +1138,6 @@ class BonusHistory implements \JsonSerializable
     /**
      * Unsets Is Fee Cancelled.
      * True/False
-     *
      * True if bonus is generated but cancelled. When true, consider this as not paid.
      */
     public function unsetIsFeeCancelled(): void

@@ -312,7 +312,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Account Full Name.
      * Account Full Name
-     *
      * Example: AT_reversal customer_FN
      */
     public function getAccountFullName(): ?string
@@ -326,7 +325,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Account Full Name.
      * Account Full Name
-     *
      * Example: AT_reversal customer_FN
      *
      * @maps AccountFullName
@@ -339,7 +337,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Account Full Name.
      * Account Full Name
-     *
      * Example: AT_reversal customer_FN
      */
     public function unsetAccountFullName(): void
@@ -350,7 +347,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Account Id.
      * Account ID
-     *
      * Example: 29484
      */
     public function getAccountId(): ?int
@@ -364,7 +360,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Account Id.
      * Account ID
-     *
      * Example: 29484
      *
      * @maps AccountId
@@ -377,7 +372,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Account Id.
      * Account ID
-     *
      * Example: 29484
      */
     public function unsetAccountId(): void
@@ -388,7 +382,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Account Number.
      * Account Number
-     *
      * Example: GB99215176
      */
     public function getAccountNumber(): ?string
@@ -402,7 +395,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Account Number.
      * Account Number
-     *
      * Example: GB99215176
      *
      * @maps AccountNumber
@@ -415,7 +407,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Account Number.
      * Account Number
-     *
      * Example: GB99215176
      */
     public function unsetAccountNumber(): void
@@ -426,7 +417,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Account Short Name.
      * Account Short Name
-     *
      * Example: AT Earth Movers-SN
      */
     public function getAccountShortName(): ?string
@@ -440,7 +430,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Account Short Name.
      * Account Short Name
-     *
      * Example: AT Earth Movers-SN
      *
      * @maps AccountShortName
@@ -453,7 +442,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Account Short Name.
      * Account Short Name
-     *
      * Example: AT Earth Movers-SN
      */
     public function unsetAccountShortName(): void
@@ -464,7 +452,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Col Co Id.
      * ColCo Id.
-     *
      * Example: 18
      */
     public function getColCoId(): ?int
@@ -478,7 +465,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Col Co Id.
      * ColCo Id.
-     *
      * Example: 18
      *
      * @maps ColCoId
@@ -491,7 +477,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Col Co Id.
      * ColCo Id.
-     *
      * Example: 18
      */
     public function unsetColCoId(): void
@@ -502,7 +487,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Col Co Op Co Id.
      * ColCo’s OpCo Id.
-     *
      * Example: 018
      */
     public function getColCoOpCoId(): ?string
@@ -516,7 +500,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Col Co Op Co Id.
      * ColCo’s OpCo Id.
-     *
      * Example: 018
      *
      * @maps ColCoOpCoId
@@ -529,7 +512,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Col Co Op Co Id.
      * ColCo’s OpCo Id.
-     *
      * Example: 018
      */
     public function unsetColCoOpCoId(): void
@@ -540,29 +522,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Current Billing Frequency.
      * Current billing frequency of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: Weekly – Wednesday
      */
     public function getCurrentBillingFrequency(): ?string
@@ -576,29 +546,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Current Billing Frequency.
      * Current billing frequency of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: Weekly – Wednesday
      *
      * @maps CurrentBillingFrequency
@@ -611,29 +569,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Current Billing Frequency.
      * Current billing frequency of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: Weekly – Wednesday
      */
     public function unsetCurrentBillingFrequency(): void
@@ -644,29 +590,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Current Billing Frequency Id.
      * Current billing frequency id of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: 5
      */
     public function getCurrentBillingFrequencyId(): ?int
@@ -680,29 +614,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Current Billing Frequency Id.
      * Current billing frequency id of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: 5
      *
      * @maps CurrentBillingFrequencyId
@@ -715,29 +637,17 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Current Billing Frequency Id.
      * Current billing frequency id of the account.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Daily (all days)
-     *
-     * 2 Daily (only working days)
-     *
-     * 3 Weekly - Monday
-     *
-     * 4 Weekly - Tuesday
-     *
-     * 5 Weekly - Wednesday
-     *
-     * 6 Weekly - Thursday
-     *
-     * 7 Weekly - Friday
-     *
-     * 8 Weekly - Saturday
-     *
-     * 9 Weekly - Sunday
-     *
-     * 10 Monthly - 1st
-     *
+     * 1    Daily (all days)
+     * 2    Daily (only working days)
+     * 3    Weekly - Monday
+     * 4    Weekly - Tuesday
+     * 5    Weekly - Wednesday
+     * 6    Weekly - Thursday
+     * 7    Weekly - Friday
+     * 8    Weekly - Saturday
+     * 9    Weekly - Sunday
+     * 10    Monthly - 1st
      * Example: 5
      */
     public function unsetCurrentBillingFrequencyId(): void
@@ -748,22 +658,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Current Distribution Method.
      * Current distribution method name of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      */
     public function getCurrentDistributionMethod(): ?string
     {
@@ -776,22 +678,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Current Distribution Method.
      * Current distribution method name of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      *
      * @maps CurrentDistributionMethod
      */
@@ -803,22 +697,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Current Distribution Method.
      * Current distribution method name of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      */
     public function unsetCurrentDistributionMethod(): void
     {
@@ -828,22 +714,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Current Distribution Method Id.
      * Current distribution method id of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      */
     public function getCurrentDistributionMethodId(): ?int
     {
@@ -856,22 +734,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Current Distribution Method Id.
      * Current distribution method id of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      *
      * @maps CurrentDistributionMethodId
      */
@@ -883,22 +753,14 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Current Distribution Method Id.
      * Current distribution method id of the account.
-     *
      * Example : Id & Description
-     *
-     * 1 e-mail
-     *
-     * 2 Fax
-     *
-     * 3 Courier to Customer
-     *
-     * 4 Courier to Client
-     *
-     * 5 Print
-     *
-     * 6 FTP
-     *
-     * 7 SMS
+     * 1    e-mail
+     * 2    Fax
+     * 3    Courier to Customer
+     * 4    Courier to Client
+     * 5    Print
+     * 6    FTP
+     * 7    SMS
      */
     public function unsetCurrentDistributionMethodId(): void
     {
@@ -908,7 +770,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      */
     public function getCustomerCurrencyCode(): ?string
@@ -922,7 +783,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      *
      * @maps CustomerCurrencyCode
@@ -935,7 +795,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Customer Currency Code.
      * Customer currency ISO code.
-     *
      * Example: EUR
      */
     public function unsetCustomerCurrencyCode(): void
@@ -946,7 +805,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      */
     public function getCustomerCurrencySymbol(): ?string
@@ -960,7 +818,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      *
      * @maps CustomerCurrencySymbol
@@ -973,7 +830,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Customer Currency Symbol.
      * Customer currency code.
-     *
      * Example: €
      */
     public function unsetCustomerCurrencySymbol(): void
@@ -984,7 +840,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Del Co Client Number.
      * DelCo’s client company number.
-     *
      * Example: 132
      */
     public function getDelCoClientNumber(): ?string
@@ -998,7 +853,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Del Co Client Number.
      * DelCo’s client company number.
-     *
      * Example: 132
      *
      * @maps DelCoClientNumber
@@ -1011,7 +865,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Del Co Client Number.
      * DelCo’s client company number.
-     *
      * Example: 132
      */
     public function unsetDelCoClientNumber(): void
@@ -1022,7 +875,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Del Co Id.
      * DelCo Id.
-     *
      * Example: 132
      */
     public function getDelCoId(): ?int
@@ -1036,7 +888,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Del Co Id.
      * DelCo Id.
-     *
      * Example: 132
      *
      * @maps DelCoId
@@ -1049,7 +900,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Del Co Id.
      * DelCo Id.
-     *
      * Example: 132
      */
     public function unsetDelCoId(): void
@@ -1060,7 +910,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Del Co Op Co Id.
      * DelCo’s OpCo Id.
-     *
      * Example: 032
      */
     public function getDelCoOpCoId(): ?string
@@ -1074,7 +923,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Del Co Op Co Id.
      * DelCo’s OpCo Id.
-     *
      * Example: 032
      *
      * @maps DelCoOpCoId
@@ -1087,7 +935,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Del Co Op Co Id.
      * DelCo’s OpCo Id.
-     *
      * Example: 032
      */
     public function unsetDelCoOpCoId(): void
@@ -1162,7 +1009,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Due Date.
      * Due date. Format: yyyyMMdd.
-     *
      * Example: 20170115
      */
     public function getDueDate(): ?string
@@ -1176,7 +1022,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Due Date.
      * Due date. Format: yyyyMMdd.
-     *
      * Example: 20170115
      *
      * @maps DueDate
@@ -1189,7 +1034,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Due Date.
      * Due date. Format: yyyyMMdd.
-     *
      * Example: 20170115
      */
     public function unsetDueDate(): void
@@ -1264,7 +1108,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Invoice Date.
      * Invoicing date. Format: yyyyMMdd
-     *
      * Example: 20170101
      */
     public function getInvoiceDate(): ?string
@@ -1278,7 +1121,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Invoice Date.
      * Invoicing date. Format: yyyyMMdd
-     *
      * Example: 20170101
      *
      * @maps InvoiceDate
@@ -1291,7 +1133,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Invoice Date.
      * Invoicing date. Format: yyyyMMdd
-     *
      * Example: 20170101
      */
     public function unsetInvoiceDate(): void
@@ -1334,7 +1175,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Invoiced on Behalf Of.
      * Country Name.
-     *
      * Example: Czech Republic
      */
     public function getInvoicedOnBehalfOf(): ?string
@@ -1348,7 +1188,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Invoiced on Behalf Of.
      * Country Name.
-     *
      * Example: Czech Republic
      *
      * @maps InvoicedOnBehalfOf
@@ -1361,7 +1200,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Invoiced on Behalf Of.
      * Country Name.
-     *
      * Example: Czech Republic
      */
     public function unsetInvoicedOnBehalfOf(): void
@@ -1372,7 +1210,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Invoice Id.
      * Invoice id.
-     *
      * Example: 1
      */
     public function getInvoiceId(): ?int
@@ -1386,7 +1223,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Invoice Id.
      * Invoice id.
-     *
      * Example: 1
      *
      * @maps InvoiceId
@@ -1399,7 +1235,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Invoice Id.
      * Invoice id.
-     *
      * Example: 1
      */
     public function unsetInvoiceId(): void
@@ -1410,7 +1245,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Invoice Number.
      * Invoice number.
-     *
      * Example: 0123456789
      */
     public function getInvoiceNumber(): ?string
@@ -1424,7 +1258,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Invoice Number.
      * Invoice number.
-     *
      * Example: 0123456789
      *
      * @maps InvoiceNumber
@@ -1437,7 +1270,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Invoice Number.
      * Invoice number.
-     *
      * Example: 0123456789
      */
     public function unsetInvoiceNumber(): void
@@ -1448,7 +1280,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Is International.
      * True/False.
-     *
      * True if this is an International invoice, else false.
      */
     public function getIsInternational(): ?bool
@@ -1462,7 +1293,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Is International.
      * True/False.
-     *
      * True if this is an International invoice, else false.
      *
      * @maps IsInternational
@@ -1475,7 +1305,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Is International.
      * True/False.
-     *
      * True if this is an International invoice, else false.
      */
     public function unsetIsInternational(): void
@@ -1486,7 +1315,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Is National.
      * True/False.
-     *
      * True if this is a National invoice, else false.
      */
     public function getIsNational(): ?bool
@@ -1500,7 +1328,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Is National.
      * True/False.
-     *
      * True if this is a National invoice, else false.
      *
      * @maps IsNational
@@ -1513,7 +1340,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Is National.
      * True/False.
-     *
      * True if this is a National invoice, else false.
      */
     public function unsetIsNational(): void
@@ -1588,7 +1414,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Payer Id.
      * Payment customer id of the customer.
-     *
      * Example: 123456
      */
     public function getPayerId(): ?int
@@ -1602,7 +1427,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Payer Id.
      * Payment customer id of the customer.
-     *
      * Example: 123456
      *
      * @maps PayerId
@@ -1615,7 +1439,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Payer Id.
      * Payment customer id of the customer.
-     *
      * Example: 123456
      */
     public function unsetPayerId(): void
@@ -1626,7 +1449,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Payer Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      */
     public function getPayerNumber(): ?string
@@ -1640,7 +1462,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Payer Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      *
      * @maps PayerNumber
@@ -1653,7 +1474,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Payer Number.
      * Payment customer number.
-     *
      * Example: GB000000123
      */
     public function unsetPayerNumber(): void
@@ -1664,16 +1484,11 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Payment Terms.
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      */
     public function getPaymentTerms(): ?string
     {
@@ -1686,16 +1501,11 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Payment Terms.
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      *
      * @maps PaymentTerms
      */
@@ -1707,16 +1517,11 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Payment Terms.
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      */
     public function unsetPaymentTerms(): void
     {
@@ -1726,18 +1531,12 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Payment Terms Id.
      * Payment terms id of the payment customer.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      */
     public function getPaymentTermsId(): ?int
     {
@@ -1750,18 +1549,12 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Payment Terms Id.
      * Payment terms id of the payment customer.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      *
      * @maps PaymentTermsId
      */
@@ -1773,18 +1566,12 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Payment Terms Id.
      * Payment terms id of the payment customer.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 14 days after Invoice
-     *
-     * 2 15 days after Invoice
-     *
-     * 3 21 days after Invoice
-     *
-     * 4 30 days after Invoice
-     *
-     * 5 45 days after Invoice
+     * 1    14 days after Invoice
+     * 2    15 days after Invoice
+     * 3    21 days after Invoice
+     * 4    30 days after Invoice
+     * 5    45 days after Invoice
      */
     public function unsetPaymentTermsId(): void
     {
@@ -1794,7 +1581,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Replacement Invoice Id.
      * Replaced document id.
-     *
      * Example: 2
      */
     public function getReplacementInvoiceId(): ?int
@@ -1808,7 +1594,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Replacement Invoice Id.
      * Replaced document id.
-     *
      * Example: 2
      *
      * @maps ReplacementInvoiceId
@@ -1821,7 +1606,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Replacement Invoice Id.
      * Replaced document id.
-     *
      * Example: 2
      */
     public function unsetReplacementInvoiceId(): void
@@ -1870,13 +1654,9 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Status.
      * Status of the document. Valid values –
-     *
-     * • [Empty] – For all document types except for Invoice and Statement.
-     *
-     * • Due – Invoices/Statements due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices/Statements.
-     *
+     * •    [Empty] – For all document types except for Invoice and Statement.
+     * •    Due – Invoices/Statements due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices/Statements.
      * Overdue – Invoices/Statements due of payment and has crossed the due date.
      */
     public function getStatus(): ?string
@@ -1890,13 +1670,9 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Status.
      * Status of the document. Valid values –
-     *
-     * • [Empty] – For all document types except for Invoice and Statement.
-     *
-     * • Due – Invoices/Statements due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices/Statements.
-     *
+     * •    [Empty] – For all document types except for Invoice and Statement.
+     * •    Due – Invoices/Statements due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices/Statements.
      * Overdue – Invoices/Statements due of payment and has crossed the due date.
      *
      * @maps Status
@@ -1909,13 +1685,9 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Status.
      * Status of the document. Valid values –
-     *
-     * • [Empty] – For all document types except for Invoice and Statement.
-     *
-     * • Due – Invoices/Statements due for payment and is within the due date.
-     *
-     * • Paid – Fully paid Invoices/Statements.
-     *
+     * •    [Empty] – For all document types except for Invoice and Statement.
+     * •    Due – Invoices/Statements due for payment and is within the due date.
+     * •    Paid – Fully paid Invoices/Statements.
      * Overdue – Invoices/Statements due of payment and has crossed the due date.
      */
     public function unsetStatus(): void
@@ -1926,20 +1698,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Billing Type.
      * Billing type description.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      */
     public function getSummaryDocumentBillingType(): ?string
     {
@@ -1952,20 +1717,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Billing Type.
      * Billing type description.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      *
      * @maps SummaryDocumentBillingType
      */
@@ -1977,20 +1735,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Billing Type.
      * Billing type description.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      */
     public function unsetSummaryDocumentBillingType(): void
     {
@@ -2000,20 +1751,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Billing Type Id.
      * Billing type id.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      */
     public function getSummaryDocumentBillingTypeId(): ?int
     {
@@ -2026,20 +1770,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Billing Type Id.
      * Billing type id.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      *
      * @maps SummaryDocumentBillingTypeId
      */
@@ -2051,20 +1788,13 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Billing Type Id.
      * Billing type id.
-     *
      * Example: Id & Description
-     *
-     * -3 Guarantee History
-     *
-     * -1 Initial Balance
-     *
-     * 0 Standard Invoice
-     *
-     * 1 Immediate Invoice
-     *
-     * 2 Guarantee
-     *
-     * 4 Advanced DD Invoice
+     * -3    Guarantee History
+     * -1    Initial Balance
+     * 0    Standard Invoice
+     * 1    Immediate Invoice
+     * 2    Guarantee
+     * 4    Advanced DD Invoice
      */
     public function unsetSummaryDocumentBillingTypeId(): void
     {
@@ -2074,7 +1804,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Date.
      * Document generated date. Format: yyyyMMdd
-     *
      * Example: 20170101
      */
     public function getSummaryDocumentDate(): ?string
@@ -2088,7 +1817,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Date.
      * Document generated date. Format: yyyyMMdd
-     *
      * Example: 20170101
      *
      * @maps SummaryDocumentDate
@@ -2101,7 +1829,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Date.
      * Document generated date. Format: yyyyMMdd
-     *
      * Example: 20170101
      */
     public function unsetSummaryDocumentDate(): void
@@ -2144,7 +1871,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Due Date.
      * Due date for document. Format: yyyyMMdd
-     *
      * Example: 20170115
      */
     public function getSummaryDocumentDueDate(): ?string
@@ -2158,7 +1884,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Due Date.
      * Due date for document. Format: yyyyMMdd
-     *
      * Example: 20170115
      *
      * @maps SummaryDocumentDueDate
@@ -2171,7 +1896,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Due Date.
      * Due date for document. Format: yyyyMMdd
-     *
      * Example: 20170115
      */
     public function unsetSummaryDocumentDueDate(): void
@@ -2182,7 +1906,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Id.
      * Summary document identifier
-     *
      * Example: 1
      */
     public function getSummaryDocumentId(): ?int
@@ -2196,7 +1919,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Id.
      * Summary document identifier
-     *
      * Example: 1
      *
      * @maps SummaryDocumentId
@@ -2209,7 +1931,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Id.
      * Summary document identifier
-     *
      * Example: 1
      */
     public function unsetSummaryDocumentId(): void
@@ -2220,7 +1941,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Is Fully Paid.
      * True/False
-     *
      * True if invoice amount is fully paid, else false
      */
     public function getSummaryDocumentIsFullyPaid(): ?bool
@@ -2234,7 +1954,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Is Fully Paid.
      * True/False
-     *
      * True if invoice amount is fully paid, else false
      *
      * @maps SummaryDocumentIsFullyPaid
@@ -2247,7 +1966,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Is Fully Paid.
      * True/False
-     *
      * True if invoice amount is fully paid, else false
      */
     public function unsetSummaryDocumentIsFullyPaid(): void
@@ -2258,7 +1976,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Summary Document Number.
      * Summary document number
-     *
      * Example: ‘0/CZ0000000123456/2017’
      */
     public function getSummaryDocumentNumber(): ?string
@@ -2272,7 +1989,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Summary Document Number.
      * Summary document number
-     *
      * Example: ‘0/CZ0000000123456/2017’
      *
      * @maps SummaryDocumentNumber
@@ -2285,7 +2001,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Summary Document Number.
      * Summary document number
-     *
      * Example: ‘0/CZ0000000123456/2017’
      */
     public function unsetSummaryDocumentNumber(): void
@@ -2392,7 +2107,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Transaction Currency Code.
      * Transaction currency ISO code.
-     *
      * Example: EUR
      */
     public function getTransactionCurrencyCode(): ?string
@@ -2406,7 +2120,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Transaction Currency Code.
      * Transaction currency ISO code.
-     *
      * Example: EUR
      *
      * @maps TransactionCurrencyCode
@@ -2419,7 +2132,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Transaction Currency Code.
      * Transaction currency ISO code.
-     *
      * Example: EUR
      */
     public function unsetTransactionCurrencyCode(): void
@@ -2430,7 +2142,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Transaction Currency Symbol.
      * Transaction currency symbol.
-     *
      * Example: €
      */
     public function getTransactionCurrencySymbol(): ?string
@@ -2444,7 +2155,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Transaction Currency Symbol.
      * Transaction currency symbol.
-     *
      * Example: €
      *
      * @maps TransactionCurrencySymbol
@@ -2457,7 +2167,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Transaction Currency Symbol.
      * Transaction currency symbol.
-     *
      * Example: €
      */
     public function unsetTransactionCurrencySymbol(): void
@@ -2468,15 +2177,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Type.
      * Invoice type description.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: Original
      */
     public function getType(): ?string
@@ -2490,15 +2194,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Type.
      * Invoice type description.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: Original
      *
      * @maps Type
@@ -2511,15 +2210,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Type.
      * Invoice type description.
-     *
      * A few of the possible IDs and Description are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: Original
      */
     public function unsetType(): void
@@ -2530,15 +2224,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns Type Id.
      * Invoice type id.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: 1
      */
     public function getTypeId(): ?int
@@ -2552,15 +2241,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets Type Id.
      * Invoice type id.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: 1
      *
      * @maps TypeId
@@ -2573,15 +2257,10 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets Type Id.
      * Invoice type id.
-     *
      * A few of the possible IDs and Descriptions are below:
-     *
-     * 1 Original
-     *
-     * 2 Reversal
-     *
-     * 3 Replacement
-     *
+     * 1    Original
+     * 2    Reversal
+     * 3    Replacement
      * Example: 1
      */
     public function unsetTypeId(): void
@@ -2656,7 +2335,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns V at Country.
      * Country name of the VAT country.
-     *
      * Example: France, Germany
      */
     public function getVATCountry(): ?string
@@ -2670,7 +2348,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets V at Country.
      * Country name of the VAT country.
-     *
      * Example: France, Germany
      *
      * @maps VATCountry
@@ -2683,7 +2360,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets V at Country.
      * Country name of the VAT country.
-     *
      * Example: France, Germany
      */
     public function unsetVATCountry(): void
@@ -2694,7 +2370,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns V at Country Id.
      * Country Id of the VAT country.
-     *
      * Example: 1,2
      */
     public function getVATCountryId(): ?int
@@ -2708,7 +2383,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets V at Country Id.
      * Country Id of the VAT country.
-     *
      * Example: 1,2
      *
      * @maps VATCountryId
@@ -2721,7 +2395,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets V at Country Id.
      * Country Id of the VAT country.
-     *
      * Example: 1,2
      */
     public function unsetVATCountryId(): void
@@ -2732,7 +2405,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns V at Country ISO Code.
      * Country ISO code of the VAT country.
-     *
      * Example : CZ, SK, UK, etc.,
      */
     public function getVATCountryISOCode(): ?string
@@ -2746,7 +2418,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets V at Country ISO Code.
      * Country ISO code of the VAT country.
-     *
      * Example : CZ, SK, UK, etc.,
      *
      * @maps VATCountryISOCode
@@ -2759,7 +2430,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets V at Country ISO Code.
      * Country ISO code of the VAT country.
-     *
      * Example : CZ, SK, UK, etc.,
      */
     public function unsetVATCountryISOCode(): void
@@ -2770,7 +2440,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Returns V at Country Op Co Id.
      * VAT country’s OpCo Id.
-     *
      * Example: 032
      */
     public function getVATCountryOpCoId(): ?string
@@ -2784,7 +2453,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Sets V at Country Op Co Id.
      * VAT country’s OpCo Id.
-     *
      * Example: 032
      *
      * @maps VATCountryOpCoId
@@ -2797,7 +2465,6 @@ class InvoiceSearchDetails implements \JsonSerializable
     /**
      * Unsets V at Country Op Co Id.
      * VAT country’s OpCo Id.
-     *
      * Example: 032
      */
     public function unsetVATCountryOpCoId(): void

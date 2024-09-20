@@ -87,9 +87,7 @@ class UsageSummary implements \JsonSerializable
     /**
      * Returns Date.
      * Transaction date.
-     *
      * The records will be sorted by this field in ascending order.
-     *
      *
      *
      * Format: yyyyMMdd
@@ -105,9 +103,7 @@ class UsageSummary implements \JsonSerializable
     /**
      * Sets Date.
      * Transaction date.
-     *
      * The records will be sorted by this field in ascending order.
-     *
      *
      *
      * Format: yyyyMMdd
@@ -122,9 +118,7 @@ class UsageSummary implements \JsonSerializable
     /**
      * Unsets Date.
      * Transaction date.
-     *
      * The records will be sorted by this field in ascending order.
-     *
      *
      *
      * Format: yyyyMMdd

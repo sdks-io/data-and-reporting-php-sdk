@@ -45,6 +45,8 @@ class ConfigurationDefaults
 
     public const O_AUTH_TOKEN = null;
 
+    public const BEARER_TOKEN_CLOCK_SKEW = 0;
+
     /**
      * @var array Associative list of all default configurations
      */
@@ -63,6 +65,9 @@ class ConfigurationDefaults
         'password' => self::PASSWORD,
         'oAuthClientId' => self::O_AUTH_CLIENT_ID,
         'oAuthClientSecret' => self::O_AUTH_CLIENT_SECRET,
-        'oAuthToken' => self::O_AUTH_TOKEN
+        'oAuthToken' => self::O_AUTH_TOKEN,
+        'BearerToken-ClockSkew' => self::BEARER_TOKEN_CLOCK_SKEW,
+        'BearerToken-TokenProvider' => null,
+        'BearerToken-OnTokenUpdate' => null
     ];
 }

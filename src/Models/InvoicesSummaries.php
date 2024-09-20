@@ -247,7 +247,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Returns Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      */
     public function getBillingCurrencySymbol(): ?string
@@ -261,7 +260,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Sets Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      *
      * @maps BillingCurrencySymbol
@@ -274,7 +272,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Unsets Billing Currency Symbol.
      * Billing currency symbol.
-     *
      * Example: €
      */
     public function unsetBillingCurrencySymbol(): void
@@ -317,7 +314,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Returns Payment Due Date.
      * Payment due date.
-     *
      * Format: YYYYMMDD
      */
     public function getPaymentDueDate(): ?string
@@ -331,7 +327,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Sets Payment Due Date.
      * Payment due date.
-     *
      * Format: YYYYMMDD
      *
      * @maps PaymentDueDate
@@ -344,7 +339,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Unsets Payment Due Date.
      * Payment due date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetPaymentDueDate(): void
@@ -355,7 +349,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Returns Summary Document Date.
      * Summary document date.
-     *
      * Format: YYYYMMDD
      */
     public function getSummaryDocumentDate(): ?string
@@ -369,7 +362,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Sets Summary Document Date.
      * Summary document date.
-     *
      * Format: YYYYMMDD
      *
      * @maps SummaryDocumentDate
@@ -382,7 +374,6 @@ class InvoicesSummaries implements \JsonSerializable
     /**
      * Unsets Summary Document Date.
      * Summary document date.
-     *
      * Format: YYYYMMDD
      */
     public function unsetSummaryDocumentDate(): void
