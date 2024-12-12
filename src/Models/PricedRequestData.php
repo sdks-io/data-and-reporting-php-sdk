@@ -927,6 +927,10 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Returns Period.
+     * Pass below one of the value as per the required transaction period
+     * 1. Last 7 Days
+     * 2. Last 30 Days
+     * 3. Last 90 Days
      */
     public function getPeriod(): ?int
     {
@@ -935,6 +939,10 @@ class PricedRequestData implements \JsonSerializable
 
     /**
      * Sets Period.
+     * Pass below one of the value as per the required transaction period
+     * 1. Last 7 Days
+     * 2. Last 30 Days
+     * 3. Last 90 Days
      *
      * @maps Period
      * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionReqV2PeriodEnum::checkValue

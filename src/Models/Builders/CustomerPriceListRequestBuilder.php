@@ -31,7 +31,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Initializes a new customer price list request Builder object.
+     * Initializes a new Customer Price List Request Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +50,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -57,7 +59,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -66,7 +70,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -75,7 +79,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -84,7 +90,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -93,7 +99,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -102,7 +110,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -111,7 +119,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -120,7 +130,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -129,7 +139,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -138,7 +150,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -147,7 +159,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets customer specific list field.
+     * Sets Customer Specific List field.
+     *
+     * @param int|null $value
      */
     public function customerSpecificList(?int $value): self
     {
@@ -156,7 +170,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets customer specific list field.
+     * Unsets Customer Specific List field.
      */
     public function unsetCustomerSpecificList(): self
     {
@@ -165,7 +179,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets price list type field.
+     * Sets Price List Type field.
+     *
+     * @param int|null $value
      */
     public function priceListType(?int $value): self
     {
@@ -174,7 +190,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets price list type field.
+     * Unsets Price List Type field.
      */
     public function unsetPriceListType(): self
     {
@@ -183,7 +199,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets del co id field.
+     * Sets Del Co Id field.
+     *
+     * @param int|null $value
      */
     public function delCoId(?int $value): self
     {
@@ -192,7 +210,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets del co id field.
+     * Unsets Del Co Id field.
      */
     public function unsetDelCoId(): self
     {
@@ -201,7 +219,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -210,7 +230,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -219,7 +241,9 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Sets include pump price discounts field.
+     * Sets Include Pump Price Discounts field.
+     *
+     * @param bool|null $value
      */
     public function includePumpPriceDiscounts(?bool $value): self
     {
@@ -228,7 +252,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Unsets include pump price discounts field.
+     * Unsets Include Pump Price Discounts field.
      */
     public function unsetIncludePumpPriceDiscounts(): self
     {
@@ -237,7 +261,7 @@ class CustomerPriceListRequestBuilder
     }
 
     /**
-     * Initializes a new customer price list request object.
+     * Initializes a new Customer Price List Request object.
      */
     public function build(): CustomerPriceListRequest
     {

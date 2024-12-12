@@ -11,6 +11,9 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\BonusConfiguration;
+use ShellDataReportingAPIsLib\Models\BonusHistory;
+use ShellDataReportingAPIsLib\Models\CurrentVolume;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\VolumeBasedBonusResponse;
 
@@ -32,7 +35,7 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Initializes a new volume based bonus response Builder object.
+     * Initializes a new Volume Based Bonus Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +43,9 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Sets configuration field.
+     * Sets Configuration field.
+     *
+     * @param BonusConfiguration[]|null $value
      */
     public function configuration(?array $value): self
     {
@@ -49,7 +54,9 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Sets current period consumption field.
+     * Sets Current Period Consumption field.
+     *
+     * @param CurrentVolume[]|null $value
      */
     public function currentPeriodConsumption(?array $value): self
     {
@@ -58,7 +65,9 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Sets historical bonus paid field.
+     * Sets Historical Bonus Paid field.
+     *
+     * @param BonusHistory[]|null $value
      */
     public function historicalBonusPaid(?array $value): self
     {
@@ -67,7 +76,9 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -76,7 +87,9 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -85,7 +98,7 @@ class VolumeBasedBonusResponseBuilder
     }
 
     /**
-     * Initializes a new volume based bonus response object.
+     * Initializes a new Volume Based Bonus Response object.
      */
     public function build(): VolumeBasedBonusResponse
     {

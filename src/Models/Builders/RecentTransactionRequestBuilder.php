@@ -32,7 +32,11 @@ class RecentTransactionRequestBuilder
     }
 
     /**
-     * Initializes a new recent transaction request Builder object.
+     * Initializes a new Recent Transaction Request Builder object.
+     *
+     * @param int $pageSize
+     * @param int $page
+     * @param RecentTransactionReq $filters
      */
     public static function init(int $pageSize, int $page, RecentTransactionReq $filters): self
     {
@@ -40,7 +44,7 @@ class RecentTransactionRequestBuilder
     }
 
     /**
-     * Initializes a new recent transaction request object.
+     * Initializes a new Recent Transaction Request object.
      */
     public function build(): RecentTransactionRequest
     {

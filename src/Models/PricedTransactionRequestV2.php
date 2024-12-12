@@ -15,7 +15,7 @@ use stdClass;
 class PricedTransactionRequestV2 implements \JsonSerializable
 {
     /**
-     * @var Filters|null
+     * @var PricedRequestData|null
      */
     private $filters;
 
@@ -31,18 +31,22 @@ class PricedTransactionRequestV2 implements \JsonSerializable
 
     /**
      * Returns Filters.
+     * This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbilled sales items)
+     * from SFSBI. It provides a flexible search criteria and supports paging
      */
-    public function getFilters(): ?Filters
+    public function getFilters(): ?PricedRequestData
     {
         return $this->filters;
     }
 
     /**
      * Sets Filters.
+     * This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbilled sales items)
+     * from SFSBI. It provides a flexible search criteria and supports paging
      *
      * @maps Filters
      */
-    public function setFilters(?Filters $filters): void
+    public function setFilters(?PricedRequestData $filters): void
     {
         $this->filters = $filters;
     }

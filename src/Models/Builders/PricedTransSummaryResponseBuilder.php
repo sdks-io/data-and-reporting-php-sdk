@@ -13,6 +13,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\PricedTransSummaryResponse;
+use ShellDataReportingAPIsLib\Models\PricedTransSummaryResponseTransactionsSummaryItems;
 
 /**
  * Builder for model PricedTransSummaryResponse
@@ -32,7 +33,7 @@ class PricedTransSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new priced trans summary response Builder object.
+     * Initializes a new Priced Trans Summary Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class PricedTransSummaryResponseBuilder
     }
 
     /**
-     * Sets transactions summary field.
+     * Sets Transactions Summary field.
+     *
+     * @param PricedTransSummaryResponseTransactionsSummaryItems[]|null $value
      */
     public function transactionsSummary(?array $value): self
     {
@@ -49,7 +52,9 @@ class PricedTransSummaryResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -58,7 +63,9 @@ class PricedTransSummaryResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -67,7 +74,7 @@ class PricedTransSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new priced trans summary response object.
+     * Initializes a new Priced Trans Summary Response object.
      */
     public function build(): PricedTransSummaryResponse
     {

@@ -32,7 +32,7 @@ class EIDDownloadRequestBuilder
     }
 
     /**
-     * Initializes a new eiddownload request Builder object.
+     * Initializes a new EID Download Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class EIDDownloadRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param EIDDownloadReq|null $value
      */
     public function filters(?EIDDownloadReq $value): self
     {
@@ -49,7 +51,7 @@ class EIDDownloadRequestBuilder
     }
 
     /**
-     * Initializes a new eiddownload request object.
+     * Initializes a new EID Download Request object.
      */
     public function build(): EIDDownloadRequest
     {

@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\UpdateOdometerReference;
 use ShellDataReportingAPIsLib\Models\UpdateOdometerResponse;
 
 /**
@@ -32,7 +33,7 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Initializes a new update odometer response Builder object.
+     * Initializes a new Update Odometer Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Sets service reference field.
+     * Sets Service Reference field.
+     *
+     * @param int|null $value
      */
     public function serviceReference(?int $value): self
     {
@@ -49,7 +52,9 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Sets update odometer references field.
+     * Sets Update Odometer References field.
+     *
+     * @param UpdateOdometerReference[]|null $value
      */
     public function updateOdometerReferences(?array $value): self
     {
@@ -58,7 +63,9 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -67,7 +74,9 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -76,7 +85,7 @@ class UpdateOdometerResponseBuilder
     }
 
     /**
-     * Initializes a new update odometer response object.
+     * Initializes a new Update Odometer Response object.
      */
     public function build(): UpdateOdometerResponse
     {

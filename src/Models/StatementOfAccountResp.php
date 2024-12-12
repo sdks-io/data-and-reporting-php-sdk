@@ -15,7 +15,7 @@ use stdClass;
 class StatementOfAccountResp implements \JsonSerializable
 {
     /**
-     * @var LastStatementOfAccount2|null
+     * @var LastStatementOfAccount|null
      */
     private $lastStatementOfAccount;
 
@@ -41,18 +41,20 @@ class StatementOfAccountResp implements \JsonSerializable
 
     /**
      * Returns Last Statement of Account.
+     * Latest statement of the account generated for the given Payer.
      */
-    public function getLastStatementOfAccount(): ?LastStatementOfAccount2
+    public function getLastStatementOfAccount(): ?LastStatementOfAccount
     {
         return $this->lastStatementOfAccount;
     }
 
     /**
      * Sets Last Statement of Account.
+     * Latest statement of the account generated for the given Payer.
      *
      * @maps LastStatementOfAccount
      */
-    public function setLastStatementOfAccount(?LastStatementOfAccount2 $lastStatementOfAccount): void
+    public function setLastStatementOfAccount(?LastStatementOfAccount $lastStatementOfAccount): void
     {
         $this->lastStatementOfAccount = $lastStatementOfAccount;
     }

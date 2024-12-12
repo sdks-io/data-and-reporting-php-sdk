@@ -31,7 +31,7 @@ class UpdateOdometerBuilder
     }
 
     /**
-     * Initializes a new update odometer Builder object.
+     * Initializes a new Update Odometer Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class UpdateOdometerBuilder
     }
 
     /**
-     * Sets sales item id field.
+     * Sets Sales Item Id field.
+     *
+     * @param string|null $value
      */
     public function salesItemId(?string $value): self
     {
@@ -48,7 +50,9 @@ class UpdateOdometerBuilder
     }
 
     /**
-     * Sets new odometer value field.
+     * Sets New Odometer Value field.
+     *
+     * @param int|null $value
      */
     public function newOdometerValue(?int $value): self
     {
@@ -57,7 +61,7 @@ class UpdateOdometerBuilder
     }
 
     /**
-     * Initializes a new update odometer object.
+     * Initializes a new Update Odometer object.
      */
     public function build(): UpdateOdometer
     {

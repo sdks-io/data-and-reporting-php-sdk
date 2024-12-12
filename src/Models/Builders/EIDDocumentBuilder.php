@@ -31,7 +31,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Initializes a new eiddocument Builder object.
+     * Initializes a new EID Document Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document id field.
+     * Sets Document Id field.
+     *
+     * @param int|null $value
      */
     public function documentId(?int $value): self
     {
@@ -48,7 +50,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document id field.
+     * Unsets Document Id field.
      */
     public function unsetDocumentId(): self
     {
@@ -57,7 +59,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets account group id field.
+     * Sets Account Group Id field.
+     *
+     * @param string|null $value
      */
     public function accountGroupId(?string $value): self
     {
@@ -66,7 +70,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets account group id field.
+     * Unsets Account Group Id field.
      */
     public function unsetAccountGroupId(): self
     {
@@ -75,7 +79,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets account group name field.
+     * Sets Account Group Name field.
+     *
+     * @param string|null $value
      */
     public function accountGroupName(?string $value): self
     {
@@ -84,7 +90,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets account group name field.
+     * Unsets Account Group Name field.
      */
     public function unsetAccountGroupName(): self
     {
@@ -93,7 +99,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document type field.
+     * Sets Document Type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -102,7 +110,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document type field.
+     * Unsets Document Type field.
      */
     public function unsetDocumentType(): self
     {
@@ -111,7 +119,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document format field.
+     * Sets Document Format field.
+     *
+     * @param string|null $value
      */
     public function documentFormat(?string $value): self
     {
@@ -120,7 +130,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document format field.
+     * Unsets Document Format field.
      */
     public function unsetDocumentFormat(): self
     {
@@ -129,7 +139,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document date field.
+     * Sets Document Date field.
+     *
+     * @param string|null $value
      */
     public function documentDate(?string $value): self
     {
@@ -138,7 +150,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document date field.
+     * Unsets Document Date field.
      */
     public function unsetDocumentDate(): self
     {
@@ -147,7 +159,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets number of invoices field.
+     * Sets Number Of Invoices field.
+     *
+     * @param int|null $value
      */
     public function numberOfInvoices(?int $value): self
     {
@@ -156,7 +170,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets number of invoices field.
+     * Unsets Number Of Invoices field.
      */
     public function unsetNumberOfInvoices(): self
     {
@@ -165,7 +179,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets file size field.
+     * Sets File Size field.
+     *
+     * @param int|null $value
      */
     public function fileSize(?int $value): self
     {
@@ -174,7 +190,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets file size field.
+     * Unsets File Size field.
      */
     public function unsetFileSize(): self
     {
@@ -183,7 +199,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document status field.
+     * Sets Document Status field.
+     *
+     * @param string|null $value
      */
     public function documentStatus(?string $value): self
     {
@@ -192,7 +210,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document status field.
+     * Unsets Document Status field.
      */
     public function unsetDocumentStatus(): self
     {
@@ -201,7 +219,9 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets document name field.
+     * Sets Document Name field.
+     *
+     * @param string|null $value
      */
     public function documentName(?string $value): self
     {
@@ -210,7 +230,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Unsets document name field.
+     * Unsets Document Name field.
      */
     public function unsetDocumentName(): self
     {
@@ -219,7 +239,7 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Initializes a new eiddocument object.
+     * Initializes a new EID Document object.
      */
     public function build(): EIDDocument
     {

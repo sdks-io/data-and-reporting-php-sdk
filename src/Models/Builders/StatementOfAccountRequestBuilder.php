@@ -32,7 +32,7 @@ class StatementOfAccountRequestBuilder
     }
 
     /**
-     * Initializes a new statement of account request Builder object.
+     * Initializes a new Statement Of Account Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class StatementOfAccountRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param StatementOfAccountRequestFilters|null $value
      */
     public function filters(?StatementOfAccountRequestFilters $value): self
     {
@@ -49,7 +51,7 @@ class StatementOfAccountRequestBuilder
     }
 
     /**
-     * Initializes a new statement of account request object.
+     * Initializes a new Statement Of Account Request object.
      */
     public function build(): StatementOfAccountRequest
     {

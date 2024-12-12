@@ -31,7 +31,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Initializes a new eidsearch req Builder object.
+     * Initializes a new EID Search Req Builder object.
+     *
+     * @param string[] $accountGroupId
      */
     public static function init(array $accountGroupId): self
     {
@@ -39,7 +41,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +52,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets account group country field.
+     * Sets Account Group Country field.
+     *
+     * @param int|null $value
      */
     public function accountGroupCountry(?int $value): self
     {
@@ -57,7 +63,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets account group name field.
+     * Sets Account Group Name field.
+     *
+     * @param string|null $value
      */
     public function accountGroupName(?string $value): self
     {
@@ -66,7 +74,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Unsets account group name field.
+     * Unsets Account Group Name field.
      */
     public function unsetAccountGroupName(): self
     {
@@ -75,7 +83,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -84,7 +94,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -93,7 +103,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -102,7 +114,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -111,7 +123,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets invoice type field.
+     * Sets Invoice Type field.
+     *
+     * @param string|null $value
      */
     public function invoiceType(?string $value): self
     {
@@ -120,7 +134,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Unsets invoice type field.
+     * Unsets Invoice Type field.
      */
     public function unsetInvoiceType(): self
     {
@@ -129,7 +143,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -138,7 +154,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Unsets invoice status field.
+     * Unsets Invoice Status field.
      */
     public function unsetInvoiceStatus(): self
     {
@@ -147,7 +163,9 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets sort by field.
+     * Sets Sort By field.
+     *
+     * @param string[]|null $value
      */
     public function sortBy(?array $value): self
     {
@@ -156,7 +174,7 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Initializes a new eidsearch req object.
+     * Initializes a new EID Search Req object.
      */
     public function build(): EIDSearchReq
     {

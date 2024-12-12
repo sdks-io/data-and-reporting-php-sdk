@@ -31,7 +31,7 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction request accounts items Builder object.
+     * Initializes a new Multi Priced Transaction Request Accounts Items Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -48,7 +50,9 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -57,7 +61,9 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -66,7 +72,9 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -75,7 +83,7 @@ class MultiPricedTransactionRequestAccountsItemsBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction request accounts items object.
+     * Initializes a new Multi Priced Transaction Request Accounts Items object.
      */
     public function build(): MultiPricedTransactionRequestAccountsItems
     {

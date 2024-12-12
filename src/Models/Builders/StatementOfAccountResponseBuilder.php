@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\StatementOfAccountResp;
 use ShellDataReportingAPIsLib\Models\StatementOfAccountResponse;
 
 /**
@@ -31,7 +32,7 @@ class StatementOfAccountResponseBuilder
     }
 
     /**
-     * Initializes a new statement of account response Builder object.
+     * Initializes a new Statement Of Account Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class StatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class StatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class StatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param StatementOfAccountResp[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,7 @@ class StatementOfAccountResponseBuilder
     }
 
     /**
-     * Initializes a new statement of account response object.
+     * Initializes a new Statement Of Account Response object.
      */
     public function build(): StatementOfAccountResponse
     {

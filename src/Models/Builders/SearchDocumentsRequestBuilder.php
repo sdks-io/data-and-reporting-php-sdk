@@ -32,7 +32,7 @@ class SearchDocumentsRequestBuilder
     }
 
     /**
-     * Initializes a new search documents request Builder object.
+     * Initializes a new Search Documents Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class SearchDocumentsRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param SearchDocReq|null $value
      */
     public function filters(?SearchDocReq $value): self
     {
@@ -49,7 +51,9 @@ class SearchDocumentsRequestBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param string|null $value
      */
     public function page(?string $value): self
     {
@@ -58,7 +62,9 @@ class SearchDocumentsRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param string|null $value
      */
     public function pageSize(?string $value): self
     {
@@ -67,7 +73,7 @@ class SearchDocumentsRequestBuilder
     }
 
     /**
-     * Initializes a new search documents request object.
+     * Initializes a new Search Documents Request object.
      */
     public function build(): SearchDocumentsRequest
     {

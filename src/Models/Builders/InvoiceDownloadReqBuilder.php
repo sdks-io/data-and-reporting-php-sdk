@@ -31,7 +31,7 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Initializes a new invoice download req Builder object.
+     * Initializes a new Invoice Download Req Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +50,9 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -57,7 +61,9 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string[]|null $value
      */
     public function accountNumber(?array $value): self
     {
@@ -66,7 +72,9 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Sets document reference field.
+     * Sets Document Reference field.
+     *
+     * @param int[]|null $value
      */
     public function documentReference(?array $value): self
     {
@@ -75,7 +83,9 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Sets invoice or soanumber field.
+     * Sets Invoice Or SOA Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceOrSOANumber(?string $value): self
     {
@@ -84,7 +94,7 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Unsets invoice or soanumber field.
+     * Unsets Invoice Or SOA Number field.
      */
     public function unsetInvoiceOrSOANumber(): self
     {
@@ -93,7 +103,7 @@ class InvoiceDownloadReqBuilder
     }
 
     /**
-     * Initializes a new invoice download req object.
+     * Initializes a new Invoice Download Req object.
      */
     public function build(): InvoiceDownloadReq
     {

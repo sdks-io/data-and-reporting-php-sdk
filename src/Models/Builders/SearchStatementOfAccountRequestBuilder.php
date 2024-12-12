@@ -32,7 +32,7 @@ class SearchStatementOfAccountRequestBuilder
     }
 
     /**
-     * Initializes a new search statement of account request Builder object.
+     * Initializes a new Search Statement Of Account Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class SearchStatementOfAccountRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param SearchSOAReq|null $value
      */
     public function filters(?SearchSOAReq $value): self
     {
@@ -49,7 +51,9 @@ class SearchStatementOfAccountRequestBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -58,7 +62,9 @@ class SearchStatementOfAccountRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -67,7 +73,7 @@ class SearchStatementOfAccountRequestBuilder
     }
 
     /**
-     * Initializes a new search statement of account request object.
+     * Initializes a new Search Statement Of Account Request object.
      */
     public function build(): SearchStatementOfAccountRequest
     {

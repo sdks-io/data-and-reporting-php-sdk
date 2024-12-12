@@ -31,7 +31,7 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Initializes a new exception site location Builder object.
+     * Initializes a new Exception Site Location Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Sets lat field.
+     * Sets Lat field.
+     *
+     * @param string|null $value
      */
     public function lat(?string $value): self
     {
@@ -48,7 +50,7 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Unsets lat field.
+     * Unsets Lat field.
      */
     public function unsetLat(): self
     {
@@ -57,7 +59,9 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Sets lng field.
+     * Sets Lng field.
+     *
+     * @param string|null $value
      */
     public function lng(?string $value): self
     {
@@ -66,7 +70,7 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Unsets lng field.
+     * Unsets Lng field.
      */
     public function unsetLng(): self
     {
@@ -75,7 +79,7 @@ class ExceptionSiteLocationBuilder
     }
 
     /**
-     * Initializes a new exception site location object.
+     * Initializes a new Exception Site Location object.
      */
     public function build(): ExceptionSiteLocation
     {

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\UpdateOdometer;
 use ShellDataReportingAPIsLib\Models\UpdateOdometerRequest;
 
 /**
@@ -31,7 +32,7 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Initializes a new update odometer request Builder object.
+     * Initializes a new Update Odometer Request Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +51,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -57,7 +62,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -66,7 +73,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -75,7 +84,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -84,7 +95,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets update odometers field.
+     * Sets Update Odometers field.
+     *
+     * @param UpdateOdometer[]|null $value
      */
     public function updateOdometers(?array $value): self
     {
@@ -93,7 +106,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets notify caller field.
+     * Sets Notify Caller field.
+     *
+     * @param bool|null $value
      */
     public function notifyCaller(?bool $value): self
     {
@@ -102,7 +117,9 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Sets caller field.
+     * Sets Caller field.
+     *
+     * @param string|null $value
      */
     public function caller(?string $value): self
     {
@@ -111,7 +128,7 @@ class UpdateOdometerRequestBuilder
     }
 
     /**
-     * Initializes a new update odometer request object.
+     * Initializes a new Update Odometer Request object.
      */
     public function build(): UpdateOdometerRequest
     {

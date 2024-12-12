@@ -31,7 +31,7 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Initializes a new priced transaction items location items Builder object.
+     * Initializes a new Priced Transaction Items Location Items Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Sets latitude field.
+     * Sets Latitude field.
+     *
+     * @param string|null $value
      */
     public function latitude(?string $value): self
     {
@@ -48,7 +50,7 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Unsets latitude field.
+     * Unsets Latitude field.
      */
     public function unsetLatitude(): self
     {
@@ -57,7 +59,9 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Sets longitude field.
+     * Sets Longitude field.
+     *
+     * @param string|null $value
      */
     public function longitude(?string $value): self
     {
@@ -66,7 +70,7 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Unsets longitude field.
+     * Unsets Longitude field.
      */
     public function unsetLongitude(): self
     {
@@ -75,7 +79,7 @@ class PricedTransactionItemsLocationItemsBuilder
     }
 
     /**
-     * Initializes a new priced transaction items location items object.
+     * Initializes a new Priced Transaction Items Location Items object.
      */
     public function build(): PricedTransactionItemsLocationItems
     {

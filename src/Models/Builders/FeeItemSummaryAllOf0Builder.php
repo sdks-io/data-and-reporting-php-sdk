@@ -31,7 +31,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Initializes a new fee item summary all of 0 Builder object.
+     * Initializes a new Fee Item Summary All Of 0 Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets fee type group field.
+     * Sets Fee Type Group field.
+     *
+     * @param string|null $value
      */
     public function feeTypeGroup(?string $value): self
     {
@@ -48,7 +50,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets fee type group field.
+     * Unsets Fee Type Group field.
      */
     public function unsetFeeTypeGroup(): self
     {
@@ -57,7 +59,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets fee type id field.
+     * Sets Fee Type Id field.
+     *
+     * @param string|null $value
      */
     public function feeTypeId(?string $value): self
     {
@@ -66,7 +70,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets fee type id field.
+     * Unsets Fee Type Id field.
      */
     public function unsetFeeTypeId(): self
     {
@@ -75,7 +79,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -84,7 +90,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -93,7 +99,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -102,7 +110,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -111,7 +119,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -120,7 +130,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -129,7 +139,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -138,7 +150,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -147,7 +159,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -156,7 +170,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -165,7 +179,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets total quantity field.
+     * Sets Total Quantity field.
+     *
+     * @param float|null $value
      */
     public function totalQuantity(?float $value): self
     {
@@ -174,7 +190,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets total quantity field.
+     * Unsets Total Quantity field.
      */
     public function unsetTotalQuantity(): self
     {
@@ -183,7 +199,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets total invoice net amount field.
+     * Sets Total Invoice Net Amount field.
+     *
+     * @param float|null $value
      */
     public function totalInvoiceNetAmount(?float $value): self
     {
@@ -192,7 +210,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets total invoice net amount field.
+     * Unsets Total Invoice Net Amount field.
      */
     public function unsetTotalInvoiceNetAmount(): self
     {
@@ -201,7 +219,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets total invoice gross amount field.
+     * Sets Total Invoice Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function totalInvoiceGrossAmount(?float $value): self
     {
@@ -210,7 +230,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets total invoice gross amount field.
+     * Unsets Total Invoice Gross Amount field.
      */
     public function unsetTotalInvoiceGrossAmount(): self
     {
@@ -219,7 +239,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets total invoice vatamount field.
+     * Sets Total Invoice VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function totalInvoiceVATAmount(?float $value): self
     {
@@ -228,7 +250,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets total invoice vatamount field.
+     * Unsets Total Invoice VAT Amount field.
      */
     public function unsetTotalInvoiceVATAmount(): self
     {
@@ -237,7 +259,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets invoice currency code field.
+     * Sets Invoice Currency Code field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencyCode(?string $value): self
     {
@@ -246,7 +270,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets invoice currency code field.
+     * Unsets Invoice Currency Code field.
      */
     public function unsetInvoiceCurrencyCode(): self
     {
@@ -255,7 +279,9 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Sets invoice currency symbol field.
+     * Sets Invoice Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencySymbol(?string $value): self
     {
@@ -264,7 +290,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Unsets invoice currency symbol field.
+     * Unsets Invoice Currency Symbol field.
      */
     public function unsetInvoiceCurrencySymbol(): self
     {
@@ -273,7 +299,7 @@ class FeeItemSummaryAllOf0Builder
     }
 
     /**
-     * Initializes a new fee item summary all of 0 object.
+     * Initializes a new Fee Item Summary All Of 0 object.
      */
     public function build(): FeeItemSummaryAllOf0
     {

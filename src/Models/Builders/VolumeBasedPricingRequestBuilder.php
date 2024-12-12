@@ -31,7 +31,7 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Initializes a new volume based pricing request Builder object.
+     * Initializes a new Volume Based Pricing Request Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +50,9 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -57,7 +61,9 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -66,7 +72,9 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -75,7 +83,9 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Sets include history field.
+     * Sets Include History field.
+     *
+     * @param bool|null $value
      */
     public function includeHistory(?bool $value): self
     {
@@ -84,7 +94,7 @@ class VolumeBasedPricingRequestBuilder
     }
 
     /**
-     * Initializes a new volume based pricing request object.
+     * Initializes a new Volume Based Pricing Request object.
      */
     public function build(): VolumeBasedPricingRequest
     {

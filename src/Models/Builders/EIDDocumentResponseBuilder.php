@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\EIDDocument;
 use ShellDataReportingAPIsLib\Models\EIDDocumentResponse;
 
 /**
@@ -31,7 +32,7 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Initializes a new eiddocument response Builder object.
+     * Initializes a new EID Document Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param EIDDocument[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -75,7 +84,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -84,7 +95,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -93,7 +106,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets total records field.
+     * Sets Total Records field.
+     *
+     * @param int|null $value
      */
     public function totalRecords(?int $value): self
     {
@@ -102,7 +117,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets is first page field.
+     * Sets Is First Page field.
+     *
+     * @param bool|null $value
      */
     public function isFirstPage(?bool $value): self
     {
@@ -111,7 +128,9 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets is last page field.
+     * Sets Is Last Page field.
+     *
+     * @param bool|null $value
      */
     public function isLastPage(?bool $value): self
     {
@@ -120,7 +139,7 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Initializes a new eiddocument response object.
+     * Initializes a new EID Document Response object.
      */
     public function build(): EIDDocumentResponse
     {

@@ -11,6 +11,8 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
+use ShellDataReportingAPIsLib\Models\ExceptionProduct;
 use ShellDataReportingAPIsLib\Models\TransactionExceptionsRequest;
 
 /**
@@ -31,7 +33,12 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions request Builder object.
+     * Initializes a new Transaction Exceptions Request Builder object.
+     *
+     * @param string $transactionsFromDate
+     * @param string $transactionsToDate
+     * @param int $condition
+     * @param int $outputType
      */
     public static function init(
         string $transactionsFromDate,
@@ -45,7 +52,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -54,7 +63,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -63,7 +74,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -72,7 +85,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -81,7 +96,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -90,7 +107,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets value field.
+     * Sets Value field.
+     *
+     * @param float|null $value
      */
     public function value(?float $value): self
     {
@@ -99,7 +118,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets products field.
+     * Sets Products field.
+     *
+     * @param ExceptionProduct[]|null $value
      */
     public function products(?array $value): self
     {
@@ -108,7 +129,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets exception period field.
+     * Sets Exception Period field.
+     *
+     * @param int|null $value
      */
     public function exceptionPeriod(?int $value): self
     {
@@ -117,7 +140,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param bool|null $value
      */
     public function fuelOnly(?bool $value): self
     {
@@ -126,7 +151,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets site group ids field.
+     * Sets Site Group Ids field.
+     *
+     * @param int[]|null $value
      */
     public function siteGroupIds(?array $value): self
     {
@@ -135,7 +162,9 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Sets use field id field.
+     * Sets Use Field Id field.
+     *
+     * @param bool|null $value
      */
     public function useFieldId(?bool $value): self
     {
@@ -144,7 +173,7 @@ class TransactionExceptionsRequestBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions request object.
+     * Initializes a new Transaction Exceptions Request object.
      */
     public function build(): TransactionExceptionsRequest
     {

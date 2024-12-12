@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\MultiPricedTransactionRequest;
+use ShellDataReportingAPIsLib\Models\MultiPricedTransactionRequestAccountsItems;
 
 /**
  * Builder for model MultiPricedTransactionRequest
@@ -31,7 +32,10 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction request Builder object.
+     * Initializes a new Multi Priced Transaction Request Builder object.
+     *
+     * @param int $colCoCode
+     * @param MultiPricedTransactionRequestAccountsItems[] $accounts
      */
     public static function init(int $colCoCode, array $accounts): self
     {
@@ -39,7 +43,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +54,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -57,7 +65,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -66,7 +76,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -75,7 +87,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -84,7 +98,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -93,7 +109,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets posting date from field.
+     * Sets Posting Date From field.
+     *
+     * @param string|null $value
      */
     public function postingDateFrom(?string $value): self
     {
@@ -102,7 +120,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets posting date to field.
+     * Sets Posting Date To field.
+     *
+     * @param string|null $value
      */
     public function postingDateTo(?string $value): self
     {
@@ -111,7 +131,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -120,7 +142,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -129,7 +153,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets valid invoice date only field.
+     * Sets Valid Invoice Date Only field.
+     *
+     * @param bool|null $value
      */
     public function validInvoiceDateOnly(?bool $value): self
     {
@@ -138,7 +164,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets invoice from date field.
+     * Sets Invoice From Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceFromDate(?string $value): self
     {
@@ -147,7 +175,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets invoice to date field.
+     * Sets Invoice To Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceToDate(?string $value): self
     {
@@ -156,7 +186,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param bool|null $value
      */
     public function fuelOnly(?bool $value): self
     {
@@ -165,7 +197,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets include fees field.
+     * Sets Include Fees field.
+     *
+     * @param bool|null $value
      */
     public function includeFees(?bool $value): self
     {
@@ -174,7 +208,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets sort order field.
+     * Sets Sort Order field.
+     *
+     * @param string|null $value
      */
     public function sortOrder(?string $value): self
     {
@@ -183,7 +219,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets current page field.
+     * Sets Current Page field.
+     *
+     * @param int|null $value
      */
     public function currentPage(?int $value): self
     {
@@ -192,7 +230,9 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -201,7 +241,7 @@ class MultiPricedTransactionRequestBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction request object.
+     * Initializes a new Multi Priced Transaction Request object.
      */
     public function build(): MultiPricedTransactionRequest
     {

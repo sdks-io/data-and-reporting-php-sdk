@@ -263,11 +263,11 @@ $result = $transactionController->pricedTransactions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionPricedtransactions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionPricedtransactions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionPricedtransactions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionPricedtransactions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionPricedtransactions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Priced Transactions Summary
@@ -407,11 +407,11 @@ $result = $transactionController->pricedTransactionsSummary(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionPricedtransactionssummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionPricedtransactionssummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionPricedtransactionssummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionPricedtransactionssummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionPricedtransactionssummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Multipriced Transactions
@@ -664,11 +664,11 @@ $result = $transactionController->multipricedTransactions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionMultipayerspricedtransactions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionMultipayerspricedtransactions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionMultipayerspricedtransactions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionMultipayerspricedtransactions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionMultipayerspricedtransactions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Card Usage Summary
@@ -713,11 +713,11 @@ $result = $transactionController->cardUsageSummary(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionCardusagesummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionCardusagesummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionCardusagesummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionCardusagesummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionCardusagesummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Volume Based Bonus
@@ -762,11 +762,11 @@ $result = $transactionController->volumeBasedBonus(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionVolumebasedbonus400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionVolumebasedbonus401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionVolumebasedbonus403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionVolumebasedbonus404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionVolumebasedbonus500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Volume Based Pricing
@@ -811,11 +811,11 @@ $result = $transactionController->volumeBasedPricing(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionVolumebasedpricing400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionVolumebasedpricing401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionVolumebasedpricing403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionVolumebasedpricing404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionVolumebasedpricing500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Fees
@@ -994,11 +994,11 @@ $result = $transactionController->fees(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFees400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFees401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFees403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFees404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFees500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Fee Summary Response
@@ -1101,11 +1101,11 @@ $result = $transactionController->feeSummaryResponse(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFeessummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFeessummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFeessummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFeessummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFeessummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Fuel Consumption
@@ -1192,11 +1192,11 @@ $result = $transactionController->fuelConsumption(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFuelconsumption400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFuelconsumption401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFuelconsumption403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFuelconsumption404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFuelconsumption500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Update Odometer
@@ -1278,11 +1278,11 @@ $result = $transactionController->updateOdometer(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionUpdateodometer400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionUpdateodometer401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionUpdateodometer403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionUpdateodometer404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionUpdateodometer500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Transaction Exceptions
@@ -1377,11 +1377,11 @@ $result = $transactionController->transactionExceptions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionExceptions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionExceptions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-401-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionExceptions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionExceptions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionExceptions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-500-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
 
 
 # Recent Transactions New
@@ -1549,11 +1549,11 @@ $result = $transactionController->recentTransactionsNew(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Recent400ErrorException`](../../doc/models/transaction-data-v1-recent-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Recent401ErrorException`](../../doc/models/transaction-data-v1-recent-401-error-exception.md) |
-| 403 | Forbidden | [`TransactionDataV1Recent403ErrorException`](../../doc/models/transaction-data-v1-recent-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Recent404ErrorException`](../../doc/models/transaction-data-v1-recent-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Recent500ErrorException`](../../doc/models/transaction-data-v1-recent-500-error-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
 
 
 # Priced Transactions V2
@@ -1616,7 +1616,7 @@ $requestId = '2b0cbe11-f109-4c43-9201-49af0370df1c';
 
 $body = PricedTransactionRequestV2Builder::init()
     ->filters(
-        FiltersBuilder::init(
+        PricedRequestDataBuilder::init(
             ApiHelper::deserialize('{"key1":"val1","key2":"val2"}')
         )
             ->colCoCode('032')
@@ -1861,9 +1861,9 @@ $result = $transactionController->pricedTransactionsV2(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Priced400ErrorException`](../../doc/models/transaction-data-v1-priced-400-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Priced401ErrorException`](../../doc/models/transaction-data-v1-priced-401-error-exception.md) |
-| 403 | Forbidden | [`TransactionDataV1Priced403ErrorException`](../../doc/models/transaction-data-v1-priced-403-error-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Priced404ErrorException`](../../doc/models/transaction-data-v1-priced-404-error-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Priced500ErrorException`](../../doc/models/transaction-data-v1-priced-500-error-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
 

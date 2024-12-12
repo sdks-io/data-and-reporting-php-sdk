@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
 use ShellDataReportingAPIsLib\Models\TransactionFeesRequest;
 
 /**
@@ -31,7 +32,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Initializes a new transaction fees request Builder object.
+     * Initializes a new Transaction Fees Request Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +51,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -57,7 +60,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -66,7 +71,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -75,7 +80,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -84,7 +91,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -93,7 +100,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -102,7 +111,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -111,7 +120,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -120,7 +131,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -129,7 +142,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -138,7 +151,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -147,7 +162,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -156,7 +171,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -165,7 +182,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets invoice status field.
+     * Unsets Invoice Status field.
      */
     public function unsetInvoiceStatus(): self
     {
@@ -174,7 +191,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets fee type group field.
+     * Sets Fee Type Group field.
+     *
+     * @param string|null $value
      */
     public function feeTypeGroup(?string $value): self
     {
@@ -183,7 +202,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets fee type group field.
+     * Unsets Fee Type Group field.
      */
     public function unsetFeeTypeGroup(): self
     {
@@ -192,7 +211,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets fee type id field.
+     * Sets Fee Type Id field.
+     *
+     * @param int|null $value
      */
     public function feeTypeId(?int $value): self
     {
@@ -201,7 +222,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets fee type id field.
+     * Unsets Fee Type Id field.
      */
     public function unsetFeeTypeId(): self
     {
@@ -210,7 +231,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -219,7 +242,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -228,7 +251,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -237,7 +262,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -246,7 +271,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -255,7 +282,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets period field.
+     * Unsets Period field.
      */
     public function unsetPeriod(): self
     {
@@ -264,7 +291,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets include cancelled items field.
+     * Sets Include Cancelled Items field.
+     *
+     * @param bool|null $value
      */
     public function includeCancelledItems(?bool $value): self
     {
@@ -273,7 +302,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets include cancelled items field.
+     * Unsets Include Cancelled Items field.
      */
     public function unsetIncludeCancelledItems(): self
     {
@@ -282,7 +311,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -291,7 +322,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -300,7 +331,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -309,7 +342,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -318,7 +351,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets line item description field.
+     * Sets Line Item Description field.
+     *
+     * @param string|null $value
      */
     public function lineItemDescription(?string $value): self
     {
@@ -327,7 +362,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets line item description field.
+     * Unsets Line Item Description field.
      */
     public function unsetLineItemDescription(): self
     {
@@ -336,7 +371,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets sort order field.
+     * Sets Sort Order field.
+     *
+     * @param string|null $value
      */
     public function sortOrder(?string $value): self
     {
@@ -345,7 +382,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets sort order field.
+     * Unsets Sort Order field.
      */
     public function unsetSortOrder(): self
     {
@@ -354,7 +391,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets current page field.
+     * Sets Current Page field.
+     *
+     * @param int|null $value
      */
     public function currentPage(?int $value): self
     {
@@ -363,7 +402,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets current page field.
+     * Unsets Current Page field.
      */
     public function unsetCurrentPage(): self
     {
@@ -372,7 +411,9 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -381,7 +422,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Unsets page size field.
+     * Unsets Page Size field.
      */
     public function unsetPageSize(): self
     {
@@ -390,7 +431,7 @@ class TransactionFeesRequestBuilder
     }
 
     /**
-     * Initializes a new transaction fees request object.
+     * Initializes a new Transaction Fees Request object.
      */
     public function build(): TransactionFeesRequest
     {

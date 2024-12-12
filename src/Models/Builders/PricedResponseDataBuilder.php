@@ -31,7 +31,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Initializes a new priced response data Builder object.
+     * Initializes a new Priced Response Data Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets account name field.
+     * Sets Account Name field.
+     *
+     * @param string|null $value
      */
     public function accountName(?string $value): self
     {
@@ -48,7 +50,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets account name field.
+     * Unsets Account Name field.
      */
     public function unsetAccountName(): self
     {
@@ -57,7 +59,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -66,7 +70,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -75,7 +79,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -84,7 +90,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -93,7 +99,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -102,7 +110,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -111,7 +119,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets additional 1 field.
+     * Sets Additional 1 field.
+     *
+     * @param string|null $value
      */
     public function additional1(?string $value): self
     {
@@ -120,7 +130,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets additional 1 field.
+     * Unsets Additional 1 field.
      */
     public function unsetAdditional1(): self
     {
@@ -129,7 +139,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets additional 2 field.
+     * Sets Additional 2 field.
+     *
+     * @param string|null $value
      */
     public function additional2(?string $value): self
     {
@@ -138,7 +150,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets additional 2 field.
+     * Unsets Additional 2 field.
      */
     public function unsetAdditional2(): self
     {
@@ -147,7 +159,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets additional 3 field.
+     * Sets Additional 3 field.
+     *
+     * @param string|null $value
      */
     public function additional3(?string $value): self
     {
@@ -156,7 +170,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets additional 3 field.
+     * Unsets Additional 3 field.
      */
     public function unsetAdditional3(): self
     {
@@ -165,7 +179,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets additional 4 field.
+     * Sets Additional 4 field.
+     *
+     * @param string|null $value
      */
     public function additional4(?string $value): self
     {
@@ -174,7 +190,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets additional 4 field.
+     * Unsets Additional 4 field.
      */
     public function unsetAdditional4(): self
     {
@@ -183,7 +199,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets allow clearing field.
+     * Sets Allow Clearing field.
+     *
+     * @param string|null $value
      */
     public function allowClearing(?string $value): self
     {
@@ -192,7 +210,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets allow clearing field.
+     * Unsets Allow Clearing field.
      */
     public function unsetAllowClearing(): self
     {
@@ -201,7 +219,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets authorisation code field.
+     * Sets Authorisation Code field.
+     *
+     * @param int|null $value
      */
     public function authorisationCode(?int $value): self
     {
@@ -210,7 +230,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets authorisation code field.
+     * Unsets Authorisation Code field.
      */
     public function unsetAuthorisationCode(): self
     {
@@ -219,7 +239,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction status field.
+     * Sets Transaction Status field.
+     *
+     * @param string|null $value
      */
     public function transactionStatus(?string $value): self
     {
@@ -228,7 +250,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction status field.
+     * Unsets Transaction Status field.
      */
     public function unsetTransactionStatus(): self
     {
@@ -237,7 +259,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -246,7 +270,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -255,7 +279,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card expiry period field.
+     * Sets Card Expiry Period field.
+     *
+     * @param int|null $value
      */
     public function cardExpiryPeriod(?int $value): self
     {
@@ -264,7 +290,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card expiry period field.
+     * Unsets Card Expiry Period field.
      */
     public function unsetCardExpiryPeriod(): self
     {
@@ -273,7 +299,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card expiry field.
+     * Sets Card Expiry field.
+     *
+     * @param string|null $value
      */
     public function cardExpiry(?string $value): self
     {
@@ -282,7 +310,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card expiry field.
+     * Unsets Card Expiry field.
      */
     public function unsetCardExpiry(): self
     {
@@ -291,7 +319,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -300,7 +330,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -309,7 +339,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -318,7 +350,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card group name field.
+     * Unsets Card Group Name field.
      */
     public function unsetCardGroupName(): self
     {
@@ -327,7 +359,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets issuer code field.
+     * Sets Issuer Code field.
+     *
+     * @param int|null $value
      */
     public function issuerCode(?int $value): self
     {
@@ -336,7 +370,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets issuer code field.
+     * Unsets Issuer Code field.
      */
     public function unsetIssuerCode(): self
     {
@@ -345,7 +379,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -354,7 +390,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -363,7 +399,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets release code field.
+     * Sets Release Code field.
+     *
+     * @param int|null $value
      */
     public function releaseCode(?int $value): self
     {
@@ -372,7 +410,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets release code field.
+     * Unsets Release Code field.
      */
     public function unsetReleaseCode(): self
     {
@@ -381,7 +419,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card sequence number field.
+     * Sets Card Sequence Number field.
+     *
+     * @param int|null $value
      */
     public function cardSequenceNumber(?int $value): self
     {
@@ -390,7 +430,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card sequence number field.
+     * Unsets Card Sequence Number field.
      */
     public function unsetCardSequenceNumber(): self
     {
@@ -399,7 +439,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets card type field.
+     * Sets Card Type field.
+     *
+     * @param string|null $value
      */
     public function cardType(?string $value): self
     {
@@ -408,7 +450,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets card type field.
+     * Unsets Card Type field.
      */
     public function unsetCardType(): self
     {
@@ -417,7 +459,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param string|null $value
      */
     public function colCoCode(?string $value): self
     {
@@ -426,7 +470,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -435,7 +479,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets unit discount invoice currency field.
+     * Sets Unit Discount Invoice Currency field.
+     *
+     * @param float|null $value
      */
     public function unitDiscountInvoiceCurrency(?float $value): self
     {
@@ -444,7 +490,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets unit discount invoice currency field.
+     * Unsets Unit Discount Invoice Currency field.
      */
     public function unsetUnitDiscountInvoiceCurrency(): self
     {
@@ -453,7 +499,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets col co exchange rate field.
+     * Sets Col Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function colCoExchangeRate(?float $value): self
     {
@@ -462,7 +510,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice currency symbol field.
+     * Sets Invoice Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencySymbol(?string $value): self
     {
@@ -471,7 +521,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice currency symbol field.
+     * Unsets Invoice Currency Symbol field.
      */
     public function unsetInvoiceCurrencySymbol(): self
     {
@@ -480,7 +530,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets correction flag field.
+     * Sets Correction Flag field.
+     *
+     * @param bool|null $value
      */
     public function correctionFlag(?bool $value): self
     {
@@ -489,7 +541,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets correction flag field.
+     * Unsets Correction Flag field.
      */
     public function unsetCorrectionFlag(): self
     {
@@ -498,7 +550,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets crmnumber field.
+     * Sets CRM Number field.
+     *
+     * @param float|null $value
      */
     public function cRMNumber(?float $value): self
     {
@@ -507,7 +561,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets crmnumber field.
+     * Unsets CRM Number field.
      */
     public function unsetCRMNumber(): self
     {
@@ -516,7 +570,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer country field.
+     * Sets Customer Country field.
+     *
+     * @param string|null $value
      */
     public function customerCountry(?string $value): self
     {
@@ -525,7 +581,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer country field.
+     * Unsets Customer Country field.
      */
     public function unsetCustomerCountry(): self
     {
@@ -534,7 +590,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer currency code field.
+     * Sets Customer Currency Code field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencyCode(?string $value): self
     {
@@ -543,7 +601,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer currency code field.
+     * Unsets Customer Currency Code field.
      */
     public function unsetCustomerCurrencyCode(): self
     {
@@ -552,7 +610,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer currency symbol field.
+     * Sets Customer Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencySymbol(?string $value): self
     {
@@ -561,7 +621,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer currency symbol field.
+     * Unsets Customer Currency Symbol field.
      */
     public function unsetCustomerCurrencySymbol(): self
     {
@@ -570,7 +630,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets rebateon net amount in customer currency field.
+     * Sets Rebateon Net Amount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function rebateonNetAmountInCustomerCurrency(?float $value): self
     {
@@ -579,7 +641,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets rebateon net amount in customer currency field.
+     * Unsets Rebateon Net Amount In Customer Currency field.
      */
     public function unsetRebateonNetAmountInCustomerCurrency(): self
     {
@@ -588,7 +650,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets effective discount in customer currency field.
+     * Sets Effective Discount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveDiscountInCustomerCurrency(?float $value): self
     {
@@ -597,7 +661,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets effective discount in customer currency field.
+     * Unsets Effective Discount In Customer Currency field.
      */
     public function unsetEffectiveDiscountInCustomerCurrency(): self
     {
@@ -606,7 +670,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets effective unit discount in customer currency field.
+     * Sets Effective Unit Discount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveUnitDiscountInCustomerCurrency(?float $value): self
     {
@@ -615,7 +681,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets effective unit discount in customer currency field.
+     * Unsets Effective Unit Discount In Customer Currency field.
      */
     public function unsetEffectiveUnitDiscountInCustomerCurrency(): self
     {
@@ -624,7 +690,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets unit price in invoice currency field.
+     * Sets Unit Price In Invoice Currency field.
+     *
+     * @param float|null $value
      */
     public function unitPriceInInvoiceCurrency(?float $value): self
     {
@@ -633,7 +701,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets unit price in invoice currency field.
+     * Unsets Unit Price In Invoice Currency field.
      */
     public function unsetUnitPriceInInvoiceCurrency(): self
     {
@@ -642,7 +710,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice tax field.
+     * Sets Invoice Tax field.
+     *
+     * @param float|null $value
      */
     public function invoiceTax(?float $value): self
     {
@@ -651,7 +721,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice tax field.
+     * Unsets Invoice Tax field.
      */
     public function unsetInvoiceTax(): self
     {
@@ -660,7 +730,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice gross amount field.
+     * Sets Invoice Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceGrossAmount(?float $value): self
     {
@@ -669,7 +741,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice gross amount field.
+     * Unsets Invoice Gross Amount field.
      */
     public function unsetInvoiceGrossAmount(): self
     {
@@ -678,7 +750,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice net amount field.
+     * Sets Invoice Net Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceNetAmount(?float $value): self
     {
@@ -687,7 +761,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice net amount field.
+     * Unsets Invoice Net Amount field.
      */
     public function unsetInvoiceNetAmount(): self
     {
@@ -696,7 +770,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vaton net amount in customer currency field.
+     * Sets VA Ton Net Amount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function vATonNetAmountInCustomerCurrency(?float $value): self
     {
@@ -705,7 +781,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vaton net amount in customer currency field.
+     * Unsets VA Ton Net Amount In Customer Currency field.
      */
     public function unsetVATonNetAmountInCustomerCurrency(): self
     {
@@ -714,7 +790,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer retail price unit gross field.
+     * Sets Customer Retail Price Unit Gross field.
+     *
+     * @param float|null $value
      */
     public function customerRetailPriceUnitGross(?float $value): self
     {
@@ -723,7 +801,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer retail price unit gross field.
+     * Unsets Customer Retail Price Unit Gross field.
      */
     public function unsetCustomerRetailPriceUnitGross(): self
     {
@@ -732,7 +810,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer retail value total gross field.
+     * Sets Customer Retail Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalGross(?float $value): self
     {
@@ -741,7 +821,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer retail value total gross field.
+     * Unsets Customer Retail Value Total Gross field.
      */
     public function unsetCustomerRetailValueTotalGross(): self
     {
@@ -750,7 +830,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer retail value total net field.
+     * Sets Customer Retail Value Total Net field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalNet(?float $value): self
     {
@@ -759,7 +841,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer retail value total net field.
+     * Unsets Customer Retail Value Total Net field.
      */
     public function unsetCustomerRetailValueTotalNet(): self
     {
@@ -768,7 +850,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction type description field.
+     * Sets Transaction Type Description field.
+     *
+     * @param float|null $value
      */
     public function transactionTypeDescription(?float $value): self
     {
@@ -777,7 +861,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction type description field.
+     * Unsets Transaction Type Description field.
      */
     public function unsetTransactionTypeDescription(): self
     {
@@ -786,7 +870,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets rebateon net amount in transaction currency field.
+     * Sets Rebateon Net Amount In Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function rebateonNetAmountInTransactionCurrency(?float $value): self
     {
@@ -795,7 +881,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets rebateon net amount in transaction currency field.
+     * Unsets Rebateon Net Amount In Transaction Currency field.
      */
     public function unsetRebateonNetAmountInTransactionCurrency(): self
     {
@@ -804,7 +890,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets effective discount in trx currency field.
+     * Sets Effective Discount In Trx Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveDiscountInTrxCurrency(?float $value): self
     {
@@ -813,7 +901,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets effective discount in trx currency field.
+     * Unsets Effective Discount In Trx Currency field.
      */
     public function unsetEffectiveDiscountInTrxCurrency(): self
     {
@@ -822,7 +910,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets del co to col co exchange rate field.
+     * Sets Del Co To Col Co Exchange Rate field.
+     *
+     * @param int|null $value
      */
     public function delCoToColCoExchangeRate(?int $value): self
     {
@@ -831,7 +921,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets del co to col co exchange rate field.
+     * Unsets Del Co To Col Co Exchange Rate field.
      */
     public function unsetDelCoToColCoExchangeRate(): self
     {
@@ -840,7 +930,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets cards field.
+     * Sets Cards field.
+     *
+     * @param int[]|null $value
      */
     public function cards(?array $value): self
     {
@@ -849,7 +941,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets unit discount transaction currency field.
+     * Sets Unit Discount Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function unitDiscountTransactionCurrency(?float $value): self
     {
@@ -858,7 +952,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets unit discount transaction currency field.
+     * Unsets Unit Discount Transaction Currency field.
      */
     public function unsetUnitDiscountTransactionCurrency(): self
     {
@@ -867,7 +961,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction gross amount field.
+     * Sets Transaction Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function transactionGrossAmount(?float $value): self
     {
@@ -876,7 +972,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction gross amount field.
+     * Unsets Transaction Gross Amount field.
      */
     public function unsetTransactionGrossAmount(): self
     {
@@ -885,7 +981,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction net amount field.
+     * Sets Transaction Net Amount field.
+     *
+     * @param float|null $value
      */
     public function transactionNetAmount(?float $value): self
     {
@@ -894,7 +992,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction net amount field.
+     * Unsets Transaction Net Amount field.
      */
     public function unsetTransactionNetAmount(): self
     {
@@ -903,7 +1001,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction tax field.
+     * Sets Transaction Tax field.
+     *
+     * @param float|null $value
      */
     public function transactionTax(?float $value): self
     {
@@ -912,7 +1012,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction tax field.
+     * Unsets Transaction Tax field.
      */
     public function unsetTransactionTax(): self
     {
@@ -921,7 +1021,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vaton net amount field.
+     * Sets VA Ton Net Amount field.
+     *
+     * @param float|null $value
      */
     public function vATonNetAmount(?float $value): self
     {
@@ -930,7 +1032,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vaton net amount field.
+     * Unsets VA Ton Net Amount field.
      */
     public function unsetVATonNetAmount(): self
     {
@@ -939,7 +1041,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco list price unit net field.
+     * Sets Delco List Price Unit Net field.
+     *
+     * @param float|null $value
      */
     public function delcoListPriceUnitNet(?float $value): self
     {
@@ -948,7 +1052,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco list price unit net field.
+     * Unsets Delco List Price Unit Net field.
      */
     public function unsetDelcoListPriceUnitNet(): self
     {
@@ -957,7 +1061,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco retail price unit gross field.
+     * Sets Delco Retail Price Unit Gross field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailPriceUnitGross(?float $value): self
     {
@@ -966,7 +1072,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco retail price unit gross field.
+     * Unsets Delco Retail Price Unit Gross field.
      */
     public function unsetDelcoRetailPriceUnitGross(): self
     {
@@ -975,7 +1081,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets unit price in transaction currency field.
+     * Sets Unit Price In Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function unitPriceInTransactionCurrency(?float $value): self
     {
@@ -984,7 +1092,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets unit price in transaction currency field.
+     * Unsets Unit Price In Transaction Currency field.
      */
     public function unsetUnitPriceInTransactionCurrency(): self
     {
@@ -993,7 +1101,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco retail price unit net field.
+     * Sets Delco Retail Price Unit Net field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailPriceUnitNet(?float $value): self
     {
@@ -1002,7 +1112,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco retail price unit net field.
+     * Unsets Delco Retail Price Unit Net field.
      */
     public function unsetDelcoRetailPriceUnitNet(): self
     {
@@ -1011,7 +1121,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco retail value total gross field.
+     * Sets Delco Retail Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailValueTotalGross(?float $value): self
     {
@@ -1020,7 +1132,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco retail value total gross field.
+     * Unsets Delco Retail Value Total Gross field.
      */
     public function unsetDelcoRetailValueTotalGross(): self
     {
@@ -1029,7 +1141,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco retail value total net field.
+     * Sets Delco Retail Value Total Net field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailValueTotalNet(?float $value): self
     {
@@ -1038,7 +1152,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco retail value total net field.
+     * Unsets Delco Retail Value Total Net field.
      */
     public function unsetDelcoRetailValueTotalNet(): self
     {
@@ -1047,7 +1161,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction currency symbol field.
+     * Sets Transaction Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencySymbol(?string $value): self
     {
@@ -1056,7 +1172,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction currency symbol field.
+     * Unsets Transaction Currency Symbol field.
      */
     public function unsetTransactionCurrencySymbol(): self
     {
@@ -1065,7 +1181,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets discount type field.
+     * Sets Discount Type field.
+     *
+     * @param string|null $value
      */
     public function discountType(?string $value): self
     {
@@ -1074,7 +1192,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets discount type field.
+     * Unsets Discount Type field.
      */
     public function unsetDiscountType(): self
     {
@@ -1083,7 +1201,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets dispute status field.
+     * Sets Dispute Status field.
+     *
+     * @param bool|null $value
      */
     public function disputeStatus(?bool $value): self
     {
@@ -1092,7 +1212,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets dispute status field.
+     * Unsets Dispute Status field.
      */
     public function unsetDisputeStatus(): self
     {
@@ -1101,7 +1221,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets is shell site field.
+     * Sets Is Shell Site field.
+     *
+     * @param bool|null $value
      */
     public function isShellSite(?bool $value): self
     {
@@ -1110,7 +1232,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fleet id input field.
+     * Sets Fleet Id Input field.
+     *
+     * @param string|null $value
      */
     public function fleetIdInput(?string $value): self
     {
@@ -1119,7 +1243,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fleet id input field.
+     * Unsets Fleet Id Input field.
      */
     public function unsetFleetIdInput(): self
     {
@@ -1128,7 +1252,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets incoming product code field.
+     * Sets Incoming Product Code field.
+     *
+     * @param int|null $value
      */
     public function incomingProductCode(?int $value): self
     {
@@ -1137,7 +1263,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets incoming product code field.
+     * Unsets Incoming Product Code field.
      */
     public function unsetIncomingProductCode(): self
     {
@@ -1146,7 +1272,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets posting date field.
+     * Sets Posting Date field.
+     *
+     * @param string|null $value
      */
     public function postingDate(?string $value): self
     {
@@ -1155,7 +1283,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets posting date field.
+     * Unsets Posting Date field.
      */
     public function unsetPostingDate(): self
     {
@@ -1164,7 +1292,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets posting time field.
+     * Sets Posting Time field.
+     *
+     * @param string|null $value
      */
     public function postingTime(?string $value): self
     {
@@ -1173,7 +1303,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets posting time field.
+     * Unsets Posting Time field.
      */
     public function unsetPostingTime(): self
     {
@@ -1182,7 +1312,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param int|null $value
      */
     public function productCode(?int $value): self
     {
@@ -1191,7 +1323,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -1200,7 +1332,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -1209,7 +1343,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -1218,7 +1352,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -1227,7 +1363,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -1236,7 +1372,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets incoming currency code field.
+     * Sets Incoming Currency Code field.
+     *
+     * @param string|null $value
      */
     public function incomingCurrencyCode(?string $value): self
     {
@@ -1245,7 +1383,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets incoming currency code field.
+     * Unsets Incoming Currency Code field.
      */
     public function unsetIncomingCurrencyCode(): self
     {
@@ -1254,7 +1392,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets incoming site description field.
+     * Sets Incoming Site Description field.
+     *
+     * @param string|null $value
      */
     public function incomingSiteDescription(?string $value): self
     {
@@ -1263,7 +1403,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets incoming site description field.
+     * Unsets Incoming Site Description field.
      */
     public function unsetIncomingSiteDescription(): self
     {
@@ -1272,7 +1412,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets location field.
+     * Sets Location field.
+     *
+     * @param string|null $value
      */
     public function location(?string $value): self
     {
@@ -1281,7 +1423,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets location field.
+     * Unsets Location field.
      */
     public function unsetLocation(): self
     {
@@ -1290,7 +1432,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -1299,7 +1443,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -1308,7 +1452,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param int|null $value
      */
     public function siteCode(?int $value): self
     {
@@ -1317,7 +1463,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -1326,7 +1472,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets incoming site number field.
+     * Sets Incoming Site Number field.
+     *
+     * @param int|null $value
      */
     public function incomingSiteNumber(?int $value): self
     {
@@ -1335,7 +1483,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets incoming site number field.
+     * Unsets Incoming Site Number field.
      */
     public function unsetIncomingSiteNumber(): self
     {
@@ -1344,7 +1492,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice currency code field.
+     * Sets Invoice Currency Code field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencyCode(?string $value): self
     {
@@ -1353,7 +1503,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice currency code field.
+     * Unsets Invoice Currency Code field.
      */
     public function unsetInvoiceCurrencyCode(): self
     {
@@ -1362,7 +1512,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -1371,7 +1523,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -1380,7 +1532,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param float|null $value
      */
     public function invoiceNumber(?float $value): self
     {
@@ -1389,7 +1543,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -1398,7 +1552,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fuel product field.
+     * Sets Fuel Product field.
+     *
+     * @param bool|null $value
      */
     public function fuelProduct(?bool $value): self
     {
@@ -1407,7 +1563,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fuel product field.
+     * Unsets Fuel Product field.
      */
     public function unsetFuelProduct(): self
     {
@@ -1416,7 +1572,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vatapplicable field.
+     * Sets VAT Applicable field.
+     *
+     * @param string|null $value
      */
     public function vATApplicable(?string $value): self
     {
@@ -1425,7 +1583,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vatapplicable field.
+     * Unsets VAT Applicable field.
      */
     public function unsetVATApplicable(): self
     {
@@ -1434,7 +1592,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -1443,7 +1603,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -1452,7 +1612,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -1461,7 +1623,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -1470,7 +1632,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets parent customer number field.
+     * Sets Parent Customer Number field.
+     *
+     * @param string|null $value
      */
     public function parentCustomerNumber(?string $value): self
     {
@@ -1479,7 +1643,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets parent customer number field.
+     * Unsets Parent Customer Number field.
      */
     public function unsetParentCustomerNumber(): self
     {
@@ -1488,7 +1652,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets payer group field.
+     * Sets Payer Group field.
+     *
+     * @param string|null $value
      */
     public function payerGroup(?string $value): self
     {
@@ -1497,7 +1663,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets payer group field.
+     * Unsets Payer Group field.
      */
     public function unsetPayerGroup(): self
     {
@@ -1506,7 +1672,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets payer group name field.
+     * Sets Payer Group Name field.
+     *
+     * @param string|null $value
      */
     public function payerGroupName(?string $value): self
     {
@@ -1515,7 +1683,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets payer group name field.
+     * Unsets Payer Group Name field.
      */
     public function unsetPayerGroupName(): self
     {
@@ -1524,7 +1692,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets check digit field.
+     * Sets Check Digit field.
+     *
+     * @param int|null $value
      */
     public function checkDigit(?int $value): self
     {
@@ -1533,7 +1703,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets check digit field.
+     * Unsets Check Digit field.
      */
     public function unsetCheckDigit(): self
     {
@@ -1542,7 +1712,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets net invoice indicator field.
+     * Sets Net Invoice Indicator field.
+     *
+     * @param string|null $value
      */
     public function netInvoiceIndicator(?string $value): self
     {
@@ -1551,7 +1723,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets net invoice indicator field.
+     * Unsets Net Invoice Indicator field.
      */
     public function unsetNetInvoiceIndicator(): self
     {
@@ -1560,7 +1732,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco code field.
+     * Sets Delco Code field.
+     *
+     * @param int|null $value
      */
     public function delcoCode(?int $value): self
     {
@@ -1569,7 +1743,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco code field.
+     * Unsets Delco Code field.
      */
     public function unsetDelcoCode(): self
     {
@@ -1578,7 +1752,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets network code field.
+     * Sets Network Code field.
+     *
+     * @param int|null $value
      */
     public function networkCode(?int $value): self
     {
@@ -1587,7 +1763,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets network code field.
+     * Unsets Network Code field.
      */
     public function unsetNetworkCode(): self
     {
@@ -1596,7 +1772,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -1605,7 +1783,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -1614,7 +1792,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets site country field.
+     * Sets Site Country field.
+     *
+     * @param string|null $value
      */
     public function siteCountry(?string $value): self
     {
@@ -1623,7 +1803,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets site country field.
+     * Unsets Site Country field.
      */
     public function unsetSiteCountry(): self
     {
@@ -1632,7 +1812,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vatcountry field.
+     * Sets VAT Country field.
+     *
+     * @param string|null $value
      */
     public function vATCountry(?string $value): self
     {
@@ -1641,7 +1823,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vatcountry field.
+     * Unsets VAT Country field.
      */
     public function unsetVATCountry(): self
     {
@@ -1650,7 +1832,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets delco name field.
+     * Sets Delco Name field.
+     *
+     * @param string|null $value
      */
     public function delcoName(?string $value): self
     {
@@ -1659,7 +1843,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets delco name field.
+     * Unsets Delco Name field.
      */
     public function unsetDelcoName(): self
     {
@@ -1668,7 +1852,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets network field.
+     * Sets Network field.
+     *
+     * @param string|null $value
      */
     public function network(?string $value): self
     {
@@ -1677,7 +1863,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets network field.
+     * Unsets Network field.
      */
     public function unsetNetwork(): self
     {
@@ -1686,7 +1872,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets odometer input field.
+     * Sets Odometer Input field.
+     *
+     * @param int|null $value
      */
     public function odometerInput(?int $value): self
     {
@@ -1695,7 +1883,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets odometer input field.
+     * Unsets Odometer Input field.
      */
     public function unsetOdometerInput(): self
     {
@@ -1704,7 +1892,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original sales item id field.
+     * Sets Original Sales Item Id field.
+     *
+     * @param string|null $value
      */
     public function originalSalesItemId(?string $value): self
     {
@@ -1713,7 +1903,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original sales item id field.
+     * Unsets Original Sales Item Id field.
      */
     public function unsetOriginalSalesItemId(): self
     {
@@ -1722,7 +1912,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fleet iddescription field.
+     * Sets Fleet ID Description field.
+     *
+     * @param string|null $value
      */
     public function fleetIDDescription(?string $value): self
     {
@@ -1731,7 +1923,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fleet iddescription field.
+     * Unsets Fleet ID Description field.
      */
     public function unsetFleetIDDescription(): self
     {
@@ -1740,7 +1932,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets parent customer id field.
+     * Sets Parent Customer Id field.
+     *
+     * @param int|null $value
      */
     public function parentCustomerId(?int $value): self
     {
@@ -1749,7 +1943,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets parent customer id field.
+     * Unsets Parent Customer Id field.
      */
     public function unsetParentCustomerId(): self
     {
@@ -1758,7 +1952,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets pinindicator field.
+     * Sets PIN Indicator field.
+     *
+     * @param string|null $value
      */
     public function pINIndicator(?string $value): self
     {
@@ -1767,7 +1963,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets pinindicator field.
+     * Unsets PIN Indicator field.
      */
     public function unsetPINIndicator(): self
     {
@@ -1776,7 +1972,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -1785,7 +1983,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -1794,7 +1992,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets purchased in country code field.
+     * Sets Purchased In Country Code field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountryCode(?string $value): self
     {
@@ -1803,7 +2003,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets purchased in country code field.
+     * Unsets Purchased In Country Code field.
      */
     public function unsetPurchasedInCountryCode(): self
     {
@@ -1812,7 +2012,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets quantity field.
+     * Sets Quantity field.
+     *
+     * @param float|null $value
      */
     public function quantity(?float $value): self
     {
@@ -1821,7 +2023,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets quantity field.
+     * Unsets Quantity field.
      */
     public function unsetQuantity(): self
     {
@@ -1830,7 +2032,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets rebate rate field.
+     * Sets Rebate Rate field.
+     *
+     * @param float|null $value
      */
     public function rebateRate(?float $value): self
     {
@@ -1839,7 +2043,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets rebate rate field.
+     * Unsets Rebate Rate field.
      */
     public function unsetRebateRate(): self
     {
@@ -1848,7 +2052,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets receipt number field.
+     * Sets Receipt Number field.
+     *
+     * @param int|null $value
      */
     public function receiptNumber(?int $value): self
     {
@@ -1857,7 +2063,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets receipt number field.
+     * Unsets Receipt Number field.
      */
     public function unsetReceiptNumber(): self
     {
@@ -1866,7 +2072,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets refund flag field.
+     * Sets Refund Flag field.
+     *
+     * @param string|null $value
      */
     public function refundFlag(?string $value): self
     {
@@ -1875,7 +2083,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -1884,7 +2094,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -1893,7 +2103,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -1902,7 +2114,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -1911,7 +2123,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets latitude field.
+     * Sets Latitude field.
+     *
+     * @param float|null $value
      */
     public function latitude(?float $value): self
     {
@@ -1920,7 +2134,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets latitude field.
+     * Unsets Latitude field.
      */
     public function unsetLatitude(): self
     {
@@ -1929,7 +2143,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets longitude field.
+     * Sets Longitude field.
+     *
+     * @param float|null $value
      */
     public function longitude(?float $value): self
     {
@@ -1938,7 +2154,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets longitude field.
+     * Unsets Longitude field.
      */
     public function unsetLongitude(): self
     {
@@ -1947,7 +2163,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets del co exchange rate field.
+     * Sets Del Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function delCoExchangeRate(?float $value): self
     {
@@ -1956,7 +2174,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets del co exchange rate field.
+     * Unsets Del Co Exchange Rate field.
      */
     public function unsetDelCoExchangeRate(): self
     {
@@ -1965,7 +2183,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets euro rebate amount field.
+     * Sets Euro Rebate Amount field.
+     *
+     * @param float|null $value
      */
     public function euroRebateAmount(?float $value): self
     {
@@ -1974,7 +2194,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets euro rebate amount field.
+     * Unsets Euro Rebate Amount field.
      */
     public function unsetEuroRebateAmount(): self
     {
@@ -1983,7 +2203,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets net euro amount field.
+     * Sets Net Euro Amount field.
+     *
+     * @param float|null $value
      */
     public function netEuroAmount(?float $value): self
     {
@@ -1992,7 +2214,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets net euro amount field.
+     * Unsets Net Euro Amount field.
      */
     public function unsetNetEuroAmount(): self
     {
@@ -2001,7 +2223,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets euro vatamount field.
+     * Sets Euro VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function euroVATAmount(?float $value): self
     {
@@ -2010,7 +2234,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets euro vatamount field.
+     * Unsets Euro VAT Amount field.
      */
     public function unsetEuroVATAmount(): self
     {
@@ -2019,7 +2243,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets parent customer name field.
+     * Sets Parent Customer Name field.
+     *
+     * @param string|null $value
      */
     public function parentCustomerName(?string $value): self
     {
@@ -2028,7 +2254,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets parent customer name field.
+     * Unsets Parent Customer Name field.
      */
     public function unsetParentCustomerName(): self
     {
@@ -2037,7 +2263,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets is invoiced field.
+     * Sets Is Invoiced field.
+     *
+     * @param bool|null $value
      */
     public function isInvoiced(?bool $value): self
     {
@@ -2046,7 +2274,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets is invoiced field.
+     * Unsets Is Invoiced field.
      */
     public function unsetIsInvoiced(): self
     {
@@ -2055,7 +2283,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction currency code field.
+     * Sets Transaction Currency Code field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencyCode(?string $value): self
     {
@@ -2064,7 +2294,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction currency code field.
+     * Unsets Transaction Currency Code field.
      */
     public function unsetTransactionCurrencyCode(): self
     {
@@ -2073,7 +2303,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets credit debit code field.
+     * Sets Credit Debit Code field.
+     *
+     * @param string|null $value
      */
     public function creditDebitCode(?string $value): self
     {
@@ -2082,7 +2314,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets credit debit code field.
+     * Unsets Credit Debit Code field.
      */
     public function unsetCreditDebitCode(): self
     {
@@ -2091,7 +2323,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction date field.
+     * Sets Transaction Date field.
+     *
+     * @param string|null $value
      */
     public function transactionDate(?string $value): self
     {
@@ -2100,7 +2334,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction date field.
+     * Unsets Transaction Date field.
      */
     public function unsetTransactionDate(): self
     {
@@ -2109,7 +2343,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction time field.
+     * Sets Transaction Time field.
+     *
+     * @param string|null $value
      */
     public function transactionTime(?string $value): self
     {
@@ -2118,7 +2354,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction time field.
+     * Unsets Transaction Time field.
      */
     public function unsetTransactionTime(): self
     {
@@ -2127,7 +2363,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction item id field.
+     * Sets Transaction Item Id field.
+     *
+     * @param string|null $value
      */
     public function transactionItemId(?string $value): self
     {
@@ -2136,7 +2374,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction item id field.
+     * Unsets Transaction Item Id field.
      */
     public function unsetTransactionItemId(): self
     {
@@ -2145,7 +2383,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets trn identifier field.
+     * Sets Trn Identifier field.
+     *
+     * @param string|null $value
      */
     public function trnIdentifier(?string $value): self
     {
@@ -2154,7 +2394,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets trn identifier field.
+     * Unsets Trn Identifier field.
      */
     public function unsetTrnIdentifier(): self
     {
@@ -2163,7 +2403,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -2172,7 +2414,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets type field.
+     * Unsets Type field.
      */
     public function unsetType(): self
     {
@@ -2181,7 +2423,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction line field.
+     * Sets Transaction Line field.
+     *
+     * @param int|null $value
      */
     public function transactionLine(?int $value): self
     {
@@ -2190,7 +2434,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction line field.
+     * Unsets Transaction Line field.
      */
     public function unsetTransactionLine(): self
     {
@@ -2199,7 +2443,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction type field.
+     * Sets Transaction Type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -2208,7 +2454,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction type field.
+     * Unsets Transaction Type field.
      */
     public function unsetTransactionType(): self
     {
@@ -2217,7 +2463,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets utcoffset field.
+     * Sets UTC Offset field.
+     *
+     * @param string|null $value
      */
     public function uTCOffset(?string $value): self
     {
@@ -2226,7 +2474,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets utcoffset field.
+     * Unsets UTC Offset field.
      */
     public function unsetUTCOffset(): self
     {
@@ -2235,7 +2483,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vatcategory field.
+     * Sets VAT Category field.
+     *
+     * @param string|null $value
      */
     public function vATCategory(?string $value): self
     {
@@ -2244,7 +2494,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vatcategory field.
+     * Unsets VAT Category field.
      */
     public function unsetVATCategory(): self
     {
@@ -2253,7 +2503,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vatrate field.
+     * Sets VAT Rate field.
+     *
+     * @param float|null $value
      */
     public function vATRate(?float $value): self
     {
@@ -2262,7 +2514,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vatrate field.
+     * Unsets VAT Rate field.
      */
     public function unsetVATRate(): self
     {
@@ -2271,7 +2523,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets vehicle registration field.
+     * Sets Vehicle Registration field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistration(?string $value): self
     {
@@ -2280,7 +2534,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets vehicle registration field.
+     * Unsets Vehicle Registration field.
      */
     public function unsetVehicleRegistration(): self
     {
@@ -2289,7 +2543,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets is cancelled field.
+     * Sets Is Cancelled field.
+     *
+     * @param string|null $value
      */
     public function isCancelled(?string $value): self
     {
@@ -2298,7 +2554,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets is cancelled field.
+     * Unsets Is Cancelled field.
      */
     public function unsetIsCancelled(): self
     {
@@ -2307,7 +2563,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets col co gross amount field.
+     * Sets Col Co Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoGrossAmount(?float $value): self
     {
@@ -2316,7 +2574,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets col co gross amount field.
+     * Unsets Col Co Gross Amount field.
      */
     public function unsetColCoGrossAmount(): self
     {
@@ -2325,7 +2583,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets col co net amount field.
+     * Sets Col Co Net Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoNetAmount(?float $value): self
     {
@@ -2334,7 +2594,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets col co net amount field.
+     * Unsets Col Co Net Amount field.
      */
     public function unsetColCoNetAmount(): self
     {
@@ -2343,7 +2603,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets col co vatamount field.
+     * Sets Col Co VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoVATAmount(?float $value): self
     {
@@ -2352,7 +2614,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets col co vatamount field.
+     * Unsets Col Co VAT Amount field.
      */
     public function unsetColCoVATAmount(): self
     {
@@ -2361,7 +2623,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original currency symbol field.
+     * Sets Original Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function originalCurrencySymbol(?string $value): self
     {
@@ -2370,7 +2634,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original currency symbol field.
+     * Unsets Original Currency Symbol field.
      */
     public function unsetOriginalCurrencySymbol(): self
     {
@@ -2379,7 +2643,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original currency code field.
+     * Sets Original Currency Code field.
+     *
+     * @param string|null $value
      */
     public function originalCurrencyCode(?string $value): self
     {
@@ -2388,7 +2654,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original currency code field.
+     * Unsets Original Currency Code field.
      */
     public function unsetOriginalCurrencyCode(): self
     {
@@ -2397,7 +2663,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original vatamount field.
+     * Sets Original VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function originalVATAmount(?float $value): self
     {
@@ -2406,7 +2674,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original vatamount field.
+     * Unsets Original VAT Amount field.
      */
     public function unsetOriginalVATAmount(): self
     {
@@ -2415,7 +2683,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets emboss text field.
+     * Sets Emboss Text field.
+     *
+     * @param string|null $value
      */
     public function embossText(?string $value): self
     {
@@ -2424,7 +2694,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets emboss text field.
+     * Unsets Emboss Text field.
      */
     public function unsetEmbossText(): self
     {
@@ -2433,7 +2703,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original exchange rate field.
+     * Sets Original Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function originalExchangeRate(?float $value): self
     {
@@ -2442,7 +2714,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original exchange rate field.
+     * Unsets Original Exchange Rate field.
      */
     public function unsetOriginalExchangeRate(): self
     {
@@ -2451,7 +2723,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original transaction item invoice date field.
+     * Sets Original Transaction Item Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function originalTransactionItemInvoiceDate(?string $value): self
     {
@@ -2460,7 +2734,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original transaction item invoice date field.
+     * Unsets Original Transaction Item Invoice Date field.
      */
     public function unsetOriginalTransactionItemInvoiceDate(): self
     {
@@ -2469,7 +2743,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fee type id field.
+     * Sets Fee Type Id field.
+     *
+     * @param int|null $value
      */
     public function feeTypeId(?int $value): self
     {
@@ -2478,7 +2754,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fee type id field.
+     * Unsets Fee Type Id field.
      */
     public function unsetFeeTypeId(): self
     {
@@ -2487,7 +2763,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets line item description field.
+     * Sets Line Item Description field.
+     *
+     * @param bool|null $value
      */
     public function lineItemDescription(?bool $value): self
     {
@@ -2496,7 +2774,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets line item description field.
+     * Unsets Line Item Description field.
      */
     public function unsetLineItemDescription(): self
     {
@@ -2505,7 +2783,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -2514,7 +2794,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -2523,7 +2803,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets frequency field.
+     * Sets Frequency field.
+     *
+     * @param int|null $value
      */
     public function frequency(?int $value): self
     {
@@ -2532,7 +2814,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets frequency field.
+     * Unsets Frequency field.
      */
     public function unsetFrequency(): self
     {
@@ -2541,7 +2823,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param int|null $value
      */
     public function feeRuleId(?int $value): self
     {
@@ -2550,7 +2834,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -2559,7 +2843,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets system entry date field.
+     * Sets System Entry Date field.
+     *
+     * @param string|null $value
      */
     public function systemEntryDate(?string $value): self
     {
@@ -2568,7 +2854,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets system entry date field.
+     * Unsets System Entry Date field.
      */
     public function unsetSystemEntryDate(): self
     {
@@ -2577,7 +2863,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets system entry time field.
+     * Sets System Entry Time field.
+     *
+     * @param string|null $value
      */
     public function systemEntryTime(?string $value): self
     {
@@ -2586,7 +2874,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets system entry time field.
+     * Unsets System Entry Time field.
      */
     public function unsetSystemEntryTime(): self
     {
@@ -2595,7 +2883,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets is manual field.
+     * Sets Is Manual field.
+     *
+     * @param string|null $value
      */
     public function isManual(?string $value): self
     {
@@ -2604,7 +2894,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets is manual field.
+     * Unsets Is Manual field.
      */
     public function unsetIsManual(): self
     {
@@ -2613,7 +2903,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original transaction item id field.
+     * Sets Original Transaction Item Id field.
+     *
+     * @param string|null $value
      */
     public function originalTransactionItemId(?string $value): self
     {
@@ -2622,7 +2914,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original transaction item id field.
+     * Unsets Original Transaction Item Id field.
      */
     public function unsetOriginalTransactionItemId(): self
     {
@@ -2631,7 +2923,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original transaction item invoice number field.
+     * Sets Original Transaction Item Invoice Number field.
+     *
+     * @param int|null $value
      */
     public function originalTransactionItemInvoiceNumber(?int $value): self
     {
@@ -2640,7 +2934,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original transaction item invoice number field.
+     * Unsets Original Transaction Item Invoice Number field.
      */
     public function unsetOriginalTransactionItemInvoiceNumber(): self
     {
@@ -2649,7 +2943,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original transaction item invoice id field.
+     * Sets Original Transaction Item Invoice Id field.
+     *
+     * @param int|null $value
      */
     public function originalTransactionItemInvoiceId(?int $value): self
     {
@@ -2658,7 +2954,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original transaction item invoice id field.
+     * Unsets Original Transaction Item Invoice Id field.
      */
     public function unsetOriginalTransactionItemInvoiceId(): self
     {
@@ -2667,7 +2963,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets payer short name field.
+     * Sets Payer Short Name field.
+     *
+     * @param string|null $value
      */
     public function payerShortName(?string $value): self
     {
@@ -2676,7 +2974,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets payer short name field.
+     * Unsets Payer Short Name field.
      */
     public function unsetPayerShortName(): self
     {
@@ -2685,7 +2983,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets reverse charge field.
+     * Sets Reverse Charge field.
+     *
+     * @param string|null $value
      */
     public function reverseCharge(?string $value): self
     {
@@ -2694,7 +2994,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets reverse charge field.
+     * Unsets Reverse Charge field.
      */
     public function unsetReverseCharge(): self
     {
@@ -2703,7 +3003,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original gross amount field.
+     * Sets Original Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function originalGrossAmount(?float $value): self
     {
@@ -2712,7 +3014,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original gross amount field.
+     * Unsets Original Gross Amount field.
      */
     public function unsetOriginalGrossAmount(): self
     {
@@ -2721,7 +3023,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets original net amount field.
+     * Sets Original Net Amount field.
+     *
+     * @param float|null $value
      */
     public function originalNetAmount(?float $value): self
     {
@@ -2730,7 +3034,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets original net amount field.
+     * Unsets Original Net Amount field.
      */
     public function unsetOriginalNetAmount(): self
     {
@@ -2739,7 +3043,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets unit of measure field.
+     * Sets Unit Of Measure field.
+     *
+     * @param string|null $value
      */
     public function unitOfMeasure(?string $value): self
     {
@@ -2748,7 +3054,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets unit of measure field.
+     * Unsets Unit Of Measure field.
      */
     public function unsetUnitOfMeasure(): self
     {
@@ -2757,7 +3063,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets road type field.
+     * Sets Road Type field.
+     *
+     * @param string|null $value
      */
     public function roadType(?string $value): self
     {
@@ -2766,7 +3074,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets road type field.
+     * Unsets Road Type field.
      */
     public function unsetRoadType(): self
     {
@@ -2775,7 +3083,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets customer country iso code field.
+     * Sets Customer Country Iso Code field.
+     *
+     * @param string|null $value
      */
     public function customerCountryIsoCode(?string $value): self
     {
@@ -2784,7 +3094,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets customer country iso code field.
+     * Unsets Customer Country Iso Code field.
      */
     public function unsetCustomerCountryIsoCode(): self
     {
@@ -2793,7 +3103,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evoperator field.
+     * Sets EV Operator field.
+     *
+     * @param string|null $value
      */
     public function eVOperator(?string $value): self
     {
@@ -2802,7 +3114,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evoperator field.
+     * Unsets EV Operator field.
      */
     public function unsetEVOperator(): self
     {
@@ -2811,7 +3123,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evserial id field.
+     * Sets EV Serial Id field.
+     *
+     * @param string|null $value
      */
     public function eVSerialId(?string $value): self
     {
@@ -2820,7 +3134,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evserial id field.
+     * Unsets EV Serial Id field.
      */
     public function unsetEVSerialId(): self
     {
@@ -2829,7 +3143,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge point serial field.
+     * Sets EV Charge Point Serial field.
+     *
+     * @param string|null $value
      */
     public function eVChargePointSerial(?string $value): self
     {
@@ -2838,7 +3154,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge point serial field.
+     * Unsets EV Charge Point Serial field.
      */
     public function unsetEVChargePointSerial(): self
     {
@@ -2847,7 +3163,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge point connector type field.
+     * Sets EV Charge Point Connector Type field.
+     *
+     * @param int|null $value
      */
     public function eVChargePointConnectorType(?int $value): self
     {
@@ -2856,7 +3174,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge point connector type field.
+     * Unsets EV Charge Point Connector Type field.
      */
     public function unsetEVChargePointConnectorType(): self
     {
@@ -2865,7 +3183,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge point connector type description field.
+     * Sets EV Charge Point Connector Type Description field.
+     *
+     * @param string|null $value
      */
     public function eVChargePointConnectorTypeDescription(?string $value): self
     {
@@ -2874,7 +3194,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge point connector type description field.
+     * Unsets EV Charge Point Connector Type Description field.
      */
     public function unsetEVChargePointConnectorTypeDescription(): self
     {
@@ -2883,7 +3203,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge duration field.
+     * Sets EV Charge Duration field.
+     *
+     * @param string|null $value
      */
     public function eVChargeDuration(?string $value): self
     {
@@ -2892,7 +3214,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge duration field.
+     * Unsets EV Charge Duration field.
      */
     public function unsetEVChargeDuration(): self
     {
@@ -2901,7 +3223,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge start date field.
+     * Sets EV Charge Start Date field.
+     *
+     * @param string|null $value
      */
     public function eVChargeStartDate(?string $value): self
     {
@@ -2910,7 +3234,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge start date field.
+     * Unsets EV Charge Start Date field.
      */
     public function unsetEVChargeStartDate(): self
     {
@@ -2919,7 +3243,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge start time field.
+     * Sets EV Charge Start Time field.
+     *
+     * @param string|null $value
      */
     public function eVChargeStartTime(?string $value): self
     {
@@ -2928,7 +3254,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge start time field.
+     * Unsets EV Charge Start Time field.
      */
     public function unsetEVChargeStartTime(): self
     {
@@ -2937,7 +3263,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge end date field.
+     * Sets EV Charge End Date field.
+     *
+     * @param string|null $value
      */
     public function eVChargeEndDate(?string $value): self
     {
@@ -2946,7 +3274,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge end date field.
+     * Unsets EV Charge End Date field.
      */
     public function unsetEVChargeEndDate(): self
     {
@@ -2955,7 +3283,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets evcharge end time field.
+     * Sets EV Charge End Time field.
+     *
+     * @param string|null $value
      */
     public function eVChargeEndTime(?string $value): self
     {
@@ -2964,7 +3294,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets evcharge end time field.
+     * Unsets EV Charge End Time field.
      */
     public function unsetEVChargeEndTime(): self
     {
@@ -2973,7 +3303,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets hosting collecting company number field.
+     * Sets Hosting Collecting Company Number field.
+     *
+     * @param int|null $value
      */
     public function hostingCollectingCompanyNumber(?int $value): self
     {
@@ -2982,7 +3314,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets hosting collecting company number field.
+     * Unsets Hosting Collecting Company Number field.
      */
     public function unsetHostingCollectingCompanyNumber(): self
     {
@@ -2991,7 +3323,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param float|null $value
      */
     public function transactionId(?float $value): self
     {
@@ -3000,7 +3334,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets Transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -3009,7 +3343,9 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param bool|null $value
      */
     public function fuelOnly(?bool $value): self
     {
@@ -3018,7 +3354,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Unsets fuel only field.
+     * Unsets Fuel Only field.
      */
     public function unsetFuelOnly(): self
     {
@@ -3027,7 +3363,7 @@ class PricedResponseDataBuilder
     }
 
     /**
-     * Initializes a new priced response data object.
+     * Initializes a new Priced Response Data object.
      */
     public function build(): PricedResponseData
     {

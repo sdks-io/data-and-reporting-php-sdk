@@ -11,7 +11,11 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\LastStatementOfAccount2;
+use ShellDataReportingAPIsLib\Models\InvoicesSummaries;
+use ShellDataReportingAPIsLib\Models\LastStatementOfAccount;
+use ShellDataReportingAPIsLib\Models\MonthlyInvoiceTrend;
+use ShellDataReportingAPIsLib\Models\PastStatementOfAccounts;
+use ShellDataReportingAPIsLib\Models\PaymentsSinceLastSOA;
 use ShellDataReportingAPIsLib\Models\StatementOfAccountResp;
 
 /**
@@ -32,7 +36,7 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Initializes a new statement of account resp Builder object.
+     * Initializes a new Statement Of Account Resp Builder object.
      */
     public static function init(): self
     {
@@ -40,16 +44,20 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Sets last statement of account field.
+     * Sets Last Statement Of Account field.
+     *
+     * @param LastStatementOfAccount|null $value
      */
-    public function lastStatementOfAccount(?LastStatementOfAccount2 $value): self
+    public function lastStatementOfAccount(?LastStatementOfAccount $value): self
     {
         $this->instance->setLastStatementOfAccount($value);
         return $this;
     }
 
     /**
-     * Sets monthly invoice trend field.
+     * Sets Monthly Invoice Trend field.
+     *
+     * @param MonthlyInvoiceTrend[]|null $value
      */
     public function monthlyInvoiceTrend(?array $value): self
     {
@@ -58,7 +66,7 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Unsets monthly invoice trend field.
+     * Unsets Monthly Invoice Trend field.
      */
     public function unsetMonthlyInvoiceTrend(): self
     {
@@ -67,7 +75,9 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Sets past statement of accounts field.
+     * Sets Past Statement Of Accounts field.
+     *
+     * @param PastStatementOfAccounts[]|null $value
      */
     public function pastStatementOfAccounts(?array $value): self
     {
@@ -76,7 +86,9 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Sets payments since last soa field.
+     * Sets Payments Since Last SOA field.
+     *
+     * @param PaymentsSinceLastSOA[]|null $value
      */
     public function paymentsSinceLastSOA(?array $value): self
     {
@@ -85,7 +97,7 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Unsets payments since last soa field.
+     * Unsets Payments Since Last SOA field.
      */
     public function unsetPaymentsSinceLastSOA(): self
     {
@@ -94,7 +106,9 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Sets invoices summaries field.
+     * Sets Invoices Summaries field.
+     *
+     * @param InvoicesSummaries[]|null $value
      */
     public function invoicesSummaries(?array $value): self
     {
@@ -103,7 +117,7 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Unsets invoices summaries field.
+     * Unsets Invoices Summaries field.
      */
     public function unsetInvoicesSummaries(): self
     {
@@ -112,7 +126,7 @@ class StatementOfAccountRespBuilder
     }
 
     /**
-     * Initializes a new statement of account resp object.
+     * Initializes a new Statement Of Account Resp object.
      */
     public function build(): StatementOfAccountResp
     {

@@ -31,7 +31,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Initializes a new payments since last soa Builder object.
+     * Initializes a new Payments Since Last SOA Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -48,7 +50,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -57,7 +59,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -75,7 +79,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -84,7 +90,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -93,7 +99,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document id field.
+     * Sets Summary Document Id field.
+     *
+     * @param int|null $value
      */
     public function summaryDocumentId(?int $value): self
     {
@@ -102,7 +110,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document id field.
+     * Unsets Summary Document Id field.
      */
     public function unsetSummaryDocumentId(): self
     {
@@ -111,7 +119,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document number field.
+     * Sets Summary Document Number field.
+     *
+     * @param string|null $value
      */
     public function summaryDocumentNumber(?string $value): self
     {
@@ -120,7 +130,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document number field.
+     * Unsets Summary Document Number field.
      */
     public function unsetSummaryDocumentNumber(): self
     {
@@ -129,7 +139,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document date field.
+     * Sets Summary Document Date field.
+     *
+     * @param string|null $value
      */
     public function summaryDocumentDate(?string $value): self
     {
@@ -138,7 +150,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document date field.
+     * Unsets Summary Document Date field.
      */
     public function unsetSummaryDocumentDate(): self
     {
@@ -147,7 +159,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document payment due date field.
+     * Sets Summary Document Payment Due Date field.
+     *
+     * @param string|null $value
      */
     public function summaryDocumentPaymentDueDate(?string $value): self
     {
@@ -156,7 +170,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document payment due date field.
+     * Unsets Summary Document Payment Due Date field.
      */
     public function unsetSummaryDocumentPaymentDueDate(): self
     {
@@ -165,7 +179,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document total value field.
+     * Sets Summary Document Total Value field.
+     *
+     * @param float|null $value
      */
     public function summaryDocumentTotalValue(?float $value): self
     {
@@ -174,7 +190,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document total value field.
+     * Unsets Summary Document Total Value field.
      */
     public function unsetSummaryDocumentTotalValue(): self
     {
@@ -183,7 +199,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document total vat field.
+     * Sets Summary Document Total VAT field.
+     *
+     * @param float|null $value
      */
     public function summaryDocumentTotalVAT(?float $value): self
     {
@@ -192,7 +210,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document total vat field.
+     * Unsets Summary Document Total VAT field.
      */
     public function unsetSummaryDocumentTotalVAT(): self
     {
@@ -201,7 +219,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets summary document ddamount field.
+     * Sets Summary Document DD Amount field.
+     *
+     * @param float|null $value
      */
     public function summaryDocumentDDAmount(?float $value): self
     {
@@ -210,7 +230,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets summary document ddamount field.
+     * Unsets Summary Document DD Amount field.
      */
     public function unsetSummaryDocumentDDAmount(): self
     {
@@ -219,7 +239,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets payment date field.
+     * Sets Payment Date field.
+     *
+     * @param string|null $value
      */
     public function paymentDate(?string $value): self
     {
@@ -228,7 +250,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets payment date field.
+     * Unsets Payment Date field.
      */
     public function unsetPaymentDate(): self
     {
@@ -237,7 +259,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets payment reference field.
+     * Sets Payment Reference field.
+     *
+     * @param string|null $value
      */
     public function paymentReference(?string $value): self
     {
@@ -246,7 +270,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets payment reference field.
+     * Unsets Payment Reference field.
      */
     public function unsetPaymentReference(): self
     {
@@ -255,7 +279,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets payment currency code field.
+     * Sets Payment Currency Code field.
+     *
+     * @param string|null $value
      */
     public function paymentCurrencyCode(?string $value): self
     {
@@ -264,7 +290,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets payment currency code field.
+     * Unsets Payment Currency Code field.
      */
     public function unsetPaymentCurrencyCode(): self
     {
@@ -273,7 +299,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets payment currency symbol field.
+     * Sets Payment Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function paymentCurrencySymbol(?string $value): self
     {
@@ -282,7 +310,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets payment currency symbol field.
+     * Unsets Payment Currency Symbol field.
      */
     public function unsetPaymentCurrencySymbol(): self
     {
@@ -291,7 +319,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets amount paid field.
+     * Sets Amount Paid field.
+     *
+     * @param float|null $value
      */
     public function amountPaid(?float $value): self
     {
@@ -300,7 +330,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets amount paid field.
+     * Unsets Amount Paid field.
      */
     public function unsetAmountPaid(): self
     {
@@ -309,7 +339,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets balance field.
+     * Sets Balance field.
+     *
+     * @param float|null $value
      */
     public function balance(?float $value): self
     {
@@ -318,7 +350,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets balance field.
+     * Unsets Balance field.
      */
     public function unsetBalance(): self
     {
@@ -327,7 +359,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets true payment field.
+     * Sets True Payment field.
+     *
+     * @param string|null $value
      */
     public function truePayment(?string $value): self
     {
@@ -336,7 +370,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets true payment field.
+     * Unsets True Payment field.
      */
     public function unsetTruePayment(): self
     {
@@ -345,7 +379,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets prepaid balance field.
+     * Sets Prepaid Balance field.
+     *
+     * @param float|null $value
      */
     public function prepaidBalance(?float $value): self
     {
@@ -354,7 +390,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets prepaid balance field.
+     * Unsets Prepaid Balance field.
      */
     public function unsetPrepaidBalance(): self
     {
@@ -363,7 +399,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets local currency code field.
+     * Sets Local Currency Code field.
+     *
+     * @param string|null $value
      */
     public function localCurrencyCode(?string $value): self
     {
@@ -372,7 +410,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets local currency code field.
+     * Unsets Local Currency Code field.
      */
     public function unsetLocalCurrencyCode(): self
     {
@@ -381,7 +419,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets local currency symbol field.
+     * Sets Local Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function localCurrencySymbol(?string $value): self
     {
@@ -390,7 +430,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets local currency symbol field.
+     * Unsets Local Currency Symbol field.
      */
     public function unsetLocalCurrencySymbol(): self
     {
@@ -399,7 +439,9 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Sets local currency exchange rate field.
+     * Sets Local Currency Exchange Rate field.
+     *
+     * @param string|null $value
      */
     public function localCurrencyExchangeRate(?string $value): self
     {
@@ -408,7 +450,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Unsets local currency exchange rate field.
+     * Unsets Local Currency Exchange Rate field.
      */
     public function unsetLocalCurrencyExchangeRate(): self
     {
@@ -417,7 +459,7 @@ class PaymentsSinceLastSOABuilder
     }
 
     /**
-     * Initializes a new payments since last soa object.
+     * Initializes a new Payments Since Last SOA object.
      */
     public function build(): PaymentsSinceLastSOA
     {

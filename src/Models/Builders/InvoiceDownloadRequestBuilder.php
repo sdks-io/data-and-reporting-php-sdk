@@ -32,7 +32,7 @@ class InvoiceDownloadRequestBuilder
     }
 
     /**
-     * Initializes a new invoice download request Builder object.
+     * Initializes a new Invoice Download Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class InvoiceDownloadRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param InvoiceDownloadReq|null $value
      */
     public function filters(?InvoiceDownloadReq $value): self
     {
@@ -49,7 +51,7 @@ class InvoiceDownloadRequestBuilder
     }
 
     /**
-     * Initializes a new invoice download request object.
+     * Initializes a new Invoice Download Request object.
      */
     public function build(): InvoiceDownloadRequest
     {

@@ -31,7 +31,10 @@ class EIDDownloadReqBuilder
     }
 
     /**
-     * Initializes a new eiddownload req Builder object.
+     * Initializes a new EID Download Req Builder object.
+     *
+     * @param string[] $eIDList
+     * @param string[] $accountGroupIdList
      */
     public static function init(array $eIDList, array $accountGroupIdList): self
     {
@@ -39,7 +42,9 @@ class EIDDownloadReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +53,9 @@ class EIDDownloadReqBuilder
     }
 
     /**
-     * Sets account group country field.
+     * Sets Account Group Country field.
+     *
+     * @param int|null $value
      */
     public function accountGroupCountry(?int $value): self
     {
@@ -57,7 +64,7 @@ class EIDDownloadReqBuilder
     }
 
     /**
-     * Initializes a new eiddownload req object.
+     * Initializes a new EID Download Req object.
      */
     public function build(): EIDDownloadReq
     {

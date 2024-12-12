@@ -31,7 +31,7 @@ class FuelConsumptionCardBuilder
     }
 
     /**
-     * Initializes a new fuel consumption card Builder object.
+     * Initializes a new Fuel Consumption Card Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FuelConsumptionCardBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -48,7 +50,9 @@ class FuelConsumptionCardBuilder
     }
 
     /**
-     * Sets pan field.
+     * Sets PAN field.
+     *
+     * @param string|null $value
      */
     public function pAN(?string $value): self
     {
@@ -57,7 +61,9 @@ class FuelConsumptionCardBuilder
     }
 
     /**
-     * Sets expiry date field.
+     * Sets Expiry Date field.
+     *
+     * @param string|null $value
      */
     public function expiryDate(?string $value): self
     {
@@ -66,7 +72,7 @@ class FuelConsumptionCardBuilder
     }
 
     /**
-     * Initializes a new fuel consumption card object.
+     * Initializes a new Fuel Consumption Card object.
      */
     public function build(): FuelConsumptionCard
     {

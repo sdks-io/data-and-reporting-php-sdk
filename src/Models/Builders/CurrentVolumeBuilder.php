@@ -31,7 +31,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Initializes a new current volume Builder object.
+     * Initializes a new Current Volume Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param int|null $value
      */
     public function feeRuleId(?int $value): self
     {
@@ -48,7 +50,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -57,7 +59,9 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -66,7 +70,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -75,7 +79,9 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Sets month field.
+     * Sets Month field.
+     *
+     * @param int|null $value
      */
     public function month(?int $value): self
     {
@@ -84,7 +90,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Unsets month field.
+     * Unsets Month field.
      */
     public function unsetMonth(): self
     {
@@ -93,7 +99,9 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Sets year field.
+     * Sets Year field.
+     *
+     * @param string|null $value
      */
     public function year(?string $value): self
     {
@@ -102,7 +110,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Unsets year field.
+     * Unsets Year field.
      */
     public function unsetYear(): self
     {
@@ -111,7 +119,9 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Sets total volume field.
+     * Sets Total Volume field.
+     *
+     * @param float|null $value
      */
     public function totalVolume(?float $value): self
     {
@@ -120,7 +130,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Unsets total volume field.
+     * Unsets Total Volume field.
      */
     public function unsetTotalVolume(): self
     {
@@ -129,7 +139,7 @@ class CurrentVolumeBuilder
     }
 
     /**
-     * Initializes a new current volume object.
+     * Initializes a new Current Volume object.
      */
     public function build(): CurrentVolume
     {

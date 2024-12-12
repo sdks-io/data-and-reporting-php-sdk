@@ -31,7 +31,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Initializes a new priced trans summary response transactions summary items Builder object.
+     * Initializes a new Priced Trans Summary Response Transactions Summary Items Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -48,7 +50,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -57,7 +59,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -66,7 +70,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -75,7 +79,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -84,7 +90,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -93,7 +99,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -102,7 +110,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -111,7 +119,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -120,7 +130,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -129,7 +139,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -138,7 +150,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -147,7 +159,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -156,7 +170,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -165,7 +179,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets total fuel quantity field.
+     * Sets Total Fuel Quantity field.
+     *
+     * @param int|null $value
      */
     public function totalFuelQuantity(?int $value): self
     {
@@ -174,7 +190,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets total fuel quantity field.
+     * Unsets Total Fuel Quantity field.
      */
     public function unsetTotalFuelQuantity(): self
     {
@@ -183,7 +199,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets total net amount field.
+     * Sets Total Net Amount field.
+     *
+     * @param int|null $value
      */
     public function totalNetAmount(?int $value): self
     {
@@ -192,7 +210,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets total net amount field.
+     * Unsets Total Net Amount field.
      */
     public function unsetTotalNetAmount(): self
     {
@@ -201,7 +219,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets total gross amount field.
+     * Sets Total Gross Amount field.
+     *
+     * @param int|null $value
      */
     public function totalGrossAmount(?int $value): self
     {
@@ -210,7 +230,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets total gross amount field.
+     * Unsets Total Gross Amount field.
      */
     public function unsetTotalGrossAmount(): self
     {
@@ -219,7 +239,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets invoice currency code field.
+     * Sets Invoice Currency Code field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencyCode(?string $value): self
     {
@@ -228,7 +250,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets invoice currency code field.
+     * Unsets Invoice Currency Code field.
      */
     public function unsetInvoiceCurrencyCode(): self
     {
@@ -237,7 +259,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets invoice currency symbol field.
+     * Sets Invoice Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencySymbol(?string $value): self
     {
@@ -246,7 +270,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets invoice currency symbol field.
+     * Unsets Invoice Currency Symbol field.
      */
     public function unsetInvoiceCurrencySymbol(): self
     {
@@ -255,7 +279,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets customer retail value total net field.
+     * Sets Customer Retail Value Total Net field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalNet(?float $value): self
     {
@@ -264,7 +290,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets customer retail value total net field.
+     * Unsets Customer Retail Value Total Net field.
      */
     public function unsetCustomerRetailValueTotalNet(): self
     {
@@ -273,7 +299,9 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Sets customer retail value total gross field.
+     * Sets Customer Retail Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalGross(?float $value): self
     {
@@ -282,7 +310,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Unsets customer retail value total gross field.
+     * Unsets Customer Retail Value Total Gross field.
      */
     public function unsetCustomerRetailValueTotalGross(): self
     {
@@ -291,7 +319,7 @@ class PricedTransSummaryResponseTransactionsSummaryItemsBuilder
     }
 
     /**
-     * Initializes a new priced trans summary response transactions summary items object.
+     * Initializes a new Priced Trans Summary Response Transactions Summary Items object.
      */
     public function build(): PricedTransSummaryResponseTransactionsSummaryItems
     {

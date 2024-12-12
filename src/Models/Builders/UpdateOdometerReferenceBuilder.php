@@ -31,7 +31,7 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Initializes a new update odometer reference Builder object.
+     * Initializes a new Update Odometer Reference Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Sets sales item id field.
+     * Sets Sales Item Id field.
+     *
+     * @param int|null $value
      */
     public function salesItemId(?int $value): self
     {
@@ -48,7 +50,7 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Unsets sales item id field.
+     * Unsets Sales Item Id field.
      */
     public function unsetSalesItemId(): self
     {
@@ -57,7 +59,9 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Sets update odometer reference id field.
+     * Sets Update Odometer Reference Id field.
+     *
+     * @param int|null $value
      */
     public function updateOdometerReferenceId(?int $value): self
     {
@@ -66,7 +70,7 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Unsets update odometer reference id field.
+     * Unsets Update Odometer Reference Id field.
      */
     public function unsetUpdateOdometerReferenceId(): self
     {
@@ -75,7 +79,7 @@ class UpdateOdometerReferenceBuilder
     }
 
     /**
-     * Initializes a new update odometer reference object.
+     * Initializes a new Update Odometer Reference object.
      */
     public function build(): UpdateOdometerReference
     {

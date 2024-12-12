@@ -31,7 +31,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Initializes a new monthly invoice trend Builder object.
+     * Initializes a new Monthly Invoice Trend Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -48,7 +50,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -57,7 +59,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -66,7 +70,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -75,7 +79,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets month field.
+     * Sets Month field.
+     *
+     * @param int|null $value
      */
     public function month(?int $value): self
     {
@@ -84,7 +90,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets month field.
+     * Unsets Month field.
      */
     public function unsetMonth(): self
     {
@@ -93,7 +99,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets total net amount field.
+     * Sets Total Net Amount field.
+     *
+     * @param float|null $value
      */
     public function totalNetAmount(?float $value): self
     {
@@ -102,7 +110,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets total net amount field.
+     * Unsets Total Net Amount field.
      */
     public function unsetTotalNetAmount(): self
     {
@@ -111,7 +119,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets total vatamount field.
+     * Sets Total VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function totalVATAmount(?float $value): self
     {
@@ -120,7 +130,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets total vatamount field.
+     * Unsets Total VAT Amount field.
      */
     public function unsetTotalVATAmount(): self
     {
@@ -129,7 +139,9 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Sets year field.
+     * Sets Year field.
+     *
+     * @param int|null $value
      */
     public function year(?int $value): self
     {
@@ -138,7 +150,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Unsets year field.
+     * Unsets Year field.
      */
     public function unsetYear(): self
     {
@@ -147,7 +159,7 @@ class MonthlyInvoiceTrendBuilder
     }
 
     /**
-     * Initializes a new monthly invoice trend object.
+     * Initializes a new Monthly Invoice Trend object.
      */
     public function build(): MonthlyInvoiceTrend
     {

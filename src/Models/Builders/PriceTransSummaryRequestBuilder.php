@@ -32,7 +32,7 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Initializes a new price trans summary request Builder object.
+     * Initializes a new Price Trans Summary Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -49,7 +51,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -58,7 +62,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -67,7 +73,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -76,7 +84,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts|null $value
      */
     public function accounts(?Accounts $value): self
     {
@@ -85,7 +95,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -94,7 +106,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -103,7 +117,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -112,7 +128,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets vehicle registration number field.
+     * Sets Vehicle Registration Number field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistrationNumber(?string $value): self
     {
@@ -121,7 +139,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -130,7 +150,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -139,7 +161,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -148,7 +172,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -157,7 +183,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -166,7 +194,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -175,7 +205,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -184,7 +216,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -193,7 +227,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param string|null $value
      */
     public function siteCode(?string $value): self
     {
@@ -202,7 +238,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -211,7 +249,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets posting date from field.
+     * Sets Posting Date From field.
+     *
+     * @param string|null $value
      */
     public function postingDateFrom(?string $value): self
     {
@@ -220,7 +260,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets posting date to field.
+     * Sets Posting Date To field.
+     *
+     * @param string|null $value
      */
     public function postingDateTo(?string $value): self
     {
@@ -229,7 +271,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets sales item id field.
+     * Sets Sales Item Id field.
+     *
+     * @param string|null $value
      */
     public function salesItemId(?string $value): self
     {
@@ -238,7 +282,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -247,7 +293,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -256,7 +304,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -265,7 +315,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets valid invoice date only field.
+     * Sets Valid Invoice Date Only field.
+     *
+     * @param bool|null $value
      */
     public function validInvoiceDateOnly(?bool $value): self
     {
@@ -274,7 +326,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets invoice from date field.
+     * Sets Invoice From Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceFromDate(?string $value): self
     {
@@ -283,7 +337,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets invoice to date field.
+     * Sets Invoice To Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceToDate(?string $value): self
     {
@@ -292,7 +348,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param bool|null $value
      */
     public function fuelOnly(?bool $value): self
     {
@@ -301,7 +359,9 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Sets include fees field.
+     * Sets Include Fees field.
+     *
+     * @param bool|null $value
      */
     public function includeFees(?bool $value): self
     {
@@ -310,7 +370,7 @@ class PriceTransSummaryRequestBuilder
     }
 
     /**
-     * Initializes a new price trans summary request object.
+     * Initializes a new Price Trans Summary Request object.
      */
     public function build(): PriceTransSummaryRequest
     {

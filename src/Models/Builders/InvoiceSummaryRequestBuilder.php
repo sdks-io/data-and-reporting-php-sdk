@@ -32,7 +32,7 @@ class InvoiceSummaryRequestBuilder
     }
 
     /**
-     * Initializes a new invoice summary request Builder object.
+     * Initializes a new Invoice Summary Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class InvoiceSummaryRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param InvoiceSummaryRequestFilters|null $value
      */
     public function filters(?InvoiceSummaryRequestFilters $value): self
     {
@@ -49,7 +51,7 @@ class InvoiceSummaryRequestBuilder
     }
 
     /**
-     * Initializes a new invoice summary request object.
+     * Initializes a new Invoice Summary Request object.
      */
     public function build(): InvoiceSummaryRequest
     {

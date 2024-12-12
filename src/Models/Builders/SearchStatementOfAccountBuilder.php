@@ -31,7 +31,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Initializes a new search statement of account Builder object.
+     * Initializes a new Search Statement Of Account Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets statement of account id field.
+     * Sets Statement Of Account Id field.
+     *
+     * @param int|null $value
      */
     public function statementOfAccountId(?int $value): self
     {
@@ -48,7 +50,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets statement of account id field.
+     * Unsets Statement Of Account Id field.
      */
     public function unsetStatementOfAccountId(): self
     {
@@ -57,7 +59,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets so areference number field.
+     * Sets So A Reference Number field.
+     *
+     * @param string|null $value
      */
     public function soAReferenceNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets so areference number field.
+     * Unsets So A Reference Number field.
      */
     public function unsetSoAReferenceNumber(): self
     {
@@ -75,7 +79,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets statement date field.
+     * Sets Statement Date field.
+     *
+     * @param string|null $value
      */
     public function statementDate(?string $value): self
     {
@@ -84,7 +90,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets statement date field.
+     * Unsets Statement Date field.
      */
     public function unsetStatementDate(): self
     {
@@ -93,7 +99,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -102,7 +110,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -111,7 +119,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -120,7 +130,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -129,7 +139,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets amount due field.
+     * Sets Amount Due field.
+     *
+     * @param float|null $value
      */
     public function amountDue(?float $value): self
     {
@@ -138,7 +150,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets amount due field.
+     * Unsets Amount Due field.
      */
     public function unsetAmountDue(): self
     {
@@ -147,7 +159,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets amount overdue field.
+     * Sets Amount Overdue field.
+     *
+     * @param float|null $value
      */
     public function amountOverdue(?float $value): self
     {
@@ -156,7 +170,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets amount overdue field.
+     * Unsets Amount Overdue field.
      */
     public function unsetAmountOverdue(): self
     {
@@ -165,7 +179,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -174,7 +190,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -183,7 +199,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -192,7 +210,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -201,7 +219,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets due date field.
+     * Sets Due Date field.
+     *
+     * @param string|null $value
      */
     public function dueDate(?string $value): self
     {
@@ -210,7 +230,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets due date field.
+     * Unsets Due Date field.
      */
     public function unsetDueDate(): self
     {
@@ -219,7 +239,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets invoiced on behalf of field.
+     * Sets Invoiced On Behalf Of field.
+     *
+     * @param string|null $value
      */
     public function invoicedOnBehalfOf(?string $value): self
     {
@@ -228,7 +250,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets invoiced on behalf of field.
+     * Unsets Invoiced On Behalf Of field.
      */
     public function unsetInvoicedOnBehalfOf(): self
     {
@@ -237,7 +259,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -246,7 +270,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets status field.
+     * Unsets Status field.
      */
     public function unsetStatus(): self
     {
@@ -255,7 +279,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets gross amount customer currency field.
+     * Sets Gross Amount Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function grossAmountCustomerCurrency(?float $value): self
     {
@@ -264,7 +290,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets gross amount customer currency field.
+     * Unsets Gross Amount Customer Currency field.
      */
     public function unsetGrossAmountCustomerCurrency(): self
     {
@@ -273,7 +299,9 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Sets document reference number field.
+     * Sets Document Reference Number field.
+     *
+     * @param string|null $value
      */
     public function documentReferenceNumber(?string $value): self
     {
@@ -282,7 +310,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Unsets document reference number field.
+     * Unsets Document Reference Number field.
      */
     public function unsetDocumentReferenceNumber(): self
     {
@@ -291,7 +319,7 @@ class SearchStatementOfAccountBuilder
     }
 
     /**
-     * Initializes a new search statement of account object.
+     * Initializes a new Search Statement Of Account object.
      */
     public function build(): SearchStatementOfAccount
     {

@@ -31,7 +31,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Initializes a new recent transaction req Builder object.
+     * Initializes a new Recent Transaction Req Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +50,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -57,7 +61,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -66,7 +72,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -75,7 +81,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -84,7 +92,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -93,7 +101,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -102,7 +112,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -111,7 +121,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -120,7 +132,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -129,7 +141,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets from date time field.
+     * Sets From Date Time field.
+     *
+     * @param string|null $value
      */
     public function fromDateTime(?string $value): self
     {
@@ -138,7 +152,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets from date time field.
+     * Unsets From Date Time field.
      */
     public function unsetFromDateTime(): self
     {
@@ -147,7 +161,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets to date time field.
+     * Sets To Date Time field.
+     *
+     * @param string|null $value
      */
     public function toDateTime(?string $value): self
     {
@@ -156,7 +172,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets to date time field.
+     * Unsets To Date Time field.
      */
     public function unsetToDateTime(): self
     {
@@ -165,7 +181,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets transaction status field.
+     * Sets Transaction Status field.
+     *
+     * @param string|null $value
      */
     public function transactionStatus(?string $value): self
     {
@@ -174,7 +192,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets transaction status field.
+     * Unsets Transaction Status field.
      */
     public function unsetTransactionStatus(): self
     {
@@ -183,7 +201,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param string|null $value
      */
     public function fuelOnly(?string $value): self
     {
@@ -192,7 +212,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets fuel only field.
+     * Unsets Fuel Only field.
      */
     public function unsetFuelOnly(): self
     {
@@ -201,7 +221,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -210,7 +232,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -219,7 +241,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets vehicle registration number field.
+     * Sets Vehicle Registration Number field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistrationNumber(?string $value): self
     {
@@ -228,7 +252,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets vehicle registration number field.
+     * Unsets Vehicle Registration Number field.
      */
     public function unsetVehicleRegistrationNumber(): self
     {
@@ -237,7 +261,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets include declines field.
+     * Sets Include Declines field.
+     *
+     * @param bool|null $value
      */
     public function includeDeclines(?bool $value): self
     {
@@ -246,7 +272,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets include declines field.
+     * Unsets Include Declines field.
      */
     public function unsetIncludeDeclines(): self
     {
@@ -255,7 +281,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets card issuer name field.
+     * Sets Card Issuer Name field.
+     *
+     * @param string|null $value
      */
     public function cardIssuerName(?string $value): self
     {
@@ -264,7 +292,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Unsets card issuer name field.
+     * Unsets Card Issuer Name field.
      */
     public function unsetCardIssuerName(): self
     {
@@ -273,7 +301,9 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Sets column list field.
+     * Sets Column List field.
+     *
+     * @param string|null $value
      */
     public function columnList(?string $value): self
     {
@@ -282,7 +312,7 @@ class RecentTransactionReqBuilder
     }
 
     /**
-     * Initializes a new recent transaction req object.
+     * Initializes a new Recent Transaction Req object.
      */
     public function build(): RecentTransactionReq
     {

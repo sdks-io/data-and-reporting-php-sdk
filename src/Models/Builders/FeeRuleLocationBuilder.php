@@ -31,7 +31,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Initializes a new fee rule location Builder object.
+     * Initializes a new Fee Rule Location Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets delco id field.
+     * Sets Delco Id field.
+     *
+     * @param string|null $value
      */
     public function delcoId(?string $value): self
     {
@@ -48,7 +50,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets delco id field.
+     * Unsets Delco Id field.
      */
     public function unsetDelcoId(): self
     {
@@ -57,7 +59,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets country field.
+     * Sets Country field.
+     *
+     * @param string|null $value
      */
     public function country(?string $value): self
     {
@@ -66,7 +70,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets country field.
+     * Unsets Country field.
      */
     public function unsetCountry(): self
     {
@@ -75,7 +79,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets country code field.
+     * Sets Country Code field.
+     *
+     * @param string|null $value
      */
     public function countryCode(?string $value): self
     {
@@ -84,7 +90,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets country code field.
+     * Unsets Country Code field.
      */
     public function unsetCountryCode(): self
     {
@@ -93,7 +99,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets fuel network id field.
+     * Sets Fuel Network Id field.
+     *
+     * @param int|null $value
      */
     public function fuelNetworkId(?int $value): self
     {
@@ -102,7 +110,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets fuel network id field.
+     * Unsets Fuel Network Id field.
      */
     public function unsetFuelNetworkId(): self
     {
@@ -111,7 +119,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets network name field.
+     * Sets Network Name field.
+     *
+     * @param string|null $value
      */
     public function networkName(?string $value): self
     {
@@ -120,7 +130,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets network name field.
+     * Unsets Network Name field.
      */
     public function unsetNetworkName(): self
     {
@@ -129,7 +139,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -138,7 +150,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -147,7 +159,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -156,7 +170,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -165,7 +179,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param int|null $value
      */
     public function siteCode(?int $value): self
     {
@@ -174,7 +190,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -183,7 +199,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets site id field.
+     * Sets Site Id field.
+     *
+     * @param int|null $value
      */
     public function siteId(?int $value): self
     {
@@ -192,7 +210,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets site id field.
+     * Unsets Site Id field.
      */
     public function unsetSiteId(): self
     {
@@ -201,7 +219,9 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -210,7 +230,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -219,7 +239,7 @@ class FeeRuleLocationBuilder
     }
 
     /**
-     * Initializes a new fee rule location object.
+     * Initializes a new Fee Rule Location object.
      */
     public function build(): FeeRuleLocation
     {

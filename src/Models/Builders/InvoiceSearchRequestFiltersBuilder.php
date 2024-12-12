@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
 use ShellDataReportingAPIsLib\Models\InvoiceSearchRequestFilters;
 
 /**
@@ -31,7 +32,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new invoice search request filters Builder object.
+     * Initializes a new Invoice Search Request Filters Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +51,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -57,7 +60,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -66,7 +71,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -75,7 +80,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -84,7 +91,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -93,7 +100,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets invoice id field.
+     * Sets Invoice Id field.
+     *
+     * @param int|null $value
      */
     public function invoiceId(?int $value): self
     {
@@ -102,7 +111,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets invoice id field.
+     * Unsets Invoice Id field.
      */
     public function unsetInvoiceId(): self
     {
@@ -111,7 +120,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -120,7 +131,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -129,7 +140,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -138,7 +151,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -147,7 +160,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -156,7 +171,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -165,7 +180,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -174,7 +191,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -183,7 +200,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets summary document id field.
+     * Sets Summary Document Id field.
+     *
+     * @param int|null $value
      */
     public function summaryDocumentId(?int $value): self
     {
@@ -192,7 +211,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets summary document id field.
+     * Unsets Summary Document Id field.
      */
     public function unsetSummaryDocumentId(): self
     {
@@ -201,7 +220,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets summary document number field.
+     * Sets Summary Document Number field.
+     *
+     * @param string|null $value
      */
     public function summaryDocumentNumber(?string $value): self
     {
@@ -210,7 +231,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets summary document number field.
+     * Unsets Summary Document Number field.
      */
     public function unsetSummaryDocumentNumber(): self
     {
@@ -219,7 +240,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets statement of account id field.
+     * Sets Statement Of Account Id field.
+     *
+     * @param string|null $value
      */
     public function statementOfAccountId(?string $value): self
     {
@@ -228,7 +251,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets statement of account id field.
+     * Unsets Statement Of Account Id field.
      */
     public function unsetStatementOfAccountId(): self
     {
@@ -237,7 +260,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets so areference number field.
+     * Sets So A Reference Number field.
+     *
+     * @param string|null $value
      */
     public function soAReferenceNumber(?string $value): self
     {
@@ -246,7 +271,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets so areference number field.
+     * Unsets So A Reference Number field.
      */
     public function unsetSoAReferenceNumber(): self
     {
@@ -255,7 +280,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -264,7 +291,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets period field.
+     * Unsets Period field.
      */
     public function unsetPeriod(): self
     {
@@ -273,7 +300,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -282,7 +311,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets invoice status field.
+     * Unsets Invoice Status field.
      */
     public function unsetInvoiceStatus(): self
     {
@@ -291,7 +320,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets invoiced on behalf of field.
+     * Sets Invoiced On Behalf Of field.
+     *
+     * @param string|null $value
      */
     public function invoicedOnBehalfOf(?string $value): self
     {
@@ -300,7 +331,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets invoiced on behalf of field.
+     * Unsets Invoiced On Behalf Of field.
      */
     public function unsetInvoicedOnBehalfOf(): self
     {
@@ -309,7 +340,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets include einvoice details field.
+     * Sets Include E Invoice Details field.
+     *
+     * @param bool|null $value
      */
     public function includeEInvoiceDetails(?bool $value): self
     {
@@ -318,7 +351,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets include einvoice details field.
+     * Unsets Include E Invoice Details field.
      */
     public function unsetIncludeEInvoiceDetails(): self
     {
@@ -327,7 +360,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -336,7 +371,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -345,7 +380,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -354,7 +391,9 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -363,7 +402,7 @@ class InvoiceSearchRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new invoice search request filters object.
+     * Initializes a new Invoice Search Request Filters object.
      */
     public function build(): InvoiceSearchRequestFilters
     {

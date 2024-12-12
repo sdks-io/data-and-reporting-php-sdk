@@ -31,7 +31,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Initializes a new priced request data Builder object.
+     * Initializes a new Priced Request Data Builder object.
+     *
+     * @param array $invoiceStatus
      */
     public static function init(array $invoiceStatus): self
     {
@@ -39,7 +41,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param string|null $value
      */
     public function colCoCode(?string $value): self
     {
@@ -48,7 +52,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -57,7 +63,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -66,7 +74,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -75,7 +83,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -84,7 +94,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -93,7 +103,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -102,7 +114,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -111,7 +123,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -120,7 +134,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -129,7 +143,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -138,7 +154,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -147,7 +163,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -156,7 +174,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -165,7 +183,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -174,7 +194,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -183,7 +203,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param string|null $value
      */
     public function siteCode(?string $value): self
     {
@@ -192,7 +214,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -201,7 +223,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets incoming site number field.
+     * Sets Incoming Site Number field.
+     *
+     * @param string|null $value
      */
     public function incomingSiteNumber(?string $value): self
     {
@@ -210,7 +234,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets incoming site number field.
+     * Unsets Incoming Site Number field.
      */
     public function unsetIncomingSiteNumber(): self
     {
@@ -219,7 +243,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -228,7 +254,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -237,7 +263,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -246,7 +274,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -255,7 +283,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets purchased in country code field.
+     * Sets Purchased In Country Code field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountryCode(?string $value): self
     {
@@ -264,7 +294,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets purchased in country code field.
+     * Unsets Purchased In Country Code field.
      */
     public function unsetPurchasedInCountryCode(): self
     {
@@ -273,7 +303,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -282,7 +314,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -291,7 +323,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -300,7 +334,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -309,7 +343,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets vehicle registration number field.
+     * Sets Vehicle Registration Number field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistrationNumber(?string $value): self
     {
@@ -318,7 +354,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets vehicle registration number field.
+     * Unsets Vehicle Registration Number field.
      */
     public function unsetVehicleRegistrationNumber(): self
     {
@@ -327,7 +363,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets fee type id field.
+     * Sets Fee Type Id field.
+     *
+     * @param int|null $value
      */
     public function feeTypeId(?int $value): self
     {
@@ -336,7 +374,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets fee type id field.
+     * Unsets Fee Type Id field.
      */
     public function unsetFeeTypeId(): self
     {
@@ -345,7 +383,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets line item description field.
+     * Sets Line Item Description field.
+     *
+     * @param string|null $value
      */
     public function lineItemDescription(?string $value): self
     {
@@ -354,7 +394,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets line item description field.
+     * Unsets Line Item Description field.
      */
     public function unsetLineItemDescription(): self
     {
@@ -363,7 +403,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets cards field.
+     * Sets Cards field.
+     *
+     * @param int[]|null $value
      */
     public function cards(?array $value): self
     {
@@ -372,7 +414,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets sort order field.
+     * Sets Sort Order field.
+     *
+     * @param string|null $value
      */
     public function sortOrder(?string $value): self
     {
@@ -381,7 +425,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -390,7 +436,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -399,7 +445,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -408,7 +456,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -417,7 +465,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -426,7 +476,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets posting date from field.
+     * Sets Posting Date From field.
+     *
+     * @param string|null $value
      */
     public function postingDateFrom(?string $value): self
     {
@@ -435,7 +487,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets posting date from field.
+     * Unsets Posting Date From field.
      */
     public function unsetPostingDateFrom(): self
     {
@@ -444,7 +496,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets posting date to field.
+     * Sets Posting Date To field.
+     *
+     * @param string|null $value
      */
     public function postingDateTo(?string $value): self
     {
@@ -453,7 +507,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets posting date to field.
+     * Unsets Posting Date To field.
      */
     public function unsetPostingDateTo(): self
     {
@@ -462,7 +516,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets transaction item id field.
+     * Sets Transaction Item Id field.
+     *
+     * @param string|null $value
      */
     public function transactionItemId(?string $value): self
     {
@@ -471,7 +527,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets transaction item id field.
+     * Unsets Transaction Item Id field.
      */
     public function unsetTransactionItemId(): self
     {
@@ -480,7 +536,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets fuel only field.
+     * Sets Fuel Only field.
+     *
+     * @param bool|null $value
      */
     public function fuelOnly(?bool $value): self
     {
@@ -489,7 +547,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets fuel only field.
+     * Unsets Fuel Only field.
      */
     public function unsetFuelOnly(): self
     {
@@ -498,7 +556,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets include fees field.
+     * Sets Include Fees field.
+     *
+     * @param bool|null $value
      */
     public function includeFees(?bool $value): self
     {
@@ -507,7 +567,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets include fees field.
+     * Unsets Include Fees field.
      */
     public function unsetIncludeFees(): self
     {
@@ -516,7 +576,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets is multipayer field.
+     * Sets Is Multipayer field.
+     *
+     * @param bool|null $value
      */
     public function isMultipayer(?bool $value): self
     {
@@ -525,7 +587,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets valid invoice date only field.
+     * Sets Valid Invoice Date Only field.
+     *
+     * @param bool|null $value
      */
     public function validInvoiceDateOnly(?bool $value): self
     {
@@ -534,7 +598,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets invoice from date field.
+     * Sets Invoice From Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceFromDate(?string $value): self
     {
@@ -543,7 +609,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets invoice from date field.
+     * Unsets Invoice From Date field.
      */
     public function unsetInvoiceFromDate(): self
     {
@@ -552,7 +618,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets invoice to date field.
+     * Sets Invoice To Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceToDate(?string $value): self
     {
@@ -561,7 +629,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets invoice to date field.
+     * Unsets Invoice To Date field.
      */
     public function unsetInvoiceToDate(): self
     {
@@ -570,7 +638,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets hosting collecting company number field.
+     * Sets Hosting Collecting Company Number field.
+     *
+     * @param string|null $value
      */
     public function hostingCollectingCompanyNumber(?string $value): self
     {
@@ -579,7 +649,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets hosting collecting company number field.
+     * Unsets Hosting Collecting Company Number field.
      */
     public function unsetHostingCollectingCompanyNumber(): self
     {
@@ -588,7 +658,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets search field.
+     * Sets Search field.
+     *
+     * @param string|null $value
      */
     public function search(?string $value): self
     {
@@ -597,7 +669,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets search field.
+     * Unsets Search field.
      */
     public function unsetSearch(): self
     {
@@ -606,7 +678,9 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -615,7 +689,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets Transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -624,7 +698,7 @@ class PricedRequestDataBuilder
     }
 
     /**
-     * Initializes a new priced request data object.
+     * Initializes a new Priced Request Data object.
      */
     public function build(): PricedRequestData
     {

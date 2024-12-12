@@ -13,6 +13,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\CustomerPriceListResponse;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\PriceList;
 
 /**
  * Builder for model CustomerPriceListResponse
@@ -32,7 +33,7 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Initializes a new customer price list response Builder object.
+     * Initializes a new Customer Price List Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -49,7 +52,9 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Sets price list field.
+     * Sets Price List field.
+     *
+     * @param PriceList[]|null $value
      */
     public function priceList(?array $value): self
     {
@@ -58,7 +63,9 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -67,7 +74,7 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Initializes a new customer price list response object.
+     * Initializes a new Customer Price List Response object.
      */
     public function build(): CustomerPriceListResponse
     {

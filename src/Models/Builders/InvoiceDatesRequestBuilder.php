@@ -32,7 +32,7 @@ class InvoiceDatesRequestBuilder
     }
 
     /**
-     * Initializes a new invoice dates request Builder object.
+     * Initializes a new Invoice Dates Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class InvoiceDatesRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param InvoiceDatesRequestFilters|null $value
      */
     public function filters(?InvoiceDatesRequestFilters $value): self
     {
@@ -49,7 +51,7 @@ class InvoiceDatesRequestBuilder
     }
 
     /**
-     * Initializes a new invoice dates request object.
+     * Initializes a new Invoice Dates Request object.
      */
     public function build(): InvoiceDatesRequest
     {

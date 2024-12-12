@@ -31,7 +31,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Initializes a new usage summary Builder object.
+     * Initializes a new Usage Summary Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets date field.
+     * Sets Date field.
+     *
+     * @param string|null $value
      */
     public function date(?string $value): self
     {
@@ -48,7 +50,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets date field.
+     * Unsets Date field.
      */
     public function unsetDate(): self
     {
@@ -57,7 +59,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -66,7 +70,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -75,7 +79,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -84,7 +90,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -93,7 +99,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -102,7 +110,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -111,7 +119,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets is fuel product field.
+     * Sets Is Fuel Product field.
+     *
+     * @param bool|null $value
      */
     public function isFuelProduct(?bool $value): self
     {
@@ -120,7 +130,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets is fuel product field.
+     * Unsets Is Fuel Product field.
      */
     public function unsetIsFuelProduct(): self
     {
@@ -129,7 +139,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -138,7 +150,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -147,7 +159,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -156,7 +170,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -165,7 +179,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets total volume field.
+     * Sets Total Volume field.
+     *
+     * @param float|null $value
      */
     public function totalVolume(?float $value): self
     {
@@ -174,7 +190,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets total volume field.
+     * Unsets Total Volume field.
      */
     public function unsetTotalVolume(): self
     {
@@ -183,7 +199,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets total gross field.
+     * Sets Total Gross field.
+     *
+     * @param float|null $value
      */
     public function totalGross(?float $value): self
     {
@@ -192,7 +210,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets total gross field.
+     * Unsets Total Gross field.
      */
     public function unsetTotalGross(): self
     {
@@ -201,7 +219,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets total net field.
+     * Sets Total Net field.
+     *
+     * @param float|null $value
      */
     public function totalNet(?float $value): self
     {
@@ -210,7 +230,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets total net field.
+     * Unsets Total Net field.
      */
     public function unsetTotalNet(): self
     {
@@ -219,7 +239,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -228,7 +250,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -237,7 +259,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -246,7 +270,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -255,7 +279,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group ID field.
+     *
+     * @param int|null $value
      */
     public function productGroupID(?int $value): self
     {
@@ -264,7 +290,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group ID field.
      */
     public function unsetProductGroupID(): self
     {
@@ -273,7 +299,9 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -282,7 +310,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -291,7 +319,7 @@ class UsageSummaryBuilder
     }
 
     /**
-     * Initializes a new usage summary object.
+     * Initializes a new Usage Summary object.
      */
     public function build(): UsageSummary
     {

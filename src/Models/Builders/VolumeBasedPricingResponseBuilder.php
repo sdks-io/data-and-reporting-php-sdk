@@ -11,7 +11,10 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\BonusConfiguration;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\PricingCurrentVolume;
+use ShellDataReportingAPIsLib\Models\PricingHistory;
 use ShellDataReportingAPIsLib\Models\VolumeBasedPricingResponse;
 
 /**
@@ -32,7 +35,7 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Initializes a new volume based pricing response Builder object.
+     * Initializes a new Volume Based Pricing Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +43,9 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets configuration field.
+     * Sets Configuration field.
+     *
+     * @param BonusConfiguration[]|null $value
      */
     public function configuration(?array $value): self
     {
@@ -49,7 +54,9 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets current period consumption field.
+     * Sets Current Period Consumption field.
+     *
+     * @param PricingCurrentVolume[]|null $value
      */
     public function currentPeriodConsumption(?array $value): self
     {
@@ -58,7 +65,9 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets history field.
+     * Sets History field.
+     *
+     * @param PricingHistory[]|null $value
      */
     public function history(?array $value): self
     {
@@ -67,7 +76,9 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -76,7 +87,9 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -85,7 +98,7 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Initializes a new volume based pricing response object.
+     * Initializes a new Volume Based Pricing Response object.
      */
     public function build(): VolumeBasedPricingResponse
     {

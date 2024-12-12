@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\InvoiceSearchDetails;
 use ShellDataReportingAPIsLib\Models\InvoiceSearchResponse;
 
 /**
@@ -31,7 +32,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Initializes a new invoice search response Builder object.
+     * Initializes a new Invoice Search Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets request id field.
+     * Unsets Request Id field.
      */
     public function unsetRequestId(): self
     {
@@ -57,7 +60,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -66,7 +71,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets status field.
+     * Unsets Status field.
      */
     public function unsetStatus(): self
     {
@@ -75,7 +80,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param InvoiceSearchDetails[]|null $value
      */
     public function data(?array $value): self
     {
@@ -84,7 +91,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -93,7 +102,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets page field.
+     * Unsets Page field.
      */
     public function unsetPage(): self
     {
@@ -102,7 +111,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -111,7 +122,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets page size field.
+     * Unsets Page Size field.
      */
     public function unsetPageSize(): self
     {
@@ -120,7 +131,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets total records field.
+     * Sets Total Records field.
+     *
+     * @param int|null $value
      */
     public function totalRecords(?int $value): self
     {
@@ -129,7 +142,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets total records field.
+     * Unsets Total Records field.
      */
     public function unsetTotalRecords(): self
     {
@@ -138,7 +151,9 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -147,7 +162,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Unsets total pages field.
+     * Unsets Total Pages field.
      */
     public function unsetTotalPages(): self
     {
@@ -156,7 +171,7 @@ class InvoiceSearchResponseBuilder
     }
 
     /**
-     * Initializes a new invoice search response object.
+     * Initializes a new Invoice Search Response object.
      */
     public function build(): InvoiceSearchResponse
     {

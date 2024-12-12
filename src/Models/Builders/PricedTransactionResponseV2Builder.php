@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\PricedResponseData;
 use ShellDataReportingAPIsLib\Models\PricedTransactionResponseV2;
 
 /**
@@ -31,7 +32,7 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Initializes a new priced transaction response v2 Builder object.
+     * Initializes a new Priced Transaction Response V2 Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param PricedResponseData[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -75,7 +84,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -84,7 +95,9 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -93,7 +106,7 @@ class PricedTransactionResponseV2Builder
     }
 
     /**
-     * Initializes a new priced transaction response v2 object.
+     * Initializes a new Priced Transaction Response V2 object.
      */
     public function build(): PricedTransactionResponseV2
     {

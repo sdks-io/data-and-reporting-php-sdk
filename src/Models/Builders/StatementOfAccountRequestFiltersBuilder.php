@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
 use ShellDataReportingAPIsLib\Models\StatementOfAccountRequestFilters;
 
 /**
@@ -31,7 +32,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new statement of account request filters Builder object.
+     * Initializes a new Statement Of Account Request Filters Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +51,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -57,7 +60,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -66,7 +71,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -75,7 +80,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -84,7 +91,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -93,7 +100,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets include monthly invoice trend field.
+     * Sets Include Monthly Invoice Trend field.
+     *
+     * @param bool|null $value
      */
     public function includeMonthlyInvoiceTrend(?bool $value): self
     {
@@ -102,7 +111,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets include monthly invoice trend field.
+     * Unsets Include Monthly Invoice Trend field.
      */
     public function unsetIncludeMonthlyInvoiceTrend(): self
     {
@@ -111,7 +120,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets include past statement of accounts field.
+     * Sets Include Past Statement Of Accounts field.
+     *
+     * @param bool|null $value
      */
     public function includePastStatementOfAccounts(?bool $value): self
     {
@@ -120,7 +131,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets include past statement of accounts field.
+     * Unsets Include Past Statement Of Accounts field.
      */
     public function unsetIncludePastStatementOfAccounts(): self
     {
@@ -129,7 +140,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets due or over due soadocuments only field.
+     * Sets Due Or Over Due SOA Documents Only field.
+     *
+     * @param bool|null $value
      */
     public function dueOrOverDueSOADocumentsOnly(?bool $value): self
     {
@@ -138,7 +151,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets due or over due soadocuments only field.
+     * Unsets Due Or Over Due SOA Documents Only field.
      */
     public function unsetDueOrOverDueSOADocumentsOnly(): self
     {
@@ -147,7 +160,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets number of soadocuments field.
+     * Sets Number Of SOA Documents field.
+     *
+     * @param int|null $value
      */
     public function numberOfSOADocuments(?int $value): self
     {
@@ -156,7 +171,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets number of soadocuments field.
+     * Unsets Number Of SOA Documents field.
      */
     public function unsetNumberOfSOADocuments(): self
     {
@@ -165,7 +180,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets include account invoices summary field.
+     * Sets Include Account Invoices Summary field.
+     *
+     * @param bool|null $value
      */
     public function includeAccountInvoicesSummary(?bool $value): self
     {
@@ -174,7 +191,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets include account invoices summary field.
+     * Unsets Include Account Invoices Summary field.
      */
     public function unsetIncludeAccountInvoicesSummary(): self
     {
@@ -183,7 +200,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -192,7 +211,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -201,7 +220,9 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -210,7 +231,7 @@ class StatementOfAccountRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new statement of account request filters object.
+     * Initializes a new Statement Of Account Request Filters object.
      */
     public function build(): StatementOfAccountRequestFilters
     {

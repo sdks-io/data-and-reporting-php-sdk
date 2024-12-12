@@ -15,71 +15,9 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionCardusagesummary400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionCardusagesummary401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionCardusagesummary403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionCardusagesummary404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionCardusagesummary500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionExceptions400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionExceptions401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionExceptions403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionExceptions404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionExceptions500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFees400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFees401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFees403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFees404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFees500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFeessummary400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFeessummary401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFeessummary403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFeessummary404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFeessummary500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFuelconsumption400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFuelconsumption401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFuelconsumption403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFuelconsumption404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionFuelconsumption500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionMultipayerspricedtransactions400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionMultipayerspricedtransactions401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionMultipayerspricedtransactions403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionMultipayerspricedtransactions404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionMultipayerspricedtransactions500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactions400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactions401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactions403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactions404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactions500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactionssummary400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactionssummary401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactionssummary403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactionssummary404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionPricedtransactionssummary500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionUpdateodometer400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionUpdateodometer401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionUpdateodometer403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionUpdateodometer404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionUpdateodometer500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedbonus400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedbonus401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedbonus403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedbonus404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedbonus500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedpricing400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedpricing401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedpricing403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedpricing404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1TransactionVolumebasedpricing500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\DefaultErrorException;
+use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
+use ShellDataReportingAPIsLib\Exceptions\ErrorUserAccessError1Exception;
 use ShellDataReportingAPIsLib\Models\CardUsageSummaryRequest;
 use ShellDataReportingAPIsLib\Models\CardUsageSummaryResponse;
 use ShellDataReportingAPIsLib\Models\FeeSummaryResponse;
@@ -217,7 +155,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionPricedtransactions400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -225,14 +163,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionPricedtransactions401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionPricedtransactions403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -240,7 +178,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionPricedtransactions404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -248,7 +186,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionPricedtransactions500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(PricedTransactionResponse::class);
@@ -360,7 +298,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionPricedtransactionssummary400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -368,14 +306,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionPricedtransactionssummary401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionPricedtransactionssummary403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -383,7 +321,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionPricedtransactionssummary404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -391,7 +329,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionPricedtransactionssummary500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(PricedTransSummaryResponse::class);
@@ -494,7 +432,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionMultipayerspricedtransactions400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -502,14 +440,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionMultipayerspricedtransactions401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionMultipayerspricedtransactions403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -517,7 +455,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionMultipayerspricedtransactions404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -525,7 +463,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionMultipayerspricedtransactions500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(MultiPricedTransactionResponse::class);
@@ -572,7 +510,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionCardusagesummary400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -580,14 +518,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionCardusagesummary401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionCardusagesummary403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -595,7 +533,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionCardusagesummary404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -603,7 +541,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionCardusagesummary500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(CardUsageSummaryResponse::class);
@@ -653,7 +591,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionVolumebasedbonus400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -661,14 +599,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionVolumebasedbonus401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionVolumebasedbonus403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -676,7 +614,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionVolumebasedbonus404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -684,7 +622,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionVolumebasedbonus500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(VolumeBasedBonusResponse::class);
@@ -735,7 +673,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionVolumebasedpricing400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -743,14 +681,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionVolumebasedpricing401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionVolumebasedpricing403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -758,7 +696,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionVolumebasedpricing404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -766,7 +704,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionVolumebasedpricing500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(VolumeBasedPricingResponse::class);
@@ -834,7 +772,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionFees400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -842,14 +780,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionFees401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionFees403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -857,7 +795,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionFees404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -865,7 +803,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionFees500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(TransactionFeesResponse::class);
@@ -932,7 +870,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionFeessummary400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -940,14 +878,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionFeessummary401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionFeessummary403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -955,7 +893,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionFeessummary404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -963,7 +901,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionFeessummary500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(FeeSummaryResponse::class);
@@ -1014,7 +952,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionFuelconsumption400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1022,14 +960,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionFuelconsumption401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionFuelconsumption403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -1037,7 +975,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionFuelconsumption404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1045,7 +983,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionFuelconsumption500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(FuelConsumptionResponse::class);
@@ -1089,7 +1027,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionUpdateodometer400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1097,14 +1035,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionUpdateodometer401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionUpdateodometer403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -1112,7 +1050,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionUpdateodometer404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1120,7 +1058,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionUpdateodometer500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(UpdateOdometerResponse::class);
@@ -1167,7 +1105,7 @@ class TransactionController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1TransactionExceptions400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1175,14 +1113,14 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1TransactionExceptions401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1TransactionExceptions403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -1190,7 +1128,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1TransactionExceptions404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1198,7 +1136,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1TransactionExceptions500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(TransactionExceptionsResponse::class);
@@ -1258,7 +1196,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    TransactionDataV1Recent400ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1266,16 +1204,16 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    TransactionDataV1Recent401ErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', TransactionDataV1Recent403ErrorException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    TransactionDataV1Recent404ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1283,7 +1221,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    TransactionDataV1Recent500ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->type(RecentTransactionsResponse::class);
@@ -1357,7 +1295,6 @@ class TransactionController extends BaseController
      *
      * * EVChargeEndTime
      *
-     *
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
      * @param PricedTransactionRequestV2|null $body Priced TransactionV2 RequestBody
@@ -1385,7 +1322,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    TransactionDataV1Priced400ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1393,16 +1330,16 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    TransactionDataV1Priced401ErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', TransactionDataV1Priced403ErrorException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    TransactionDataV1Priced404ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1410,7 +1347,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    TransactionDataV1Priced500ErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->type(PricedTransactionResponseV2::class);

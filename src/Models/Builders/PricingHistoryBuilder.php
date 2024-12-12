@@ -31,7 +31,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Initializes a new pricing history Builder object.
+     * Initializes a new Pricing History Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -48,7 +50,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -57,7 +59,9 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -66,7 +70,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -75,7 +79,9 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Sets fees rule id field.
+     * Sets Fees Rule ID field.
+     *
+     * @param int|null $value
      */
     public function feesRuleID(?int $value): self
     {
@@ -84,7 +90,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Unsets fees rule id field.
+     * Unsets Fees Rule ID field.
      */
     public function unsetFeesRuleID(): self
     {
@@ -93,7 +99,9 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Sets fees rule description field.
+     * Sets Fees Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feesRuleDescription(?string $value): self
     {
@@ -102,7 +110,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Unsets fees rule description field.
+     * Unsets Fees Rule Description field.
      */
     public function unsetFeesRuleDescription(): self
     {
@@ -111,7 +119,9 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Sets total volume field.
+     * Sets Total Volume field.
+     *
+     * @param float|null $value
      */
     public function totalVolume(?float $value): self
     {
@@ -120,7 +130,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Unsets total volume field.
+     * Unsets Total Volume field.
      */
     public function unsetTotalVolume(): self
     {
@@ -129,7 +139,7 @@ class PricingHistoryBuilder
     }
 
     /**
-     * Initializes a new pricing history object.
+     * Initializes a new Pricing History object.
      */
     public function build(): PricingHistory
     {

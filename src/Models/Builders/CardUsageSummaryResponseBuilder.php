@@ -13,6 +13,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\CardUsageSummaryResponse;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\UsageSummary;
 
 /**
  * Builder for model CardUsageSummaryResponse
@@ -32,7 +33,7 @@ class CardUsageSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new card usage summary response Builder object.
+     * Initializes a new Card Usage Summary Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class CardUsageSummaryResponseBuilder
     }
 
     /**
-     * Sets usage summary field.
+     * Sets Usage Summary field.
+     *
+     * @param UsageSummary[]|null $value
      */
     public function usageSummary(?array $value): self
     {
@@ -49,7 +52,9 @@ class CardUsageSummaryResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -58,7 +63,9 @@ class CardUsageSummaryResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -67,7 +74,7 @@ class CardUsageSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new card usage summary response object.
+     * Initializes a new Card Usage Summary Response object.
      */
     public function build(): CardUsageSummaryResponse
     {

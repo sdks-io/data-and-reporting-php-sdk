@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\FeeItem;
 use ShellDataReportingAPIsLib\Models\TransactionFeesResponse;
 
 /**
@@ -32,7 +33,7 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Initializes a new transaction fees response Builder object.
+     * Initializes a new Transaction Fees Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets fee items field.
+     * Sets Fee Items field.
+     *
+     * @param FeeItem[]|null $value
      */
     public function feeItems(?array $value): self
     {
@@ -49,7 +52,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets current page field.
+     * Sets Current Page field.
+     *
+     * @param int|null $value
      */
     public function currentPage(?int $value): self
     {
@@ -58,7 +63,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets row count field.
+     * Sets Row Count field.
+     *
+     * @param int|null $value
      */
     public function rowCount(?int $value): self
     {
@@ -67,7 +74,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -76,7 +85,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -85,7 +96,9 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -94,7 +107,7 @@ class TransactionFeesResponseBuilder
     }
 
     /**
-     * Initializes a new transaction fees response object.
+     * Initializes a new Transaction Fees Response object.
      */
     public function build(): TransactionFeesResponse
     {

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
 use ShellDataReportingAPIsLib\Models\InvoiceDatesRequestFilters;
 
 /**
@@ -31,7 +32,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new invoice dates request filters Builder object.
+     * Initializes a new Invoice Dates Request Filters Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +51,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -57,7 +60,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -66,7 +71,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -75,7 +80,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -84,7 +91,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -93,7 +100,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -102,7 +111,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -111,7 +120,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -120,7 +131,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -129,7 +140,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -138,7 +151,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -147,7 +160,9 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -156,7 +171,7 @@ class InvoiceDatesRequestFiltersBuilder
     }
 
     /**
-     * Initializes a new invoice dates request filters object.
+     * Initializes a new Invoice Dates Request Filters object.
      */
     public function build(): InvoiceDatesRequestFilters
     {

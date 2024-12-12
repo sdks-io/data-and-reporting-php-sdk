@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponseTransactionsItems;
+use ShellDataReportingAPIsLib\Models\SiteLocation;
 
 /**
  * Builder for model MultiPricedTransactionResponseTransactionsItems
@@ -31,7 +32,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction response transactions items Builder object.
+     * Initializes a new Multi Priced Transaction Response Transactions Items Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -48,7 +51,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets type field.
+     * Unsets Type field.
      */
     public function unsetType(): self
     {
@@ -57,7 +60,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -66,7 +71,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -75,7 +80,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -84,7 +91,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -93,7 +100,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card expiry field.
+     * Sets Card Expiry field.
+     *
+     * @param string|null $value
      */
     public function cardExpiry(?string $value): self
     {
@@ -102,7 +111,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card expiry field.
+     * Unsets Card Expiry field.
      */
     public function unsetCardExpiry(): self
     {
@@ -111,7 +120,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction date field.
+     * Sets Transaction Date field.
+     *
+     * @param string|null $value
      */
     public function transactionDate(?string $value): self
     {
@@ -120,7 +131,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction date field.
+     * Unsets Transaction Date field.
      */
     public function unsetTransactionDate(): self
     {
@@ -129,7 +140,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction time field.
+     * Sets Transaction Time field.
+     *
+     * @param string|null $value
      */
     public function transactionTime(?string $value): self
     {
@@ -138,7 +151,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction time field.
+     * Unsets Transaction Time field.
      */
     public function unsetTransactionTime(): self
     {
@@ -147,7 +160,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets utcoffset field.
+     * Sets UTC Offset field.
+     *
+     * @param string|null $value
      */
     public function uTCOffset(?string $value): self
     {
@@ -156,7 +171,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets utcoffset field.
+     * Unsets UTC Offset field.
      */
     public function unsetUTCOffset(): self
     {
@@ -165,7 +180,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets fleet id input field.
+     * Sets Fleet Id Input field.
+     *
+     * @param string|null $value
      */
     public function fleetIdInput(?string $value): self
     {
@@ -174,7 +191,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets fleet id input field.
+     * Unsets Fleet Id Input field.
      */
     public function unsetFleetIdInput(): self
     {
@@ -183,7 +200,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets odometer input field.
+     * Sets Odometer Input field.
+     *
+     * @param int|null $value
      */
     public function odometerInput(?int $value): self
     {
@@ -192,7 +211,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets odometer input field.
+     * Unsets Odometer Input field.
      */
     public function unsetOdometerInput(): self
     {
@@ -201,7 +220,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -210,7 +231,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -219,7 +240,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vehicle registration field.
+     * Sets Vehicle Registration field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistration(?string $value): self
     {
@@ -228,7 +251,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vehicle registration field.
+     * Unsets Vehicle Registration field.
      */
     public function unsetVehicleRegistration(): self
     {
@@ -237,7 +260,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice currency code field.
+     * Sets Invoice Currency Code field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencyCode(?string $value): self
     {
@@ -246,7 +271,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice currency code field.
+     * Unsets Invoice Currency Code field.
      */
     public function unsetInvoiceCurrencyCode(): self
     {
@@ -255,7 +280,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice currency symbol field.
+     * Sets Invoice Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencySymbol(?string $value): self
     {
@@ -264,7 +291,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice currency symbol field.
+     * Unsets Invoice Currency Symbol field.
      */
     public function unsetInvoiceCurrencySymbol(): self
     {
@@ -273,7 +300,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction currency code field.
+     * Sets Transaction Currency Code field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencyCode(?string $value): self
     {
@@ -282,7 +311,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction currency code field.
+     * Unsets Transaction Currency Code field.
      */
     public function unsetTransactionCurrencyCode(): self
     {
@@ -291,7 +320,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction currency symbol field.
+     * Sets Transaction Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencySymbol(?string $value): self
     {
@@ -300,7 +331,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction currency symbol field.
+     * Unsets Transaction Currency Symbol field.
      */
     public function unsetTransactionCurrencySymbol(): self
     {
@@ -309,7 +340,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction net amount field.
+     * Sets Transaction Net Amount field.
+     *
+     * @param int|null $value
      */
     public function transactionNetAmount(?int $value): self
     {
@@ -318,7 +351,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction net amount field.
+     * Unsets Transaction Net Amount field.
      */
     public function unsetTransactionNetAmount(): self
     {
@@ -327,7 +360,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction tax field.
+     * Sets Transaction Tax field.
+     *
+     * @param int|null $value
      */
     public function transactionTax(?int $value): self
     {
@@ -336,7 +371,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction tax field.
+     * Unsets Transaction Tax field.
      */
     public function unsetTransactionTax(): self
     {
@@ -345,7 +380,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction gross amount field.
+     * Sets Transaction Gross Amount field.
+     *
+     * @param int|null $value
      */
     public function transactionGrossAmount(?int $value): self
     {
@@ -354,7 +391,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction gross amount field.
+     * Unsets Transaction Gross Amount field.
      */
     public function unsetTransactionGrossAmount(): self
     {
@@ -363,7 +400,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice net amount field.
+     * Sets Invoice Net Amount field.
+     *
+     * @param int|null $value
      */
     public function invoiceNetAmount(?int $value): self
     {
@@ -372,7 +411,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice net amount field.
+     * Unsets Invoice Net Amount field.
      */
     public function unsetInvoiceNetAmount(): self
     {
@@ -381,7 +420,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice tax field.
+     * Sets Invoice Tax field.
+     *
+     * @param int|null $value
      */
     public function invoiceTax(?int $value): self
     {
@@ -390,7 +431,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice tax field.
+     * Unsets Invoice Tax field.
      */
     public function unsetInvoiceTax(): self
     {
@@ -399,7 +440,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice gross amount field.
+     * Sets Invoice Gross Amount field.
+     *
+     * @param int|null $value
      */
     public function invoiceGrossAmount(?int $value): self
     {
@@ -408,7 +451,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice gross amount field.
+     * Unsets Invoice Gross Amount field.
      */
     public function unsetInvoiceGrossAmount(): self
     {
@@ -417,7 +460,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -426,7 +471,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -435,7 +480,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -444,7 +491,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -453,7 +500,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -462,7 +511,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -471,7 +520,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets account name field.
+     * Sets Account Name field.
+     *
+     * @param string|null $value
      */
     public function accountName(?string $value): self
     {
@@ -480,7 +531,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets account name field.
+     * Unsets Account Name field.
      */
     public function unsetAccountName(): self
     {
@@ -489,7 +540,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -498,7 +551,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -507,7 +560,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets quantity field.
+     * Sets Quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -516,7 +571,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets quantity field.
+     * Unsets Quantity field.
      */
     public function unsetQuantity(): self
     {
@@ -525,7 +580,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets fuel product field.
+     * Sets Fuel Product field.
+     *
+     * @param bool|null $value
      */
     public function fuelProduct(?bool $value): self
     {
@@ -534,7 +591,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets fuel product field.
+     * Unsets Fuel Product field.
      */
     public function unsetFuelProduct(): self
     {
@@ -543,7 +600,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets unit price in transaction currency field.
+     * Sets Unit Price In Transaction Currency field.
+     *
+     * @param int|null $value
      */
     public function unitPriceInTransactionCurrency(?int $value): self
     {
@@ -552,7 +611,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets unit price in transaction currency field.
+     * Unsets Unit Price In Transaction Currency field.
      */
     public function unsetUnitPriceInTransactionCurrency(): self
     {
@@ -561,7 +620,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets unit price in invoice currency field.
+     * Sets Unit Price In Invoice Currency field.
+     *
+     * @param int|null $value
      */
     public function unitPriceInInvoiceCurrency(?int $value): self
     {
@@ -570,7 +631,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets unit price in invoice currency field.
+     * Unsets Unit Price In Invoice Currency field.
      */
     public function unsetUnitPriceInInvoiceCurrency(): self
     {
@@ -579,7 +640,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets unit discount transaction currency field.
+     * Sets Unit Discount Transaction Currency field.
+     *
+     * @param int|null $value
      */
     public function unitDiscountTransactionCurrency(?int $value): self
     {
@@ -588,7 +651,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets unit discount transaction currency field.
+     * Unsets Unit Discount Transaction Currency field.
      */
     public function unsetUnitDiscountTransactionCurrency(): self
     {
@@ -597,7 +660,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets unit discount invoice currency field.
+     * Sets Unit Discount Invoice Currency field.
+     *
+     * @param int|null $value
      */
     public function unitDiscountInvoiceCurrency(?int $value): self
     {
@@ -606,7 +671,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets unit discount invoice currency field.
+     * Unsets Unit Discount Invoice Currency field.
      */
     public function unsetUnitDiscountInvoiceCurrency(): self
     {
@@ -615,7 +680,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets is invoiced field.
+     * Sets Is Invoiced field.
+     *
+     * @param bool|null $value
      */
     public function isInvoiced(?bool $value): self
     {
@@ -624,7 +691,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets is invoiced field.
+     * Unsets Is Invoiced field.
      */
     public function unsetIsInvoiced(): self
     {
@@ -633,7 +700,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -642,7 +711,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -651,7 +720,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -660,7 +731,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -669,7 +740,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param string|null $value
      */
     public function siteCode(?string $value): self
     {
@@ -678,7 +751,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -687,7 +760,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -696,7 +771,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -705,7 +780,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets site country field.
+     * Sets Site Country field.
+     *
+     * @param string|null $value
      */
     public function siteCountry(?string $value): self
     {
@@ -714,7 +791,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets site country field.
+     * Unsets Site Country field.
      */
     public function unsetSiteCountry(): self
     {
@@ -723,7 +800,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets location field.
+     * Sets Location field.
+     *
+     * @param SiteLocation[]|null $value
      */
     public function location(?array $value): self
     {
@@ -732,7 +811,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -741,7 +822,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card group name field.
+     * Unsets Card Group Name field.
      */
     public function unsetCardGroupName(): self
     {
@@ -750,7 +831,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets receipt number field.
+     * Sets Receipt Number field.
+     *
+     * @param string|null $value
      */
     public function receiptNumber(?string $value): self
     {
@@ -759,7 +842,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets receipt number field.
+     * Unsets Receipt Number field.
      */
     public function unsetReceiptNumber(): self
     {
@@ -768,7 +851,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -777,7 +862,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -786,7 +871,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -795,7 +882,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -804,7 +891,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -813,7 +902,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -822,7 +911,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -831,7 +922,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -840,7 +931,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets del co exchange rate field.
+     * Sets Del Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function delCoExchangeRate(?float $value): self
     {
@@ -849,7 +942,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets del co exchange rate field.
+     * Unsets Del Co Exchange Rate field.
      */
     public function unsetDelCoExchangeRate(): self
     {
@@ -858,7 +951,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets col co exchange rate field.
+     * Sets Col Co Exchange Rate field.
+     *
+     * @param int|null $value
      */
     public function colCoExchangeRate(?int $value): self
     {
@@ -867,7 +962,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets col co exchange rate field.
+     * Unsets Col Co Exchange Rate field.
      */
     public function unsetColCoExchangeRate(): self
     {
@@ -876,7 +971,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets is shell site field.
+     * Sets Is Shell Site field.
+     *
+     * @param bool|null $value
      */
     public function isShellSite(?bool $value): self
     {
@@ -885,7 +982,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets is shell site field.
+     * Unsets Is Shell Site field.
      */
     public function unsetIsShellSite(): self
     {
@@ -894,7 +991,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets network field.
+     * Sets Network field.
+     *
+     * @param string|null $value
      */
     public function network(?string $value): self
     {
@@ -903,7 +1002,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets network field.
+     * Unsets Network field.
      */
     public function unsetNetwork(): self
     {
@@ -912,7 +1011,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -921,7 +1022,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -930,7 +1031,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -939,7 +1042,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -948,7 +1051,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets posting date field.
+     * Sets Posting Date field.
+     *
+     * @param string|null $value
      */
     public function postingDate(?string $value): self
     {
@@ -957,7 +1062,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets posting date field.
+     * Unsets Posting Date field.
      */
     public function unsetPostingDate(): self
     {
@@ -966,7 +1071,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets issuer code field.
+     * Sets Issuer Code field.
+     *
+     * @param string|null $value
      */
     public function issuerCode(?string $value): self
     {
@@ -975,7 +1082,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets issuer code field.
+     * Unsets Issuer Code field.
      */
     public function unsetIssuerCode(): self
     {
@@ -984,7 +1091,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets purchased in country code field.
+     * Sets Purchased In Country Code field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountryCode(?string $value): self
     {
@@ -993,7 +1102,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets purchased in country code field.
+     * Unsets Purchased In Country Code field.
      */
     public function unsetPurchasedInCountryCode(): self
     {
@@ -1002,7 +1111,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer country code field.
+     * Sets Customer Country Code field.
+     *
+     * @param string|null $value
      */
     public function customerCountryCode(?string $value): self
     {
@@ -1011,7 +1122,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer country code field.
+     * Unsets Customer Country Code field.
      */
     public function unsetCustomerCountryCode(): self
     {
@@ -1020,7 +1131,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer country field.
+     * Sets Customer Country field.
+     *
+     * @param string|null $value
      */
     public function customerCountry(?string $value): self
     {
@@ -1029,7 +1142,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer country field.
+     * Unsets Customer Country field.
      */
     public function unsetCustomerCountry(): self
     {
@@ -1038,7 +1151,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets release code field.
+     * Sets Release Code field.
+     *
+     * @param string|null $value
      */
     public function releaseCode(?string $value): self
     {
@@ -1047,7 +1162,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets release code field.
+     * Unsets Release Code field.
      */
     public function unsetReleaseCode(): self
     {
@@ -1056,7 +1171,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param string|null $value
      */
     public function cardGroupId(?string $value): self
     {
@@ -1065,7 +1182,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -1074,7 +1191,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card sequence number field.
+     * Sets Card Sequence Number field.
+     *
+     * @param string|null $value
      */
     public function cardSequenceNumber(?string $value): self
     {
@@ -1083,7 +1202,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card sequence number field.
+     * Unsets Card Sequence Number field.
      */
     public function unsetCardSequenceNumber(): self
     {
@@ -1092,7 +1211,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets check digit field.
+     * Sets Check Digit field.
+     *
+     * @param string|null $value
      */
     public function checkDigit(?string $value): self
     {
@@ -1101,7 +1222,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets check digit field.
+     * Unsets Check Digit field.
      */
     public function unsetCheckDigit(): self
     {
@@ -1110,7 +1231,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets fleet iddescription field.
+     * Sets Fleet ID Description field.
+     *
+     * @param string|null $value
      */
     public function fleetIDDescription(?string $value): self
     {
@@ -1119,7 +1242,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets fleet iddescription field.
+     * Unsets Fleet ID Description field.
      */
     public function unsetFleetIDDescription(): self
     {
@@ -1128,7 +1251,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vatrate field.
+     * Sets VAT Rate field.
+     *
+     * @param float|null $value
      */
     public function vATRate(?float $value): self
     {
@@ -1137,7 +1262,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vatrate field.
+     * Unsets VAT Rate field.
      */
     public function unsetVATRate(): self
     {
@@ -1146,7 +1271,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vatcategory field.
+     * Sets VAT Category field.
+     *
+     * @param string|null $value
      */
     public function vATCategory(?string $value): self
     {
@@ -1155,7 +1282,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vatcategory field.
+     * Unsets VAT Category field.
      */
     public function unsetVATCategory(): self
     {
@@ -1164,7 +1291,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vatcountry field.
+     * Sets VAT Country field.
+     *
+     * @param string|null $value
      */
     public function vATCountry(?string $value): self
     {
@@ -1173,7 +1302,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vatcountry field.
+     * Unsets VAT Country field.
      */
     public function unsetVATCountry(): self
     {
@@ -1182,7 +1311,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets effective discount in trx currency field.
+     * Sets Effective Discount In Trx Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveDiscountInTrxCurrency(?float $value): self
     {
@@ -1191,7 +1322,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets effective discount in trx currency field.
+     * Unsets Effective Discount In Trx Currency field.
      */
     public function unsetEffectiveDiscountInTrxCurrency(): self
     {
@@ -1200,7 +1331,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction type field.
+     * Sets Transaction Type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -1209,7 +1342,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction type field.
+     * Unsets Transaction Type field.
      */
     public function unsetTransactionType(): self
     {
@@ -1218,7 +1351,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets pinindicator field.
+     * Sets PIN Indicator field.
+     *
+     * @param string|null $value
      */
     public function pINIndicator(?string $value): self
     {
@@ -1227,7 +1362,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets pinindicator field.
+     * Unsets PIN Indicator field.
      */
     public function unsetPINIndicator(): self
     {
@@ -1236,7 +1371,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vatapplicable field.
+     * Sets VAT Applicable field.
+     *
+     * @param string|null $value
      */
     public function vATApplicable(?string $value): self
     {
@@ -1245,7 +1382,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vatapplicable field.
+     * Unsets VAT Applicable field.
      */
     public function unsetVATApplicable(): self
     {
@@ -1254,7 +1391,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets net invoice indicator field.
+     * Sets Net Invoice Indicator field.
+     *
+     * @param string|null $value
      */
     public function netInvoiceIndicator(?string $value): self
     {
@@ -1263,7 +1402,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets net invoice indicator field.
+     * Unsets Net Invoice Indicator field.
      */
     public function unsetNetInvoiceIndicator(): self
     {
@@ -1272,7 +1411,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer currency code field.
+     * Sets Customer Currency Code field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencyCode(?string $value): self
     {
@@ -1281,7 +1422,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer currency code field.
+     * Unsets Customer Currency Code field.
      */
     public function unsetCustomerCurrencyCode(): self
     {
@@ -1290,7 +1431,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer currency symbol field.
+     * Sets Customer Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencySymbol(?string $value): self
     {
@@ -1299,7 +1442,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer currency symbol field.
+     * Unsets Customer Currency Symbol field.
      */
     public function unsetCustomerCurrencySymbol(): self
     {
@@ -1308,7 +1451,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets effective unit discount in customer currency field.
+     * Sets Effective Unit Discount In Customer Currency field.
+     *
+     * @param int|null $value
      */
     public function effectiveUnitDiscountInCustomerCurrency(?int $value): self
     {
@@ -1317,7 +1462,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets effective unit discount in customer currency field.
+     * Unsets Effective Unit Discount In Customer Currency field.
      */
     public function unsetEffectiveUnitDiscountInCustomerCurrency(): self
     {
@@ -1326,7 +1471,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets effective discount in customer currency field.
+     * Sets Effective Discount In Customer Currency field.
+     *
+     * @param int|null $value
      */
     public function effectiveDiscountInCustomerCurrency(?int $value): self
     {
@@ -1335,7 +1482,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets effective discount in customer currency field.
+     * Unsets Effective Discount In Customer Currency field.
      */
     public function unsetEffectiveDiscountInCustomerCurrency(): self
     {
@@ -1344,7 +1491,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets vaton net amount in customer currency field.
+     * Sets VA Ton Net Amount In Customer Currency field.
+     *
+     * @param int|null $value
      */
     public function vATonNetAmountInCustomerCurrency(?int $value): self
     {
@@ -1353,7 +1502,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets vaton net amount in customer currency field.
+     * Unsets VA Ton Net Amount In Customer Currency field.
      */
     public function unsetVATonNetAmountInCustomerCurrency(): self
     {
@@ -1362,7 +1511,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets discount type field.
+     * Sets Discount Type field.
+     *
+     * @param string|null $value
      */
     public function discountType(?string $value): self
     {
@@ -1371,7 +1522,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets discount type field.
+     * Unsets Discount Type field.
      */
     public function unsetDiscountType(): self
     {
@@ -1380,7 +1531,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction status field.
+     * Sets Transaction Status field.
+     *
+     * @param string|null $value
      */
     public function transactionStatus(?string $value): self
     {
@@ -1389,7 +1542,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction status field.
+     * Unsets Transaction Status field.
      */
     public function unsetTransactionStatus(): self
     {
@@ -1398,7 +1551,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets sales item id field.
+     * Sets Sales Item Id field.
+     *
+     * @param int|null $value
      */
     public function salesItemId(?int $value): self
     {
@@ -1407,7 +1562,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets sales item id field.
+     * Unsets Sales Item Id field.
      */
     public function unsetSalesItemId(): self
     {
@@ -1416,7 +1571,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets payer group field.
+     * Sets Payer Group field.
+     *
+     * @param string|null $value
      */
     public function payerGroup(?string $value): self
     {
@@ -1425,7 +1582,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets payer group field.
+     * Unsets Payer Group field.
      */
     public function unsetPayerGroup(): self
     {
@@ -1434,7 +1591,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets payer group name field.
+     * Sets Payer Group Name field.
+     *
+     * @param string|null $value
      */
     public function payerGroupName(?string $value): self
     {
@@ -1443,7 +1602,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets payer group name field.
+     * Unsets Payer Group Name field.
      */
     public function unsetPayerGroupName(): self
     {
@@ -1452,7 +1611,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets refund flag field.
+     * Sets Refund Flag field.
+     *
+     * @param string|null $value
      */
     public function refundFlag(?string $value): self
     {
@@ -1461,7 +1622,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets refund flag field.
+     * Unsets Refund Flag field.
      */
     public function unsetRefundFlag(): self
     {
@@ -1470,7 +1631,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets original sales item id field.
+     * Sets Original Sales Item Id field.
+     *
+     * @param string|null $value
      */
     public function originalSalesItemId(?string $value): self
     {
@@ -1479,7 +1642,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets original sales item id field.
+     * Unsets Original Sales Item Id field.
      */
     public function unsetOriginalSalesItemId(): self
     {
@@ -1488,7 +1651,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco name field.
+     * Sets Delco Name field.
+     *
+     * @param string|null $value
      */
     public function delcoName(?string $value): self
     {
@@ -1497,7 +1662,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco name field.
+     * Unsets Delco Name field.
      */
     public function unsetDelcoName(): self
     {
@@ -1506,7 +1671,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco code field.
+     * Sets Delco Code field.
+     *
+     * @param string|null $value
      */
     public function delcoCode(?string $value): self
     {
@@ -1515,7 +1682,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco code field.
+     * Unsets Delco Code field.
      */
     public function unsetDelcoCode(): self
     {
@@ -1524,7 +1691,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -1533,7 +1702,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -1542,7 +1711,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -1551,7 +1722,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -1560,7 +1731,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card expiry period field.
+     * Sets Card Expiry Period field.
+     *
+     * @param string|null $value
      */
     public function cardExpiryPeriod(?string $value): self
     {
@@ -1569,7 +1742,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card expiry period field.
+     * Unsets Card Expiry Period field.
      */
     public function unsetCardExpiryPeriod(): self
     {
@@ -1578,7 +1751,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets authorisation code field.
+     * Sets Authorisation Code field.
+     *
+     * @param string|null $value
      */
     public function authorisationCode(?string $value): self
     {
@@ -1587,7 +1762,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets authorisation code field.
+     * Unsets Authorisation Code field.
      */
     public function unsetAuthorisationCode(): self
     {
@@ -1596,7 +1771,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -1605,7 +1782,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets Transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -1614,7 +1791,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction line field.
+     * Sets Transaction Line field.
+     *
+     * @param string|null $value
      */
     public function transactionLine(?string $value): self
     {
@@ -1623,7 +1802,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction line field.
+     * Unsets Transaction Line field.
      */
     public function unsetTransactionLine(): self
     {
@@ -1632,7 +1811,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets allow clearing field.
+     * Sets Allow Clearing field.
+     *
+     * @param string|null $value
      */
     public function allowClearing(?string $value): self
     {
@@ -1641,7 +1822,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets allow clearing field.
+     * Unsets Allow Clearing field.
      */
     public function unsetAllowClearing(): self
     {
@@ -1650,7 +1831,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets crmnumber field.
+     * Sets CRM Number field.
+     *
+     * @param string|null $value
      */
     public function cRMNumber(?string $value): self
     {
@@ -1659,7 +1842,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets crmnumber field.
+     * Unsets CRM Number field.
      */
     public function unsetCRMNumber(): self
     {
@@ -1668,7 +1851,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets dispute status field.
+     * Sets Dispute Status field.
+     *
+     * @param string|null $value
      */
     public function disputeStatus(?string $value): self
     {
@@ -1677,7 +1862,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets dispute status field.
+     * Unsets Dispute Status field.
      */
     public function unsetDisputeStatus(): self
     {
@@ -1686,7 +1871,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets rebate rate field.
+     * Sets Rebate Rate field.
+     *
+     * @param float|null $value
      */
     public function rebateRate(?float $value): self
     {
@@ -1695,7 +1882,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets rebate rate field.
+     * Unsets Rebate Rate field.
      */
     public function unsetRebateRate(): self
     {
@@ -1704,7 +1891,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets del co to col co exchange rate field.
+     * Sets Del Co To Col Co Exchange Rate field.
+     *
+     * @param int|null $value
      */
     public function delCoToColCoExchangeRate(?int $value): self
     {
@@ -1713,7 +1902,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets del co to col co exchange rate field.
+     * Unsets Del Co To Col Co Exchange Rate field.
      */
     public function unsetDelCoToColCoExchangeRate(): self
     {
@@ -1722,7 +1911,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets net euro amount field.
+     * Sets Net Euro Amount field.
+     *
+     * @param float|null $value
      */
     public function netEuroAmount(?float $value): self
     {
@@ -1731,7 +1922,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets net euro amount field.
+     * Unsets Net Euro Amount field.
      */
     public function unsetNetEuroAmount(): self
     {
@@ -1740,7 +1931,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets euro rebate amount field.
+     * Sets Euro Rebate Amount field.
+     *
+     * @param int|null $value
      */
     public function euroRebateAmount(?int $value): self
     {
@@ -1749,7 +1942,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets euro rebate amount field.
+     * Unsets Euro Rebate Amount field.
      */
     public function unsetEuroRebateAmount(): self
     {
@@ -1758,7 +1951,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets euro vatamount field.
+     * Sets Euro VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function euroVATAmount(?float $value): self
     {
@@ -1767,7 +1962,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets euro vatamount field.
+     * Unsets Euro VAT Amount field.
      */
     public function unsetEuroVATAmount(): self
     {
@@ -1776,7 +1971,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets parent customer number field.
+     * Sets Parent Customer Number field.
+     *
+     * @param string|null $value
      */
     public function parentCustomerNumber(?string $value): self
     {
@@ -1785,7 +1982,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets parent customer number field.
+     * Unsets Parent Customer Number field.
      */
     public function unsetParentCustomerNumber(): self
     {
@@ -1794,7 +1991,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets parent customer name field.
+     * Sets Parent Customer Name field.
+     *
+     * @param string|null $value
      */
     public function parentCustomerName(?string $value): self
     {
@@ -1803,7 +2002,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets parent customer name field.
+     * Unsets Parent Customer Name field.
      */
     public function unsetParentCustomerName(): self
     {
@@ -1812,7 +2011,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets parent customer id field.
+     * Sets Parent Customer Id field.
+     *
+     * @param int|null $value
      */
     public function parentCustomerId(?int $value): self
     {
@@ -1821,7 +2022,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets parent customer id field.
+     * Unsets Parent Customer Id field.
      */
     public function unsetParentCustomerId(): self
     {
@@ -1830,7 +2031,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets incoming site number field.
+     * Sets Incoming Site Number field.
+     *
+     * @param string|null $value
      */
     public function incomingSiteNumber(?string $value): self
     {
@@ -1839,7 +2042,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets incoming site number field.
+     * Unsets Incoming Site Number field.
      */
     public function unsetIncomingSiteNumber(): self
     {
@@ -1848,7 +2051,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets incoming site description field.
+     * Sets Incoming Site Description field.
+     *
+     * @param string|null $value
      */
     public function incomingSiteDescription(?string $value): self
     {
@@ -1857,7 +2062,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets incoming site description field.
+     * Unsets Incoming Site Description field.
      */
     public function unsetIncomingSiteDescription(): self
     {
@@ -1866,7 +2071,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets incoming currency code field.
+     * Sets Incoming Currency Code field.
+     *
+     * @param string|null $value
      */
     public function incomingCurrencyCode(?string $value): self
     {
@@ -1875,7 +2082,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets incoming currency code field.
+     * Unsets Incoming Currency Code field.
      */
     public function unsetIncomingCurrencyCode(): self
     {
@@ -1884,7 +2091,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets incoming product code field.
+     * Sets Incoming Product Code field.
+     *
+     * @param string|null $value
      */
     public function incomingProductCode(?string $value): self
     {
@@ -1893,7 +2102,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets incoming product code field.
+     * Unsets Incoming Product Code field.
      */
     public function unsetIncomingProductCode(): self
     {
@@ -1902,7 +2111,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets credit debit code field.
+     * Sets Credit Debit Code field.
+     *
+     * @param string|null $value
      */
     public function creditDebitCode(?string $value): self
     {
@@ -1911,7 +2122,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets credit debit code field.
+     * Unsets Credit Debit Code field.
      */
     public function unsetCreditDebitCode(): self
     {
@@ -1920,7 +2131,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets correction flag field.
+     * Sets Correction Flag field.
+     *
+     * @param string|null $value
      */
     public function correctionFlag(?string $value): self
     {
@@ -1929,7 +2142,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets correction flag field.
+     * Unsets Correction Flag field.
      */
     public function unsetCorrectionFlag(): self
     {
@@ -1938,7 +2151,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets additional 1 field.
+     * Sets Additional 1 field.
+     *
+     * @param string|null $value
      */
     public function additional1(?string $value): self
     {
@@ -1947,7 +2162,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets additional 1 field.
+     * Unsets Additional 1 field.
      */
     public function unsetAdditional1(): self
     {
@@ -1956,7 +2171,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets additional 2 field.
+     * Sets Additional 2 field.
+     *
+     * @param string|null $value
      */
     public function additional2(?string $value): self
     {
@@ -1965,7 +2182,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets additional 2 field.
+     * Unsets Additional 2 field.
      */
     public function unsetAdditional2(): self
     {
@@ -1974,7 +2191,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets additional 3 field.
+     * Sets Additional 3 field.
+     *
+     * @param string|null $value
      */
     public function additional3(?string $value): self
     {
@@ -1983,7 +2202,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets additional 3 field.
+     * Unsets Additional 3 field.
      */
     public function unsetAdditional3(): self
     {
@@ -1992,7 +2211,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets additional 4 field.
+     * Sets Additional 4 field.
+     *
+     * @param string|null $value
      */
     public function additional4(?string $value): self
     {
@@ -2001,7 +2222,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets additional 4 field.
+     * Unsets Additional 4 field.
      */
     public function unsetAdditional4(): self
     {
@@ -2010,7 +2231,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets rebateon net amount in customer currency field.
+     * Sets Rebateon Net Amount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function rebateonNetAmountInCustomerCurrency(?float $value): self
     {
@@ -2019,7 +2242,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets rebateon net amount in customer currency field.
+     * Unsets Rebateon Net Amount In Customer Currency field.
      */
     public function unsetRebateonNetAmountInCustomerCurrency(): self
     {
@@ -2028,7 +2251,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets rebateon net amount in transaction currency field.
+     * Sets Rebateon Net Amount In Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function rebateonNetAmountInTransactionCurrency(?float $value): self
     {
@@ -2037,7 +2262,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets rebateon net amount in transaction currency field.
+     * Unsets Rebateon Net Amount In Transaction Currency field.
      */
     public function unsetRebateonNetAmountInTransactionCurrency(): self
     {
@@ -2046,7 +2271,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets network code field.
+     * Sets Network Code field.
+     *
+     * @param string|null $value
      */
     public function networkCode(?string $value): self
     {
@@ -2055,7 +2282,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets network code field.
+     * Unsets Network Code field.
      */
     public function unsetNetworkCode(): self
     {
@@ -2064,7 +2291,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets trn identifier field.
+     * Sets Trn Identifier field.
+     *
+     * @param string|null $value
      */
     public function trnIdentifier(?string $value): self
     {
@@ -2073,7 +2302,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets trn identifier field.
+     * Unsets Trn Identifier field.
      */
     public function unsetTrnIdentifier(): self
     {
@@ -2082,7 +2311,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets card type field.
+     * Sets Card Type field.
+     *
+     * @param string|null $value
      */
     public function cardType(?string $value): self
     {
@@ -2091,7 +2322,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets card type field.
+     * Unsets Card Type field.
      */
     public function unsetCardType(): self
     {
@@ -2100,7 +2331,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco list price unit net field.
+     * Sets Delco List Price Unit Net field.
+     *
+     * @param float|null $value
      */
     public function delcoListPriceUnitNet(?float $value): self
     {
@@ -2109,7 +2342,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco list price unit net field.
+     * Unsets Delco List Price Unit Net field.
      */
     public function unsetDelcoListPriceUnitNet(): self
     {
@@ -2118,7 +2351,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco retail price unit net field.
+     * Sets Delco Retail Price Unit Net field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailPriceUnitNet(?float $value): self
     {
@@ -2127,7 +2362,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco retail price unit net field.
+     * Unsets Delco Retail Price Unit Net field.
      */
     public function unsetDelcoRetailPriceUnitNet(): self
     {
@@ -2136,7 +2371,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco retail price unit gross field.
+     * Sets Delco Retail Price Unit Gross field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailPriceUnitGross(?float $value): self
     {
@@ -2145,7 +2382,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco retail price unit gross field.
+     * Unsets Delco Retail Price Unit Gross field.
      */
     public function unsetDelcoRetailPriceUnitGross(): self
     {
@@ -2154,7 +2391,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco retail value total net field.
+     * Sets Delco Retail Value Total Net field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailValueTotalNet(?float $value): self
     {
@@ -2163,7 +2402,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco retail value total net field.
+     * Unsets Delco Retail Value Total Net field.
      */
     public function unsetDelcoRetailValueTotalNet(): self
     {
@@ -2172,7 +2411,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets delco retail value total gross field.
+     * Sets Delco Retail Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function delcoRetailValueTotalGross(?float $value): self
     {
@@ -2181,7 +2422,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets delco retail value total gross field.
+     * Unsets Delco Retail Value Total Gross field.
      */
     public function unsetDelcoRetailValueTotalGross(): self
     {
@@ -2190,7 +2431,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer retail price unit gross field.
+     * Sets Customer Retail Price Unit Gross field.
+     *
+     * @param float|null $value
      */
     public function customerRetailPriceUnitGross(?float $value): self
     {
@@ -2199,7 +2442,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer retail price unit gross field.
+     * Unsets Customer Retail Price Unit Gross field.
      */
     public function unsetCustomerRetailPriceUnitGross(): self
     {
@@ -2208,7 +2451,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer retail value total gross field.
+     * Sets Customer Retail Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalGross(?float $value): self
     {
@@ -2217,7 +2462,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer retail value total gross field.
+     * Unsets Customer Retail Value Total Gross field.
      */
     public function unsetCustomerRetailValueTotalGross(): self
     {
@@ -2226,7 +2471,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets customer retail value total net field.
+     * Sets Customer Retail Value Total Net field.
+     *
+     * @param float|null $value
      */
     public function customerRetailValueTotalNet(?float $value): self
     {
@@ -2235,7 +2482,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets customer retail value total net field.
+     * Unsets Customer Retail Value Total Net field.
      */
     public function unsetCustomerRetailValueTotalNet(): self
     {
@@ -2244,7 +2491,9 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Sets transaction type description field.
+     * Sets Transaction Type Description field.
+     *
+     * @param string|null $value
      */
     public function transactionTypeDescription(?string $value): self
     {
@@ -2253,7 +2502,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Unsets transaction type description field.
+     * Unsets Transaction Type Description field.
      */
     public function unsetTransactionTypeDescription(): self
     {
@@ -2262,7 +2511,7 @@ class MultiPricedTransactionResponseTransactionsItemsBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction response transactions items object.
+     * Initializes a new Multi Priced Transaction Response Transactions Items object.
      */
     public function build(): MultiPricedTransactionResponseTransactionsItems
     {

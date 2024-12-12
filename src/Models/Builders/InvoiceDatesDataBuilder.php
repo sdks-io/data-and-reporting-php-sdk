@@ -31,7 +31,7 @@ class InvoiceDatesDataBuilder
     }
 
     /**
-     * Initializes a new invoice dates data Builder object.
+     * Initializes a new Invoice Dates Data Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class InvoiceDatesDataBuilder
     }
 
     /**
-     * Sets invoice numbers field.
+     * Sets Invoice Numbers field.
+     *
+     * @param string[]|null $value
      */
     public function invoiceNumbers(?array $value): self
     {
@@ -48,7 +50,9 @@ class InvoiceDatesDataBuilder
     }
 
     /**
-     * Sets invoice dates field.
+     * Sets Invoice Dates field.
+     *
+     * @param string[]|null $value
      */
     public function invoiceDates(?array $value): self
     {
@@ -57,7 +61,7 @@ class InvoiceDatesDataBuilder
     }
 
     /**
-     * Initializes a new invoice dates data object.
+     * Initializes a new Invoice Dates Data object.
      */
     public function build(): InvoiceDatesData
     {

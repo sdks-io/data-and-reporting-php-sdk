@@ -31,7 +31,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Initializes a new fee rule product Builder object.
+     * Initializes a new Fee Rule Product Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -48,7 +50,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -57,7 +59,9 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -66,7 +70,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -75,7 +79,9 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -84,7 +90,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -93,7 +99,9 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -102,7 +110,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -111,7 +119,9 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -120,7 +130,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -129,7 +139,7 @@ class FeeRuleProductBuilder
     }
 
     /**
-     * Initializes a new fee rule product object.
+     * Initializes a new Fee Rule Product object.
      */
     public function build(): FeeRuleProduct
     {

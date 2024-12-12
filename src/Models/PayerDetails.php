@@ -520,7 +520,7 @@ class PayerDetails implements \JsonSerializable
     private $hasActiveVolBasedAssociationBonus;
 
     /**
-     * @var FinanceCurrency2|null
+     * @var FinanceCurrency|null
      */
     private $financeCurrency;
 
@@ -3763,18 +3763,22 @@ class PayerDetails implements \JsonSerializable
 
     /**
      * Returns Finance Currency.
+     * This entity will not be present in the response if the ‘IncludeFinanceCurrency’ flag in the request
+     * is ‘false’
      */
-    public function getFinanceCurrency(): ?FinanceCurrency2
+    public function getFinanceCurrency(): ?FinanceCurrency
     {
         return $this->financeCurrency;
     }
 
     /**
      * Sets Finance Currency.
+     * This entity will not be present in the response if the ‘IncludeFinanceCurrency’ flag in the request
+     * is ‘false’
      *
      * @maps FinanceCurrency
      */
-    public function setFinanceCurrency(?FinanceCurrency2 $financeCurrency): void
+    public function setFinanceCurrency(?FinanceCurrency $financeCurrency): void
     {
         $this->financeCurrency = $financeCurrency;
     }

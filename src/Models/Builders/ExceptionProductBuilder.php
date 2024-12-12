@@ -31,7 +31,7 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Initializes a new exception product Builder object.
+     * Initializes a new Exception Product Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Sets productid field.
+     * Sets Productid field.
+     *
+     * @param int|null $value
      */
     public function productid(?int $value): self
     {
@@ -48,7 +50,7 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Unsets productid field.
+     * Unsets Productid field.
      */
     public function unsetProductid(): self
     {
@@ -57,7 +59,9 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -66,7 +70,7 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -75,7 +79,7 @@ class ExceptionProductBuilder
     }
 
     /**
-     * Initializes a new exception product object.
+     * Initializes a new Exception Product object.
      */
     public function build(): ExceptionProduct
     {

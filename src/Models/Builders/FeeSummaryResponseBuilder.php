@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\FeeItemSummaryAllOf0;
 use ShellDataReportingAPIsLib\Models\FeeSummaryResponse;
 
 /**
@@ -32,7 +33,7 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new fee summary response Builder object.
+     * Initializes a new Fee Summary Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Sets fee items summary field.
+     * Sets Fee Items Summary field.
+     *
+     * @param FeeItemSummaryAllOf0[]|null $value
      */
     public function feeItemsSummary(?array $value): self
     {
@@ -49,7 +52,9 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -58,7 +63,9 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -67,7 +74,7 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new fee summary response object.
+     * Initializes a new Fee Summary Response object.
      */
     public function build(): FeeSummaryResponse
     {

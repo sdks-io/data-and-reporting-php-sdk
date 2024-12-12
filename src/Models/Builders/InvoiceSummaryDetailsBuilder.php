@@ -31,7 +31,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Initializes a new invoice summary details Builder object.
+     * Initializes a new Invoice Summary Details Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets total invoices field.
+     * Sets Total Invoices field.
+     *
+     * @param int|null $value
      */
     public function totalInvoices(?int $value): self
     {
@@ -48,7 +50,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets total invoices field.
+     * Unsets Total Invoices field.
      */
     public function unsetTotalInvoices(): self
     {
@@ -57,7 +59,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets total gross amount customer currency field.
+     * Sets Total Gross Amount Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function totalGrossAmountCustomerCurrency(?float $value): self
     {
@@ -66,7 +70,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets total gross amount customer currency field.
+     * Unsets Total Gross Amount Customer Currency field.
      */
     public function unsetTotalGrossAmountCustomerCurrency(): self
     {
@@ -75,7 +79,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets total net amount customer currency field.
+     * Sets Total Net Amount Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function totalNetAmountCustomerCurrency(?float $value): self
     {
@@ -84,7 +90,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets total net amount customer currency field.
+     * Unsets Total Net Amount Customer Currency field.
      */
     public function unsetTotalNetAmountCustomerCurrency(): self
     {
@@ -93,7 +99,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets total vatamount customer currency field.
+     * Sets Total VAT Amount Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function totalVATAmountCustomerCurrency(?float $value): self
     {
@@ -102,7 +110,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets total vatamount customer currency field.
+     * Unsets Total VAT Amount Customer Currency field.
      */
     public function unsetTotalVATAmountCustomerCurrency(): self
     {
@@ -111,7 +119,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets customer currency code field.
+     * Sets Customer Currency Code field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencyCode(?string $value): self
     {
@@ -120,7 +130,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets customer currency code field.
+     * Unsets Customer Currency Code field.
      */
     public function unsetCustomerCurrencyCode(): self
     {
@@ -129,7 +139,9 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Sets customer currency symbol field.
+     * Sets Customer Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencySymbol(?string $value): self
     {
@@ -138,7 +150,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Unsets customer currency symbol field.
+     * Unsets Customer Currency Symbol field.
      */
     public function unsetCustomerCurrencySymbol(): self
     {
@@ -147,7 +159,7 @@ class InvoiceSummaryDetailsBuilder
     }
 
     /**
-     * Initializes a new invoice summary details object.
+     * Initializes a new Invoice Summary Details object.
      */
     public function build(): InvoiceSummaryDetails
     {

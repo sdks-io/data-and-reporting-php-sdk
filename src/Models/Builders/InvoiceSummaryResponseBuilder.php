@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\InvoiceSummaryDetails;
 use ShellDataReportingAPIsLib\Models\InvoiceSummaryResponse;
 
 /**
@@ -31,7 +32,7 @@ class InvoiceSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new invoice summary response Builder object.
+     * Initializes a new Invoice Summary Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class InvoiceSummaryResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class InvoiceSummaryResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class InvoiceSummaryResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param InvoiceSummaryDetails[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,7 @@ class InvoiceSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new invoice summary response object.
+     * Initializes a new Invoice Summary Response object.
      */
     public function build(): InvoiceSummaryResponse
     {

@@ -31,7 +31,7 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Initializes a new fee rule tier Builder object.
+     * Initializes a new Fee Rule Tier Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Sets tier minimum field.
+     * Sets Tier Minimum field.
+     *
+     * @param int|null $value
      */
     public function tierMinimum(?int $value): self
     {
@@ -48,7 +50,7 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Unsets tier minimum field.
+     * Unsets Tier Minimum field.
      */
     public function unsetTierMinimum(): self
     {
@@ -57,7 +59,9 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Sets value field.
+     * Sets Value field.
+     *
+     * @param float|null $value
      */
     public function value(?float $value): self
     {
@@ -66,7 +70,7 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Unsets value field.
+     * Unsets Value field.
      */
     public function unsetValue(): self
     {
@@ -75,7 +79,9 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Sets tier maximum field.
+     * Sets Tier Maximum field.
+     *
+     * @param int|null $value
      */
     public function tierMaximum(?int $value): self
     {
@@ -84,7 +90,7 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Unsets tier maximum field.
+     * Unsets Tier Maximum field.
      */
     public function unsetTierMaximum(): self
     {
@@ -93,7 +99,7 @@ class FeeRuleTierBuilder
     }
 
     /**
-     * Initializes a new fee rule tier object.
+     * Initializes a new Fee Rule Tier object.
      */
     public function build(): FeeRuleTier
     {

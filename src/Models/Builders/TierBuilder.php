@@ -31,7 +31,7 @@ class TierBuilder
     }
 
     /**
-     * Initializes a new tier Builder object.
+     * Initializes a new Tier Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class TierBuilder
     }
 
     /**
-     * Sets tier price list id field.
+     * Sets Tier Price List Id field.
+     *
+     * @param int|null $value
      */
     public function tierPriceListId(?int $value): self
     {
@@ -48,7 +50,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets tier price list id field.
+     * Unsets Tier Price List Id field.
      */
     public function unsetTierPriceListId(): self
     {
@@ -57,7 +59,9 @@ class TierBuilder
     }
 
     /**
-     * Sets price list description field.
+     * Sets Price List Description field.
+     *
+     * @param string|null $value
      */
     public function priceListDescription(?string $value): self
     {
@@ -66,7 +70,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets price list description field.
+     * Unsets Price List Description field.
      */
     public function unsetPriceListDescription(): self
     {
@@ -75,7 +79,9 @@ class TierBuilder
     }
 
     /**
-     * Sets tier min field.
+     * Sets Tier Min field.
+     *
+     * @param int|null $value
      */
     public function tierMin(?int $value): self
     {
@@ -84,7 +90,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets tier min field.
+     * Unsets Tier Min field.
      */
     public function unsetTierMin(): self
     {
@@ -93,7 +99,9 @@ class TierBuilder
     }
 
     /**
-     * Sets tier max field.
+     * Sets Tier Max field.
+     *
+     * @param int|null $value
      */
     public function tierMax(?int $value): self
     {
@@ -102,7 +110,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets tier max field.
+     * Unsets Tier Max field.
      */
     public function unsetTierMax(): self
     {
@@ -111,7 +119,9 @@ class TierBuilder
     }
 
     /**
-     * Sets tiered pricing group name field.
+     * Sets Tiered Pricing Group Name field.
+     *
+     * @param string|null $value
      */
     public function tieredPricingGroupName(?string $value): self
     {
@@ -120,7 +130,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets tiered pricing group name field.
+     * Unsets Tiered Pricing Group Name field.
      */
     public function unsetTieredPricingGroupName(): self
     {
@@ -129,7 +139,9 @@ class TierBuilder
     }
 
     /**
-     * Sets tiered pricing group period field.
+     * Sets Tiered Pricing Group Period field.
+     *
+     * @param string|null $value
      */
     public function tieredPricingGroupPeriod(?string $value): self
     {
@@ -138,7 +150,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets tiered pricing group period field.
+     * Unsets Tiered Pricing Group Period field.
      */
     public function unsetTieredPricingGroupPeriod(): self
     {
@@ -147,7 +159,9 @@ class TierBuilder
     }
 
     /**
-     * Sets discount value field.
+     * Sets Discount Value field.
+     *
+     * @param float|null $value
      */
     public function discountValue(?float $value): self
     {
@@ -156,7 +170,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets discount value field.
+     * Unsets Discount Value field.
      */
     public function unsetDiscountValue(): self
     {
@@ -165,7 +179,9 @@ class TierBuilder
     }
 
     /**
-     * Sets price per unit field.
+     * Sets Price Per Unit field.
+     *
+     * @param float|null $value
      */
     public function pricePerUnit(?float $value): self
     {
@@ -174,7 +190,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets price per unit field.
+     * Unsets Price Per Unit field.
      */
     public function unsetPricePerUnit(): self
     {
@@ -183,7 +199,9 @@ class TierBuilder
     }
 
     /**
-     * Sets price per unit after discount field.
+     * Sets Price Per Unit After Discount field.
+     *
+     * @param float|null $value
      */
     public function pricePerUnitAfterDiscount(?float $value): self
     {
@@ -192,7 +210,7 @@ class TierBuilder
     }
 
     /**
-     * Unsets price per unit after discount field.
+     * Unsets Price Per Unit After Discount field.
      */
     public function unsetPricePerUnitAfterDiscount(): self
     {
@@ -201,7 +219,7 @@ class TierBuilder
     }
 
     /**
-     * Initializes a new tier object.
+     * Initializes a new Tier object.
      */
     public function build(): Tier
     {

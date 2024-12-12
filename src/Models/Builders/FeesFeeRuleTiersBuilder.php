@@ -31,7 +31,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Initializes a new fees fee rule tiers Builder object.
+     * Initializes a new Fees Fee Rule Tiers Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets tier min field.
+     * Sets Tier Min field.
+     *
+     * @param int|null $value
      */
     public function tierMin(?int $value): self
     {
@@ -48,7 +50,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets tier min field.
+     * Unsets Tier Min field.
      */
     public function unsetTierMin(): self
     {
@@ -57,7 +59,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets tier max field.
+     * Sets Tier Max field.
+     *
+     * @param int|null $value
      */
     public function tierMax(?int $value): self
     {
@@ -66,7 +70,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets tier max field.
+     * Unsets Tier Max field.
      */
     public function unsetTierMax(): self
     {
@@ -75,7 +79,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets date effective field.
+     * Sets Date Effective field.
+     *
+     * @param string|null $value
      */
     public function dateEffective(?string $value): self
     {
@@ -84,7 +90,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets date effective field.
+     * Unsets Date Effective field.
      */
     public function unsetDateEffective(): self
     {
@@ -93,7 +99,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets date terminated field.
+     * Sets Date Terminated field.
+     *
+     * @param string|null $value
      */
     public function dateTerminated(?string $value): self
     {
@@ -102,7 +110,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets date terminated field.
+     * Unsets Date Terminated field.
      */
     public function unsetDateTerminated(): self
     {
@@ -111,7 +119,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets tier value field.
+     * Sets Tier Value field.
+     *
+     * @param float|null $value
      */
     public function tierValue(?float $value): self
     {
@@ -120,7 +130,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets tier value field.
+     * Unsets Tier Value field.
      */
     public function unsetTierValue(): self
     {
@@ -129,7 +139,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets fee rule basis id field.
+     * Sets Fee Rule Basis ID field.
+     *
+     * @param int|null $value
      */
     public function feeRuleBasisID(?int $value): self
     {
@@ -138,7 +150,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets fee rule basis id field.
+     * Unsets Fee Rule Basis ID field.
      */
     public function unsetFeeRuleBasisID(): self
     {
@@ -147,7 +159,9 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Sets fee rule basis description field.
+     * Sets Fee Rule Basis Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleBasisDescription(?string $value): self
     {
@@ -156,7 +170,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Unsets fee rule basis description field.
+     * Unsets Fee Rule Basis Description field.
      */
     public function unsetFeeRuleBasisDescription(): self
     {
@@ -165,7 +179,7 @@ class FeesFeeRuleTiersBuilder
     }
 
     /**
-     * Initializes a new fees fee rule tiers object.
+     * Initializes a new Fees Fee Rule Tiers object.
      */
     public function build(): FeesFeeRuleTiers
     {

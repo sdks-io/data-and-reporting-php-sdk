@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\FuelConsumptionData;
 use ShellDataReportingAPIsLib\Models\FuelConsumptionResponse;
 
 /**
@@ -32,7 +33,7 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Initializes a new fuel consumption response Builder object.
+     * Initializes a new Fuel Consumption Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Sets fuel consumption field.
+     * Sets Fuel Consumption field.
+     *
+     * @param FuelConsumptionData[]|null $value
      */
     public function fuelConsumption(?array $value): self
     {
@@ -49,7 +52,9 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -58,7 +63,9 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -67,7 +74,7 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Initializes a new fuel consumption response object.
+     * Initializes a new Fuel Consumption Response object.
      */
     public function build(): FuelConsumptionResponse
     {

@@ -31,7 +31,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Initializes a new past statement of accounts Builder object.
+     * Initializes a new Past Statement Of Accounts Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets amount due field.
+     * Sets Amount Due field.
+     *
+     * @param float|null $value
      */
     public function amountDue(?float $value): self
     {
@@ -48,7 +50,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets amount due field.
+     * Unsets Amount Due field.
      */
     public function unsetAmountDue(): self
     {
@@ -57,7 +59,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets amount not overdue field.
+     * Sets Amount Not Overdue field.
+     *
+     * @param float|null $value
      */
     public function amountNotOverdue(?float $value): self
     {
@@ -66,7 +70,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets amount not overdue field.
+     * Unsets Amount Not Overdue field.
      */
     public function unsetAmountNotOverdue(): self
     {
@@ -75,7 +79,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets amount overdue field.
+     * Sets Amount Overdue field.
+     *
+     * @param float|null $value
      */
     public function amountOverdue(?float $value): self
     {
@@ -84,7 +90,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets amount overdue field.
+     * Unsets Amount Overdue field.
      */
     public function unsetAmountOverdue(): self
     {
@@ -93,7 +99,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets amount overdue from unallocated field.
+     * Sets Amount Overdue From Unallocated field.
+     *
+     * @param float|null $value
      */
     public function amountOverdueFromUnallocated(?float $value): self
     {
@@ -102,7 +110,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets amount overdue from unallocated field.
+     * Unsets Amount Overdue From Unallocated field.
      */
     public function unsetAmountOverdueFromUnallocated(): self
     {
@@ -111,7 +119,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets amount paid field.
+     * Sets Amount Paid field.
+     *
+     * @param float|null $value
      */
     public function amountPaid(?float $value): self
     {
@@ -120,7 +130,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets amount paid field.
+     * Unsets Amount Paid field.
      */
     public function unsetAmountPaid(): self
     {
@@ -129,7 +139,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets balance on this statement field.
+     * Sets Balance On This Statement field.
+     *
+     * @param float|null $value
      */
     public function balanceOnThisStatement(?float $value): self
     {
@@ -138,7 +150,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets balance on this statement field.
+     * Unsets Balance On This Statement field.
      */
     public function unsetBalanceOnThisStatement(): self
     {
@@ -147,7 +159,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets billing currency code field.
+     * Sets Billing Currency Code field.
+     *
+     * @param string|null $value
      */
     public function billingCurrencyCode(?string $value): self
     {
@@ -156,7 +170,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets billing currency code field.
+     * Unsets Billing Currency Code field.
      */
     public function unsetBillingCurrencyCode(): self
     {
@@ -165,7 +179,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets billing currency symbol field.
+     * Sets Billing Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function billingCurrencySymbol(?string $value): self
     {
@@ -174,7 +190,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets billing currency symbol field.
+     * Unsets Billing Currency Symbol field.
      */
     public function unsetBillingCurrencySymbol(): self
     {
@@ -183,7 +199,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets credit limit field.
+     * Sets Credit Limit field.
+     *
+     * @param float|null $value
      */
     public function creditLimit(?float $value): self
     {
@@ -192,7 +210,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets credit limit field.
+     * Unsets Credit Limit field.
      */
     public function unsetCreditLimit(): self
     {
@@ -201,7 +219,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets credit limit currency code field.
+     * Sets Credit Limit Currency Code field.
+     *
+     * @param string|null $value
      */
     public function creditLimitCurrencyCode(?string $value): self
     {
@@ -210,7 +230,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets credit limit currency code field.
+     * Unsets Credit Limit Currency Code field.
      */
     public function unsetCreditLimitCurrencyCode(): self
     {
@@ -219,7 +239,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets credit limit currency symbol field.
+     * Sets Credit Limit Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function creditLimitCurrencySymbol(?string $value): self
     {
@@ -228,7 +250,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets credit limit currency symbol field.
+     * Unsets Credit Limit Currency Symbol field.
      */
     public function unsetCreditLimitCurrencySymbol(): self
     {
@@ -237,7 +259,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets credit limit in customer currency field.
+     * Sets Credit Limit In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function creditLimitInCustomerCurrency(?float $value): self
     {
@@ -246,7 +270,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets credit limit in customer currency field.
+     * Unsets Credit Limit In Customer Currency field.
      */
     public function unsetCreditLimitInCustomerCurrency(): self
     {
@@ -255,7 +279,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -264,7 +290,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -273,7 +299,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -282,7 +310,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -291,7 +319,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets fully paid field.
+     * Sets Fully Paid field.
+     *
+     * @param bool|null $value
      */
     public function fullyPaid(?bool $value): self
     {
@@ -300,7 +330,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets fully paid field.
+     * Unsets Fully Paid field.
      */
     public function unsetFullyPaid(): self
     {
@@ -309,7 +339,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets last payment currency code field.
+     * Sets Last Payment Currency Code field.
+     *
+     * @param string|null $value
      */
     public function lastPaymentCurrencyCode(?string $value): self
     {
@@ -318,7 +350,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets last payment currency code field.
+     * Unsets Last Payment Currency Code field.
      */
     public function unsetLastPaymentCurrencyCode(): self
     {
@@ -327,7 +359,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets last payment currency symbol field.
+     * Sets Last Payment Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function lastPaymentCurrencySymbol(?string $value): self
     {
@@ -336,7 +370,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets last payment currency symbol field.
+     * Unsets Last Payment Currency Symbol field.
      */
     public function unsetLastPaymentCurrencySymbol(): self
     {
@@ -345,7 +379,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets last payment date field.
+     * Sets Last Payment Date field.
+     *
+     * @param string|null $value
      */
     public function lastPaymentDate(?string $value): self
     {
@@ -354,7 +390,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets last payment date field.
+     * Unsets Last Payment Date field.
      */
     public function unsetLastPaymentDate(): self
     {
@@ -363,7 +399,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets last payment value field.
+     * Sets Last Payment Value field.
+     *
+     * @param float|null $value
      */
     public function lastPaymentValue(?float $value): self
     {
@@ -372,7 +410,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets last payment value field.
+     * Unsets Last Payment Value field.
      */
     public function unsetLastPaymentValue(): self
     {
@@ -381,7 +419,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets outstanding balance field.
+     * Sets Outstanding Balance field.
+     *
+     * @param float|null $value
      */
     public function outstandingBalance(?float $value): self
     {
@@ -390,7 +430,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets outstanding balance field.
+     * Unsets Outstanding Balance field.
      */
     public function unsetOutstandingBalance(): self
     {
@@ -399,7 +439,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -408,7 +450,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -417,7 +459,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -426,7 +470,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -435,7 +479,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets payment due date field.
+     * Sets Payment Due Date field.
+     *
+     * @param string|null $value
      */
     public function paymentDueDate(?string $value): self
     {
@@ -444,7 +490,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets payment due date field.
+     * Unsets Payment Due Date field.
      */
     public function unsetPaymentDueDate(): self
     {
@@ -453,7 +499,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets so areference number field.
+     * Sets So A Reference Number field.
+     *
+     * @param string|null $value
      */
     public function soAReferenceNumber(?string $value): self
     {
@@ -462,7 +510,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets so areference number field.
+     * Unsets So A Reference Number field.
      */
     public function unsetSoAReferenceNumber(): self
     {
@@ -471,7 +519,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets statement date field.
+     * Sets Statement Date field.
+     *
+     * @param string|null $value
      */
     public function statementDate(?string $value): self
     {
@@ -480,7 +530,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets statement date field.
+     * Unsets Statement Date field.
      */
     public function unsetStatementDate(): self
     {
@@ -489,7 +539,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets statement of account id field.
+     * Sets Statement Of Account Id field.
+     *
+     * @param int|null $value
      */
     public function statementOfAccountId(?int $value): self
     {
@@ -498,7 +550,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets statement of account id field.
+     * Unsets Statement Of Account Id field.
      */
     public function unsetStatementOfAccountId(): self
     {
@@ -507,7 +559,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets total billing documents field.
+     * Sets Total Billing Documents field.
+     *
+     * @param int|null $value
      */
     public function totalBillingDocuments(?int $value): self
     {
@@ -516,7 +570,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets total billing documents field.
+     * Unsets Total Billing Documents field.
      */
     public function unsetTotalBillingDocuments(): self
     {
@@ -525,7 +579,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets total net amount billing currency field.
+     * Sets Total Net Amount Billing Currency field.
+     *
+     * @param float|null $value
      */
     public function totalNetAmountBillingCurrency(?float $value): self
     {
@@ -534,7 +590,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets total net amount billing currency field.
+     * Unsets Total Net Amount Billing Currency field.
      */
     public function unsetTotalNetAmountBillingCurrency(): self
     {
@@ -543,7 +599,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets total summary billing documents field.
+     * Sets Total Summary Billing Documents field.
+     *
+     * @param float|null $value
      */
     public function totalSummaryBillingDocuments(?float $value): self
     {
@@ -552,7 +610,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets total summary billing documents field.
+     * Unsets Total Summary Billing Documents field.
      */
     public function unsetTotalSummaryBillingDocuments(): self
     {
@@ -561,7 +619,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets total vatamount billing currency field.
+     * Sets Total VAT Amount Billing Currency field.
+     *
+     * @param float|null $value
      */
     public function totalVATAmountBillingCurrency(?float $value): self
     {
@@ -570,7 +630,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets total vatamount billing currency field.
+     * Unsets Total VAT Amount Billing Currency field.
      */
     public function unsetTotalVATAmountBillingCurrency(): self
     {
@@ -579,7 +639,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets unallocated payment field.
+     * Sets Unallocated Payment field.
+     *
+     * @param float|null $value
      */
     public function unallocatedPayment(?float $value): self
     {
@@ -588,7 +650,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets unallocated payment field.
+     * Unsets Unallocated Payment field.
      */
     public function unsetUnallocatedPayment(): self
     {
@@ -597,7 +659,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets local currency code field.
+     * Sets Local Currency Code field.
+     *
+     * @param string|null $value
      */
     public function localCurrencyCode(?string $value): self
     {
@@ -606,7 +670,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets local currency code field.
+     * Unsets Local Currency Code field.
      */
     public function unsetLocalCurrencyCode(): self
     {
@@ -615,7 +679,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets local currency symbol field.
+     * Sets Local Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function localCurrencySymbol(?string $value): self
     {
@@ -624,7 +690,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets local currency symbol field.
+     * Unsets Local Currency Symbol field.
      */
     public function unsetLocalCurrencySymbol(): self
     {
@@ -633,7 +699,9 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Sets local currency exchange rate field.
+     * Sets Local Currency Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function localCurrencyExchangeRate(?float $value): self
     {
@@ -642,7 +710,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Unsets local currency exchange rate field.
+     * Unsets Local Currency Exchange Rate field.
      */
     public function unsetLocalCurrencyExchangeRate(): self
     {
@@ -651,7 +719,7 @@ class PastStatementOfAccountsBuilder
     }
 
     /**
-     * Initializes a new past statement of accounts object.
+     * Initializes a new Past Statement Of Accounts object.
      */
     public function build(): PastStatementOfAccounts
     {

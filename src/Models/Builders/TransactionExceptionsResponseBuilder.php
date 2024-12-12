@@ -11,7 +11,9 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\CardExceptions;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
+use ShellDataReportingAPIsLib\Models\TransactionExceptions;
 use ShellDataReportingAPIsLib\Models\TransactionExceptionsResponse;
 
 /**
@@ -32,7 +34,7 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions response Builder object.
+     * Initializes a new Transaction Exceptions Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +42,9 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Sets card exceptions field.
+     * Sets Card Exceptions field.
+     *
+     * @param CardExceptions[]|null $value
      */
     public function cardExceptions(?array $value): self
     {
@@ -49,7 +53,9 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Sets transaction exceptions field.
+     * Sets Transaction Exceptions field.
+     *
+     * @param TransactionExceptions[]|null $value
      */
     public function transactionExceptions(?array $value): self
     {
@@ -58,7 +64,7 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Unsets transaction exceptions field.
+     * Unsets Transaction Exceptions field.
      */
     public function unsetTransactionExceptions(): self
     {
@@ -67,7 +73,9 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -76,7 +84,9 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -85,7 +95,7 @@ class TransactionExceptionsResponseBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions response object.
+     * Initializes a new Transaction Exceptions Response object.
      */
     public function build(): TransactionExceptionsResponse
     {

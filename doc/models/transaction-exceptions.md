@@ -50,7 +50,7 @@
 | `siteCode` | `?string` | Optional | Site Code | getSiteCode(): ?string | setSiteCode(?string siteCode): void |
 | `siteName` | `?string` | Optional | Site Name | getSiteName(): ?string | setSiteName(?string siteName): void |
 | `siteCountry` | `?string` | Optional | Site Country | getSiteCountry(): ?string | setSiteCountry(?string siteCountry): void |
-| `location` | [`?Location`](../../doc/models/location.md) | Optional | - | getLocation(): ?Location | setLocation(?Location location): void |
+| `location` | [`?ExceptionSiteLocation`](../../doc/models/exception-site-location.md) | Optional | Geography Location entity for Site Location | getLocation(): ?ExceptionSiteLocation | setLocation(?ExceptionSiteLocation location): void |
 | `cardGroupName` | `?string` | Optional | Card Group Name | getCardGroupName(): ?string | setCardGroupName(?string cardGroupName): void |
 | `receiptNumber` | `?string` | Optional | Receipt Number | getReceiptNumber(): ?string | setReceiptNumber(?string receiptNumber): void |
 | `productCode` | `?string` | Optional | Product Code | getProductCode(): ?string | setProductCode(?string productCode): void |

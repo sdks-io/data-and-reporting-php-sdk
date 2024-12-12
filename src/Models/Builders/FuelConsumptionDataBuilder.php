@@ -31,7 +31,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Initializes a new fuel consumption data Builder object.
+     * Initializes a new Fuel Consumption Data Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets account name field.
+     * Sets Account Name field.
+     *
+     * @param string|null $value
      */
     public function accountName(?string $value): self
     {
@@ -48,7 +50,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets account name field.
+     * Unsets Account Name field.
      */
     public function unsetAccountName(): self
     {
@@ -57,7 +59,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -75,7 +79,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -84,7 +90,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -93,7 +99,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -102,7 +110,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -111,7 +119,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets card number field.
+     * Sets Card Number field.
+     *
+     * @param string|null $value
      */
     public function cardNumber(?string $value): self
     {
@@ -120,7 +130,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets card number field.
+     * Unsets Card Number field.
      */
     public function unsetCardNumber(): self
     {
@@ -129,7 +139,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -138,7 +150,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -147,7 +159,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -156,7 +170,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets card group name field.
+     * Unsets Card Group Name field.
      */
     public function unsetCardGroupName(): self
     {
@@ -165,7 +179,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -174,7 +190,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -183,7 +199,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets license number field.
+     * Sets License Number field.
+     *
+     * @param string|null $value
      */
     public function licenseNumber(?string $value): self
     {
@@ -192,7 +210,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets license number field.
+     * Unsets License Number field.
      */
     public function unsetLicenseNumber(): self
     {
@@ -201,7 +219,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets initial odometer field.
+     * Sets Initial Odometer field.
+     *
+     * @param float|null $value
      */
     public function initialOdometer(?float $value): self
     {
@@ -210,7 +230,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets initial odometer field.
+     * Unsets Initial Odometer field.
      */
     public function unsetInitialOdometer(): self
     {
@@ -219,7 +239,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets last odometer field.
+     * Sets Last Odometer field.
+     *
+     * @param float|null $value
      */
     public function lastOdometer(?float $value): self
     {
@@ -228,7 +250,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets last odometer field.
+     * Unsets Last Odometer field.
      */
     public function unsetLastOdometer(): self
     {
@@ -237,7 +259,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets distance field.
+     * Sets Distance field.
+     *
+     * @param float|null $value
      */
     public function distance(?float $value): self
     {
@@ -246,7 +270,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets distance field.
+     * Unsets Distance field.
      */
     public function unsetDistance(): self
     {
@@ -255,7 +279,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets fuel consumption field.
+     * Sets Fuel Consumption field.
+     *
+     * @param float|null $value
      */
     public function fuelConsumption(?float $value): self
     {
@@ -264,7 +290,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets fuel consumption field.
+     * Unsets Fuel Consumption field.
      */
     public function unsetFuelConsumption(): self
     {
@@ -273,7 +299,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets fuel net amount field.
+     * Sets Fuel Net Amount field.
+     *
+     * @param float|null $value
      */
     public function fuelNetAmount(?float $value): self
     {
@@ -282,7 +310,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets fuel net amount field.
+     * Unsets Fuel Net Amount field.
      */
     public function unsetFuelNetAmount(): self
     {
@@ -291,7 +319,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets discount field.
+     * Sets Discount field.
+     *
+     * @param float|null $value
      */
     public function discount(?float $value): self
     {
@@ -300,7 +330,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets discount field.
+     * Unsets Discount field.
      */
     public function unsetDiscount(): self
     {
@@ -309,7 +339,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets fuel tax field.
+     * Sets Fuel Tax field.
+     *
+     * @param float|null $value
      */
     public function fuelTax(?float $value): self
     {
@@ -318,7 +350,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets fuel tax field.
+     * Unsets Fuel Tax field.
      */
     public function unsetFuelTax(): self
     {
@@ -327,7 +359,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets fuel volume field.
+     * Sets Fuel Volume field.
+     *
+     * @param float|null $value
      */
     public function fuelVolume(?float $value): self
     {
@@ -336,7 +370,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets fuel volume field.
+     * Unsets Fuel Volume field.
      */
     public function unsetFuelVolume(): self
     {
@@ -345,7 +379,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets gross non fuel expenses field.
+     * Sets Gross Non Fuel Expenses field.
+     *
+     * @param float|null $value
      */
     public function grossNonFuelExpenses(?float $value): self
     {
@@ -354,7 +390,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets gross non fuel expenses field.
+     * Unsets Gross Non Fuel Expenses field.
      */
     public function unsetGrossNonFuelExpenses(): self
     {
@@ -363,7 +399,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets co2 produced field.
+     * Sets CO2 Produced field.
+     *
+     * @param float|null $value
      */
     public function cO2Produced(?float $value): self
     {
@@ -372,7 +410,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets co2 produced field.
+     * Unsets CO2 Produced field.
      */
     public function unsetCO2Produced(): self
     {
@@ -381,7 +419,9 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Sets transaction count field.
+     * Sets Transaction Count field.
+     *
+     * @param float|null $value
      */
     public function transactionCount(?float $value): self
     {
@@ -390,7 +430,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Unsets transaction count field.
+     * Unsets Transaction Count field.
      */
     public function unsetTransactionCount(): self
     {
@@ -399,7 +439,7 @@ class FuelConsumptionDataBuilder
     }
 
     /**
-     * Initializes a new fuel consumption data object.
+     * Initializes a new Fuel Consumption Data object.
      */
     public function build(): FuelConsumptionData
     {

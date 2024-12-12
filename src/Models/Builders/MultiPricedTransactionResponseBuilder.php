@@ -13,6 +13,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponse;
+use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponseTransactionsItems;
 
 /**
  * Builder for model MultiPricedTransactionResponse
@@ -32,7 +33,7 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction response Builder object.
+     * Initializes a new Multi Priced Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets transactions field.
+     * Sets Transactions field.
+     *
+     * @param MultiPricedTransactionResponseTransactionsItems[]|null $value
      */
     public function transactions(?array $value): self
     {
@@ -49,7 +52,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets error field.
+     * Sets Error field.
+     *
+     * @param ErrorStatus|null $value
      */
     public function error(?ErrorStatus $value): self
     {
@@ -58,7 +63,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -67,7 +74,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets current page field.
+     * Sets Current Page field.
+     *
+     * @param int|null $value
      */
     public function currentPage(?int $value): self
     {
@@ -76,7 +85,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets row count field.
+     * Sets Row Count field.
+     *
+     * @param int|null $value
      */
     public function rowCount(?int $value): self
     {
@@ -85,7 +96,9 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -94,7 +107,7 @@ class MultiPricedTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new multi priced transaction response object.
+     * Initializes a new Multi Priced Transaction Response object.
      */
     public function build(): MultiPricedTransactionResponse
     {

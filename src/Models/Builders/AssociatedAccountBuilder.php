@@ -31,7 +31,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Initializes a new associated account Builder object.
+     * Initializes a new Associated Account Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Sets associated account id field.
+     * Sets Associated Account Id field.
+     *
+     * @param int|null $value
      */
     public function associatedAccountId(?int $value): self
     {
@@ -48,7 +50,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Unsets associated account id field.
+     * Unsets Associated Account Id field.
      */
     public function unsetAssociatedAccountId(): self
     {
@@ -57,7 +59,9 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Sets associated account number field.
+     * Sets Associated Account Number field.
+     *
+     * @param string|null $value
      */
     public function associatedAccountNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Unsets associated account number field.
+     * Unsets Associated Account Number field.
      */
     public function unsetAssociatedAccountNumber(): self
     {
@@ -75,7 +79,9 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Sets associated account short name field.
+     * Sets Associated Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function associatedAccountShortName(?string $value): self
     {
@@ -84,7 +90,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Unsets associated account short name field.
+     * Unsets Associated Account Short Name field.
      */
     public function unsetAssociatedAccountShortName(): self
     {
@@ -93,7 +99,9 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Sets associated account full name field.
+     * Sets Associated Account Full Name field.
+     *
+     * @param string|null $value
      */
     public function associatedAccountFullName(?string $value): self
     {
@@ -102,7 +110,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Unsets associated account full name field.
+     * Unsets Associated Account Full Name field.
      */
     public function unsetAssociatedAccountFullName(): self
     {
@@ -111,7 +119,7 @@ class AssociatedAccountBuilder
     }
 
     /**
-     * Initializes a new associated account object.
+     * Initializes a new Associated Account object.
      */
     public function build(): AssociatedAccount
     {

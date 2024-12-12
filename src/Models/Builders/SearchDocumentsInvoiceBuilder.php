@@ -31,7 +31,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Initializes a new search documents invoice Builder object.
+     * Initializes a new Search Documents Invoice Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets document reference field.
+     * Sets Document Reference field.
+     *
+     * @param int|null $value
      */
     public function documentReference(?int $value): self
     {
@@ -48,7 +50,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -57,7 +61,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -66,7 +70,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -75,7 +81,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -84,7 +90,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -93,7 +101,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -102,7 +110,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets account name field.
+     * Sets Account Name field.
+     *
+     * @param string|null $value
      */
     public function accountName(?string $value): self
     {
@@ -111,7 +121,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets account name field.
+     * Unsets Account Name field.
      */
     public function unsetAccountName(): self
     {
@@ -120,7 +130,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets document type field.
+     * Sets Document Type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -129,7 +141,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets document type field.
+     * Unsets Document Type field.
      */
     public function unsetDocumentType(): self
     {
@@ -138,7 +150,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets gross amount field.
+     * Sets Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function grossAmount(?float $value): self
     {
@@ -147,7 +161,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets gross amount field.
+     * Unsets Gross Amount field.
      */
     public function unsetGrossAmount(): self
     {
@@ -156,7 +170,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets net amount field.
+     * Sets Net Amount field.
+     *
+     * @param float|null $value
      */
     public function netAmount(?float $value): self
     {
@@ -165,7 +181,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets net amount field.
+     * Unsets Net Amount field.
      */
     public function unsetNetAmount(): self
     {
@@ -174,7 +190,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets tax amount field.
+     * Sets Tax Amount field.
+     *
+     * @param float|null $value
      */
     public function taxAmount(?float $value): self
     {
@@ -183,7 +201,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets tax amount field.
+     * Unsets Tax Amount field.
      */
     public function unsetTaxAmount(): self
     {
@@ -192,7 +210,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -201,7 +221,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -210,7 +230,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -219,7 +241,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets invoice status field.
+     * Unsets Invoice Status field.
      */
     public function unsetInvoiceStatus(): self
     {
@@ -228,7 +250,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -237,7 +261,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -246,7 +270,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets due date field.
+     * Sets Due Date field.
+     *
+     * @param string|null $value
      */
     public function dueDate(?string $value): self
     {
@@ -255,7 +281,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets due date field.
+     * Unsets Due Date field.
      */
     public function unsetDueDate(): self
     {
@@ -264,7 +290,9 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets vatcountry isocode field.
+     * Sets VAT Country ISO Code field.
+     *
+     * @param string|null $value
      */
     public function vATCountryISOCode(?string $value): self
     {
@@ -273,7 +301,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Unsets vatcountry isocode field.
+     * Unsets VAT Country ISO Code field.
      */
     public function unsetVATCountryISOCode(): self
     {
@@ -282,7 +310,7 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Initializes a new search documents invoice object.
+     * Initializes a new Search Documents Invoice object.
      */
     public function build(): SearchDocumentsInvoice
     {

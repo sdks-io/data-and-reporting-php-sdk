@@ -31,7 +31,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Initializes a new pricing current volume Builder object.
+     * Initializes a new Pricing Current Volume Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param int|null $value
      */
     public function feeRuleId(?int $value): self
     {
@@ -48,7 +50,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -57,7 +59,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -66,7 +70,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -75,7 +79,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets price rule id field.
+     * Sets Price Rule ID field.
+     *
+     * @param int|null $value
      */
     public function priceRuleID(?int $value): self
     {
@@ -84,7 +90,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets price rule id field.
+     * Unsets Price Rule ID field.
      */
     public function unsetPriceRuleID(): self
     {
@@ -93,7 +99,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets price rule description field.
+     * Sets Price Rule Description field.
+     *
+     * @param string|null $value
      */
     public function priceRuleDescription(?string $value): self
     {
@@ -102,7 +110,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets price rule description field.
+     * Unsets Price Rule Description field.
      */
     public function unsetPriceRuleDescription(): self
     {
@@ -111,7 +119,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets total volume field.
+     * Sets Total Volume field.
+     *
+     * @param float|null $value
      */
     public function totalVolume(?float $value): self
     {
@@ -120,7 +130,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets total volume field.
+     * Unsets Total Volume field.
      */
     public function unsetTotalVolume(): self
     {
@@ -129,7 +139,9 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Sets next fee creation date field.
+     * Sets Next Fee Creation Date field.
+     *
+     * @param string|null $value
      */
     public function nextFeeCreationDate(?string $value): self
     {
@@ -138,7 +150,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Unsets next fee creation date field.
+     * Unsets Next Fee Creation Date field.
      */
     public function unsetNextFeeCreationDate(): self
     {
@@ -147,7 +159,7 @@ class PricingCurrentVolumeBuilder
     }
 
     /**
-     * Initializes a new pricing current volume object.
+     * Initializes a new Pricing Current Volume object.
      */
     public function build(): PricingCurrentVolume
     {

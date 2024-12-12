@@ -32,7 +32,7 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Initializes a new invoice search request Builder object.
+     * Initializes a new Invoice Search Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param InvoiceSearchRequestFilters|null $value
      */
     public function filters(?InvoiceSearchRequestFilters $value): self
     {
@@ -49,7 +51,9 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -58,7 +62,9 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -67,7 +73,9 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Sets sort by field.
+     * Sets Sort By field.
+     *
+     * @param int[]|null $value
      */
     public function sortBy(?array $value): self
     {
@@ -76,7 +84,7 @@ class InvoiceSearchRequestBuilder
     }
 
     /**
-     * Initializes a new invoice search request object.
+     * Initializes a new Invoice Search Request object.
      */
     public function build(): InvoiceSearchRequest
     {

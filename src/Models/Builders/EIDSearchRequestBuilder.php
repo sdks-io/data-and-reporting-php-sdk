@@ -32,7 +32,7 @@ class EIDSearchRequestBuilder
     }
 
     /**
-     * Initializes a new eidsearch request Builder object.
+     * Initializes a new EID Search Request Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class EIDSearchRequestBuilder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param EIDSearchReq|null $value
      */
     public function filters(?EIDSearchReq $value): self
     {
@@ -49,7 +51,9 @@ class EIDSearchRequestBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -58,7 +62,9 @@ class EIDSearchRequestBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -67,7 +73,7 @@ class EIDSearchRequestBuilder
     }
 
     /**
-     * Initializes a new eidsearch request object.
+     * Initializes a new EID Search Request object.
      */
     public function build(): EIDSearchRequest
     {

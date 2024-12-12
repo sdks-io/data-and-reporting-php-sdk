@@ -31,7 +31,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Initializes a new search doc req Builder object.
+     * Initializes a new Search Doc Req Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -48,7 +50,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -57,7 +61,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -66,7 +70,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets account number list field.
+     * Sets Account Number List field.
+     *
+     * @param string[]|null $value
      */
     public function accountNumberList(?array $value): self
     {
@@ -75,7 +81,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -84,7 +92,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -93,7 +101,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets invoice number list field.
+     * Sets Invoice Number List field.
+     *
+     * @param string[]|null $value
      */
     public function invoiceNumberList(?array $value): self
     {
@@ -102,7 +112,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string|null $value
      */
     public function invoiceStatus(?string $value): self
     {
@@ -111,7 +123,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets invoice status field.
+     * Unsets Invoice Status field.
      */
     public function unsetInvoiceStatus(): self
     {
@@ -120,7 +132,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets issuing date from field.
+     * Sets Issuing Date From field.
+     *
+     * @param string|null $value
      */
     public function issuingDateFrom(?string $value): self
     {
@@ -129,7 +143,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets issuing date from field.
+     * Unsets Issuing Date From field.
      */
     public function unsetIssuingDateFrom(): self
     {
@@ -138,7 +152,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets issuing date to field.
+     * Sets Issuing Date To field.
+     *
+     * @param string|null $value
      */
     public function issuingDateTo(?string $value): self
     {
@@ -147,7 +163,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets issuing date to field.
+     * Unsets Issuing Date To field.
      */
     public function unsetIssuingDateTo(): self
     {
@@ -156,7 +172,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets due date from field.
+     * Sets Due Date From field.
+     *
+     * @param string|null $value
      */
     public function dueDateFrom(?string $value): self
     {
@@ -165,7 +183,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets due date from field.
+     * Unsets Due Date From field.
      */
     public function unsetDueDateFrom(): self
     {
@@ -174,7 +192,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets due date to field.
+     * Sets Due Date To field.
+     *
+     * @param string|null $value
      */
     public function dueDateTo(?string $value): self
     {
@@ -183,7 +203,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets due date to field.
+     * Unsets Due Date To field.
      */
     public function unsetDueDateTo(): self
     {
@@ -192,7 +212,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets gross amount field.
+     * Sets Gross Amount field.
+     *
+     * @param string|null $value
      */
     public function grossAmount(?string $value): self
     {
@@ -201,7 +223,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets gross amount field.
+     * Unsets Gross Amount field.
      */
     public function unsetGrossAmount(): self
     {
@@ -210,7 +232,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets gross amount operator field.
+     * Sets Gross Amount Operator field.
+     *
+     * @param string|null $value
      */
     public function grossAmountOperator(?string $value): self
     {
@@ -219,7 +243,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets gross amount operator field.
+     * Unsets Gross Amount Operator field.
      */
     public function unsetGrossAmountOperator(): self
     {
@@ -228,7 +252,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets document type field.
+     * Sets Document Type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -237,7 +263,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets document type field.
+     * Unsets Document Type field.
      */
     public function unsetDocumentType(): self
     {
@@ -246,7 +272,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets vatissuer country field.
+     * Sets VAT Issuer Country field.
+     *
+     * @param string|null $value
      */
     public function vATIssuerCountry(?string $value): self
     {
@@ -255,7 +283,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Unsets vatissuer country field.
+     * Unsets VAT Issuer Country field.
      */
     public function unsetVATIssuerCountry(): self
     {
@@ -264,7 +292,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets sorty by field.
+     * Sets Sorty By field.
+     *
+     * @param string[]|null $value
      */
     public function sortyBy(?array $value): self
     {
@@ -273,7 +303,9 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -282,7 +314,7 @@ class SearchDocReqBuilder
     }
 
     /**
-     * Initializes a new search doc req object.
+     * Initializes a new Search Doc Req object.
      */
     public function build(): SearchDocReq
     {

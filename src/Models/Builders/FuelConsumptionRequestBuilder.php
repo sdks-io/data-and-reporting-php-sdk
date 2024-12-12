@@ -11,6 +11,8 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\Accounts;
+use ShellDataReportingAPIsLib\Models\FuelConsumptionCard;
 use ShellDataReportingAPIsLib\Models\FuelConsumptionRequest;
 
 /**
@@ -31,7 +33,7 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Initializes a new fuel consumption request Builder object.
+     * Initializes a new Fuel Consumption Request Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +41,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -48,7 +52,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -57,7 +63,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -66,7 +74,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -75,7 +85,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets accounts field.
+     * Sets Accounts field.
+     *
+     * @param Accounts[]|null $value
      */
     public function accounts(?array $value): self
     {
@@ -84,7 +96,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -93,7 +107,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -102,7 +118,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets cards field.
+     * Sets Cards field.
+     *
+     * @param FuelConsumptionCard[]|null $value
      */
     public function cards(?array $value): self
     {
@@ -111,7 +129,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -120,7 +140,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -129,7 +151,9 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -138,7 +162,7 @@ class FuelConsumptionRequestBuilder
     }
 
     /**
-     * Initializes a new fuel consumption request object.
+     * Initializes a new Fuel Consumption Request object.
      */
     public function build(): FuelConsumptionRequest
     {

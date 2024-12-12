@@ -31,7 +31,7 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Initializes a new invoice search additional document Builder object.
+     * Initializes a new Invoice Search Additional Document Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Sets reference field.
+     * Sets Reference field.
+     *
+     * @param string|null $value
      */
     public function reference(?string $value): self
     {
@@ -48,7 +50,7 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Unsets reference field.
+     * Unsets Reference field.
      */
     public function unsetReference(): self
     {
@@ -57,7 +59,9 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -66,7 +70,7 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Unsets type field.
+     * Unsets Type field.
      */
     public function unsetType(): self
     {
@@ -75,7 +79,9 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Sets is applicable field.
+     * Sets Is Applicable field.
+     *
+     * @param string|null $value
      */
     public function isApplicable(?string $value): self
     {
@@ -84,7 +90,7 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Unsets is applicable field.
+     * Unsets Is Applicable field.
      */
     public function unsetIsApplicable(): self
     {
@@ -93,7 +99,7 @@ class InvoiceSearchAdditionalDocumentBuilder
     }
 
     /**
-     * Initializes a new invoice search additional document object.
+     * Initializes a new Invoice Search Additional Document object.
      */
     public function build(): InvoiceSearchAdditionalDocument
     {

@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\Filters;
+use ShellDataReportingAPIsLib\Models\PricedRequestData;
 use ShellDataReportingAPIsLib\Models\PricedTransactionRequestV2;
 
 /**
@@ -32,7 +32,7 @@ class PricedTransactionRequestV2Builder
     }
 
     /**
-     * Initializes a new priced transaction request v2 Builder object.
+     * Initializes a new Priced Transaction Request V2 Builder object.
      */
     public static function init(): self
     {
@@ -40,16 +40,20 @@ class PricedTransactionRequestV2Builder
     }
 
     /**
-     * Sets filters field.
+     * Sets Filters field.
+     *
+     * @param PricedRequestData|null $value
      */
-    public function filters(?Filters $value): self
+    public function filters(?PricedRequestData $value): self
     {
         $this->instance->setFilters($value);
         return $this;
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -58,7 +62,9 @@ class PricedTransactionRequestV2Builder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -67,7 +73,7 @@ class PricedTransactionRequestV2Builder
     }
 
     /**
-     * Initializes a new priced transaction request v2 object.
+     * Initializes a new Priced Transaction Request V2 object.
      */
     public function build(): PricedTransactionRequestV2
     {

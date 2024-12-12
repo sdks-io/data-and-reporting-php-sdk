@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\PriceList;
+use ShellDataReportingAPIsLib\Models\Tier;
 
 /**
  * Builder for model PriceList
@@ -31,7 +32,7 @@ class PriceListBuilder
     }
 
     /**
-     * Initializes a new price list Builder object.
+     * Initializes a new Price List Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets date field.
+     * Sets Date field.
+     *
+     * @param string|null $value
      */
     public function date(?string $value): self
     {
@@ -48,7 +51,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets date field.
+     * Unsets Date field.
      */
     public function unsetDate(): self
     {
@@ -57,7 +60,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets day field.
+     * Sets Day field.
+     *
+     * @param string|null $value
      */
     public function day(?string $value): self
     {
@@ -66,7 +71,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets day field.
+     * Unsets Day field.
      */
     public function unsetDay(): self
     {
@@ -75,7 +80,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -84,7 +91,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets type field.
+     * Unsets Type field.
      */
     public function unsetType(): self
     {
@@ -93,7 +100,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price list id field.
+     * Sets Price List Id field.
+     *
+     * @param int|null $value
      */
     public function priceListId(?int $value): self
     {
@@ -102,7 +111,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price list id field.
+     * Unsets Price List Id field.
      */
     public function unsetPriceListId(): self
     {
@@ -111,7 +120,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price list description field.
+     * Sets Price List Description field.
+     *
+     * @param string|null $value
      */
     public function priceListDescription(?string $value): self
     {
@@ -120,7 +131,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price list description field.
+     * Unsets Price List Description field.
      */
     public function unsetPriceListDescription(): self
     {
@@ -129,7 +140,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule id field.
+     * Sets Price Rule Id field.
+     *
+     * @param int|null $value
      */
     public function priceRuleId(?int $value): self
     {
@@ -138,7 +151,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule id field.
+     * Unsets Price Rule Id field.
      */
     public function unsetPriceRuleId(): self
     {
@@ -147,7 +160,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule name field.
+     * Sets Price Rule Name field.
+     *
+     * @param string|null $value
      */
     public function priceRuleName(?string $value): self
     {
@@ -156,7 +171,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule name field.
+     * Unsets Price Rule Name field.
      */
     public function unsetPriceRuleName(): self
     {
@@ -165,7 +180,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets del co id field.
+     * Sets Del Co Id field.
+     *
+     * @param int|null $value
      */
     public function delCoId(?int $value): self
     {
@@ -174,7 +191,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets del co id field.
+     * Unsets Del Co Id field.
      */
     public function unsetDelCoId(): self
     {
@@ -183,7 +200,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets country code field.
+     * Sets Country Code field.
+     *
+     * @param string|null $value
      */
     public function countryCode(?string $value): self
     {
@@ -192,7 +211,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets country code field.
+     * Unsets Country Code field.
      */
     public function unsetCountryCode(): self
     {
@@ -201,7 +220,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets country field.
+     * Sets Country field.
+     *
+     * @param string|null $value
      */
     public function country(?string $value): self
     {
@@ -210,7 +231,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets country field.
+     * Unsets Country field.
      */
     public function unsetCountry(): self
     {
@@ -219,7 +240,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -228,7 +251,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -237,7 +260,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -246,7 +271,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -255,7 +280,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -264,7 +291,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -273,7 +300,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -282,7 +311,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -291,7 +320,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -300,7 +331,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -309,7 +340,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price per unit field.
+     * Sets Price Per Unit field.
+     *
+     * @param float|null $value
      */
     public function pricePerUnit(?float $value): self
     {
@@ -318,7 +351,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price per unit field.
+     * Unsets Price Per Unit field.
      */
     public function unsetPricePerUnit(): self
     {
@@ -327,7 +360,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -336,7 +371,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -345,7 +380,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -354,7 +391,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -363,7 +400,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price type field.
+     * Sets Price Type field.
+     *
+     * @param string|null $value
      */
     public function priceType(?string $value): self
     {
@@ -372,7 +411,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price type field.
+     * Unsets Price Type field.
      */
     public function unsetPriceType(): self
     {
@@ -381,7 +420,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -390,7 +431,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -399,7 +440,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -408,7 +451,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -417,7 +460,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param int|null $value
      */
     public function siteCode(?int $value): self
     {
@@ -426,7 +471,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -435,7 +480,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets site id field.
+     * Sets Site Id field.
+     *
+     * @param int|null $value
      */
     public function siteId(?int $value): self
     {
@@ -444,7 +491,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets site id field.
+     * Unsets Site Id field.
      */
     public function unsetSiteId(): self
     {
@@ -453,7 +500,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -462,7 +511,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -471,7 +520,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets fuel network id field.
+     * Sets Fuel Network Id field.
+     *
+     * @param int|null $value
      */
     public function fuelNetworkId(?int $value): self
     {
@@ -480,7 +531,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets fuel network id field.
+     * Unsets Fuel Network Id field.
      */
     public function unsetFuelNetworkId(): self
     {
@@ -489,7 +540,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets network name field.
+     * Sets Network Name field.
+     *
+     * @param string|null $value
      */
     public function networkName(?string $value): self
     {
@@ -498,7 +551,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets network name field.
+     * Unsets Network Name field.
      */
     public function unsetNetworkName(): self
     {
@@ -507,7 +560,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule delco id field.
+     * Sets Price Rule Delco Id field.
+     *
+     * @param int|null $value
      */
     public function priceRuleDelcoId(?int $value): self
     {
@@ -516,7 +571,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule delco id field.
+     * Unsets Price Rule Delco Id field.
      */
     public function unsetPriceRuleDelcoId(): self
     {
@@ -525,7 +580,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule delco name field.
+     * Sets Price Rule Delco Name field.
+     *
+     * @param string|null $value
      */
     public function priceRuleDelcoName(?string $value): self
     {
@@ -534,7 +591,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule delco name field.
+     * Unsets Price Rule Delco Name field.
      */
     public function unsetPriceRuleDelcoName(): self
     {
@@ -543,7 +600,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule country field.
+     * Sets Price Rule Country field.
+     *
+     * @param string|null $value
      */
     public function priceRuleCountry(?string $value): self
     {
@@ -552,7 +611,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule country field.
+     * Unsets Price Rule Country field.
      */
     public function unsetPriceRuleCountry(): self
     {
@@ -561,7 +620,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule country code field.
+     * Sets Price Rule Country Code field.
+     *
+     * @param string|null $value
      */
     public function priceRuleCountryCode(?string $value): self
     {
@@ -570,7 +631,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule country code field.
+     * Unsets Price Rule Country Code field.
      */
     public function unsetPriceRuleCountryCode(): self
     {
@@ -579,7 +640,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule basis id field.
+     * Sets Price Rule Basis Id field.
+     *
+     * @param int|null $value
      */
     public function priceRuleBasisId(?int $value): self
     {
@@ -588,7 +651,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule basis id field.
+     * Unsets Price Rule Basis Id field.
      */
     public function unsetPriceRuleBasisId(): self
     {
@@ -597,7 +660,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets discount value field.
+     * Sets Discount Value field.
+     *
+     * @param float|null $value
      */
     public function discountValue(?float $value): self
     {
@@ -606,7 +671,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets discount value field.
+     * Unsets Discount Value field.
      */
     public function unsetDiscountValue(): self
     {
@@ -615,7 +680,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price per unit after discount field.
+     * Sets Price Per Unit After Discount field.
+     *
+     * @param float|null $value
      */
     public function pricePerUnitAfterDiscount(?float $value): self
     {
@@ -624,7 +691,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price per unit after discount field.
+     * Unsets Price Per Unit After Discount field.
      */
     public function unsetPricePerUnitAfterDiscount(): self
     {
@@ -633,7 +700,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets vatpercentage field.
+     * Sets VAT Percentage field.
+     *
+     * @param float|null $value
      */
     public function vATPercentage(?float $value): self
     {
@@ -642,7 +711,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets vatpercentage field.
+     * Unsets VAT Percentage field.
      */
     public function unsetVATPercentage(): self
     {
@@ -651,7 +720,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets price rule category id field.
+     * Sets Price Rule Category Id field.
+     *
+     * @param int|null $value
      */
     public function priceRuleCategoryId(?int $value): self
     {
@@ -660,7 +731,7 @@ class PriceListBuilder
     }
 
     /**
-     * Unsets price rule category id field.
+     * Unsets Price Rule Category Id field.
      */
     public function unsetPriceRuleCategoryId(): self
     {
@@ -669,7 +740,9 @@ class PriceListBuilder
     }
 
     /**
-     * Sets tiers field.
+     * Sets Tiers field.
+     *
+     * @param Tier[]|null $value
      */
     public function tiers(?array $value): self
     {
@@ -678,7 +751,7 @@ class PriceListBuilder
     }
 
     /**
-     * Initializes a new price list object.
+     * Initializes a new Price List object.
      */
     public function build(): PriceList
     {

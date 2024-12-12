@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\SearchDocumentsInvoice;
 use ShellDataReportingAPIsLib\Models\SearchDocumentsResponse;
 
 /**
@@ -31,7 +32,7 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Initializes a new search documents response Builder object.
+     * Initializes a new Search Documents Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param SearchDocumentsInvoice[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets total records field.
+     * Sets Total Records field.
+     *
+     * @param int|null $value
      */
     public function totalRecords(?int $value): self
     {
@@ -75,7 +84,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets total records on page field.
+     * Sets Total Records On Page field.
+     *
+     * @param int|null $value
      */
     public function totalRecordsOnPage(?int $value): self
     {
@@ -84,7 +95,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets is first page field.
+     * Sets Is First Page field.
+     *
+     * @param bool|null $value
      */
     public function isFirstPage(?bool $value): self
     {
@@ -93,7 +106,9 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets is last page field.
+     * Sets Is Last Page field.
+     *
+     * @param bool|null $value
      */
     public function isLastPage(?bool $value): self
     {
@@ -102,7 +117,7 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Initializes a new search documents response object.
+     * Initializes a new Search Documents Response object.
      */
     public function build(): SearchDocumentsResponse
     {

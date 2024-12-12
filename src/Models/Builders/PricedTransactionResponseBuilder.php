@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\PricedTransactionResponse;
+use ShellDataReportingAPIsLib\Models\PricedTransactionResponseTransactionsItems;
 
 /**
  * Builder for model PricedTransactionResponse
@@ -31,7 +32,7 @@ class PricedTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new priced transaction response Builder object.
+     * Initializes a new Priced Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class PricedTransactionResponseBuilder
     }
 
     /**
-     * Sets transactions field.
+     * Sets Transactions field.
+     *
+     * @param PricedTransactionResponseTransactionsItems[]|null $value
      */
     public function transactions(?array $value): self
     {
@@ -48,7 +51,7 @@ class PricedTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new priced transaction response object.
+     * Initializes a new Priced Transaction Response object.
      */
     public function build(): PricedTransactionResponse
     {

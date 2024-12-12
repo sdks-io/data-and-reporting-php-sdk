@@ -31,7 +31,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Initializes a new search soareq Builder object.
+     * Initializes a new Search SOA Req Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +50,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -57,7 +59,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -75,7 +79,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -84,7 +90,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -93,7 +99,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -102,7 +110,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -111,7 +119,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -120,7 +130,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -129,7 +139,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets period field.
+     * Sets Period field.
+     *
+     * @param int|null $value
      */
     public function period(?int $value): self
     {
@@ -138,7 +150,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets period field.
+     * Unsets Period field.
      */
     public function unsetPeriod(): self
     {
@@ -147,7 +159,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -156,7 +170,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -165,7 +179,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets invoice status field.
+     * Sets Invoice Status field.
+     *
+     * @param string[]|null $value
      */
     public function invoiceStatus(?array $value): self
     {
@@ -174,7 +190,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets sort by field.
+     * Sets Sort By field.
+     *
+     * @param int[]|null $value
      */
     public function sortBy(?array $value): self
     {
@@ -183,7 +201,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets col co id field.
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
      */
     public function colCoId(?int $value): self
     {
@@ -192,7 +212,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets col co id field.
+     * Unsets Col Co Id field.
      */
     public function unsetColCoId(): self
     {
@@ -201,7 +221,9 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -210,7 +232,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -219,7 +241,7 @@ class SearchSOAReqBuilder
     }
 
     /**
-     * Initializes a new search soareq object.
+     * Initializes a new Search SOA Req object.
      */
     public function build(): SearchSOAReq
     {

@@ -23,7 +23,7 @@ class DefaultErrorFault implements \JsonSerializable
     private $faultstring;
 
     /**
-     * @var Detail|null
+     * @var DefaultErrorFaultDetail|null
      */
     private $detail;
 
@@ -49,18 +49,20 @@ class DefaultErrorFault implements \JsonSerializable
 
     /**
      * Returns Detail.
+     * Details about the error
      */
-    public function getDetail(): ?Detail
+    public function getDetail(): ?DefaultErrorFaultDetail
     {
         return $this->detail;
     }
 
     /**
      * Sets Detail.
+     * Details about the error
      *
      * @maps detail
      */
-    public function setDetail(?Detail $detail): void
+    public function setDetail(?DefaultErrorFaultDetail $detail): void
     {
         $this->detail = $detail;
     }

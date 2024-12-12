@@ -31,7 +31,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Initializes a new recent transactions Builder object.
+     * Initializes a new Recent Transactions Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets col co code field.
+     * Sets Col Co Code field.
+     *
+     * @param int|null $value
      */
     public function colCoCode(?int $value): self
     {
@@ -48,7 +50,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets col co code field.
+     * Unsets Col Co Code field.
      */
     public function unsetColCoCode(): self
     {
@@ -57,7 +59,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -75,7 +79,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -84,7 +90,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -93,7 +99,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card issue number field.
+     * Sets Card Issue Number field.
+     *
+     * @param string|null $value
      */
     public function cardIssueNumber(?string $value): self
     {
@@ -102,7 +110,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card issue number field.
+     * Unsets Card Issue Number field.
      */
     public function unsetCardIssueNumber(): self
     {
@@ -111,7 +119,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets collecting company currency code field.
+     * Sets Collecting Company Currency Code field.
+     *
+     * @param string|null $value
      */
     public function collectingCompanyCurrencyCode(?string $value): self
     {
@@ -120,7 +130,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets collecting company currency code field.
+     * Unsets Collecting Company Currency Code field.
      */
     public function unsetCollectingCompanyCurrencyCode(): self
     {
@@ -129,7 +139,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets cust data customer entered field.
+     * Sets Cust Data Customer Entered field.
+     *
+     * @param string|null $value
      */
     public function custDataCustomerEntered(?string $value): self
     {
@@ -138,7 +150,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets cust data customer entered field.
+     * Unsets Cust Data Customer Entered field.
      */
     public function unsetCustDataCustomerEntered(): self
     {
@@ -147,7 +159,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets cust data driver id field.
+     * Sets Cust Data Driver Id field.
+     *
+     * @param string|null $value
      */
     public function custDataDriverId(?string $value): self
     {
@@ -156,7 +170,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets cust data driver id field.
+     * Unsets Cust Data Driver Id field.
      */
     public function unsetCustDataDriverId(): self
     {
@@ -165,7 +179,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets cust data fleet description field.
+     * Sets Cust Data Fleet Description field.
+     *
+     * @param string|null $value
      */
     public function custDataFleetDescription(?string $value): self
     {
@@ -174,7 +190,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets cust data fleet description field.
+     * Unsets Cust Data Fleet Description field.
      */
     public function unsetCustDataFleetDescription(): self
     {
@@ -183,7 +199,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets fleet id input field.
+     * Sets Fleet Id Input field.
+     *
+     * @param string|null $value
      */
     public function fleetIdInput(?string $value): self
     {
@@ -192,7 +210,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets fleet id input field.
+     * Unsets Fleet Id Input field.
      */
     public function unsetFleetIdInput(): self
     {
@@ -201,7 +219,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets amount field.
+     * Sets Amount field.
+     *
+     * @param float|null $value
      */
     public function amount(?float $value): self
     {
@@ -210,7 +230,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets amount field.
+     * Unsets Amount field.
      */
     public function unsetAmount(): self
     {
@@ -219,7 +239,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets euroshell site number field.
+     * Sets Euroshell Site Number field.
+     *
+     * @param string|null $value
      */
     public function euroshellSiteNumber(?string $value): self
     {
@@ -228,7 +250,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets euroshell site number field.
+     * Unsets Euroshell Site Number field.
      */
     public function unsetEuroshellSiteNumber(): self
     {
@@ -237,7 +259,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets incoming product code field.
+     * Sets Incoming Product Code field.
+     *
+     * @param string|null $value
      */
     public function incomingProductCode(?string $value): self
     {
@@ -246,7 +270,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets incoming product code field.
+     * Unsets Incoming Product Code field.
      */
     public function unsetIncomingProductCode(): self
     {
@@ -255,7 +279,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -264,7 +290,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -273,7 +299,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -282,7 +310,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -291,7 +319,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param int|null $value
      */
     public function siteCode(?int $value): self
     {
@@ -300,7 +330,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -309,7 +339,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets hosting collecting company name field.
+     * Sets Hosting Collecting Company Name field.
+     *
+     * @param string|null $value
      */
     public function hostingCollectingCompanyName(?string $value): self
     {
@@ -318,7 +350,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets hosting collecting company name field.
+     * Unsets Hosting Collecting Company Name field.
      */
     public function unsetHostingCollectingCompanyName(): self
     {
@@ -327,7 +359,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets hosting collecting company number field.
+     * Sets Hosting Collecting Company Number field.
+     *
+     * @param string|null $value
      */
     public function hostingCollectingCompanyNumber(?string $value): self
     {
@@ -336,7 +370,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets hosting collecting company number field.
+     * Unsets Hosting Collecting Company Number field.
      */
     public function unsetHostingCollectingCompanyNumber(): self
     {
@@ -345,7 +379,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets iccdata tran type code field.
+     * Sets Iccdata Tran Type Code field.
+     *
+     * @param string|null $value
      */
     public function iccdataTranTypeCode(?string $value): self
     {
@@ -354,7 +390,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets iccdata tran type code field.
+     * Unsets Iccdata Tran Type Code field.
      */
     public function unsetIccdataTranTypeCode(): self
     {
@@ -363,7 +399,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction type field.
+     * Sets Transaction Type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -372,7 +410,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction type field.
+     * Unsets Transaction Type field.
      */
     public function unsetTransactionType(): self
     {
@@ -381,7 +419,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets latitude field.
+     * Sets Latitude field.
+     *
+     * @param string|null $value
      */
     public function latitude(?string $value): self
     {
@@ -390,7 +430,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets latitude field.
+     * Unsets Latitude field.
      */
     public function unsetLatitude(): self
     {
@@ -399,7 +439,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets longitude field.
+     * Sets Longitude field.
+     *
+     * @param string|null $value
      */
     public function longitude(?string $value): self
     {
@@ -408,7 +450,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets longitude field.
+     * Unsets Longitude field.
      */
     public function unsetLongitude(): self
     {
@@ -417,7 +459,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets merchant category field.
+     * Sets Merchant Category field.
+     *
+     * @param string|null $value
      */
     public function merchantCategory(?string $value): self
     {
@@ -426,7 +470,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets merchant category field.
+     * Unsets Merchant Category field.
      */
     public function unsetMerchantCategory(): self
     {
@@ -435,7 +479,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets merchant category description field.
+     * Sets Merchant Category Description field.
+     *
+     * @param string|null $value
      */
     public function merchantCategoryDescription(?string $value): self
     {
@@ -444,7 +490,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets merchant category description field.
+     * Unsets Merchant Category Description field.
      */
     public function unsetMerchantCategoryDescription(): self
     {
@@ -453,7 +499,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -462,7 +510,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -471,7 +519,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets merchant id field.
+     * Sets Merchant Id field.
+     *
+     * @param string|null $value
      */
     public function merchantId(?string $value): self
     {
@@ -480,7 +530,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets merchant id field.
+     * Unsets Merchant Id field.
      */
     public function unsetMerchantId(): self
     {
@@ -489,7 +539,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -498,7 +550,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -507,7 +559,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets network field.
+     * Sets Network field.
+     *
+     * @param string|null $value
      */
     public function network(?string $value): self
     {
@@ -516,7 +570,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets network field.
+     * Unsets Network field.
      */
     public function unsetNetwork(): self
     {
@@ -525,7 +579,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets delco code field.
+     * Sets Delco Code field.
+     *
+     * @param string|null $value
      */
     public function delcoCode(?string $value): self
     {
@@ -534,7 +590,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets delco code field.
+     * Unsets Delco Code field.
      */
     public function unsetDelcoCode(): self
     {
@@ -543,7 +599,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets odometer input field.
+     * Sets Odometer Input field.
+     *
+     * @param string|null $value
      */
     public function odometerInput(?string $value): self
     {
@@ -552,7 +610,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets odometer input field.
+     * Unsets Odometer Input field.
      */
     public function unsetOdometerInput(): self
     {
@@ -561,7 +619,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets odometer reading km field.
+     * Sets Odometer Reading Km field.
+     *
+     * @param string|null $value
      */
     public function odometerReadingKm(?string $value): self
     {
@@ -570,7 +630,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets odometer reading km field.
+     * Unsets Odometer Reading Km field.
      */
     public function unsetOdometerReadingKm(): self
     {
@@ -579,7 +639,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets odometer reading miles field.
+     * Sets Odometer Reading Miles field.
+     *
+     * @param string|null $value
      */
     public function odometerReadingMiles(?string $value): self
     {
@@ -588,7 +650,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets odometer reading miles field.
+     * Unsets Odometer Reading Miles field.
      */
     public function unsetOdometerReadingMiles(): self
     {
@@ -597,7 +659,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -606,7 +670,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -615,7 +679,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets pinindicator field.
+     * Sets PIN Indicator field.
+     *
+     * @param string|null $value
      */
     public function pINIndicator(?string $value): self
     {
@@ -624,7 +690,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets pinindicator field.
+     * Unsets PIN Indicator field.
      */
     public function unsetPINIndicator(): self
     {
@@ -633,7 +699,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets poireceipt number field.
+     * Sets POI Receipt Number field.
+     *
+     * @param string|null $value
      */
     public function pOIReceiptNumber(?string $value): self
     {
@@ -642,7 +710,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets poireceipt number field.
+     * Unsets POI Receipt Number field.
      */
     public function unsetPOIReceiptNumber(): self
     {
@@ -651,7 +719,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets products code additional field.
+     * Sets Products Code Additional field.
+     *
+     * @param string|null $value
      */
     public function productsCodeAdditional(?string $value): self
     {
@@ -660,7 +730,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets products code additional field.
+     * Unsets Products Code Additional field.
      */
     public function unsetProductsCodeAdditional(): self
     {
@@ -669,7 +739,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets products tax code field.
+     * Sets Products Tax Code field.
+     *
+     * @param string|null $value
      */
     public function productsTaxCode(?string $value): self
     {
@@ -678,7 +750,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets products tax code field.
+     * Unsets Products Tax Code field.
      */
     public function unsetProductsTaxCode(): self
     {
@@ -687,7 +759,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets fuel volume field.
+     * Sets Fuel Volume field.
+     *
+     * @param float|null $value
      */
     public function fuelVolume(?float $value): self
     {
@@ -696,7 +770,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets fuel volume field.
+     * Unsets Fuel Volume field.
      */
     public function unsetFuelVolume(): self
     {
@@ -705,7 +779,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets sfgw card date of expiry field.
+     * Sets Sfgw Card Date Of Expiry field.
+     *
+     * @param string|null $value
      */
     public function sfgwCardDateOfExpiry(?string $value): self
     {
@@ -714,7 +790,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets sfgw card date of expiry field.
+     * Unsets Sfgw Card Date Of Expiry field.
      */
     public function unsetSfgwCardDateOfExpiry(): self
     {
@@ -723,7 +799,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets site currency isocode field.
+     * Sets Site Currency ISO Code field.
+     *
+     * @param string|null $value
      */
     public function siteCurrencyISOCode(?string $value): self
     {
@@ -732,7 +810,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets site currency isocode field.
+     * Unsets Site Currency ISO Code field.
      */
     public function unsetSiteCurrencyISOCode(): self
     {
@@ -741,7 +819,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param string|null $value
      */
     public function cardId(?string $value): self
     {
@@ -750,7 +830,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -759,7 +839,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction date field.
+     * Sets Transaction Date field.
+     *
+     * @param \DateTime|null $value
      */
     public function transactionDate(?\DateTime $value): self
     {
@@ -768,7 +850,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction date field.
+     * Unsets Transaction Date field.
      */
     public function unsetTransactionDate(): self
     {
@@ -777,7 +859,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction date time field.
+     * Sets Transaction Date Time field.
+     *
+     * @param string|null $value
      */
     public function transactionDateTime(?string $value): self
     {
@@ -786,7 +870,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction date time field.
+     * Unsets Transaction Date Time field.
      */
     public function unsetTransactionDateTime(): self
     {
@@ -795,7 +879,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -804,7 +890,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets Transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -813,7 +899,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction status field.
+     * Sets Transaction Status field.
+     *
+     * @param string|null $value
      */
     public function transactionStatus(?string $value): self
     {
@@ -822,7 +910,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction status field.
+     * Unsets Transaction Status field.
      */
     public function unsetTransactionStatus(): self
     {
@@ -831,7 +919,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets unit of measure field.
+     * Sets Unit Of Measure field.
+     *
+     * @param string|null $value
      */
     public function unitOfMeasure(?string $value): self
     {
@@ -840,7 +930,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets unit of measure field.
+     * Unsets Unit Of Measure field.
      */
     public function unsetUnitOfMeasure(): self
     {
@@ -849,7 +939,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets vehicle registration number field.
+     * Sets Vehicle Registration Number field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistrationNumber(?string $value): self
     {
@@ -858,7 +950,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets vehicle registration number field.
+     * Unsets Vehicle Registration Number field.
      */
     public function unsetVehicleRegistrationNumber(): self
     {
@@ -867,7 +959,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets network delco name field.
+     * Sets Network Delco Name field.
+     *
+     * @param string|null $value
      */
     public function networkDelcoName(?string $value): self
     {
@@ -876,7 +970,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets network delco name field.
+     * Unsets Network Delco Name field.
      */
     public function unsetNetworkDelcoName(): self
     {
@@ -885,7 +979,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -894,7 +990,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -903,7 +999,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets fuel product field.
+     * Sets Fuel Product field.
+     *
+     * @param string|null $value
      */
     public function fuelProduct(?string $value): self
     {
@@ -912,7 +1010,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets fuel product field.
+     * Unsets Fuel Product field.
      */
     public function unsetFuelProduct(): self
     {
@@ -921,7 +1019,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets account customer name field.
+     * Sets Account Customer Name field.
+     *
+     * @param string|null $value
      */
     public function accountCustomerName(?string $value): self
     {
@@ -930,7 +1030,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets account customer name field.
+     * Unsets Account Customer Name field.
      */
     public function unsetAccountCustomerName(): self
     {
@@ -939,7 +1039,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -948,7 +1050,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -957,7 +1059,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction time field.
+     * Sets Transaction Time field.
+     *
+     * @param string|null $value
      */
     public function transactionTime(?string $value): self
     {
@@ -966,7 +1070,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction time field.
+     * Unsets Transaction Time field.
      */
     public function unsetTransactionTime(): self
     {
@@ -975,7 +1079,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction currency field.
+     * Sets Transaction Currency field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrency(?string $value): self
     {
@@ -984,7 +1090,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction currency field.
+     * Unsets Transaction Currency field.
      */
     public function unsetTransactionCurrency(): self
     {
@@ -993,7 +1099,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets unit price field.
+     * Sets Unit Price field.
+     *
+     * @param float|null $value
      */
     public function unitPrice(?float $value): self
     {
@@ -1002,7 +1110,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets unit price field.
+     * Unsets Unit Price field.
      */
     public function unsetUnitPrice(): self
     {
@@ -1011,7 +1119,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets authorised flag field.
+     * Sets Authorised Flag field.
+     *
+     * @param string|null $value
      */
     public function authorisedFlag(?string $value): self
     {
@@ -1020,7 +1130,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets authorised flag field.
+     * Unsets Authorised Flag field.
      */
     public function unsetAuthorisedFlag(): self
     {
@@ -1029,7 +1139,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction time gmt field.
+     * Sets Transaction Time GMT field.
+     *
+     * @param string|null $value
      */
     public function transactionTimeGMT(?string $value): self
     {
@@ -1038,7 +1150,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction time gmt field.
+     * Unsets Transaction Time GMT field.
      */
     public function unsetTransactionTimeGMT(): self
     {
@@ -1047,7 +1159,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets reason code field.
+     * Sets Reason Code field.
+     *
+     * @param string|null $value
      */
     public function reasonCode(?string $value): self
     {
@@ -1056,7 +1170,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets reason code field.
+     * Unsets Reason Code field.
      */
     public function unsetReasonCode(): self
     {
@@ -1065,7 +1179,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets issuer action code field.
+     * Sets Issuer Action Code field.
+     *
+     * @param string|null $value
      */
     public function issuerActionCode(?string $value): self
     {
@@ -1074,7 +1190,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets issuer action code field.
+     * Unsets Issuer Action Code field.
      */
     public function unsetIssuerActionCode(): self
     {
@@ -1083,7 +1199,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets issuer action code description field.
+     * Sets Issuer Action Code Description field.
+     *
+     * @param string|null $value
      */
     public function issuerActionCodeDescription(?string $value): self
     {
@@ -1092,7 +1210,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets issuer action code description field.
+     * Unsets Issuer Action Code Description field.
      */
     public function unsetIssuerActionCodeDescription(): self
     {
@@ -1101,7 +1219,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets declined reason field.
+     * Sets Declined Reason field.
+     *
+     * @param string|null $value
      */
     public function declinedReason(?string $value): self
     {
@@ -1110,7 +1230,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets declined reason field.
+     * Unsets Declined Reason field.
      */
     public function unsetDeclinedReason(): self
     {
@@ -1119,7 +1239,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card status reason description field.
+     * Sets Card Status Reason Description field.
+     *
+     * @param string|null $value
      */
     public function cardStatusReasonDescription(?string $value): self
     {
@@ -1128,7 +1250,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card status reason description field.
+     * Unsets Card Status Reason Description field.
      */
     public function unsetCardStatusReasonDescription(): self
     {
@@ -1137,7 +1259,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets transaction country field.
+     * Sets Transaction Country field.
+     *
+     * @param string|null $value
      */
     public function transactionCountry(?string $value): self
     {
@@ -1146,7 +1270,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets transaction country field.
+     * Unsets Transaction Country field.
      */
     public function unsetTransactionCountry(): self
     {
@@ -1155,7 +1279,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets issuing collecting company name field.
+     * Sets Issuing Collecting Company Name field.
+     *
+     * @param string|null $value
      */
     public function issuingCollectingCompanyName(?string $value): self
     {
@@ -1164,7 +1290,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets issuing collecting company name field.
+     * Unsets Issuing Collecting Company Name field.
      */
     public function unsetIssuingCollectingCompanyName(): self
     {
@@ -1173,7 +1299,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card issuer name field.
+     * Sets Card Issuer Name field.
+     *
+     * @param string|null $value
      */
     public function cardIssuerName(?string $value): self
     {
@@ -1182,7 +1310,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card issuer name field.
+     * Unsets Card Issuer Name field.
      */
     public function unsetCardIssuerName(): self
     {
@@ -1191,7 +1319,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -1200,7 +1330,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -1209,7 +1339,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets bearer description field.
+     * Sets Bearer Description field.
+     *
+     * @param string|null $value
      */
     public function bearerDescription(?string $value): self
     {
@@ -1218,7 +1350,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets bearer description field.
+     * Unsets Bearer Description field.
      */
     public function unsetBearerDescription(): self
     {
@@ -1227,7 +1359,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card category description field.
+     * Sets Card Category Description field.
+     *
+     * @param string|null $value
      */
     public function cardCategoryDescription(?string $value): self
     {
@@ -1236,7 +1370,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card category description field.
+     * Unsets Card Category Description field.
      */
     public function unsetCardCategoryDescription(): self
     {
@@ -1245,7 +1379,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card type description field.
+     * Sets Card Type Description field.
+     *
+     * @param string|null $value
      */
     public function cardTypeDescription(?string $value): self
     {
@@ -1254,7 +1390,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card type description field.
+     * Unsets Card Type Description field.
      */
     public function unsetCardTypeDescription(): self
     {
@@ -1263,7 +1399,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets card token type description field.
+     * Sets Card Token Type Description field.
+     *
+     * @param string|null $value
      */
     public function cardTokenTypeDescription(?string $value): self
     {
@@ -1272,7 +1410,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets card token type description field.
+     * Unsets Card Token Type Description field.
      */
     public function unsetCardTokenTypeDescription(): self
     {
@@ -1281,7 +1419,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets emboss type field.
+     * Sets Emboss Type field.
+     *
+     * @param string|null $value
      */
     public function embossType(?string $value): self
     {
@@ -1290,7 +1430,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets emboss type field.
+     * Unsets Emboss Type field.
      */
     public function unsetEmbossType(): self
     {
@@ -1299,7 +1439,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets evprinted number field.
+     * Sets EV Printed Number field.
+     *
+     * @param string|null $value
      */
     public function eVPrintedNumber(?string $value): self
     {
@@ -1308,7 +1450,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets evprinted number field.
+     * Unsets EV Printed Number field.
      */
     public function unsetEVPrintedNumber(): self
     {
@@ -1317,7 +1459,9 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Sets is rfid field.
+     * Sets Is RFID field.
+     *
+     * @param bool|null $value
      */
     public function isRFID(?bool $value): self
     {
@@ -1326,7 +1470,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Unsets is rfid field.
+     * Unsets Is RFID field.
      */
     public function unsetIsRFID(): self
     {
@@ -1335,7 +1479,7 @@ class RecentTransactionsBuilder
     }
 
     /**
-     * Initializes a new recent transactions object.
+     * Initializes a new Recent Transactions object.
      */
     public function build(): RecentTransactions
     {

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\RecentTransactions;
 use ShellDataReportingAPIsLib\Models\RecentTransactionsResponse;
 
 /**
@@ -31,7 +32,7 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Initializes a new recent transactions response Builder object.
+     * Initializes a new Recent Transactions Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -66,7 +73,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets row count field.
+     * Sets Row Count field.
+     *
+     * @param int|null $value
      */
     public function rowCount(?int $value): self
     {
@@ -75,7 +84,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -84,7 +95,9 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param RecentTransactions[]|null $value
      */
     public function data(?array $value): self
     {
@@ -93,7 +106,7 @@ class RecentTransactionsResponseBuilder
     }
 
     /**
-     * Initializes a new recent transactions response object.
+     * Initializes a new Recent Transactions Response object.
      */
     public function build(): RecentTransactionsResponse
     {

@@ -31,7 +31,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Initializes a new card exceptions Builder object.
+     * Initializes a new Card Exceptions Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -48,7 +50,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -57,7 +59,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -75,7 +79,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -84,7 +90,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -93,7 +99,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -102,7 +110,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -111,7 +119,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets currency code field.
+     * Sets Currency Code field.
+     *
+     * @param string|null $value
      */
     public function currencyCode(?string $value): self
     {
@@ -120,7 +130,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets currency code field.
+     * Unsets Currency Code field.
      */
     public function unsetCurrencyCode(): self
     {
@@ -129,7 +139,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets currency symbol field.
+     * Sets Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function currencySymbol(?string $value): self
     {
@@ -138,7 +150,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets currency symbol field.
+     * Unsets Currency Symbol field.
      */
     public function unsetCurrencySymbol(): self
     {
@@ -147,7 +159,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets day field.
+     * Sets Day field.
+     *
+     * @param int|null $value
      */
     public function day(?int $value): self
     {
@@ -156,7 +170,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets day field.
+     * Unsets Day field.
      */
     public function unsetDay(): self
     {
@@ -165,7 +179,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -174,7 +190,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -183,7 +199,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets month field.
+     * Sets Month field.
+     *
+     * @param int|null $value
      */
     public function month(?int $value): self
     {
@@ -192,7 +210,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets month field.
+     * Unsets Month field.
      */
     public function unsetMonth(): self
     {
@@ -201,7 +219,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets pan field.
+     * Sets PAN field.
+     *
+     * @param string|null $value
      */
     public function pAN(?string $value): self
     {
@@ -210,7 +230,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets pan field.
+     * Unsets PAN field.
      */
     public function unsetPAN(): self
     {
@@ -219,7 +239,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -228,7 +250,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -237,7 +259,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -246,7 +270,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -255,7 +279,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets payer short name field.
+     * Sets Payer Short Name field.
+     *
+     * @param string|null $value
      */
     public function payerShortName(?string $value): self
     {
@@ -264,7 +290,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets payer short name field.
+     * Unsets Payer Short Name field.
      */
     public function unsetPayerShortName(): self
     {
@@ -273,7 +299,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets total amount field.
+     * Sets Total Amount field.
+     *
+     * @param float|null $value
      */
     public function totalAmount(?float $value): self
     {
@@ -282,7 +310,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets total amount field.
+     * Unsets Total Amount field.
      */
     public function unsetTotalAmount(): self
     {
@@ -291,7 +319,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets total quantity field.
+     * Sets Total Quantity field.
+     *
+     * @param int|null $value
      */
     public function totalQuantity(?int $value): self
     {
@@ -300,7 +330,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets total quantity field.
+     * Unsets Total Quantity field.
      */
     public function unsetTotalQuantity(): self
     {
@@ -309,7 +339,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets total sales items field.
+     * Sets Total Sales Items field.
+     *
+     * @param int|null $value
      */
     public function totalSalesItems(?int $value): self
     {
@@ -318,7 +350,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets total sales items field.
+     * Unsets Total Sales Items field.
      */
     public function unsetTotalSalesItems(): self
     {
@@ -327,7 +359,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets total transactions field.
+     * Sets Total Transactions field.
+     *
+     * @param int|null $value
      */
     public function totalTransactions(?int $value): self
     {
@@ -336,7 +370,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets total transactions field.
+     * Unsets Total Transactions field.
      */
     public function unsetTotalTransactions(): self
     {
@@ -345,7 +379,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets vrn field.
+     * Sets VRN field.
+     *
+     * @param string|null $value
      */
     public function vRN(?string $value): self
     {
@@ -354,7 +390,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets vrn field.
+     * Unsets VRN field.
      */
     public function unsetVRN(): self
     {
@@ -363,7 +399,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets week field.
+     * Sets Week field.
+     *
+     * @param int|null $value
      */
     public function week(?int $value): self
     {
@@ -372,7 +410,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets week field.
+     * Unsets Week field.
      */
     public function unsetWeek(): self
     {
@@ -381,7 +419,9 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Sets year field.
+     * Sets Year field.
+     *
+     * @param int|null $value
      */
     public function year(?int $value): self
     {
@@ -390,7 +430,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Unsets year field.
+     * Unsets Year field.
      */
     public function unsetYear(): self
     {
@@ -399,7 +439,7 @@ class CardExceptionsBuilder
     }
 
     /**
-     * Initializes a new card exceptions object.
+     * Initializes a new Card Exceptions object.
      */
     public function build(): CardExceptions
     {

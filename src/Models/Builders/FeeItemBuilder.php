@@ -12,6 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\FeeItem;
+use ShellDataReportingAPIsLib\Models\FeesFeeRuleTiers;
 
 /**
  * Builder for model FeeItem
@@ -31,7 +32,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Initializes a new fee item Builder object.
+     * Initializes a new Fee Item Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee item id field.
+     * Sets Fee Item Id field.
+     *
+     * @param int|null $value
      */
     public function feeItemId(?int $value): self
     {
@@ -48,7 +51,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee item id field.
+     * Unsets Fee Item Id field.
      */
     public function unsetFeeItemId(): self
     {
@@ -57,7 +60,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -66,7 +71,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -75,7 +80,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -84,7 +91,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -93,7 +100,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -102,7 +111,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -111,7 +120,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice account id field.
+     * Sets Invoice Account Id field.
+     *
+     * @param int|null $value
      */
     public function invoiceAccountId(?int $value): self
     {
@@ -120,7 +131,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice account id field.
+     * Unsets Invoice Account Id field.
      */
     public function unsetInvoiceAccountId(): self
     {
@@ -129,7 +140,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice account number field.
+     * Sets Invoice Account Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceAccountNumber(?string $value): self
     {
@@ -138,7 +151,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice account number field.
+     * Unsets Invoice Account Number field.
      */
     public function unsetInvoiceAccountNumber(): self
     {
@@ -147,7 +160,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice account short name field.
+     * Sets Invoice Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function invoiceAccountShortName(?string $value): self
     {
@@ -156,7 +171,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice account short name field.
+     * Unsets Invoice Account Short Name field.
      */
     public function unsetInvoiceAccountShortName(): self
     {
@@ -165,7 +180,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -174,7 +191,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -183,7 +200,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -192,7 +211,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -201,7 +220,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets payer short name field.
+     * Sets Payer Short Name field.
+     *
+     * @param string|null $value
      */
     public function payerShortName(?string $value): self
     {
@@ -210,7 +231,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets payer short name field.
+     * Unsets Payer Short Name field.
      */
     public function unsetPayerShortName(): self
     {
@@ -219,7 +240,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -228,7 +251,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -237,7 +260,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets pan field.
+     * Sets PAN field.
+     *
+     * @param string|null $value
      */
     public function pAN(?string $value): self
     {
@@ -246,7 +271,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets pan field.
+     * Unsets PAN field.
      */
     public function unsetPAN(): self
     {
@@ -255,7 +280,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param int|null $value
      */
     public function cardGroupId(?int $value): self
     {
@@ -264,7 +291,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -273,7 +300,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -282,7 +311,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets card group name field.
+     * Unsets Card Group Name field.
      */
     public function unsetCardGroupName(): self
     {
@@ -291,7 +320,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee type id field.
+     * Sets Fee Type Id field.
+     *
+     * @param int|null $value
      */
     public function feeTypeId(?int $value): self
     {
@@ -300,7 +331,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee type id field.
+     * Unsets Fee Type Id field.
      */
     public function unsetFeeTypeId(): self
     {
@@ -309,7 +340,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee type field.
+     * Sets Fee Type field.
+     *
+     * @param string|null $value
      */
     public function feeType(?string $value): self
     {
@@ -318,7 +351,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee type field.
+     * Unsets Fee Type field.
      */
     public function unsetFeeType(): self
     {
@@ -327,7 +360,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee type group field.
+     * Sets Fee Type Group field.
+     *
+     * @param string|null $value
      */
     public function feeTypeGroup(?string $value): self
     {
@@ -336,7 +371,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee type group field.
+     * Unsets Fee Type Group field.
      */
     public function unsetFeeTypeGroup(): self
     {
@@ -345,7 +380,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param int|null $value
      */
     public function feeRuleId(?int $value): self
     {
@@ -354,7 +391,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -363,7 +400,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -372,7 +411,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -381,7 +420,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee rule tiers field.
+     * Sets Fee Rule Tiers field.
+     *
+     * @param FeesFeeRuleTiers[]|null $value
      */
     public function feeRuleTiers(?array $value): self
     {
@@ -390,7 +431,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee item date field.
+     * Sets Fee Item Date field.
+     *
+     * @param string|null $value
      */
     public function feeItemDate(?string $value): self
     {
@@ -399,7 +442,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee item date field.
+     * Unsets Fee Item Date field.
      */
     public function unsetFeeItemDate(): self
     {
@@ -408,7 +451,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee item time field.
+     * Sets Fee Item Time field.
+     *
+     * @param string|null $value
      */
     public function feeItemTime(?string $value): self
     {
@@ -417,7 +462,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee item time field.
+     * Unsets Fee Item Time field.
      */
     public function unsetFeeItemTime(): self
     {
@@ -426,7 +471,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets is manual field.
+     * Sets Is Manual field.
+     *
+     * @param bool|null $value
      */
     public function isManual(?bool $value): self
     {
@@ -435,7 +482,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets is manual field.
+     * Unsets Is Manual field.
      */
     public function unsetIsManual(): self
     {
@@ -444,7 +491,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets is cancelled field.
+     * Sets Is Cancelled field.
+     *
+     * @param bool|null $value
      */
     public function isCancelled(?bool $value): self
     {
@@ -453,7 +502,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets is cancelled field.
+     * Unsets Is Cancelled field.
      */
     public function unsetIsCancelled(): self
     {
@@ -462,7 +511,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets customer currency code field.
+     * Sets Customer Currency Code field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencyCode(?string $value): self
     {
@@ -471,7 +522,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets customer currency code field.
+     * Unsets Customer Currency Code field.
      */
     public function unsetCustomerCurrencyCode(): self
     {
@@ -480,7 +531,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets customer currency symbol field.
+     * Sets Customer Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencySymbol(?string $value): self
     {
@@ -489,7 +542,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets customer currency symbol field.
+     * Unsets Customer Currency Symbol field.
      */
     public function unsetCustomerCurrencySymbol(): self
     {
@@ -498,7 +551,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -507,7 +562,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -516,7 +571,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -525,7 +582,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -534,7 +591,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -543,7 +602,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -552,7 +611,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -561,7 +622,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -570,7 +631,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -579,7 +642,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -588,7 +651,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets line item description field.
+     * Sets Line Item Description field.
+     *
+     * @param string|null $value
      */
     public function lineItemDescription(?string $value): self
     {
@@ -597,7 +662,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets line item description field.
+     * Unsets Line Item Description field.
      */
     public function unsetLineItemDescription(): self
     {
@@ -606,7 +671,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets quantity field.
+     * Sets Quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -615,7 +682,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets quantity field.
+     * Unsets Quantity field.
      */
     public function unsetQuantity(): self
     {
@@ -624,7 +691,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets is invoiced field.
+     * Sets Is Invoiced field.
+     *
+     * @param bool|null $value
      */
     public function isInvoiced(?bool $value): self
     {
@@ -633,7 +702,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets is invoiced field.
+     * Unsets Is Invoiced field.
      */
     public function unsetIsInvoiced(): self
     {
@@ -642,7 +711,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vatcountry code field.
+     * Sets VAT Country Code field.
+     *
+     * @param string|null $value
      */
     public function vATCountryCode(?string $value): self
     {
@@ -651,7 +722,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vatcountry code field.
+     * Unsets VAT Country Code field.
      */
     public function unsetVATCountryCode(): self
     {
@@ -660,7 +731,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vatcountry name field.
+     * Sets VAT Country Name field.
+     *
+     * @param string|null $value
      */
     public function vATCountryName(?string $value): self
     {
@@ -669,7 +742,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vatcountry name field.
+     * Unsets VAT Country Name field.
      */
     public function unsetVATCountryName(): self
     {
@@ -678,7 +751,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vatpercentage field.
+     * Sets VAT Percentage field.
+     *
+     * @param float|null $value
      */
     public function vATPercentage(?float $value): self
     {
@@ -687,7 +762,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vatpercentage field.
+     * Unsets VAT Percentage field.
      */
     public function unsetVATPercentage(): self
     {
@@ -696,7 +771,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vatcategory id field.
+     * Sets VAT Category ID field.
+     *
+     * @param int|null $value
      */
     public function vATCategoryID(?int $value): self
     {
@@ -705,7 +782,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vatcategory id field.
+     * Unsets VAT Category ID field.
      */
     public function unsetVATCategoryID(): self
     {
@@ -714,7 +791,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vatcategory description field.
+     * Sets VAT Category Description field.
+     *
+     * @param string|null $value
      */
     public function vATCategoryDescription(?string $value): self
     {
@@ -723,7 +802,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vatcategory description field.
+     * Unsets VAT Category Description field.
      */
     public function unsetVATCategoryDescription(): self
     {
@@ -732,7 +811,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets legislative region id field.
+     * Sets Legislative Region Id field.
+     *
+     * @param int|null $value
      */
     public function legislativeRegionId(?int $value): self
     {
@@ -741,7 +822,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets legislative region id field.
+     * Unsets Legislative Region Id field.
      */
     public function unsetLegislativeRegionId(): self
     {
@@ -750,7 +831,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets legislative region name field.
+     * Sets Legislative Region Name field.
+     *
+     * @param string|null $value
      */
     public function legislativeRegionName(?string $value): self
     {
@@ -759,7 +842,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets legislative region name field.
+     * Unsets Legislative Region Name field.
      */
     public function unsetLegislativeRegionName(): self
     {
@@ -768,7 +851,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets system entry date field.
+     * Sets System Entry Date field.
+     *
+     * @param string|null $value
      */
     public function systemEntryDate(?string $value): self
     {
@@ -777,7 +862,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets system entry date field.
+     * Unsets System Entry Date field.
      */
     public function unsetSystemEntryDate(): self
     {
@@ -786,7 +871,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets system entry time field.
+     * Sets System Entry Time field.
+     *
+     * @param string|null $value
      */
     public function systemEntryTime(?string $value): self
     {
@@ -795,7 +882,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets system entry time field.
+     * Unsets System Entry Time field.
      */
     public function unsetSystemEntryTime(): self
     {
@@ -804,7 +891,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets col co net amount field.
+     * Sets Col Co Net Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoNetAmount(?float $value): self
     {
@@ -813,7 +902,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets col co net amount field.
+     * Unsets Col Co Net Amount field.
      */
     public function unsetColCoNetAmount(): self
     {
@@ -822,7 +911,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets col co vatamount field.
+     * Sets Col Co VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoVATAmount(?float $value): self
     {
@@ -831,7 +922,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets col co vatamount field.
+     * Unsets Col Co VAT Amount field.
      */
     public function unsetColCoVATAmount(): self
     {
@@ -840,7 +931,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets col co gross amount field.
+     * Sets Col Co Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function colCoGrossAmount(?float $value): self
     {
@@ -849,7 +942,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets col co gross amount field.
+     * Unsets Col Co Gross Amount field.
      */
     public function unsetColCoGrossAmount(): self
     {
@@ -858,7 +951,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets interim invoice id field.
+     * Sets Interim Invoice Id field.
+     *
+     * @param int|null $value
      */
     public function interimInvoiceId(?int $value): self
     {
@@ -867,7 +962,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets interim invoice id field.
+     * Unsets Interim Invoice Id field.
      */
     public function unsetInterimInvoiceId(): self
     {
@@ -876,7 +971,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets interim invoice number field.
+     * Sets Interim Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function interimInvoiceNumber(?string $value): self
     {
@@ -885,7 +982,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets interim invoice number field.
+     * Unsets Interim Invoice Number field.
      */
     public function unsetInterimInvoiceNumber(): self
     {
@@ -894,7 +991,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice id field.
+     * Sets Invoice Id field.
+     *
+     * @param int|null $value
      */
     public function invoiceId(?int $value): self
     {
@@ -903,7 +1002,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice id field.
+     * Unsets Invoice Id field.
      */
     public function unsetInvoiceId(): self
     {
@@ -912,7 +1011,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -921,7 +1022,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -930,7 +1031,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -939,7 +1042,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -948,7 +1051,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets customer exchange rate field.
+     * Sets Customer Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function customerExchangeRate(?float $value): self
     {
@@ -957,7 +1062,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets customer exchange rate field.
+     * Unsets Customer Exchange Rate field.
      */
     public function unsetCustomerExchangeRate(): self
     {
@@ -966,7 +1071,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice net amount field.
+     * Sets Invoice Net Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceNetAmount(?float $value): self
     {
@@ -975,7 +1082,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice net amount field.
+     * Unsets Invoice Net Amount field.
      */
     public function unsetInvoiceNetAmount(): self
     {
@@ -984,7 +1091,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice gross amount field.
+     * Sets Invoice Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceGrossAmount(?float $value): self
     {
@@ -993,7 +1102,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice gross amount field.
+     * Unsets Invoice Gross Amount field.
      */
     public function unsetInvoiceGrossAmount(): self
     {
@@ -1002,7 +1111,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets invoice vatamount field.
+     * Sets Invoice VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceVATAmount(?float $value): self
     {
@@ -1011,7 +1122,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets invoice vatamount field.
+     * Unsets Invoice VAT Amount field.
      */
     public function unsetInvoiceVATAmount(): self
     {
@@ -1020,7 +1131,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets reverse charge field.
+     * Sets Reverse Charge field.
+     *
+     * @param bool|null $value
      */
     public function reverseCharge(?bool $value): self
     {
@@ -1029,7 +1142,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets reverse charge field.
+     * Unsets Reverse Charge field.
      */
     public function unsetReverseCharge(): self
     {
@@ -1038,7 +1151,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original fee item id field.
+     * Sets Original Fee Item Id field.
+     *
+     * @param int|null $value
      */
     public function originalFeeItemId(?int $value): self
     {
@@ -1047,7 +1162,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original fee item id field.
+     * Unsets Original Fee Item Id field.
      */
     public function unsetOriginalFeeItemId(): self
     {
@@ -1056,7 +1171,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original currency code field.
+     * Sets Original Currency Code field.
+     *
+     * @param string|null $value
      */
     public function originalCurrencyCode(?string $value): self
     {
@@ -1065,7 +1182,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original currency code field.
+     * Unsets Original Currency Code field.
      */
     public function unsetOriginalCurrencyCode(): self
     {
@@ -1074,7 +1191,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original currency symbol field.
+     * Sets Original Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function originalCurrencySymbol(?string $value): self
     {
@@ -1083,7 +1202,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original currency symbol field.
+     * Unsets Original Currency Symbol field.
      */
     public function unsetOriginalCurrencySymbol(): self
     {
@@ -1092,7 +1211,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original unit price field.
+     * Sets Original Unit Price field.
+     *
+     * @param float|null $value
      */
     public function originalUnitPrice(?float $value): self
     {
@@ -1101,7 +1222,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original unit price field.
+     * Unsets Original Unit Price field.
      */
     public function unsetOriginalUnitPrice(): self
     {
@@ -1110,7 +1231,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original net amount field.
+     * Sets Original Net Amount field.
+     *
+     * @param float|null $value
      */
     public function originalNetAmount(?float $value): self
     {
@@ -1119,7 +1242,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original net amount field.
+     * Unsets Original Net Amount field.
      */
     public function unsetOriginalNetAmount(): self
     {
@@ -1128,7 +1251,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original vatamount field.
+     * Sets Original VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function originalVATAmount(?float $value): self
     {
@@ -1137,7 +1262,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original vatamount field.
+     * Unsets Original VAT Amount field.
      */
     public function unsetOriginalVATAmount(): self
     {
@@ -1146,7 +1271,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original gross amount field.
+     * Sets Original Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function originalGrossAmount(?float $value): self
     {
@@ -1155,7 +1282,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original gross amount field.
+     * Unsets Original Gross Amount field.
      */
     public function unsetOriginalGrossAmount(): self
     {
@@ -1164,7 +1291,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original exchange rate field.
+     * Sets Original Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function originalExchangeRate(?float $value): self
     {
@@ -1173,7 +1302,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original exchange rate field.
+     * Unsets Original Exchange Rate field.
      */
     public function unsetOriginalExchangeRate(): self
     {
@@ -1182,7 +1311,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original legislative region id field.
+     * Sets Original Legislative Region Id field.
+     *
+     * @param int|null $value
      */
     public function originalLegislativeRegionId(?int $value): self
     {
@@ -1191,7 +1322,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original legislative region id field.
+     * Unsets Original Legislative Region Id field.
      */
     public function unsetOriginalLegislativeRegionId(): self
     {
@@ -1200,7 +1331,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original legislative region name field.
+     * Sets Original Legislative Region Name field.
+     *
+     * @param string|null $value
      */
     public function originalLegislativeRegionName(?string $value): self
     {
@@ -1209,7 +1342,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original legislative region name field.
+     * Unsets Original Legislative Region Name field.
      */
     public function unsetOriginalLegislativeRegionName(): self
     {
@@ -1218,7 +1351,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets frequency field.
+     * Sets Frequency field.
+     *
+     * @param string|null $value
      */
     public function frequency(?string $value): self
     {
@@ -1227,7 +1362,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets frequency field.
+     * Unsets Frequency field.
      */
     public function unsetFrequency(): self
     {
@@ -1236,7 +1371,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets fee item card level breakup field.
+     * Sets Fee Item Card Level Breakup field.
+     *
+     * @param string|null $value
      */
     public function feeItemCardLevelBreakup(?string $value): self
     {
@@ -1245,7 +1382,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets fee item card level breakup field.
+     * Unsets Fee Item Card Level Breakup field.
      */
     public function unsetFeeItemCardLevelBreakup(): self
     {
@@ -1254,7 +1391,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original fee item invoice id field.
+     * Sets Original Fee Item Invoice Id field.
+     *
+     * @param int|null $value
      */
     public function originalFeeItemInvoiceId(?int $value): self
     {
@@ -1263,7 +1402,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original fee item invoice id field.
+     * Unsets Original Fee Item Invoice Id field.
      */
     public function unsetOriginalFeeItemInvoiceId(): self
     {
@@ -1272,7 +1411,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original fee item invoice number field.
+     * Sets Original Fee Item Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function originalFeeItemInvoiceNumber(?string $value): self
     {
@@ -1281,7 +1422,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original fee item invoice number field.
+     * Unsets Original Fee Item Invoice Number field.
      */
     public function unsetOriginalFeeItemInvoiceNumber(): self
     {
@@ -1290,7 +1431,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets original fee item invoice date field.
+     * Sets Original Fee Item Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function originalFeeItemInvoiceDate(?string $value): self
     {
@@ -1299,7 +1442,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets original fee item invoice date field.
+     * Unsets Original Fee Item Invoice Date field.
      */
     public function unsetOriginalFeeItemInvoiceDate(): self
     {
@@ -1308,7 +1451,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -1317,7 +1462,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -1326,7 +1471,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets emboss text field.
+     * Sets Emboss Text field.
+     *
+     * @param string|null $value
      */
     public function embossText(?string $value): self
     {
@@ -1335,7 +1482,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets emboss text field.
+     * Unsets Emboss Text field.
      */
     public function unsetEmbossText(): self
     {
@@ -1344,7 +1491,9 @@ class FeeItemBuilder
     }
 
     /**
-     * Sets vrn field.
+     * Sets VRN field.
+     *
+     * @param string|null $value
      */
     public function vRN(?string $value): self
     {
@@ -1353,7 +1502,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Unsets vrn field.
+     * Unsets VRN field.
      */
     public function unsetVRN(): self
     {
@@ -1362,7 +1511,7 @@ class FeeItemBuilder
     }
 
     /**
-     * Initializes a new fee item object.
+     * Initializes a new Fee Item object.
      */
     public function build(): FeeItem
     {

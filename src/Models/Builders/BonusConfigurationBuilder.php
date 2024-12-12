@@ -11,7 +11,11 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\AssociatedAccount;
 use ShellDataReportingAPIsLib\Models\BonusConfiguration;
+use ShellDataReportingAPIsLib\Models\FeeRuleLocation;
+use ShellDataReportingAPIsLib\Models\FeeRuleProduct;
+use ShellDataReportingAPIsLib\Models\FeeRuleTier;
 
 /**
  * Builder for model BonusConfiguration
@@ -31,7 +35,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Initializes a new bonus configuration Builder object.
+     * Initializes a new Bonus Configuration Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +43,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets pricing account id field.
+     * Sets Pricing Account Id field.
+     *
+     * @param int|null $value
      */
     public function pricingAccountId(?int $value): self
     {
@@ -48,7 +54,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets pricing account id field.
+     * Unsets Pricing Account Id field.
      */
     public function unsetPricingAccountId(): self
     {
@@ -57,7 +63,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets pricing account number field.
+     * Sets Pricing Account Number field.
+     *
+     * @param string|null $value
      */
     public function pricingAccountNumber(?string $value): self
     {
@@ -66,7 +74,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets pricing account number field.
+     * Unsets Pricing Account Number field.
      */
     public function unsetPricingAccountNumber(): self
     {
@@ -75,7 +83,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets pricing account short name field.
+     * Sets Pricing Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function pricingAccountShortName(?string $value): self
     {
@@ -84,7 +94,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets pricing account short name field.
+     * Unsets Pricing Account Short Name field.
      */
     public function unsetPricingAccountShortName(): self
     {
@@ -93,7 +103,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets pricing account full name field.
+     * Sets Pricing Account Full Name field.
+     *
+     * @param string|null $value
      */
     public function pricingAccountFullName(?string $value): self
     {
@@ -102,7 +114,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets pricing account full name field.
+     * Unsets Pricing Account Full Name field.
      */
     public function unsetPricingAccountFullName(): self
     {
@@ -111,7 +123,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param int|null $value
      */
     public function feeRuleId(?int $value): self
     {
@@ -120,7 +134,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -129,7 +143,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -138,7 +154,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -147,7 +163,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule date effective field.
+     * Sets Fee Rule Date Effective field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDateEffective(?string $value): self
     {
@@ -156,7 +174,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule date effective field.
+     * Unsets Fee Rule Date Effective field.
      */
     public function unsetFeeRuleDateEffective(): self
     {
@@ -165,7 +183,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule date terminated field.
+     * Sets Fee Rule Date Terminated field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDateTerminated(?string $value): self
     {
@@ -174,7 +194,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule date terminated field.
+     * Unsets Fee Rule Date Terminated field.
      */
     public function unsetFeeRuleDateTerminated(): self
     {
@@ -183,7 +203,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets bonus paid to field.
+     * Sets Bonus Paid To field.
+     *
+     * @param string|null $value
      */
     public function bonusPaidTo(?string $value): self
     {
@@ -192,7 +214,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets bonus paid to field.
+     * Unsets Bonus Paid To field.
      */
     public function unsetBonusPaidTo(): self
     {
@@ -201,7 +223,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets bonus paid to account id field.
+     * Sets Bonus Paid To Account Id field.
+     *
+     * @param int|null $value
      */
     public function bonusPaidToAccountId(?int $value): self
     {
@@ -210,7 +234,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets bonus paid to account id field.
+     * Unsets Bonus Paid To Account Id field.
      */
     public function unsetBonusPaidToAccountId(): self
     {
@@ -219,7 +243,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets bonus paid to account number field.
+     * Sets Bonus Paid To Account Number field.
+     *
+     * @param string|null $value
      */
     public function bonusPaidToAccountNumber(?string $value): self
     {
@@ -228,7 +254,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets bonus paid to account number field.
+     * Unsets Bonus Paid To Account Number field.
      */
     public function unsetBonusPaidToAccountNumber(): self
     {
@@ -237,7 +263,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets bonus paid to account short name field.
+     * Sets Bonus Paid To Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function bonusPaidToAccountShortName(?string $value): self
     {
@@ -246,7 +274,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets bonus paid to account short name field.
+     * Unsets Bonus Paid To Account Short Name field.
      */
     public function unsetBonusPaidToAccountShortName(): self
     {
@@ -255,7 +283,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets bonus paid to account full name field.
+     * Sets Bonus Paid To Account Full Name field.
+     *
+     * @param string|null $value
      */
     public function bonusPaidToAccountFullName(?string $value): self
     {
@@ -264,7 +294,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets bonus paid to account full name field.
+     * Unsets Bonus Paid To Account Full Name field.
      */
     public function unsetBonusPaidToAccountFullName(): self
     {
@@ -273,7 +303,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets frequency field.
+     * Sets Frequency field.
+     *
+     * @param string|null $value
      */
     public function frequency(?string $value): self
     {
@@ -282,7 +314,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets frequency field.
+     * Unsets Frequency field.
      */
     public function unsetFrequency(): self
     {
@@ -291,7 +323,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets next calculation date field.
+     * Sets Next Calculation Date field.
+     *
+     * @param string|null $value
      */
     public function nextCalculationDate(?string $value): self
     {
@@ -300,7 +334,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets next calculation date field.
+     * Unsets Next Calculation Date field.
      */
     public function unsetNextCalculationDate(): self
     {
@@ -309,7 +343,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets previous calculated date field.
+     * Sets Previous Calculated Date field.
+     *
+     * @param string|null $value
      */
     public function previousCalculatedDate(?string $value): self
     {
@@ -318,7 +354,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets previous calculated date field.
+     * Unsets Previous Calculated Date field.
      */
     public function unsetPreviousCalculatedDate(): self
     {
@@ -327,7 +363,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule basis field.
+     * Sets Fee Rule Basis field.
+     *
+     * @param string|null $value
      */
     public function feeRuleBasis(?string $value): self
     {
@@ -336,7 +374,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule basis field.
+     * Unsets Fee Rule Basis field.
      */
     public function unsetFeeRuleBasis(): self
     {
@@ -345,7 +383,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule currency code field.
+     * Sets Fee Rule Currency Code field.
+     *
+     * @param string|null $value
      */
     public function feeRuleCurrencyCode(?string $value): self
     {
@@ -354,7 +394,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule currency code field.
+     * Unsets Fee Rule Currency Code field.
      */
     public function unsetFeeRuleCurrencyCode(): self
     {
@@ -363,7 +403,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule currency symbol field.
+     * Sets Fee Rule Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function feeRuleCurrencySymbol(?string $value): self
     {
@@ -372,7 +414,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule currency symbol field.
+     * Unsets Fee Rule Currency Symbol field.
      */
     public function unsetFeeRuleCurrencySymbol(): self
     {
@@ -381,7 +423,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule available from field.
+     * Sets Fee Rule Available From field.
+     *
+     * @param string|null $value
      */
     public function feeRuleAvailableFrom(?string $value): self
     {
@@ -390,7 +434,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule available from field.
+     * Unsets Fee Rule Available From field.
      */
     public function unsetFeeRuleAvailableFrom(): self
     {
@@ -399,7 +443,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule available to field.
+     * Sets Fee Rule Available To field.
+     *
+     * @param string|null $value
      */
     public function feeRuleAvailableTo(?string $value): self
     {
@@ -408,7 +454,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Unsets fee rule available to field.
+     * Unsets Fee Rule Available To field.
      */
     public function unsetFeeRuleAvailableTo(): self
     {
@@ -417,7 +463,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule locations field.
+     * Sets Fee Rule Locations field.
+     *
+     * @param FeeRuleLocation[]|null $value
      */
     public function feeRuleLocations(?array $value): self
     {
@@ -426,7 +474,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule tiers field.
+     * Sets Fee Rule Tiers field.
+     *
+     * @param FeeRuleTier[]|null $value
      */
     public function feeRuleTiers(?array $value): self
     {
@@ -435,7 +485,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets associated accounts field.
+     * Sets Associated Accounts field.
+     *
+     * @param AssociatedAccount[]|null $value
      */
     public function associatedAccounts(?array $value): self
     {
@@ -444,7 +496,9 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Sets fee rule products field.
+     * Sets Fee Rule Products field.
+     *
+     * @param FeeRuleProduct[]|null $value
      */
     public function feeRuleProducts(?array $value): self
     {
@@ -453,7 +507,7 @@ class BonusConfigurationBuilder
     }
 
     /**
-     * Initializes a new bonus configuration object.
+     * Initializes a new Bonus Configuration object.
      */
     public function build(): BonusConfiguration
     {

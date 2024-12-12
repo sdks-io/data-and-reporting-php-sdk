@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\InvoiceDatesData;
 use ShellDataReportingAPIsLib\Models\InvoiceDatesResponseData;
 
 /**
@@ -31,7 +32,7 @@ class InvoiceDatesResponseDataBuilder
     }
 
     /**
-     * Initializes a new invoice dates response data Builder object.
+     * Initializes a new Invoice Dates Response Data Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class InvoiceDatesResponseDataBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class InvoiceDatesResponseDataBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class InvoiceDatesResponseDataBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param InvoiceDatesData[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,7 @@ class InvoiceDatesResponseDataBuilder
     }
 
     /**
-     * Initializes a new invoice dates response data object.
+     * Initializes a new Invoice Dates Response Data object.
      */
     public function build(): InvoiceDatesResponseData
     {

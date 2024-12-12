@@ -31,7 +31,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Initializes a new bonus history Builder object.
+     * Initializes a new Bonus History Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets payer id field.
+     * Sets Payer Id field.
+     *
+     * @param int|null $value
      */
     public function payerId(?int $value): self
     {
@@ -48,7 +50,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets payer id field.
+     * Unsets Payer Id field.
      */
     public function unsetPayerId(): self
     {
@@ -57,7 +59,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -66,7 +70,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -75,7 +79,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets payer short name field.
+     * Sets Payer Short Name field.
+     *
+     * @param string|null $value
      */
     public function payerShortName(?string $value): self
     {
@@ -84,7 +90,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets payer short name field.
+     * Unsets Payer Short Name field.
      */
     public function unsetPayerShortName(): self
     {
@@ -93,7 +99,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets payer full name field.
+     * Sets Payer Full Name field.
+     *
+     * @param string|null $value
      */
     public function payerFullName(?string $value): self
     {
@@ -102,7 +110,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets payer full name field.
+     * Unsets Payer Full Name field.
      */
     public function unsetPayerFullName(): self
     {
@@ -111,7 +119,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -120,7 +130,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -129,7 +139,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -138,7 +150,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -147,7 +159,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -156,7 +170,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -165,7 +179,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets account full name field.
+     * Sets Account Full Name field.
+     *
+     * @param string|null $value
      */
     public function accountFullName(?string $value): self
     {
@@ -174,7 +190,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets account full name field.
+     * Unsets Account Full Name field.
      */
     public function unsetAccountFullName(): self
     {
@@ -183,7 +199,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice account id field.
+     * Sets Invoice Account Id field.
+     *
+     * @param int|null $value
      */
     public function invoiceAccountId(?int $value): self
     {
@@ -192,7 +210,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice account id field.
+     * Unsets Invoice Account Id field.
      */
     public function unsetInvoiceAccountId(): self
     {
@@ -201,7 +219,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice account number field.
+     * Sets Invoice Account Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceAccountNumber(?string $value): self
     {
@@ -210,7 +230,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice account number field.
+     * Unsets Invoice Account Number field.
      */
     public function unsetInvoiceAccountNumber(): self
     {
@@ -219,7 +239,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice account short name field.
+     * Sets Invoice Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function invoiceAccountShortName(?string $value): self
     {
@@ -228,7 +250,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice account short name field.
+     * Unsets Invoice Account Short Name field.
      */
     public function unsetInvoiceAccountShortName(): self
     {
@@ -237,7 +259,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice account full name field.
+     * Sets Invoice Account Full Name field.
+     *
+     * @param string|null $value
      */
     public function invoiceAccountFullName(?string $value): self
     {
@@ -246,7 +270,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice account full name field.
+     * Unsets Invoice Account Full Name field.
      */
     public function unsetInvoiceAccountFullName(): self
     {
@@ -255,7 +279,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee rule id field.
+     * Sets Fee Rule Id field.
+     *
+     * @param string|null $value
      */
     public function feeRuleId(?string $value): self
     {
@@ -264,7 +290,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee rule id field.
+     * Unsets Fee Rule Id field.
      */
     public function unsetFeeRuleId(): self
     {
@@ -273,7 +299,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee rule description field.
+     * Sets Fee Rule Description field.
+     *
+     * @param string|null $value
      */
     public function feeRuleDescription(?string $value): self
     {
@@ -282,7 +310,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee rule description field.
+     * Unsets Fee Rule Description field.
      */
     public function unsetFeeRuleDescription(): self
     {
@@ -291,7 +319,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets from date field.
+     * Sets From Date field.
+     *
+     * @param string|null $value
      */
     public function fromDate(?string $value): self
     {
@@ -300,7 +330,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets from date field.
+     * Unsets From Date field.
      */
     public function unsetFromDate(): self
     {
@@ -309,7 +339,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets to date field.
+     * Sets To Date field.
+     *
+     * @param string|null $value
      */
     public function toDate(?string $value): self
     {
@@ -318,7 +350,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets to date field.
+     * Unsets To Date field.
      */
     public function unsetToDate(): self
     {
@@ -327,7 +359,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets bonus paid to field.
+     * Sets Bonus Paid To field.
+     *
+     * @param string|null $value
      */
     public function bonusPaidTo(?string $value): self
     {
@@ -336,7 +370,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets bonus paid to field.
+     * Unsets Bonus Paid To field.
      */
     public function unsetBonusPaidTo(): self
     {
@@ -345,7 +379,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee item id field.
+     * Sets Fee Item Id field.
+     *
+     * @param int|null $value
      */
     public function feeItemId(?int $value): self
     {
@@ -354,7 +390,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee item id field.
+     * Unsets Fee Item Id field.
      */
     public function unsetFeeItemId(): self
     {
@@ -363,7 +399,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee rule basis field.
+     * Sets Fee Rule Basis field.
+     *
+     * @param string|null $value
      */
     public function feeRuleBasis(?string $value): self
     {
@@ -372,7 +410,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee rule basis field.
+     * Unsets Fee Rule Basis field.
      */
     public function unsetFeeRuleBasis(): self
     {
@@ -381,7 +419,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee item currency code field.
+     * Sets Fee Item Currency Code field.
+     *
+     * @param string|null $value
      */
     public function feeItemCurrencyCode(?string $value): self
     {
@@ -390,7 +430,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee item currency code field.
+     * Unsets Fee Item Currency Code field.
      */
     public function unsetFeeItemCurrencyCode(): self
     {
@@ -399,7 +439,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee item currency symbol field.
+     * Sets Fee Item Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function feeItemCurrencySymbol(?string $value): self
     {
@@ -408,7 +450,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee item currency symbol field.
+     * Unsets Fee Item Currency Symbol field.
      */
     public function unsetFeeItemCurrencySymbol(): self
     {
@@ -417,7 +459,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets prorated volume field.
+     * Sets Prorated Volume field.
+     *
+     * @param float|null $value
      */
     public function proratedVolume(?float $value): self
     {
@@ -426,7 +470,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets prorated volume field.
+     * Unsets Prorated Volume field.
      */
     public function unsetProratedVolume(): self
     {
@@ -435,7 +479,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets total volume field.
+     * Sets Total Volume field.
+     *
+     * @param float|null $value
      */
     public function totalVolume(?float $value): self
     {
@@ -444,7 +490,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets total volume field.
+     * Unsets Total Volume field.
      */
     public function unsetTotalVolume(): self
     {
@@ -453,7 +499,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee product field.
+     * Sets Fee Product field.
+     *
+     * @param string|null $value
      */
     public function feeProduct(?string $value): self
     {
@@ -462,7 +510,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee product field.
+     * Unsets Fee Product field.
      */
     public function unsetFeeProduct(): self
     {
@@ -471,7 +519,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice gross amount field.
+     * Sets Invoice Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceGrossAmount(?float $value): self
     {
@@ -480,7 +530,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice gross amount field.
+     * Unsets Invoice Gross Amount field.
      */
     public function unsetInvoiceGrossAmount(): self
     {
@@ -489,7 +539,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice net amount field.
+     * Sets Invoice Net Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceNetAmount(?float $value): self
     {
@@ -498,7 +550,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice net amount field.
+     * Unsets Invoice Net Amount field.
      */
     public function unsetInvoiceNetAmount(): self
     {
@@ -507,7 +559,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets invoice vatamount field.
+     * Sets Invoice VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceVATAmount(?float $value): self
     {
@@ -516,7 +570,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets invoice vatamount field.
+     * Unsets Invoice VAT Amount field.
      */
     public function unsetInvoiceVATAmount(): self
     {
@@ -525,7 +579,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets is fee cancelled field.
+     * Sets Is Fee Cancelled field.
+     *
+     * @param bool|null $value
      */
     public function isFeeCancelled(?bool $value): self
     {
@@ -534,7 +590,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets is fee cancelled field.
+     * Unsets Is Fee Cancelled field.
      */
     public function unsetIsFeeCancelled(): self
     {
@@ -543,7 +599,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee item tier prorated volume field.
+     * Sets Fee Item Tier Prorated Volume field.
+     *
+     * @param float|null $value
      */
     public function feeItemTierProratedVolume(?float $value): self
     {
@@ -552,7 +610,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee item tier prorated volume field.
+     * Unsets Fee Item Tier Prorated Volume field.
      */
     public function unsetFeeItemTierProratedVolume(): self
     {
@@ -561,7 +619,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets fee item tier total volume field.
+     * Sets Fee Item Tier Total Volume field.
+     *
+     * @param float|null $value
      */
     public function feeItemTierTotalVolume(?float $value): self
     {
@@ -570,7 +630,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets fee item tier total volume field.
+     * Unsets Fee Item Tier Total Volume field.
      */
     public function unsetFeeItemTierTotalVolume(): self
     {
@@ -579,7 +639,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets tier minimum field.
+     * Sets Tier Minimum field.
+     *
+     * @param int|null $value
      */
     public function tierMinimum(?int $value): self
     {
@@ -588,7 +650,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets tier minimum field.
+     * Unsets Tier Minimum field.
      */
     public function unsetTierMinimum(): self
     {
@@ -597,7 +659,9 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Sets tier rate field.
+     * Sets Tier Rate field.
+     *
+     * @param float|null $value
      */
     public function tierRate(?float $value): self
     {
@@ -606,7 +670,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Unsets tier rate field.
+     * Unsets Tier Rate field.
      */
     public function unsetTierRate(): self
     {
@@ -615,7 +679,7 @@ class BonusHistoryBuilder
     }
 
     /**
-     * Initializes a new bonus history object.
+     * Initializes a new Bonus History object.
      */
     public function build(): BonusHistory
     {

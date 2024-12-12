@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use ShellDataReportingAPIsLib\Models\SearchStatementOfAccount;
 use ShellDataReportingAPIsLib\Models\SearchStatementOfAccountResponse;
 
 /**
@@ -31,7 +32,7 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Initializes a new search statement of account response Builder object.
+     * Initializes a new Search Statement Of Account Response Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +40,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets request id field.
+     * Sets Request Id field.
+     *
+     * @param string|null $value
      */
     public function requestId(?string $value): self
     {
@@ -48,7 +51,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets status field.
+     * Sets Status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -57,7 +62,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets data field.
+     * Sets Data field.
+     *
+     * @param SearchStatementOfAccount[]|null $value
      */
     public function data(?array $value): self
     {
@@ -66,7 +73,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets page field.
+     * Sets Page field.
+     *
+     * @param int|null $value
      */
     public function page(?int $value): self
     {
@@ -75,7 +84,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets total records field.
+     * Sets Total Records field.
+     *
+     * @param int|null $value
      */
     public function totalRecords(?int $value): self
     {
@@ -84,7 +95,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets total pages field.
+     * Sets Total Pages field.
+     *
+     * @param int|null $value
      */
     public function totalPages(?int $value): self
     {
@@ -93,7 +106,9 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Sets page size field.
+     * Sets Page Size field.
+     *
+     * @param int|null $value
      */
     public function pageSize(?int $value): self
     {
@@ -102,7 +117,7 @@ class SearchStatementOfAccountResponseBuilder
     }
 
     /**
-     * Initializes a new search statement of account response object.
+     * Initializes a new Search Statement Of Account Response object.
      */
     public function build(): SearchStatementOfAccountResponse
     {

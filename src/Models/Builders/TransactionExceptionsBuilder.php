@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\Location;
+use ShellDataReportingAPIsLib\Models\ExceptionSiteLocation;
 use ShellDataReportingAPIsLib\Models\TransactionExceptions;
 
 /**
@@ -32,7 +32,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions Builder object.
+     * Initializes a new Transaction Exceptions Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +40,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets sales item id field.
+     * Sets Sales Item Id field.
+     *
+     * @param float|null $value
      */
     public function salesItemId(?float $value): self
     {
@@ -49,7 +51,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets sales item id field.
+     * Unsets Sales Item Id field.
      */
     public function unsetSalesItemId(): self
     {
@@ -58,7 +60,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card id field.
+     * Sets Card Id field.
+     *
+     * @param int|null $value
      */
     public function cardId(?int $value): self
     {
@@ -67,7 +71,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card id field.
+     * Unsets Card Id field.
      */
     public function unsetCardId(): self
     {
@@ -76,7 +80,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets product id field.
+     * Sets Product Id field.
+     *
+     * @param int|null $value
      */
     public function productId(?int $value): self
     {
@@ -85,7 +91,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets product id field.
+     * Unsets Product Id field.
      */
     public function unsetProductId(): self
     {
@@ -94,7 +100,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction guid field.
+     * Sets Transaction GUID field.
+     *
+     * @param string|null $value
      */
     public function transactionGUID(?string $value): self
     {
@@ -103,7 +111,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction guid field.
+     * Unsets Transaction GUID field.
      */
     public function unsetTransactionGUID(): self
     {
@@ -112,7 +120,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction date field.
+     * Sets Transaction Date field.
+     *
+     * @param string|null $value
      */
     public function transactionDate(?string $value): self
     {
@@ -121,7 +131,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction date field.
+     * Unsets Transaction Date field.
      */
     public function unsetTransactionDate(): self
     {
@@ -130,7 +140,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets customer invoice value total gross field.
+     * Sets Customer Invoice Value Total Gross field.
+     *
+     * @param float|null $value
      */
     public function customerInvoiceValueTotalGross(?float $value): self
     {
@@ -139,7 +151,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets customer invoice value total gross field.
+     * Unsets Customer Invoice Value Total Gross field.
      */
     public function unsetCustomerInvoiceValueTotalGross(): self
     {
@@ -148,7 +160,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card pan field.
+     * Sets Card PAN field.
+     *
+     * @param string|null $value
      */
     public function cardPAN(?string $value): self
     {
@@ -157,7 +171,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card pan field.
+     * Unsets Card PAN field.
      */
     public function unsetCardPAN(): self
     {
@@ -166,7 +180,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card expiry field.
+     * Sets Card Expiry field.
+     *
+     * @param string|null $value
      */
     public function cardExpiry(?string $value): self
     {
@@ -175,7 +191,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card expiry field.
+     * Unsets Card Expiry field.
      */
     public function unsetCardExpiry(): self
     {
@@ -184,7 +200,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction time field.
+     * Sets Transaction Time field.
+     *
+     * @param string|null $value
      */
     public function transactionTime(?string $value): self
     {
@@ -193,7 +211,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction time field.
+     * Unsets Transaction Time field.
      */
     public function unsetTransactionTime(): self
     {
@@ -202,7 +220,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets utcoffset field.
+     * Sets UTC Offset field.
+     *
+     * @param string|null $value
      */
     public function uTCOffset(?string $value): self
     {
@@ -211,7 +231,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets utcoffset field.
+     * Unsets UTC Offset field.
      */
     public function unsetUTCOffset(): self
     {
@@ -220,7 +240,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets fleet id input field.
+     * Sets Fleet Id Input field.
+     *
+     * @param string|null $value
      */
     public function fleetIdInput(?string $value): self
     {
@@ -229,7 +251,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets fleet id input field.
+     * Unsets Fleet Id Input field.
      */
     public function unsetFleetIdInput(): self
     {
@@ -238,7 +260,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets odometer input field.
+     * Sets Odometer Input field.
+     *
+     * @param int|null $value
      */
     public function odometerInput(?int $value): self
     {
@@ -247,7 +271,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets odometer input field.
+     * Unsets Odometer Input field.
      */
     public function unsetOdometerInput(): self
     {
@@ -256,7 +280,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets driver name field.
+     * Sets Driver Name field.
+     *
+     * @param string|null $value
      */
     public function driverName(?string $value): self
     {
@@ -265,7 +291,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets driver name field.
+     * Unsets Driver Name field.
      */
     public function unsetDriverName(): self
     {
@@ -274,7 +300,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vehicle registration field.
+     * Sets Vehicle Registration field.
+     *
+     * @param string|null $value
      */
     public function vehicleRegistration(?string $value): self
     {
@@ -283,7 +311,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vehicle registration field.
+     * Unsets Vehicle Registration field.
      */
     public function unsetVehicleRegistration(): self
     {
@@ -292,7 +320,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice currency code field.
+     * Sets Invoice Currency Code field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencyCode(?string $value): self
     {
@@ -301,7 +331,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice currency code field.
+     * Unsets Invoice Currency Code field.
      */
     public function unsetInvoiceCurrencyCode(): self
     {
@@ -310,7 +340,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice currency symbol field.
+     * Sets Invoice Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function invoiceCurrencySymbol(?string $value): self
     {
@@ -319,7 +351,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice currency symbol field.
+     * Unsets Invoice Currency Symbol field.
      */
     public function unsetInvoiceCurrencySymbol(): self
     {
@@ -328,7 +360,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction currency code field.
+     * Sets Transaction Currency Code field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencyCode(?string $value): self
     {
@@ -337,7 +371,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction currency code field.
+     * Unsets Transaction Currency Code field.
      */
     public function unsetTransactionCurrencyCode(): self
     {
@@ -346,7 +380,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction currency symbol field.
+     * Sets Transaction Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function transactionCurrencySymbol(?string $value): self
     {
@@ -355,7 +391,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction currency symbol field.
+     * Unsets Transaction Currency Symbol field.
      */
     public function unsetTransactionCurrencySymbol(): self
     {
@@ -364,7 +400,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction net amount field.
+     * Sets Transaction Net Amount field.
+     *
+     * @param float|null $value
      */
     public function transactionNetAmount(?float $value): self
     {
@@ -373,7 +411,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction net amount field.
+     * Unsets Transaction Net Amount field.
      */
     public function unsetTransactionNetAmount(): self
     {
@@ -382,7 +420,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction tax field.
+     * Sets Transaction Tax field.
+     *
+     * @param float|null $value
      */
     public function transactionTax(?float $value): self
     {
@@ -391,7 +431,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction tax field.
+     * Unsets Transaction Tax field.
      */
     public function unsetTransactionTax(): self
     {
@@ -400,7 +440,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction gross amount field.
+     * Sets Transaction Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function transactionGrossAmount(?float $value): self
     {
@@ -409,7 +451,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction gross amount field.
+     * Unsets Transaction Gross Amount field.
      */
     public function unsetTransactionGrossAmount(): self
     {
@@ -418,7 +460,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice net amount field.
+     * Sets Invoice Net Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceNetAmount(?float $value): self
     {
@@ -427,7 +471,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice net amount field.
+     * Unsets Invoice Net Amount field.
      */
     public function unsetInvoiceNetAmount(): self
     {
@@ -436,7 +480,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice tax field.
+     * Sets Invoice Tax field.
+     *
+     * @param float|null $value
      */
     public function invoiceTax(?float $value): self
     {
@@ -445,7 +491,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice tax field.
+     * Unsets Invoice Tax field.
      */
     public function unsetInvoiceTax(): self
     {
@@ -454,7 +500,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice gross amount field.
+     * Sets Invoice Gross Amount field.
+     *
+     * @param float|null $value
      */
     public function invoiceGrossAmount(?float $value): self
     {
@@ -463,7 +511,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice gross amount field.
+     * Unsets Invoice Gross Amount field.
      */
     public function unsetInvoiceGrossAmount(): self
     {
@@ -472,7 +520,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets purchased in country field.
+     * Sets Purchased In Country field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountry(?string $value): self
     {
@@ -481,7 +531,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets purchased in country field.
+     * Unsets Purchased In Country field.
      */
     public function unsetPurchasedInCountry(): self
     {
@@ -490,7 +540,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets account id field.
+     * Sets Account Id field.
+     *
+     * @param int|null $value
      */
     public function accountId(?int $value): self
     {
@@ -499,7 +551,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets account id field.
+     * Unsets Account Id field.
      */
     public function unsetAccountId(): self
     {
@@ -508,7 +560,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets account number field.
+     * Sets Account Number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -517,7 +571,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets account number field.
+     * Unsets Account Number field.
      */
     public function unsetAccountNumber(): self
     {
@@ -526,7 +580,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets account name field.
+     * Sets Account Name field.
+     *
+     * @param string|null $value
      */
     public function accountName(?string $value): self
     {
@@ -535,7 +591,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets account name field.
+     * Unsets Account Name field.
      */
     public function unsetAccountName(): self
     {
@@ -544,7 +600,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets account short name field.
+     * Sets Account Short Name field.
+     *
+     * @param string|null $value
      */
     public function accountShortName(?string $value): self
     {
@@ -553,7 +611,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets account short name field.
+     * Unsets Account Short Name field.
      */
     public function unsetAccountShortName(): self
     {
@@ -562,7 +620,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets quantity field.
+     * Sets Quantity field.
+     *
+     * @param float|null $value
      */
     public function quantity(?float $value): self
     {
@@ -571,7 +631,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets quantity field.
+     * Unsets Quantity field.
      */
     public function unsetQuantity(): self
     {
@@ -580,7 +640,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets fuel product field.
+     * Sets Fuel Product field.
+     *
+     * @param bool|null $value
      */
     public function fuelProduct(?bool $value): self
     {
@@ -589,7 +651,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets fuel product field.
+     * Unsets Fuel Product field.
      */
     public function unsetFuelProduct(): self
     {
@@ -598,7 +660,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets unit price in transaction currency field.
+     * Sets Unit Price In Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function unitPriceInTransactionCurrency(?float $value): self
     {
@@ -607,7 +671,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets unit price in transaction currency field.
+     * Unsets Unit Price In Transaction Currency field.
      */
     public function unsetUnitPriceInTransactionCurrency(): self
     {
@@ -616,7 +680,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets unit price in invoice currency field.
+     * Sets Unit Price In Invoice Currency field.
+     *
+     * @param float|null $value
      */
     public function unitPriceInInvoiceCurrency(?float $value): self
     {
@@ -625,7 +691,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets unit price in invoice currency field.
+     * Unsets Unit Price In Invoice Currency field.
      */
     public function unsetUnitPriceInInvoiceCurrency(): self
     {
@@ -634,7 +700,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets unit discount transaction currency field.
+     * Sets Unit Discount Transaction Currency field.
+     *
+     * @param float|null $value
      */
     public function unitDiscountTransactionCurrency(?float $value): self
     {
@@ -643,7 +711,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets unit discount transaction currency field.
+     * Unsets Unit Discount Transaction Currency field.
      */
     public function unsetUnitDiscountTransactionCurrency(): self
     {
@@ -652,7 +720,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets unit discount invoice currency field.
+     * Sets Unit Discount Invoice Currency field.
+     *
+     * @param float|null $value
      */
     public function unitDiscountInvoiceCurrency(?float $value): self
     {
@@ -661,7 +731,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets unit discount invoice currency field.
+     * Unsets Unit Discount Invoice Currency field.
      */
     public function unsetUnitDiscountInvoiceCurrency(): self
     {
@@ -670,7 +740,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets is invoiced field.
+     * Sets Is Invoiced field.
+     *
+     * @param bool|null $value
      */
     public function isInvoiced(?bool $value): self
     {
@@ -679,7 +751,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets is invoiced field.
+     * Unsets Is Invoiced field.
      */
     public function unsetIsInvoiced(): self
     {
@@ -688,7 +760,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice number field.
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
      */
     public function invoiceNumber(?string $value): self
     {
@@ -697,7 +771,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice number field.
+     * Unsets Invoice Number field.
      */
     public function unsetInvoiceNumber(): self
     {
@@ -706,7 +780,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets invoice date field.
+     * Sets Invoice Date field.
+     *
+     * @param string|null $value
      */
     public function invoiceDate(?string $value): self
     {
@@ -715,7 +791,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets invoice date field.
+     * Unsets Invoice Date field.
      */
     public function unsetInvoiceDate(): self
     {
@@ -724,7 +800,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets site code field.
+     * Sets Site Code field.
+     *
+     * @param string|null $value
      */
     public function siteCode(?string $value): self
     {
@@ -733,7 +811,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets site code field.
+     * Unsets Site Code field.
      */
     public function unsetSiteCode(): self
     {
@@ -742,7 +820,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets site name field.
+     * Sets Site Name field.
+     *
+     * @param string|null $value
      */
     public function siteName(?string $value): self
     {
@@ -751,7 +831,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets site name field.
+     * Unsets Site Name field.
      */
     public function unsetSiteName(): self
     {
@@ -760,7 +840,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets site country field.
+     * Sets Site Country field.
+     *
+     * @param string|null $value
      */
     public function siteCountry(?string $value): self
     {
@@ -769,7 +851,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets site country field.
+     * Unsets Site Country field.
      */
     public function unsetSiteCountry(): self
     {
@@ -778,16 +860,20 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets location field.
+     * Sets Location field.
+     *
+     * @param ExceptionSiteLocation|null $value
      */
-    public function location(?Location $value): self
+    public function location(?ExceptionSiteLocation $value): self
     {
         $this->instance->setLocation($value);
         return $this;
     }
 
     /**
-     * Sets card group name field.
+     * Sets Card Group Name field.
+     *
+     * @param string|null $value
      */
     public function cardGroupName(?string $value): self
     {
@@ -796,7 +882,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card group name field.
+     * Unsets Card Group Name field.
      */
     public function unsetCardGroupName(): self
     {
@@ -805,7 +891,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets receipt number field.
+     * Sets Receipt Number field.
+     *
+     * @param string|null $value
      */
     public function receiptNumber(?string $value): self
     {
@@ -814,7 +902,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets receipt number field.
+     * Unsets Receipt Number field.
      */
     public function unsetReceiptNumber(): self
     {
@@ -823,7 +911,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets product code field.
+     * Sets Product Code field.
+     *
+     * @param string|null $value
      */
     public function productCode(?string $value): self
     {
@@ -832,7 +922,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets product code field.
+     * Unsets Product Code field.
      */
     public function unsetProductCode(): self
     {
@@ -841,7 +931,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets product name field.
+     * Sets Product Name field.
+     *
+     * @param string|null $value
      */
     public function productName(?string $value): self
     {
@@ -850,7 +942,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets product name field.
+     * Unsets Product Name field.
      */
     public function unsetProductName(): self
     {
@@ -859,7 +951,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets product group id field.
+     * Sets Product Group Id field.
+     *
+     * @param int|null $value
      */
     public function productGroupId(?int $value): self
     {
@@ -868,7 +962,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets product group id field.
+     * Unsets Product Group Id field.
      */
     public function unsetProductGroupId(): self
     {
@@ -877,7 +971,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets product group name field.
+     * Sets Product Group Name field.
+     *
+     * @param string|null $value
      */
     public function productGroupName(?string $value): self
     {
@@ -886,7 +982,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets product group name field.
+     * Unsets Product Group Name field.
      */
     public function unsetProductGroupName(): self
     {
@@ -895,7 +991,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets del co exchange rate field.
+     * Sets Del Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function delCoExchangeRate(?float $value): self
     {
@@ -904,7 +1002,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets del co exchange rate field.
+     * Unsets Del Co Exchange Rate field.
      */
     public function unsetDelCoExchangeRate(): self
     {
@@ -913,7 +1011,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets col co exchange rate field.
+     * Sets Col Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function colCoExchangeRate(?float $value): self
     {
@@ -922,7 +1022,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets col co exchange rate field.
+     * Unsets Col Co Exchange Rate field.
      */
     public function unsetColCoExchangeRate(): self
     {
@@ -931,7 +1031,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets is shell site field.
+     * Sets Is Shell Site field.
+     *
+     * @param bool|null $value
      */
     public function isShellSite(?bool $value): self
     {
@@ -940,7 +1042,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets is shell site field.
+     * Unsets Is Shell Site field.
      */
     public function unsetIsShellSite(): self
     {
@@ -949,7 +1051,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets network field.
+     * Sets Network field.
+     *
+     * @param string|null $value
      */
     public function network(?string $value): self
     {
@@ -958,7 +1062,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets network field.
+     * Unsets Network field.
      */
     public function unsetNetwork(): self
     {
@@ -967,7 +1071,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets site group id field.
+     * Sets Site Group Id field.
+     *
+     * @param int|null $value
      */
     public function siteGroupId(?int $value): self
     {
@@ -976,7 +1082,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets site group id field.
+     * Unsets Site Group Id field.
      */
     public function unsetSiteGroupId(): self
     {
@@ -985,7 +1091,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets site group name field.
+     * Sets Site Group Name field.
+     *
+     * @param string|null $value
      */
     public function siteGroupName(?string $value): self
     {
@@ -994,7 +1102,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets site group name field.
+     * Unsets Site Group Name field.
      */
     public function unsetSiteGroupName(): self
     {
@@ -1003,7 +1111,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets posting date field.
+     * Sets Posting Date field.
+     *
+     * @param string|null $value
      */
     public function postingDate(?string $value): self
     {
@@ -1012,7 +1122,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets posting date field.
+     * Unsets Posting Date field.
      */
     public function unsetPostingDate(): self
     {
@@ -1021,7 +1131,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets issuer code field.
+     * Sets Issuer Code field.
+     *
+     * @param string|null $value
      */
     public function issuerCode(?string $value): self
     {
@@ -1030,7 +1142,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets issuer code field.
+     * Unsets Issuer Code field.
      */
     public function unsetIssuerCode(): self
     {
@@ -1039,7 +1151,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets purchased in country code field.
+     * Sets Purchased In Country Code field.
+     *
+     * @param string|null $value
      */
     public function purchasedInCountryCode(?string $value): self
     {
@@ -1048,7 +1162,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets purchased in country code field.
+     * Unsets Purchased In Country Code field.
      */
     public function unsetPurchasedInCountryCode(): self
     {
@@ -1057,7 +1171,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets customer country code field.
+     * Sets Customer Country Code field.
+     *
+     * @param string|null $value
      */
     public function customerCountryCode(?string $value): self
     {
@@ -1066,7 +1182,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets customer country code field.
+     * Unsets Customer Country Code field.
      */
     public function unsetCustomerCountryCode(): self
     {
@@ -1075,7 +1191,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets customer country field.
+     * Sets Customer Country field.
+     *
+     * @param string|null $value
      */
     public function customerCountry(?string $value): self
     {
@@ -1084,7 +1202,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets customer country field.
+     * Unsets Customer Country field.
      */
     public function unsetCustomerCountry(): self
     {
@@ -1093,7 +1211,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets release code field.
+     * Sets Release Code field.
+     *
+     * @param string|null $value
      */
     public function releaseCode(?string $value): self
     {
@@ -1102,7 +1222,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets release code field.
+     * Unsets Release Code field.
      */
     public function unsetReleaseCode(): self
     {
@@ -1111,7 +1231,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card group id field.
+     * Sets Card Group Id field.
+     *
+     * @param string|null $value
      */
     public function cardGroupId(?string $value): self
     {
@@ -1120,7 +1242,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card group id field.
+     * Unsets Card Group Id field.
      */
     public function unsetCardGroupId(): self
     {
@@ -1129,7 +1251,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card sequence number field.
+     * Sets Card Sequence Number field.
+     *
+     * @param string|null $value
      */
     public function cardSequenceNumber(?string $value): self
     {
@@ -1138,7 +1262,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card sequence number field.
+     * Unsets Card Sequence Number field.
      */
     public function unsetCardSequenceNumber(): self
     {
@@ -1147,7 +1271,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets check digit field.
+     * Sets Check Digit field.
+     *
+     * @param string|null $value
      */
     public function checkDigit(?string $value): self
     {
@@ -1156,7 +1282,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets check digit field.
+     * Unsets Check Digit field.
      */
     public function unsetCheckDigit(): self
     {
@@ -1165,7 +1291,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets fleet iddescription field.
+     * Sets Fleet ID Description field.
+     *
+     * @param string|null $value
      */
     public function fleetIDDescription(?string $value): self
     {
@@ -1174,7 +1302,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets fleet iddescription field.
+     * Unsets Fleet ID Description field.
      */
     public function unsetFleetIDDescription(): self
     {
@@ -1183,7 +1311,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vatrate field.
+     * Sets VAT Rate field.
+     *
+     * @param float|null $value
      */
     public function vATRate(?float $value): self
     {
@@ -1192,7 +1322,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vatrate field.
+     * Unsets VAT Rate field.
      */
     public function unsetVATRate(): self
     {
@@ -1201,7 +1331,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vatcategory field.
+     * Sets VAT Category field.
+     *
+     * @param string|null $value
      */
     public function vATCategory(?string $value): self
     {
@@ -1210,7 +1342,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vatcategory field.
+     * Unsets VAT Category field.
      */
     public function unsetVATCategory(): self
     {
@@ -1219,7 +1351,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets effective discount in trx currency field.
+     * Sets Effective Discount In Trx Currency field.
+     *
+     * @param string|null $value
      */
     public function effectiveDiscountInTrxCurrency(?string $value): self
     {
@@ -1228,7 +1362,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets effective discount in trx currency field.
+     * Unsets Effective Discount In Trx Currency field.
      */
     public function unsetEffectiveDiscountInTrxCurrency(): self
     {
@@ -1237,7 +1371,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction type field.
+     * Sets Transaction Type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -1246,7 +1382,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction type field.
+     * Unsets Transaction Type field.
      */
     public function unsetTransactionType(): self
     {
@@ -1255,7 +1391,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets pinindicator field.
+     * Sets PIN Indicator field.
+     *
+     * @param string|null $value
      */
     public function pINIndicator(?string $value): self
     {
@@ -1264,7 +1402,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets pinindicator field.
+     * Unsets PIN Indicator field.
      */
     public function unsetPINIndicator(): self
     {
@@ -1273,7 +1411,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vatapplicable field.
+     * Sets VAT Applicable field.
+     *
+     * @param string|null $value
      */
     public function vATApplicable(?string $value): self
     {
@@ -1282,7 +1422,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vatapplicable field.
+     * Unsets VAT Applicable field.
      */
     public function unsetVATApplicable(): self
     {
@@ -1291,7 +1431,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets net invoice indicator field.
+     * Sets Net Invoice Indicator field.
+     *
+     * @param string|null $value
      */
     public function netInvoiceIndicator(?string $value): self
     {
@@ -1300,7 +1442,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets net invoice indicator field.
+     * Unsets Net Invoice Indicator field.
      */
     public function unsetNetInvoiceIndicator(): self
     {
@@ -1309,7 +1451,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets customer currency code field.
+     * Sets Customer Currency Code field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencyCode(?string $value): self
     {
@@ -1318,7 +1462,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets customer currency code field.
+     * Unsets Customer Currency Code field.
      */
     public function unsetCustomerCurrencyCode(): self
     {
@@ -1327,7 +1471,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets customer currency symbol field.
+     * Sets Customer Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function customerCurrencySymbol(?string $value): self
     {
@@ -1336,7 +1482,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets customer currency symbol field.
+     * Unsets Customer Currency Symbol field.
      */
     public function unsetCustomerCurrencySymbol(): self
     {
@@ -1345,7 +1491,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets effective unit discount in customer currency field.
+     * Sets Effective Unit Discount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveUnitDiscountInCustomerCurrency(?float $value): self
     {
@@ -1354,7 +1502,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets effective unit discount in customer currency field.
+     * Unsets Effective Unit Discount In Customer Currency field.
      */
     public function unsetEffectiveUnitDiscountInCustomerCurrency(): self
     {
@@ -1363,7 +1511,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets effective discount in customer currency field.
+     * Sets Effective Discount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function effectiveDiscountInCustomerCurrency(?float $value): self
     {
@@ -1372,7 +1522,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets effective discount in customer currency field.
+     * Unsets Effective Discount In Customer Currency field.
      */
     public function unsetEffectiveDiscountInCustomerCurrency(): self
     {
@@ -1381,7 +1531,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vaton net amount in customer currency field.
+     * Sets VA Ton Net Amount In Customer Currency field.
+     *
+     * @param float|null $value
      */
     public function vATonNetAmountInCustomerCurrency(?float $value): self
     {
@@ -1390,7 +1542,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vaton net amount in customer currency field.
+     * Unsets VA Ton Net Amount In Customer Currency field.
      */
     public function unsetVATonNetAmountInCustomerCurrency(): self
     {
@@ -1399,7 +1551,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets discount type field.
+     * Sets Discount Type field.
+     *
+     * @param string|null $value
      */
     public function discountType(?string $value): self
     {
@@ -1408,7 +1562,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets discount type field.
+     * Unsets Discount Type field.
      */
     public function unsetDiscountType(): self
     {
@@ -1417,7 +1571,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction status field.
+     * Sets Transaction Status field.
+     *
+     * @param string|null $value
      */
     public function transactionStatus(?string $value): self
     {
@@ -1426,7 +1582,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction status field.
+     * Unsets Transaction Status field.
      */
     public function unsetTransactionStatus(): self
     {
@@ -1435,7 +1591,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets payer group field.
+     * Sets Payer Group field.
+     *
+     * @param string|null $value
      */
     public function payerGroup(?string $value): self
     {
@@ -1444,7 +1602,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets payer group field.
+     * Unsets Payer Group field.
      */
     public function unsetPayerGroup(): self
     {
@@ -1453,7 +1611,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets refund flag field.
+     * Sets Refund Flag field.
+     *
+     * @param string|null $value
      */
     public function refundFlag(?string $value): self
     {
@@ -1462,7 +1622,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets refund flag field.
+     * Unsets Refund Flag field.
      */
     public function unsetRefundFlag(): self
     {
@@ -1471,7 +1631,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets original sales item id field.
+     * Sets Original Sales Item Id field.
+     *
+     * @param float|null $value
      */
     public function originalSalesItemId(?float $value): self
     {
@@ -1480,7 +1642,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets original sales item id field.
+     * Unsets Original Sales Item Id field.
      */
     public function unsetOriginalSalesItemId(): self
     {
@@ -1489,7 +1651,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets delco name field.
+     * Sets Delco Name field.
+     *
+     * @param string|null $value
      */
     public function delcoName(?string $value): self
     {
@@ -1498,7 +1662,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets delco name field.
+     * Unsets Delco Name field.
      */
     public function unsetDelcoName(): self
     {
@@ -1507,7 +1671,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets delco code field.
+     * Sets Delco Code field.
+     *
+     * @param string|null $value
      */
     public function delcoCode(?string $value): self
     {
@@ -1516,7 +1682,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets delco code field.
+     * Unsets Delco Code field.
      */
     public function unsetDelcoCode(): self
     {
@@ -1525,7 +1691,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets payer number field.
+     * Sets Payer Number field.
+     *
+     * @param string|null $value
      */
     public function payerNumber(?string $value): self
     {
@@ -1534,7 +1702,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets payer number field.
+     * Unsets Payer Number field.
      */
     public function unsetPayerNumber(): self
     {
@@ -1543,7 +1711,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets payer name field.
+     * Sets Payer Name field.
+     *
+     * @param string|null $value
      */
     public function payerName(?string $value): self
     {
@@ -1552,7 +1722,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets payer name field.
+     * Unsets Payer Name field.
      */
     public function unsetPayerName(): self
     {
@@ -1561,7 +1731,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets card expiry period field.
+     * Sets Card Expiry Period field.
+     *
+     * @param string|null $value
      */
     public function cardExpiryPeriod(?string $value): self
     {
@@ -1570,7 +1742,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets card expiry period field.
+     * Unsets Card Expiry Period field.
      */
     public function unsetCardExpiryPeriod(): self
     {
@@ -1579,7 +1751,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets authorisation code field.
+     * Sets Authorisation Code field.
+     *
+     * @param string|null $value
      */
     public function authorisationCode(?string $value): self
     {
@@ -1588,7 +1762,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets authorisation code field.
+     * Unsets Authorisation Code field.
      */
     public function unsetAuthorisationCode(): self
     {
@@ -1597,7 +1771,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets Transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -1606,7 +1782,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets Transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -1615,7 +1791,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets transaction line field.
+     * Sets Transaction Line field.
+     *
+     * @param string|null $value
      */
     public function transactionLine(?string $value): self
     {
@@ -1624,7 +1802,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets transaction line field.
+     * Unsets Transaction Line field.
      */
     public function unsetTransactionLine(): self
     {
@@ -1633,7 +1811,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets allow clearing field.
+     * Sets Allow Clearing field.
+     *
+     * @param string|null $value
      */
     public function allowClearing(?string $value): self
     {
@@ -1642,7 +1822,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets allow clearing field.
+     * Unsets Allow Clearing field.
      */
     public function unsetAllowClearing(): self
     {
@@ -1651,7 +1831,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets crmnumber field.
+     * Sets CRM Number field.
+     *
+     * @param string|null $value
      */
     public function cRMNumber(?string $value): self
     {
@@ -1660,7 +1842,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets crmnumber field.
+     * Unsets CRM Number field.
      */
     public function unsetCRMNumber(): self
     {
@@ -1669,7 +1851,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets dispute status field.
+     * Sets Dispute Status field.
+     *
+     * @param string|null $value
      */
     public function disputeStatus(?string $value): self
     {
@@ -1678,7 +1862,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets dispute status field.
+     * Unsets Dispute Status field.
      */
     public function unsetDisputeStatus(): self
     {
@@ -1687,7 +1871,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets rebate rate field.
+     * Sets Rebate Rate field.
+     *
+     * @param float|null $value
      */
     public function rebateRate(?float $value): self
     {
@@ -1696,7 +1882,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets rebate rate field.
+     * Unsets Rebate Rate field.
      */
     public function unsetRebateRate(): self
     {
@@ -1705,7 +1891,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets del co to col co exchange rate field.
+     * Sets Del Co To Col Co Exchange Rate field.
+     *
+     * @param float|null $value
      */
     public function delCoToColCoExchangeRate(?float $value): self
     {
@@ -1714,7 +1902,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets del co to col co exchange rate field.
+     * Unsets Del Co To Col Co Exchange Rate field.
      */
     public function unsetDelCoToColCoExchangeRate(): self
     {
@@ -1723,7 +1911,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets net euro amount field.
+     * Sets Net Euro Amount field.
+     *
+     * @param float|null $value
      */
     public function netEuroAmount(?float $value): self
     {
@@ -1732,7 +1922,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets net euro amount field.
+     * Unsets Net Euro Amount field.
      */
     public function unsetNetEuroAmount(): self
     {
@@ -1741,7 +1931,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets euro rebate amount field.
+     * Sets Euro Rebate Amount field.
+     *
+     * @param float|null $value
      */
     public function euroRebateAmount(?float $value): self
     {
@@ -1750,7 +1942,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets euro rebate amount field.
+     * Unsets Euro Rebate Amount field.
      */
     public function unsetEuroRebateAmount(): self
     {
@@ -1759,7 +1951,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets euro vatamount field.
+     * Sets Euro VAT Amount field.
+     *
+     * @param float|null $value
      */
     public function euroVATAmount(?float $value): self
     {
@@ -1768,7 +1962,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets euro vatamount field.
+     * Unsets Euro VAT Amount field.
      */
     public function unsetEuroVATAmount(): self
     {
@@ -1777,7 +1971,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets parent customer number field.
+     * Sets Parent Customer Number field.
+     *
+     * @param string|null $value
      */
     public function parentCustomerNumber(?string $value): self
     {
@@ -1786,7 +1982,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets parent customer number field.
+     * Unsets Parent Customer Number field.
      */
     public function unsetParentCustomerNumber(): self
     {
@@ -1795,7 +1991,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vaton net amount field.
+     * Sets VA Ton Net Amount field.
+     *
+     * @param float|null $value
      */
     public function vATonNetAmount(?float $value): self
     {
@@ -1804,7 +2002,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vaton net amount field.
+     * Unsets VA Ton Net Amount field.
      */
     public function unsetVATonNetAmount(): self
     {
@@ -1813,7 +2011,9 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Sets vatcountry field.
+     * Sets VAT Country field.
+     *
+     * @param string|null $value
      */
     public function vATCountry(?string $value): self
     {
@@ -1822,7 +2022,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Unsets vatcountry field.
+     * Unsets VAT Country field.
      */
     public function unsetVATCountry(): self
     {
@@ -1831,7 +2031,7 @@ class TransactionExceptionsBuilder
     }
 
     /**
-     * Initializes a new transaction exceptions object.
+     * Initializes a new Transaction Exceptions object.
      */
     public function build(): TransactionExceptions
     {

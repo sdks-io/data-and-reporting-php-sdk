@@ -15,46 +15,8 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAccounts400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAccounts401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAccounts403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAccounts404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAccounts500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAuditreport400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAuditreport401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAuditreport403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAuditreport404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerAuditreport500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCardgroups400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCardgroups401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCardgroups403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCardgroups404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCardgroups500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCustomer400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCustomer401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCustomer403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCustomer404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerCustomer500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerPayers400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerPayers401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerPayers403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerPayers404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1CustomerPayers500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1UserLoggedinuser400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1UserLoggedinuser401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1UserLoggedinuser403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1UserLoggedinuser404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV1UserLoggedinuser500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerCardtype400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerCardtype401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerCardtype403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerCardtype404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerCardtype500ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerPricelist400ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerPricelist401ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerPricelist403ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerPricelist404ErrorException;
-use ShellDataReportingAPIsLib\Exceptions\FleetmanagementV2CustomerPricelist500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\DefaultErrorException;
+use ShellDataReportingAPIsLib\Exceptions\ErrorUserAccessError1Exception;
 use ShellDataReportingAPIsLib\Models\AccountRequest;
 use ShellDataReportingAPIsLib\Models\AccountResponse;
 use ShellDataReportingAPIsLib\Models\AuditRequest;
@@ -111,7 +73,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1UserLoggedinuser400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -119,14 +81,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1UserLoggedinuser401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1UserLoggedinuser403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -134,7 +96,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1UserLoggedinuser404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -142,7 +104,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1UserLoggedinuser500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(LoggedInUserResponse::class);
@@ -203,7 +165,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1CustomerPayers400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -211,14 +173,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1CustomerPayers401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1CustomerPayers403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -226,7 +188,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1CustomerPayers404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -234,7 +196,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1CustomerPayers500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(PayerResponse::class);
@@ -281,7 +243,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1CustomerCustomer400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -289,14 +251,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1CustomerCustomer401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1CustomerCustomer403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -304,7 +266,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1CustomerCustomer404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -312,7 +274,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1CustomerCustomer500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(CustomerDetailResponse::class);
@@ -375,7 +337,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV2CustomerPricelist400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -383,14 +345,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV2CustomerPricelist401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV2CustomerPricelist403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -398,7 +360,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV2CustomerPricelist404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -406,7 +368,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV2CustomerPricelist500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(CustomerPriceListResponse::class);
@@ -447,7 +409,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1CustomerAccounts400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -455,14 +417,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1CustomerAccounts401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1CustomerAccounts403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -470,7 +432,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1CustomerAccounts404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -478,7 +440,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1CustomerAccounts500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(AccountResponse::class);
@@ -518,7 +480,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV2CustomerCardtype400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -526,14 +488,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV2CustomerCardtype401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV2CustomerCardtype403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -541,7 +503,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV2CustomerCardtype404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -549,7 +511,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV2CustomerCardtype500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(CardTypeResponse::class);
@@ -604,7 +566,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1CustomerCardgroups400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -612,14 +574,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1CustomerCardgroups401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1CustomerCardgroups403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -627,7 +589,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1CustomerCardgroups404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -635,7 +597,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1CustomerCardgroups500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(CardGroupResponse::class);
@@ -713,7 +675,7 @@ class CustomerController extends BaseController
                     "The server cannot or will not process the request  due to something that i" .
                     "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
                     "id \r\n request message framing, or deceptive request routing).",
-                    FleetmanagementV1CustomerAuditreport400ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -721,14 +683,14 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    FleetmanagementV1CustomerAuditreport401ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
                 '403',
                 ErrorType::init(
                     'The server understood the request but refuses to authorize it.',
-                    FleetmanagementV1CustomerAuditreport403ErrorException::class
+                    ErrorUserAccessError1Exception::class
                 )
             )
             ->throwErrorOn(
@@ -736,7 +698,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    FleetmanagementV1CustomerAuditreport404ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -744,7 +706,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition the prevented it from fulfi' .
                     'lling the request.',
-                    FleetmanagementV1CustomerAuditreport500ErrorException::class
+                    DefaultErrorException::class
                 )
             )
             ->type(AuditResponse::class);

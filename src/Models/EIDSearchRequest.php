@@ -69,7 +69,7 @@ class EIDSearchRequest implements \JsonSerializable
 
     /**
      * Returns Page Size.
-     * Specify the number of records to returned; Max 1000
+     * Specify the number of records to returned; Max 100
      */
     public function getPageSize(): ?int
     {
@@ -78,7 +78,7 @@ class EIDSearchRequest implements \JsonSerializable
 
     /**
      * Sets Page Size.
-     * Specify the number of records to returned; Max 1000
+     * Specify the number of records to returned; Max 100
      *
      * @maps PageSize
      */

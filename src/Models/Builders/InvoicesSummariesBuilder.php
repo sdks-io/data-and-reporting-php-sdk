@@ -31,7 +31,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Initializes a new invoices summaries Builder object.
+     * Initializes a new Invoices Summaries Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets amount due field.
+     * Sets Amount Due field.
+     *
+     * @param float|null $value
      */
     public function amountDue(?float $value): self
     {
@@ -48,7 +50,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets amount due field.
+     * Unsets Amount Due field.
      */
     public function unsetAmountDue(): self
     {
@@ -57,7 +59,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets amount not overdue field.
+     * Sets Amount Not Overdue field.
+     *
+     * @param float|null $value
      */
     public function amountNotOverdue(?float $value): self
     {
@@ -66,7 +70,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets amount not overdue field.
+     * Unsets Amount Not Overdue field.
      */
     public function unsetAmountNotOverdue(): self
     {
@@ -75,7 +79,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets amount overdue field.
+     * Sets Amount Overdue field.
+     *
+     * @param float|null $value
      */
     public function amountOverdue(?float $value): self
     {
@@ -84,7 +90,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets amount overdue field.
+     * Unsets Amount Overdue field.
      */
     public function unsetAmountOverdue(): self
     {
@@ -93,7 +99,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets amount paid field.
+     * Sets Amount Paid field.
+     *
+     * @param float|null $value
      */
     public function amountPaid(?float $value): self
     {
@@ -102,7 +110,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets amount paid field.
+     * Unsets Amount Paid field.
      */
     public function unsetAmountPaid(): self
     {
@@ -111,7 +119,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets billing currency code field.
+     * Sets Billing Currency Code field.
+     *
+     * @param string|null $value
      */
     public function billingCurrencyCode(?string $value): self
     {
@@ -120,7 +130,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets billing currency code field.
+     * Unsets Billing Currency Code field.
      */
     public function unsetBillingCurrencyCode(): self
     {
@@ -129,7 +139,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets billing currency symbol field.
+     * Sets Billing Currency Symbol field.
+     *
+     * @param string|null $value
      */
     public function billingCurrencySymbol(?string $value): self
     {
@@ -138,7 +150,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets billing currency symbol field.
+     * Unsets Billing Currency Symbol field.
      */
     public function unsetBillingCurrencySymbol(): self
     {
@@ -147,7 +159,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets outstanding balance field.
+     * Sets Outstanding Balance field.
+     *
+     * @param float|null $value
      */
     public function outstandingBalance(?float $value): self
     {
@@ -156,7 +170,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets outstanding balance field.
+     * Unsets Outstanding Balance field.
      */
     public function unsetOutstandingBalance(): self
     {
@@ -165,7 +179,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets payment due date field.
+     * Sets Payment Due Date field.
+     *
+     * @param string|null $value
      */
     public function paymentDueDate(?string $value): self
     {
@@ -174,7 +190,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets payment due date field.
+     * Unsets Payment Due Date field.
      */
     public function unsetPaymentDueDate(): self
     {
@@ -183,7 +199,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets summary document date field.
+     * Sets Summary Document Date field.
+     *
+     * @param string|null $value
      */
     public function summaryDocumentDate(?string $value): self
     {
@@ -192,7 +210,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets summary document date field.
+     * Unsets Summary Document Date field.
      */
     public function unsetSummaryDocumentDate(): self
     {
@@ -201,7 +219,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets total billing documents field.
+     * Sets Total Billing Documents field.
+     *
+     * @param int|null $value
      */
     public function totalBillingDocuments(?int $value): self
     {
@@ -210,7 +230,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets total billing documents field.
+     * Unsets Total Billing Documents field.
      */
     public function unsetTotalBillingDocuments(): self
     {
@@ -219,7 +239,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets total gross amount billing currency field.
+     * Sets Total Gross Amount Billing Currency field.
+     *
+     * @param float|null $value
      */
     public function totalGrossAmountBillingCurrency(?float $value): self
     {
@@ -228,7 +250,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets total gross amount billing currency field.
+     * Unsets Total Gross Amount Billing Currency field.
      */
     public function unsetTotalGrossAmountBillingCurrency(): self
     {
@@ -237,7 +259,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets total net amount billing currency field.
+     * Sets Total Net Amount Billing Currency field.
+     *
+     * @param float|null $value
      */
     public function totalNetAmountBillingCurrency(?float $value): self
     {
@@ -246,7 +270,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets total net amount billing currency field.
+     * Unsets Total Net Amount Billing Currency field.
      */
     public function unsetTotalNetAmountBillingCurrency(): self
     {
@@ -255,7 +279,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets total summary documents field.
+     * Sets Total Summary Documents field.
+     *
+     * @param int|null $value
      */
     public function totalSummaryDocuments(?int $value): self
     {
@@ -264,7 +290,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets total summary documents field.
+     * Unsets Total Summary Documents field.
      */
     public function unsetTotalSummaryDocuments(): self
     {
@@ -273,7 +299,9 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Sets total vatamount billing currency field.
+     * Sets Total VAT Amount Billing Currency field.
+     *
+     * @param float|null $value
      */
     public function totalVATAmountBillingCurrency(?float $value): self
     {
@@ -282,7 +310,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Unsets total vatamount billing currency field.
+     * Unsets Total VAT Amount Billing Currency field.
      */
     public function unsetTotalVATAmountBillingCurrency(): self
     {
@@ -291,7 +319,7 @@ class InvoicesSummariesBuilder
     }
 
     /**
-     * Initializes a new invoices summaries object.
+     * Initializes a new Invoices Summaries object.
      */
     public function build(): InvoicesSummaries
     {
