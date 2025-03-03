@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeItem implements \JsonSerializable
@@ -2932,6 +2933,94 @@ class FeeItem implements \JsonSerializable
     public function unsetVRN(): void
     {
         $this->vRN = [];
+    }
+
+    /**
+     * Converts the FeeItem object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeItem object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeItem',
+            [
+                'feeItemId' => $this->getFeeItemId(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountShortName' => $this->getAccountShortName(),
+                'invoiceAccountId' => $this->getInvoiceAccountId(),
+                'invoiceAccountNumber' => $this->getInvoiceAccountNumber(),
+                'invoiceAccountShortName' => $this->getInvoiceAccountShortName(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'payerShortName' => $this->getPayerShortName(),
+                'cardId' => $this->getCardId(),
+                'pAN' => $this->getPAN(),
+                'cardGroupId' => $this->getCardGroupId(),
+                'cardGroupName' => $this->getCardGroupName(),
+                'feeTypeId' => $this->getFeeTypeId(),
+                'feeType' => $this->getFeeType(),
+                'feeTypeGroup' => $this->getFeeTypeGroup(),
+                'feeRuleId' => $this->getFeeRuleId(),
+                'feeRuleDescription' => $this->getFeeRuleDescription(),
+                'feeRuleTiers' => $this->feeRuleTiers,
+                'feeItemDate' => $this->getFeeItemDate(),
+                'feeItemTime' => $this->getFeeItemTime(),
+                'isManual' => $this->getIsManual(),
+                'isCancelled' => $this->getIsCancelled(),
+                'customerCurrencyCode' => $this->getCustomerCurrencyCode(),
+                'customerCurrencySymbol' => $this->getCustomerCurrencySymbol(),
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'lineItemDescription' => $this->getLineItemDescription(),
+                'quantity' => $this->getQuantity(),
+                'isInvoiced' => $this->getIsInvoiced(),
+                'vATCountryCode' => $this->getVATCountryCode(),
+                'vATCountryName' => $this->getVATCountryName(),
+                'vATPercentage' => $this->getVATPercentage(),
+                'vATCategoryID' => $this->getVATCategoryID(),
+                'vATCategoryDescription' => $this->getVATCategoryDescription(),
+                'legislativeRegionId' => $this->getLegislativeRegionId(),
+                'legislativeRegionName' => $this->getLegislativeRegionName(),
+                'systemEntryDate' => $this->getSystemEntryDate(),
+                'systemEntryTime' => $this->getSystemEntryTime(),
+                'colCoNetAmount' => $this->getColCoNetAmount(),
+                'colCoVATAmount' => $this->getColCoVATAmount(),
+                'colCoGrossAmount' => $this->getColCoGrossAmount(),
+                'interimInvoiceId' => $this->getInterimInvoiceId(),
+                'interimInvoiceNumber' => $this->getInterimInvoiceNumber(),
+                'invoiceId' => $this->getInvoiceId(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'customerExchangeRate' => $this->getCustomerExchangeRate(),
+                'invoiceNetAmount' => $this->getInvoiceNetAmount(),
+                'invoiceGrossAmount' => $this->getInvoiceGrossAmount(),
+                'invoiceVATAmount' => $this->getInvoiceVATAmount(),
+                'reverseCharge' => $this->getReverseCharge(),
+                'originalFeeItemId' => $this->getOriginalFeeItemId(),
+                'originalCurrencyCode' => $this->getOriginalCurrencyCode(),
+                'originalCurrencySymbol' => $this->getOriginalCurrencySymbol(),
+                'originalUnitPrice' => $this->getOriginalUnitPrice(),
+                'originalNetAmount' => $this->getOriginalNetAmount(),
+                'originalVATAmount' => $this->getOriginalVATAmount(),
+                'originalGrossAmount' => $this->getOriginalGrossAmount(),
+                'originalExchangeRate' => $this->getOriginalExchangeRate(),
+                'originalLegislativeRegionId' => $this->getOriginalLegislativeRegionId(),
+                'originalLegislativeRegionName' => $this->getOriginalLegislativeRegionName(),
+                'frequency' => $this->getFrequency(),
+                'feeItemCardLevelBreakup' => $this->getFeeItemCardLevelBreakup(),
+                'originalFeeItemInvoiceId' => $this->getOriginalFeeItemInvoiceId(),
+                'originalFeeItemInvoiceNumber' => $this->getOriginalFeeItemInvoiceNumber(),
+                'originalFeeItemInvoiceDate' => $this->getOriginalFeeItemInvoiceDate(),
+                'driverName' => $this->getDriverName(),
+                'embossText' => $this->getEmbossText(),
+                'vRN' => $this->getVRN()
+            ]
+        );
     }
 
     /**

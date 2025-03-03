@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeSummaryResponse implements \JsonSerializable
@@ -91,6 +92,19 @@ class FeeSummaryResponse implements \JsonSerializable
     public function setError(?ErrorStatus $error): void
     {
         $this->error = $error;
+    }
+
+    /**
+     * Converts the FeeSummaryResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeSummaryResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeSummaryResponse',
+            ['feeItemsSummary' => $this->feeItemsSummary, 'requestId' => $this->requestId, 'error' => $this->error]
+        );
     }
 
     /**

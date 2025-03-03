@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricingHistory implements \JsonSerializable
@@ -212,6 +213,25 @@ class PricingHistory implements \JsonSerializable
     public function unsetTotalVolume(): void
     {
         $this->totalVolume = [];
+    }
+
+    /**
+     * Converts the PricingHistory object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricingHistory object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricingHistory',
+            [
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'feesRuleID' => $this->getFeesRuleID(),
+                'feesRuleDescription' => $this->getFeesRuleDescription(),
+                'totalVolume' => $this->getTotalVolume()
+            ]
+        );
     }
 
     /**

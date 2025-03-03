@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class RecentTransactionReq implements \JsonSerializable
@@ -540,6 +541,35 @@ class RecentTransactionReq implements \JsonSerializable
     public function setColumnList(?string $columnList): void
     {
         $this->columnList = $columnList;
+    }
+
+    /**
+     * Converts the RecentTransactionReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the RecentTransactionReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'RecentTransactionReq',
+            [
+                'colCoCode' => $this->colCoCode,
+                'payerNumber' => $this->payerNumber,
+                'accountNumber' => $this->getAccountNumber(),
+                'productCode' => $this->getProductCode(),
+                'purchasedInCountry' => $this->getPurchasedInCountry(),
+                'cardPAN' => $this->getCardPAN(),
+                'fromDateTime' => $this->getFromDateTime(),
+                'toDateTime' => $this->getToDateTime(),
+                'transactionStatus' => $this->getTransactionStatus(),
+                'fuelOnly' => $this->getFuelOnly(),
+                'productGroupName' => $this->getProductGroupName(),
+                'vehicleRegistrationNumber' => $this->getVehicleRegistrationNumber(),
+                'includeDeclines' => $this->getIncludeDeclines(),
+                'cardIssuerName' => $this->getCardIssuerName(),
+                'columnList' => $this->columnList
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchDocumentsResponse implements \JsonSerializable
@@ -191,6 +192,27 @@ class SearchDocumentsResponse implements \JsonSerializable
     public function setIsLastPage(?bool $isLastPage): void
     {
         $this->isLastPage = $isLastPage;
+    }
+
+    /**
+     * Converts the SearchDocumentsResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchDocumentsResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchDocumentsResponse',
+            [
+                'requestId' => $this->requestId,
+                'status' => $this->status,
+                'data' => $this->data,
+                'totalRecords' => $this->totalRecords,
+                'totalRecordsOnPage' => $this->totalRecordsOnPage,
+                'isFirstPage' => $this->isFirstPage,
+                'isLastPage' => $this->isLastPage
+            ]
+        );
     }
 
     /**

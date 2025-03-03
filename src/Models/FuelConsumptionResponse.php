@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FuelConsumptionResponse implements \JsonSerializable
@@ -87,6 +88,19 @@ class FuelConsumptionResponse implements \JsonSerializable
     public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
+    }
+
+    /**
+     * Converts the FuelConsumptionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the FuelConsumptionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FuelConsumptionResponse',
+            ['fuelConsumption' => $this->fuelConsumption, 'error' => $this->error, 'requestId' => $this->requestId]
+        );
     }
 
     /**

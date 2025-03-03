@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class ExceptionProduct implements \JsonSerializable
@@ -92,6 +93,19 @@ class ExceptionProduct implements \JsonSerializable
     public function unsetProductCode(): void
     {
         $this->productCode = [];
+    }
+
+    /**
+     * Converts the ExceptionProduct object to a human-readable string representation.
+     *
+     * @return string The string representation of the ExceptionProduct object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'ExceptionProduct',
+            ['productid' => $this->getProductid(), 'productCode' => $this->getProductCode()]
+        );
     }
 
     /**

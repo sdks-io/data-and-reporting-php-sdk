@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class TransactionFeesResponse implements \JsonSerializable
@@ -164,6 +165,26 @@ class TransactionFeesResponse implements \JsonSerializable
     public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
+    }
+
+    /**
+     * Converts the TransactionFeesResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the TransactionFeesResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'TransactionFeesResponse',
+            [
+                'feeItems' => $this->feeItems,
+                'currentPage' => $this->currentPage,
+                'rowCount' => $this->rowCount,
+                'totalPages' => $this->totalPages,
+                'error' => $this->error,
+                'requestId' => $this->requestId
+            ]
+        );
     }
 
     /**

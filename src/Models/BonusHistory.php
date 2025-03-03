@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class BonusHistory implements \JsonSerializable
@@ -1271,6 +1272,52 @@ class BonusHistory implements \JsonSerializable
     public function unsetTierRate(): void
     {
         $this->tierRate = [];
+    }
+
+    /**
+     * Converts the BonusHistory object to a human-readable string representation.
+     *
+     * @return string The string representation of the BonusHistory object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'BonusHistory',
+            [
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'payerShortName' => $this->getPayerShortName(),
+                'payerFullName' => $this->getPayerFullName(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountShortName' => $this->getAccountShortName(),
+                'accountFullName' => $this->getAccountFullName(),
+                'invoiceAccountId' => $this->getInvoiceAccountId(),
+                'invoiceAccountNumber' => $this->getInvoiceAccountNumber(),
+                'invoiceAccountShortName' => $this->getInvoiceAccountShortName(),
+                'invoiceAccountFullName' => $this->getInvoiceAccountFullName(),
+                'feeRuleId' => $this->getFeeRuleId(),
+                'feeRuleDescription' => $this->getFeeRuleDescription(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'bonusPaidTo' => $this->getBonusPaidTo(),
+                'feeItemId' => $this->getFeeItemId(),
+                'feeRuleBasis' => $this->getFeeRuleBasis(),
+                'feeItemCurrencyCode' => $this->getFeeItemCurrencyCode(),
+                'feeItemCurrencySymbol' => $this->getFeeItemCurrencySymbol(),
+                'proratedVolume' => $this->getProratedVolume(),
+                'totalVolume' => $this->getTotalVolume(),
+                'feeProduct' => $this->getFeeProduct(),
+                'invoiceGrossAmount' => $this->getInvoiceGrossAmount(),
+                'invoiceNetAmount' => $this->getInvoiceNetAmount(),
+                'invoiceVATAmount' => $this->getInvoiceVATAmount(),
+                'isFeeCancelled' => $this->getIsFeeCancelled(),
+                'feeItemTierProratedVolume' => $this->getFeeItemTierProratedVolume(),
+                'feeItemTierTotalVolume' => $this->getFeeItemTierTotalVolume(),
+                'tierMinimum' => $this->getTierMinimum(),
+                'tierRate' => $this->getTierRate()
+            ]
+        );
     }
 
     /**

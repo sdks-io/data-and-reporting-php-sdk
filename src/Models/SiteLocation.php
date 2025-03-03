@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -101,6 +102,19 @@ class SiteLocation implements \JsonSerializable
     public function unsetLongitude(): void
     {
         $this->longitude = [];
+    }
+
+    /**
+     * Converts the SiteLocation object to a human-readable string representation.
+     *
+     * @return string The string representation of the SiteLocation object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SiteLocation',
+            ['latitude' => $this->getLatitude(), 'longitude' => $this->getLongitude()]
+        );
     }
 
     /**

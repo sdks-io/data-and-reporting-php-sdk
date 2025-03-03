@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class MultiPricedTransactionResponse implements \JsonSerializable
@@ -164,6 +165,26 @@ class MultiPricedTransactionResponse implements \JsonSerializable
     public function setTotalPages(?int $totalPages): void
     {
         $this->totalPages = $totalPages;
+    }
+
+    /**
+     * Converts the MultiPricedTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the MultiPricedTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'MultiPricedTransactionResponse',
+            [
+                'transactions' => $this->transactions,
+                'error' => $this->error,
+                'requestId' => $this->requestId,
+                'currentPage' => $this->currentPage,
+                'rowCount' => $this->rowCount,
+                'totalPages' => $this->totalPages
+            ]
+        );
     }
 
     /**

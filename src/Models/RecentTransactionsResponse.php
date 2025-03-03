@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class RecentTransactionsResponse implements \JsonSerializable
@@ -168,6 +169,26 @@ class RecentTransactionsResponse implements \JsonSerializable
     public function setData(?array $data): void
     {
         $this->data = $data;
+    }
+
+    /**
+     * Converts the RecentTransactionsResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the RecentTransactionsResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'RecentTransactionsResponse',
+            [
+                'requestId' => $this->requestId,
+                'status' => $this->status,
+                'page' => $this->page,
+                'rowCount' => $this->rowCount,
+                'totalPages' => $this->totalPages,
+                'data' => $this->data
+            ]
+        );
     }
 
     /**

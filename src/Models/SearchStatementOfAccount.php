@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchStatementOfAccount implements \JsonSerializable
@@ -575,6 +576,34 @@ class SearchStatementOfAccount implements \JsonSerializable
     public function unsetDocumentReferenceNumber(): void
     {
         $this->documentReferenceNumber = [];
+    }
+
+    /**
+     * Converts the SearchStatementOfAccount object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchStatementOfAccount object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchStatementOfAccount',
+            [
+                'statementOfAccountId' => $this->getStatementOfAccountId(),
+                'soAReferenceNumber' => $this->getSoAReferenceNumber(),
+                'statementDate' => $this->getStatementDate(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'amountDue' => $this->getAmountDue(),
+                'amountOverdue' => $this->getAmountOverdue(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'dueDate' => $this->getDueDate(),
+                'invoicedOnBehalfOf' => $this->getInvoicedOnBehalfOf(),
+                'status' => $this->getStatus(),
+                'grossAmountCustomerCurrency' => $this->getGrossAmountCustomerCurrency(),
+                'documentReferenceNumber' => $this->getDocumentReferenceNumber()
+            ]
+        );
     }
 
     /**

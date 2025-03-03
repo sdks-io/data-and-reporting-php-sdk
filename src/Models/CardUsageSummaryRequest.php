@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class CardUsageSummaryRequest implements \JsonSerializable
@@ -423,6 +424,29 @@ class CardUsageSummaryRequest implements \JsonSerializable
     public function unsetCardExpiryDate(): void
     {
         $this->cardExpiryDate = [];
+    }
+
+    /**
+     * Converts the CardUsageSummaryRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CardUsageSummaryRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CardUsageSummaryRequest',
+            [
+                'colCoId' => $this->getColCoId(),
+                'colCoCode' => $this->getColCoCode(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'cardId' => $this->getCardId(),
+                'pAN' => $this->getPAN(),
+                'cardExpiryDate' => $this->getCardExpiryDate()
+            ]
+        );
     }
 
     /**

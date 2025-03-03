@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FuelConsumptionData implements \JsonSerializable
@@ -752,6 +753,40 @@ class FuelConsumptionData implements \JsonSerializable
     public function unsetTransactionCount(): void
     {
         $this->transactionCount = [];
+    }
+
+    /**
+     * Converts the FuelConsumptionData object to a human-readable string representation.
+     *
+     * @return string The string representation of the FuelConsumptionData object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FuelConsumptionData',
+            [
+                'accountName' => $this->getAccountName(),
+                'accountNumber' => $this->getAccountNumber(),
+                'payerName' => $this->getPayerName(),
+                'payerNumber' => $this->getPayerNumber(),
+                'cardNumber' => $this->getCardNumber(),
+                'cardGroupId' => $this->getCardGroupId(),
+                'cardGroupName' => $this->getCardGroupName(),
+                'driverName' => $this->getDriverName(),
+                'licenseNumber' => $this->getLicenseNumber(),
+                'initialOdometer' => $this->getInitialOdometer(),
+                'lastOdometer' => $this->getLastOdometer(),
+                'distance' => $this->getDistance(),
+                'fuelConsumption' => $this->getFuelConsumption(),
+                'fuelNetAmount' => $this->getFuelNetAmount(),
+                'discount' => $this->getDiscount(),
+                'fuelTax' => $this->getFuelTax(),
+                'fuelVolume' => $this->getFuelVolume(),
+                'grossNonFuelExpenses' => $this->getGrossNonFuelExpenses(),
+                'cO2Produced' => $this->getCO2Produced(),
+                'transactionCount' => $this->getTransactionCount()
+            ]
+        );
     }
 
     /**

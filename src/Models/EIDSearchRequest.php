@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDSearchRequest implements \JsonSerializable
@@ -85,6 +86,19 @@ class EIDSearchRequest implements \JsonSerializable
     public function setPageSize(?int $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the EIDSearchRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDSearchRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'EIDSearchRequest',
+            ['filters' => $this->filters, 'page' => $this->page, 'pageSize' => $this->pageSize]
+        );
     }
 
     /**

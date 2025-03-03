@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceSearchDetails implements \JsonSerializable
@@ -2524,6 +2525,79 @@ class InvoiceSearchDetails implements \JsonSerializable
     public function setAdditionalDocuments(?array $additionalDocuments): void
     {
         $this->additionalDocuments = $additionalDocuments;
+    }
+
+    /**
+     * Converts the InvoiceSearchDetails object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSearchDetails object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSearchDetails',
+            [
+                'accountFullName' => $this->getAccountFullName(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountShortName' => $this->getAccountShortName(),
+                'colCoId' => $this->getColCoId(),
+                'colCoOpCoId' => $this->getColCoOpCoId(),
+                'currentBillingFrequency' => $this->getCurrentBillingFrequency(),
+                'currentBillingFrequencyId' => $this->getCurrentBillingFrequencyId(),
+                'currentDistributionMethod' => $this->getCurrentDistributionMethod(),
+                'currentDistributionMethodId' => $this->getCurrentDistributionMethodId(),
+                'customerCurrencyCode' => $this->getCustomerCurrencyCode(),
+                'customerCurrencySymbol' => $this->getCustomerCurrencySymbol(),
+                'delCoClientNumber' => $this->getDelCoClientNumber(),
+                'delCoId' => $this->getDelCoId(),
+                'delCoOpCoId' => $this->getDelCoOpCoId(),
+                'documentType' => $this->getDocumentType(),
+                'documentTypeId' => $this->getDocumentTypeId(),
+                'dueDate' => $this->getDueDate(),
+                'grossAmountCustomerCurrency' => $this->getGrossAmountCustomerCurrency(),
+                'grossAmountTransactionCurrency' => $this->getGrossAmountTransactionCurrency(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'invoicedBy' => $this->getInvoicedBy(),
+                'invoicedOnBehalfOf' => $this->getInvoicedOnBehalfOf(),
+                'invoiceId' => $this->getInvoiceId(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'isInternational' => $this->getIsInternational(),
+                'isNational' => $this->getIsNational(),
+                'netAmountCustomerCurrency' => $this->getNetAmountCustomerCurrency(),
+                'netAmountTransactionCurrency' => $this->getNetAmountTransactionCurrency(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'paymentTerms' => $this->getPaymentTerms(),
+                'paymentTermsId' => $this->getPaymentTermsId(),
+                'replacementInvoiceId' => $this->getReplacementInvoiceId(),
+                'reversalInvoiceId' => $this->getReversalInvoiceId(),
+                'status' => $this->getStatus(),
+                'summaryDocumentBillingType' => $this->getSummaryDocumentBillingType(),
+                'summaryDocumentBillingTypeId' => $this->getSummaryDocumentBillingTypeId(),
+                'summaryDocumentDate' => $this->getSummaryDocumentDate(),
+                'summaryDocumentDDAmount' => $this->getSummaryDocumentDDAmount(),
+                'summaryDocumentDueDate' => $this->getSummaryDocumentDueDate(),
+                'summaryDocumentId' => $this->getSummaryDocumentId(),
+                'summaryDocumentIsFullyPaid' => $this->getSummaryDocumentIsFullyPaid(),
+                'summaryDocumentNumber' => $this->getSummaryDocumentNumber(),
+                'summaryDocumentPaidAmount' => $this->getSummaryDocumentPaidAmount(),
+                'summaryDocumentSoAReferenceNumber' => $this->getSummaryDocumentSoAReferenceNumber(),
+                'summaryDocumentStatementOfAccountId' => $this->getSummaryDocumentStatementOfAccountId(),
+                'transactionCurrencyCode' => $this->getTransactionCurrencyCode(),
+                'transactionCurrencySymbol' => $this->getTransactionCurrencySymbol(),
+                'type' => $this->getType(),
+                'typeId' => $this->getTypeId(),
+                'vATAmountCustomerCurrency' => $this->getVATAmountCustomerCurrency(),
+                'vATAmountTransactionCurrency' => $this->getVATAmountTransactionCurrency(),
+                'vATCountry' => $this->getVATCountry(),
+                'vATCountryId' => $this->getVATCountryId(),
+                'vATCountryISOCode' => $this->getVATCountryISOCode(),
+                'vATCountryOpCoId' => $this->getVATCountryOpCoId(),
+                'documentReference' => $this->getDocumentReference(),
+                'additionalDocuments' => $this->additionalDocuments
+            ]
+        );
     }
 
     /**

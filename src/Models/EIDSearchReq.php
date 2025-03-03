@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDSearchReq implements \JsonSerializable
@@ -392,6 +393,29 @@ class EIDSearchReq implements \JsonSerializable
     public function setSortBy(?array $sortBy): void
     {
         $this->sortBy = $sortBy;
+    }
+
+    /**
+     * Converts the EIDSearchReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDSearchReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'EIDSearchReq',
+            [
+                'colCoCode' => $this->colCoCode,
+                'accountGroupCountry' => $this->accountGroupCountry,
+                'accountGroupId' => $this->accountGroupId,
+                'accountGroupName' => $this->getAccountGroupName(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'invoiceType' => $this->getInvoiceType(),
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'sortBy' => $this->sortBy
+            ]
+        );
     }
 
     /**

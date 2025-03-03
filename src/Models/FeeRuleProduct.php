@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeRuleProduct implements \JsonSerializable
@@ -197,6 +198,25 @@ class FeeRuleProduct implements \JsonSerializable
     public function unsetProductName(): void
     {
         $this->productName = [];
+    }
+
+    /**
+     * Converts the FeeRuleProduct object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeRuleProduct object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeRuleProduct',
+            [
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'productCode' => $this->getProductCode(),
+                'productId' => $this->getProductId(),
+                'productName' => $this->getProductName()
+            ]
+        );
     }
 
     /**

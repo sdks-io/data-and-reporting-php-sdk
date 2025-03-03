@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -137,6 +138,23 @@ class InvoiceSearchAdditionalDocument implements \JsonSerializable
     public function unsetIsApplicable(): void
     {
         $this->isApplicable = [];
+    }
+
+    /**
+     * Converts the InvoiceSearchAdditionalDocument object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSearchAdditionalDocument object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSearchAdditionalDocument',
+            [
+                'reference' => $this->getReference(),
+                'type' => $this->getType(),
+                'isApplicable' => $this->getIsApplicable()
+            ]
+        );
     }
 
     /**

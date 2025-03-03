@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceSummaryResponse implements \JsonSerializable
@@ -89,6 +90,19 @@ class InvoiceSummaryResponse implements \JsonSerializable
     public function setData(?array $data): void
     {
         $this->data = $data;
+    }
+
+    /**
+     * Converts the InvoiceSummaryResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSummaryResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSummaryResponse',
+            ['requestId' => $this->requestId, 'status' => $this->status, 'data' => $this->data]
+        );
     }
 
     /**

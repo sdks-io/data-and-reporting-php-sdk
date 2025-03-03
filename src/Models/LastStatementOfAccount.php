@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -1200,6 +1201,47 @@ class LastStatementOfAccount implements \JsonSerializable
     public function unsetUnallocatedPayment(): void
     {
         $this->unallocatedPayment = [];
+    }
+
+    /**
+     * Converts the LastStatementOfAccount object to a human-readable string representation.
+     *
+     * @return string The string representation of the LastStatementOfAccount object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'LastStatementOfAccount',
+            [
+                'amountDue' => $this->getAmountDue(),
+                'amountNotOverdue' => $this->getAmountNotOverdue(),
+                'amountOverdue' => $this->getAmountOverdue(),
+                'creditLimit' => $this->getCreditLimit(),
+                'creditLimitCurrencyCode' => $this->getCreditLimitCurrencyCode(),
+                'creditLimitCurrencySymbol' => $this->getCreditLimitCurrencySymbol(),
+                'creditLimitInCustomerCurrency' => $this->getCreditLimitInCustomerCurrency(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'lastPaymentCurrencyCode' => $this->getLastPaymentCurrencyCode(),
+                'lastPaymentCurrencySymbol' => $this->getLastPaymentCurrencySymbol(),
+                'lastPaymentDate' => $this->getLastPaymentDate(),
+                'lastPaymentValue' => $this->getLastPaymentValue(),
+                'outstandingBalance' => $this->getOutstandingBalance(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'paymentDueDate' => $this->getPaymentDueDate(),
+                'paymentMethod' => $this->getPaymentMethod(),
+                'paymentMethodId' => $this->getPaymentMethodId(),
+                'paymentTerms' => $this->getPaymentTerms(),
+                'paymentTermsId' => $this->getPaymentTermsId(),
+                'soAReferenceNumber' => $this->getSoAReferenceNumber(),
+                'statementDate' => $this->getStatementDate(),
+                'statementOfAccountId' => $this->getStatementOfAccountId(),
+                'totalBillingDocuments' => $this->getTotalBillingDocuments(),
+                'totalSummaryBillingDocuments' => $this->getTotalSummaryBillingDocuments(),
+                'unallocatedPayment' => $this->getUnallocatedPayment()
+            ]
+        );
     }
 
     /**

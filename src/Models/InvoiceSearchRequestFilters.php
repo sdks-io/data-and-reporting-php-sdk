@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceSearchRequestFilters implements \JsonSerializable
@@ -1008,6 +1009,39 @@ class InvoiceSearchRequestFilters implements \JsonSerializable
     public function setType(?string $type): void
     {
         $this->type = $type;
+    }
+
+    /**
+     * Converts the InvoiceSearchRequestFilters object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSearchRequestFilters object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSearchRequestFilters',
+            [
+                'colCoId' => $this->getColCoId(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'invoiceId' => $this->getInvoiceId(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'summaryDocumentId' => $this->getSummaryDocumentId(),
+                'summaryDocumentNumber' => $this->getSummaryDocumentNumber(),
+                'statementOfAccountId' => $this->getStatementOfAccountId(),
+                'soAReferenceNumber' => $this->getSoAReferenceNumber(),
+                'period' => $this->getPeriod(),
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'invoicedOnBehalfOf' => $this->getInvoicedOnBehalfOf(),
+                'includeEInvoiceDetails' => $this->getIncludeEInvoiceDetails(),
+                'colCoCode' => $this->getColCoCode(),
+                'accounts' => $this->accounts,
+                'type' => $this->type
+            ]
+        );
     }
 
     /**

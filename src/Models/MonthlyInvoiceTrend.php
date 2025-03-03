@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class MonthlyInvoiceTrend implements \JsonSerializable
@@ -246,6 +247,26 @@ class MonthlyInvoiceTrend implements \JsonSerializable
     public function unsetYear(): void
     {
         $this->year = [];
+    }
+
+    /**
+     * Converts the MonthlyInvoiceTrend object to a human-readable string representation.
+     *
+     * @return string The string representation of the MonthlyInvoiceTrend object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'MonthlyInvoiceTrend',
+            [
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'month' => $this->getMonth(),
+                'totalNetAmount' => $this->getTotalNetAmount(),
+                'totalVATAmount' => $this->getTotalVATAmount(),
+                'year' => $this->getYear()
+            ]
+        );
     }
 
     /**

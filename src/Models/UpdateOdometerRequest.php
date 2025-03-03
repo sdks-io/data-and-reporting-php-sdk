@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class UpdateOdometerRequest implements \JsonSerializable
@@ -252,6 +253,28 @@ class UpdateOdometerRequest implements \JsonSerializable
     public function setCaller(?string $caller): void
     {
         $this->caller = $caller;
+    }
+
+    /**
+     * Converts the UpdateOdometerRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateOdometerRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateOdometerRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'accountId' => $this->accountId,
+                'accountNumber' => $this->accountNumber,
+                'updateOdometers' => $this->updateOdometers,
+                'notifyCaller' => $this->notifyCaller,
+                'caller' => $this->caller
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceSearchRequest implements \JsonSerializable
@@ -150,6 +151,24 @@ class InvoiceSearchRequest implements \JsonSerializable
     public function setSortBy(?array $sortBy): void
     {
         $this->sortBy = $sortBy;
+    }
+
+    /**
+     * Converts the InvoiceSearchRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSearchRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSearchRequest',
+            [
+                'filters' => $this->filters,
+                'pageSize' => $this->pageSize,
+                'page' => $this->page,
+                'sortBy' => $this->sortBy
+            ]
+        );
     }
 
     /**

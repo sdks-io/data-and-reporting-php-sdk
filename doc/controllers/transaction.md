@@ -1617,7 +1617,7 @@ $requestId = '2b0cbe11-f109-4c43-9201-49af0370df1c';
 $body = PricedTransactionRequestV2Builder::init()
     ->filters(
         PricedRequestDataBuilder::init(
-            ApiHelper::deserialize('{"key1":"val1","key2":"val2"}')
+            PricedTransactionReqV2InvoiceStatusEnum::A
         )
             ->colCoCode('032')
             ->payerNumber('DE26685263')

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class AssociatedAccount implements \JsonSerializable
@@ -160,6 +161,24 @@ class AssociatedAccount implements \JsonSerializable
     public function unsetAssociatedAccountFullName(): void
     {
         $this->associatedAccountFullName = [];
+    }
+
+    /**
+     * Converts the AssociatedAccount object to a human-readable string representation.
+     *
+     * @return string The string representation of the AssociatedAccount object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'AssociatedAccount',
+            [
+                'associatedAccountId' => $this->getAssociatedAccountId(),
+                'associatedAccountNumber' => $this->getAssociatedAccountNumber(),
+                'associatedAccountShortName' => $this->getAssociatedAccountShortName(),
+                'associatedAccountFullName' => $this->getAssociatedAccountFullName()
+            ]
+        );
     }
 
     /**

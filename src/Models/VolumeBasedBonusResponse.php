@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class VolumeBasedBonusResponse implements \JsonSerializable
@@ -141,6 +142,25 @@ class VolumeBasedBonusResponse implements \JsonSerializable
     public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
+    }
+
+    /**
+     * Converts the VolumeBasedBonusResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the VolumeBasedBonusResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'VolumeBasedBonusResponse',
+            [
+                'configuration' => $this->configuration,
+                'currentPeriodConsumption' => $this->currentPeriodConsumption,
+                'historicalBonusPaid' => $this->historicalBonusPaid,
+                'error' => $this->error,
+                'requestId' => $this->requestId
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class VolumeBasedPricingRequest implements \JsonSerializable
@@ -177,6 +178,25 @@ class VolumeBasedPricingRequest implements \JsonSerializable
     public function setIncludeHistory(?bool $includeHistory): void
     {
         $this->includeHistory = $includeHistory;
+    }
+
+    /**
+     * Converts the VolumeBasedPricingRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the VolumeBasedPricingRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'VolumeBasedPricingRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'includeHistory' => $this->includeHistory
+            ]
+        );
     }
 
     /**

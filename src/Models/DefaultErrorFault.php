@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -65,6 +66,19 @@ class DefaultErrorFault implements \JsonSerializable
     public function setDetail(?DefaultErrorFaultDetail $detail): void
     {
         $this->detail = $detail;
+    }
+
+    /**
+     * Converts the DefaultErrorFault object to a human-readable string representation.
+     *
+     * @return string The string representation of the DefaultErrorFault object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'DefaultErrorFault',
+            ['faultstring' => $this->faultstring, 'detail' => $this->detail]
+        );
     }
 
     /**

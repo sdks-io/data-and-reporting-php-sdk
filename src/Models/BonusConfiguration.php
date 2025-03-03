@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class BonusConfiguration implements \JsonSerializable
@@ -987,6 +988,45 @@ class BonusConfiguration implements \JsonSerializable
     public function setFeeRuleProducts(?array $feeRuleProducts): void
     {
         $this->feeRuleProducts = $feeRuleProducts;
+    }
+
+    /**
+     * Converts the BonusConfiguration object to a human-readable string representation.
+     *
+     * @return string The string representation of the BonusConfiguration object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'BonusConfiguration',
+            [
+                'pricingAccountId' => $this->getPricingAccountId(),
+                'pricingAccountNumber' => $this->getPricingAccountNumber(),
+                'pricingAccountShortName' => $this->getPricingAccountShortName(),
+                'pricingAccountFullName' => $this->getPricingAccountFullName(),
+                'feeRuleId' => $this->getFeeRuleId(),
+                'feeRuleDescription' => $this->getFeeRuleDescription(),
+                'feeRuleDateEffective' => $this->getFeeRuleDateEffective(),
+                'feeRuleDateTerminated' => $this->getFeeRuleDateTerminated(),
+                'bonusPaidTo' => $this->getBonusPaidTo(),
+                'bonusPaidToAccountId' => $this->getBonusPaidToAccountId(),
+                'bonusPaidToAccountNumber' => $this->getBonusPaidToAccountNumber(),
+                'bonusPaidToAccountShortName' => $this->getBonusPaidToAccountShortName(),
+                'bonusPaidToAccountFullName' => $this->getBonusPaidToAccountFullName(),
+                'frequency' => $this->getFrequency(),
+                'nextCalculationDate' => $this->getNextCalculationDate(),
+                'previousCalculatedDate' => $this->getPreviousCalculatedDate(),
+                'feeRuleBasis' => $this->getFeeRuleBasis(),
+                'feeRuleCurrencyCode' => $this->getFeeRuleCurrencyCode(),
+                'feeRuleCurrencySymbol' => $this->getFeeRuleCurrencySymbol(),
+                'feeRuleAvailableFrom' => $this->getFeeRuleAvailableFrom(),
+                'feeRuleAvailableTo' => $this->getFeeRuleAvailableTo(),
+                'feeRuleLocations' => $this->feeRuleLocations,
+                'feeRuleTiers' => $this->feeRuleTiers,
+                'associatedAccounts' => $this->associatedAccounts,
+                'feeRuleProducts' => $this->feeRuleProducts
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricedTransactionItemsLocationItems implements \JsonSerializable
@@ -98,6 +99,19 @@ class PricedTransactionItemsLocationItems implements \JsonSerializable
     public function unsetLongitude(): void
     {
         $this->longitude = [];
+    }
+
+    /**
+     * Converts the PricedTransactionItemsLocationItems object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricedTransactionItemsLocationItems object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricedTransactionItemsLocationItems',
+            ['latitude' => $this->getLatitude(), 'longitude' => $this->getLongitude()]
+        );
     }
 
     /**

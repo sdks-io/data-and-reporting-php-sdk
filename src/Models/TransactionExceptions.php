@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class TransactionExceptions implements \JsonSerializable
@@ -3793,6 +3794,120 @@ class TransactionExceptions implements \JsonSerializable
     public function unsetVATCountry(): void
     {
         $this->vATCountry = [];
+    }
+
+    /**
+     * Converts the TransactionExceptions object to a human-readable string representation.
+     *
+     * @return string The string representation of the TransactionExceptions object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'TransactionExceptions',
+            [
+                'salesItemId' => $this->getSalesItemId(),
+                'cardId' => $this->getCardId(),
+                'productId' => $this->getProductId(),
+                'transactionGUID' => $this->getTransactionGUID(),
+                'transactionDate' => $this->getTransactionDate(),
+                'customerInvoiceValueTotalGross' => $this->getCustomerInvoiceValueTotalGross(),
+                'cardPAN' => $this->getCardPAN(),
+                'cardExpiry' => $this->getCardExpiry(),
+                'transactionTime' => $this->getTransactionTime(),
+                'uTCOffset' => $this->getUTCOffset(),
+                'fleetIdInput' => $this->getFleetIdInput(),
+                'odometerInput' => $this->getOdometerInput(),
+                'driverName' => $this->getDriverName(),
+                'vehicleRegistration' => $this->getVehicleRegistration(),
+                'invoiceCurrencyCode' => $this->getInvoiceCurrencyCode(),
+                'invoiceCurrencySymbol' => $this->getInvoiceCurrencySymbol(),
+                'transactionCurrencyCode' => $this->getTransactionCurrencyCode(),
+                'transactionCurrencySymbol' => $this->getTransactionCurrencySymbol(),
+                'transactionNetAmount' => $this->getTransactionNetAmount(),
+                'transactionTax' => $this->getTransactionTax(),
+                'transactionGrossAmount' => $this->getTransactionGrossAmount(),
+                'invoiceNetAmount' => $this->getInvoiceNetAmount(),
+                'invoiceTax' => $this->getInvoiceTax(),
+                'invoiceGrossAmount' => $this->getInvoiceGrossAmount(),
+                'purchasedInCountry' => $this->getPurchasedInCountry(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountName' => $this->getAccountName(),
+                'accountShortName' => $this->getAccountShortName(),
+                'quantity' => $this->getQuantity(),
+                'fuelProduct' => $this->getFuelProduct(),
+                'unitPriceInTransactionCurrency' => $this->getUnitPriceInTransactionCurrency(),
+                'unitPriceInInvoiceCurrency' => $this->getUnitPriceInInvoiceCurrency(),
+                'unitDiscountTransactionCurrency' => $this->getUnitDiscountTransactionCurrency(),
+                'unitDiscountInvoiceCurrency' => $this->getUnitDiscountInvoiceCurrency(),
+                'isInvoiced' => $this->getIsInvoiced(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'siteCode' => $this->getSiteCode(),
+                'siteName' => $this->getSiteName(),
+                'siteCountry' => $this->getSiteCountry(),
+                'location' => $this->location,
+                'cardGroupName' => $this->getCardGroupName(),
+                'receiptNumber' => $this->getReceiptNumber(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'delCoExchangeRate' => $this->getDelCoExchangeRate(),
+                'colCoExchangeRate' => $this->getColCoExchangeRate(),
+                'isShellSite' => $this->getIsShellSite(),
+                'network' => $this->getNetwork(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'siteGroupName' => $this->getSiteGroupName(),
+                'postingDate' => $this->getPostingDate(),
+                'issuerCode' => $this->getIssuerCode(),
+                'purchasedInCountryCode' => $this->getPurchasedInCountryCode(),
+                'customerCountryCode' => $this->getCustomerCountryCode(),
+                'customerCountry' => $this->getCustomerCountry(),
+                'releaseCode' => $this->getReleaseCode(),
+                'cardGroupId' => $this->getCardGroupId(),
+                'cardSequenceNumber' => $this->getCardSequenceNumber(),
+                'checkDigit' => $this->getCheckDigit(),
+                'fleetIDDescription' => $this->getFleetIDDescription(),
+                'vATRate' => $this->getVATRate(),
+                'vATCategory' => $this->getVATCategory(),
+                'effectiveDiscountInTrxCurrency' => $this->getEffectiveDiscountInTrxCurrency(),
+                'transactionType' => $this->getTransactionType(),
+                'pINIndicator' => $this->getPINIndicator(),
+                'vATApplicable' => $this->getVATApplicable(),
+                'netInvoiceIndicator' => $this->getNetInvoiceIndicator(),
+                'customerCurrencyCode' => $this->getCustomerCurrencyCode(),
+                'customerCurrencySymbol' => $this->getCustomerCurrencySymbol(),
+                'effectiveUnitDiscountInCustomerCurrency' => $this->getEffectiveUnitDiscountInCustomerCurrency(),
+                'effectiveDiscountInCustomerCurrency' => $this->getEffectiveDiscountInCustomerCurrency(),
+                'vATonNetAmountInCustomerCurrency' => $this->getVATonNetAmountInCustomerCurrency(),
+                'discountType' => $this->getDiscountType(),
+                'transactionStatus' => $this->getTransactionStatus(),
+                'payerGroup' => $this->getPayerGroup(),
+                'refundFlag' => $this->getRefundFlag(),
+                'originalSalesItemId' => $this->getOriginalSalesItemId(),
+                'delcoName' => $this->getDelcoName(),
+                'delcoCode' => $this->getDelcoCode(),
+                'payerNumber' => $this->getPayerNumber(),
+                'payerName' => $this->getPayerName(),
+                'cardExpiryPeriod' => $this->getCardExpiryPeriod(),
+                'authorisationCode' => $this->getAuthorisationCode(),
+                'transactionId' => $this->getTransactionId(),
+                'transactionLine' => $this->getTransactionLine(),
+                'allowClearing' => $this->getAllowClearing(),
+                'cRMNumber' => $this->getCRMNumber(),
+                'disputeStatus' => $this->getDisputeStatus(),
+                'rebateRate' => $this->getRebateRate(),
+                'delCoToColCoExchangeRate' => $this->getDelCoToColCoExchangeRate(),
+                'netEuroAmount' => $this->getNetEuroAmount(),
+                'euroRebateAmount' => $this->getEuroRebateAmount(),
+                'euroVATAmount' => $this->getEuroVATAmount(),
+                'parentCustomerNumber' => $this->getParentCustomerNumber(),
+                'vATonNetAmount' => $this->getVATonNetAmount(),
+                'vATCountry' => $this->getVATCountry()
+            ]
+        );
     }
 
     /**

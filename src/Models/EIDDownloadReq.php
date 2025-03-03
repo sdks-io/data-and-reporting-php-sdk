@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDDownloadReq implements \JsonSerializable
@@ -134,6 +135,24 @@ class EIDDownloadReq implements \JsonSerializable
     public function setAccountGroupIdList(array $accountGroupIdList): void
     {
         $this->accountGroupIdList = $accountGroupIdList;
+    }
+
+    /**
+     * Converts the EIDDownloadReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDDownloadReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'EIDDownloadReq',
+            [
+                'colCoCode' => $this->colCoCode,
+                'eIDList' => $this->eIDList,
+                'accountGroupCountry' => $this->accountGroupCountry,
+                'accountGroupIdList' => $this->accountGroupIdList
+            ]
+        );
     }
 
     /**

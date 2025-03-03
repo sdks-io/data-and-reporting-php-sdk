@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class UsageSummary implements \JsonSerializable
@@ -542,6 +543,34 @@ class UsageSummary implements \JsonSerializable
     public function unsetProductGroupName(): void
     {
         $this->productGroupName = [];
+    }
+
+    /**
+     * Converts the UsageSummary object to a human-readable string representation.
+     *
+     * @return string The string representation of the UsageSummary object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UsageSummary',
+            [
+                'date' => $this->getDate(),
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'isFuelProduct' => $this->getIsFuelProduct(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'siteGroupName' => $this->getSiteGroupName(),
+                'totalVolume' => $this->getTotalVolume(),
+                'totalGross' => $this->getTotalGross(),
+                'totalNet' => $this->getTotalNet(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'productGroupID' => $this->getProductGroupID(),
+                'productGroupName' => $this->getProductGroupName()
+            ]
+        );
     }
 
     /**

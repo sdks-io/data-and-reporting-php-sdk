@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class UpdateOdometerReference implements \JsonSerializable
@@ -86,6 +87,22 @@ class UpdateOdometerReference implements \JsonSerializable
     public function unsetUpdateOdometerReferenceId(): void
     {
         $this->updateOdometerReferenceId = [];
+    }
+
+    /**
+     * Converts the UpdateOdometerReference object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateOdometerReference object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateOdometerReference',
+            [
+                'salesItemId' => $this->getSalesItemId(),
+                'updateOdometerReferenceId' => $this->getUpdateOdometerReferenceId()
+            ]
+        );
     }
 
     /**

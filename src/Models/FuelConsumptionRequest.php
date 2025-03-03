@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FuelConsumptionRequest implements \JsonSerializable
@@ -365,6 +366,31 @@ class FuelConsumptionRequest implements \JsonSerializable
     public function setPeriod(?int $period): void
     {
         $this->period = $period;
+    }
+
+    /**
+     * Converts the FuelConsumptionRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the FuelConsumptionRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FuelConsumptionRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'accounts' => $this->accounts,
+                'cardGroupId' => $this->cardGroupId,
+                'cardGroupName' => $this->cardGroupName,
+                'cards' => $this->cards,
+                'fromDate' => $this->fromDate,
+                'toDate' => $this->toDate,
+                'period' => $this->period
+            ]
+        );
     }
 
     /**

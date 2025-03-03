@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceDownloadReq implements \JsonSerializable
@@ -169,6 +170,25 @@ class InvoiceDownloadReq implements \JsonSerializable
     public function unsetInvoiceOrSOANumber(): void
     {
         $this->invoiceOrSOANumber = [];
+    }
+
+    /**
+     * Converts the InvoiceDownloadReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceDownloadReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceDownloadReq',
+            [
+                'colCoCode' => $this->colCoCode,
+                'payerNumber' => $this->payerNumber,
+                'accountNumber' => $this->accountNumber,
+                'documentReference' => $this->documentReference,
+                'invoiceOrSOANumber' => $this->getInvoiceOrSOANumber()
+            ]
+        );
     }
 
     /**

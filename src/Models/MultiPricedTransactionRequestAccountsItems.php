@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
@@ -120,6 +121,25 @@ class MultiPricedTransactionRequestAccountsItems implements \JsonSerializable
     public function setAccountNumber(?string $accountNumber): void
     {
         $this->accountNumber = $accountNumber;
+    }
+
+    /**
+     * Converts the MultiPricedTransactionRequestAccountsItems object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the MultiPricedTransactionRequestAccountsItems object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'MultiPricedTransactionRequestAccountsItems',
+            [
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'accountId' => $this->accountId,
+                'accountNumber' => $this->accountNumber
+            ]
+        );
     }
 
     /**

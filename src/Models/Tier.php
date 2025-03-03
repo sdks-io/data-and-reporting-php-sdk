@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class Tier implements \JsonSerializable
@@ -384,6 +385,29 @@ class Tier implements \JsonSerializable
     public function unsetPricePerUnitAfterDiscount(): void
     {
         $this->pricePerUnitAfterDiscount = [];
+    }
+
+    /**
+     * Converts the Tier object to a human-readable string representation.
+     *
+     * @return string The string representation of the Tier object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'Tier',
+            [
+                'tierPriceListId' => $this->getTierPriceListId(),
+                'priceListDescription' => $this->getPriceListDescription(),
+                'tierMin' => $this->getTierMin(),
+                'tierMax' => $this->getTierMax(),
+                'tieredPricingGroupName' => $this->getTieredPricingGroupName(),
+                'tieredPricingGroupPeriod' => $this->getTieredPricingGroupPeriod(),
+                'discountValue' => $this->getDiscountValue(),
+                'pricePerUnit' => $this->getPricePerUnit(),
+                'pricePerUnitAfterDiscount' => $this->getPricePerUnitAfterDiscount()
+            ]
+        );
     }
 
     /**

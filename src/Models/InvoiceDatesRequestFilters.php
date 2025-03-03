@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceDatesRequestFilters implements \JsonSerializable
@@ -336,6 +337,27 @@ class InvoiceDatesRequestFilters implements \JsonSerializable
     public function setAccounts(?array $accounts): void
     {
         $this->accounts = $accounts;
+    }
+
+    /**
+     * Converts the InvoiceDatesRequestFilters object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceDatesRequestFilters object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceDatesRequestFilters',
+            [
+                'colCoCode' => $this->getColCoCode(),
+                'colCoId' => $this->getColCoId(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'accounts' => $this->accounts
+            ]
+        );
     }
 
     /**

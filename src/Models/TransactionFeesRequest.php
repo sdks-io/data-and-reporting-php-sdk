@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class TransactionFeesRequest implements \JsonSerializable
@@ -1066,6 +1067,40 @@ class TransactionFeesRequest implements \JsonSerializable
     public function unsetPageSize(): void
     {
         $this->pageSize = [];
+    }
+
+    /**
+     * Converts the TransactionFeesRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the TransactionFeesRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'TransactionFeesRequest',
+            [
+                'colCoId' => $this->getColCoId(),
+                'colCoCode' => $this->getColCoCode(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'accounts' => $this->accounts,
+                'cardId' => $this->getCardId(),
+                'cardPAN' => $this->getCardPAN(),
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'feeTypeGroup' => $this->getFeeTypeGroup(),
+                'feeTypeId' => $this->getFeeTypeId(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'period' => $this->getPeriod(),
+                'includeCancelledItems' => $this->getIncludeCancelledItems(),
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'lineItemDescription' => $this->getLineItemDescription(),
+                'sortOrder' => $this->getSortOrder(),
+                'currentPage' => $this->getCurrentPage(),
+                'pageSize' => $this->getPageSize()
+            ]
+        );
     }
 
     /**

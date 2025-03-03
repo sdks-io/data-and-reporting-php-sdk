@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeRuleTier implements \JsonSerializable
@@ -123,6 +124,23 @@ class FeeRuleTier implements \JsonSerializable
     public function unsetTierMaximum(): void
     {
         $this->tierMaximum = [];
+    }
+
+    /**
+     * Converts the FeeRuleTier object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeRuleTier object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeRuleTier',
+            [
+                'tierMinimum' => $this->getTierMinimum(),
+                'value' => $this->getValue(),
+                'tierMaximum' => $this->getTierMaximum()
+            ]
+        );
     }
 
     /**

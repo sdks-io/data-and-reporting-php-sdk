@@ -33,9 +33,9 @@ class PricedRequestDataBuilder
     /**
      * Initializes a new Priced Request Data Builder object.
      *
-     * @param array $invoiceStatus
+     * @param string $invoiceStatus
      */
-    public static function init(array $invoiceStatus): self
+    public static function init(string $invoiceStatus): self
     {
         return new self(new PricedRequestData($invoiceStatus));
     }
@@ -48,6 +48,17 @@ class PricedRequestDataBuilder
     public function colCoCode(?string $value): self
     {
         $this->instance->setColCoCode($value);
+        return $this;
+    }
+
+    /**
+     * Sets Col Co Id field.
+     *
+     * @param int|null $value
+     */
+    public function colCoId(?int $value): self
+    {
+        $this->instance->setColCoId($value);
         return $this;
     }
 
@@ -119,6 +130,17 @@ class PricedRequestDataBuilder
     public function unsetDriverName(): self
     {
         $this->instance->unsetDriverName();
+        return $this;
+    }
+
+    /**
+     * Sets Card Id field.
+     *
+     * @param int|null $value
+     */
+    public function cardId(?int $value): self
+    {
+        $this->instance->setCardId($value);
         return $this;
     }
 

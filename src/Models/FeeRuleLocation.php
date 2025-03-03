@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeRuleLocation implements \JsonSerializable
@@ -382,6 +383,30 @@ class FeeRuleLocation implements \JsonSerializable
     public function unsetSiteName(): void
     {
         $this->siteName = [];
+    }
+
+    /**
+     * Converts the FeeRuleLocation object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeRuleLocation object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeRuleLocation',
+            [
+                'delcoId' => $this->getDelcoId(),
+                'country' => $this->getCountry(),
+                'countryCode' => $this->getCountryCode(),
+                'fuelNetworkId' => $this->getFuelNetworkId(),
+                'networkName' => $this->getNetworkName(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'siteGroupName' => $this->getSiteGroupName(),
+                'siteCode' => $this->getSiteCode(),
+                'siteId' => $this->getSiteId(),
+                'siteName' => $this->getSiteName()
+            ]
+        );
     }
 
     /**

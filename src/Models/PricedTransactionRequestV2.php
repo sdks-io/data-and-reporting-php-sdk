@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricedTransactionRequestV2 implements \JsonSerializable
@@ -89,6 +90,19 @@ class PricedTransactionRequestV2 implements \JsonSerializable
     public function setPageSize(?int $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the PricedTransactionRequestV2 object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricedTransactionRequestV2 object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricedTransactionRequestV2',
+            ['filters' => $this->filters, 'page' => $this->page, 'pageSize' => $this->pageSize]
+        );
     }
 
     /**

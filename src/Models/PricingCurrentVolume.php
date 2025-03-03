@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricingCurrentVolume implements \JsonSerializable
@@ -237,6 +238,26 @@ class PricingCurrentVolume implements \JsonSerializable
     public function unsetNextFeeCreationDate(): void
     {
         $this->nextFeeCreationDate = [];
+    }
+
+    /**
+     * Converts the PricingCurrentVolume object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricingCurrentVolume object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricingCurrentVolume',
+            [
+                'feeRuleId' => $this->getFeeRuleId(),
+                'feeRuleDescription' => $this->getFeeRuleDescription(),
+                'priceRuleID' => $this->getPriceRuleID(),
+                'priceRuleDescription' => $this->getPriceRuleDescription(),
+                'totalVolume' => $this->getTotalVolume(),
+                'nextFeeCreationDate' => $this->getNextFeeCreationDate()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,8 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Exceptions;
 
+use ShellDataReportingAPIsLib\ApiHelper;
+
 /**
  * Error response
  */
@@ -38,5 +40,15 @@ class DefaultErrorException extends ApiException
     public function setFault(?\ShellDataReportingAPIsLib\Models\DefaultErrorFault $fault): void
     {
         $this->fault = $fault;
+    }
+
+    /**
+     * Converts the DefaultErrorException object to a human-readable string representation.
+     *
+     * @return string The string representation of the DefaultErrorException object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('DefaultErrorException', ['fault' => $this->fault], parent::__toString());
     }
 }

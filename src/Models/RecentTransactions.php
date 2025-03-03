@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use ShellDataReportingAPIsLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -2678,6 +2679,92 @@ class RecentTransactions implements \JsonSerializable
     public function unsetIsRFID(): void
     {
         $this->isRFID = [];
+    }
+
+    /**
+     * Converts the RecentTransactions object to a human-readable string representation.
+     *
+     * @return string The string representation of the RecentTransactions object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'RecentTransactions',
+            [
+                'colCoCode' => $this->getColCoCode(),
+                'payerNumber' => $this->getPayerNumber(),
+                'accountNumber' => $this->getAccountNumber(),
+                'cardIssueNumber' => $this->getCardIssueNumber(),
+                'collectingCompanyCurrencyCode' => $this->getCollectingCompanyCurrencyCode(),
+                'custDataCustomerEntered' => $this->getCustDataCustomerEntered(),
+                'custDataDriverId' => $this->getCustDataDriverId(),
+                'custDataFleetDescription' => $this->getCustDataFleetDescription(),
+                'fleetIdInput' => $this->getFleetIdInput(),
+                'amount' => $this->getAmount(),
+                'euroshellSiteNumber' => $this->getEuroshellSiteNumber(),
+                'incomingProductCode' => $this->getIncomingProductCode(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'siteCode' => $this->getSiteCode(),
+                'hostingCollectingCompanyName' => $this->getHostingCollectingCompanyName(),
+                'hostingCollectingCompanyNumber' => $this->getHostingCollectingCompanyNumber(),
+                'iccdataTranTypeCode' => $this->getIccdataTranTypeCode(),
+                'transactionType' => $this->getTransactionType(),
+                'latitude' => $this->getLatitude(),
+                'longitude' => $this->getLongitude(),
+                'merchantCategory' => $this->getMerchantCategory(),
+                'merchantCategoryDescription' => $this->getMerchantCategoryDescription(),
+                'purchasedInCountry' => $this->getPurchasedInCountry(),
+                'merchantId' => $this->getMerchantId(),
+                'siteName' => $this->getSiteName(),
+                'network' => $this->getNetwork(),
+                'delcoCode' => $this->getDelcoCode(),
+                'odometerInput' => $this->getOdometerInput(),
+                'odometerReadingKm' => $this->getOdometerReadingKm(),
+                'odometerReadingMiles' => $this->getOdometerReadingMiles(),
+                'cardPAN' => $this->getCardPAN(),
+                'pINIndicator' => $this->getPINIndicator(),
+                'pOIReceiptNumber' => $this->getPOIReceiptNumber(),
+                'productsCodeAdditional' => $this->getProductsCodeAdditional(),
+                'productsTaxCode' => $this->getProductsTaxCode(),
+                'fuelVolume' => $this->getFuelVolume(),
+                'sfgwCardDateOfExpiry' => $this->getSfgwCardDateOfExpiry(),
+                'siteCurrencyISOCode' => $this->getSiteCurrencyISOCode(),
+                'cardId' => $this->getCardId(),
+                'transactionDate' => $this->getTransactionDate(),
+                'transactionDateTime' => $this->getTransactionDateTime(),
+                'transactionId' => $this->getTransactionId(),
+                'transactionStatus' => $this->getTransactionStatus(),
+                'unitOfMeasure' => $this->getUnitOfMeasure(),
+                'vehicleRegistrationNumber' => $this->getVehicleRegistrationNumber(),
+                'networkDelcoName' => $this->getNetworkDelcoName(),
+                'productGroupName' => $this->getProductGroupName(),
+                'fuelProduct' => $this->getFuelProduct(),
+                'accountCustomerName' => $this->getAccountCustomerName(),
+                'payerName' => $this->getPayerName(),
+                'transactionTime' => $this->getTransactionTime(),
+                'transactionCurrency' => $this->getTransactionCurrency(),
+                'unitPrice' => $this->getUnitPrice(),
+                'authorisedFlag' => $this->getAuthorisedFlag(),
+                'transactionTimeGMT' => $this->getTransactionTimeGMT(),
+                'reasonCode' => $this->getReasonCode(),
+                'issuerActionCode' => $this->getIssuerActionCode(),
+                'issuerActionCodeDescription' => $this->getIssuerActionCodeDescription(),
+                'declinedReason' => $this->getDeclinedReason(),
+                'cardStatusReasonDescription' => $this->getCardStatusReasonDescription(),
+                'transactionCountry' => $this->getTransactionCountry(),
+                'issuingCollectingCompanyName' => $this->getIssuingCollectingCompanyName(),
+                'cardIssuerName' => $this->getCardIssuerName(),
+                'driverName' => $this->getDriverName(),
+                'bearerDescription' => $this->getBearerDescription(),
+                'cardCategoryDescription' => $this->getCardCategoryDescription(),
+                'cardTypeDescription' => $this->getCardTypeDescription(),
+                'cardTokenTypeDescription' => $this->getCardTokenTypeDescription(),
+                'embossType' => $this->getEmbossType(),
+                'eVPrintedNumber' => $this->getEVPrintedNumber(),
+                'isRFID' => $this->getIsRFID()
+            ]
+        );
     }
 
     /**

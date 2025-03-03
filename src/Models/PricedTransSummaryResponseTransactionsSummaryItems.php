@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSerializable
@@ -698,6 +699,35 @@ class PricedTransSummaryResponseTransactionsSummaryItems implements \JsonSeriali
     public function unsetCustomerRetailValueTotalGross(): void
     {
         $this->customerRetailValueTotalGross = [];
+    }
+
+    /**
+     * Converts the PricedTransSummaryResponseTransactionsSummaryItems object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the PricedTransSummaryResponseTransactionsSummaryItems object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricedTransSummaryResponseTransactionsSummaryItems',
+            [
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'siteGroupName' => $this->getSiteGroupName(),
+                'totalFuelQuantity' => $this->getTotalFuelQuantity(),
+                'totalNetAmount' => $this->getTotalNetAmount(),
+                'totalGrossAmount' => $this->getTotalGrossAmount(),
+                'invoiceCurrencyCode' => $this->getInvoiceCurrencyCode(),
+                'invoiceCurrencySymbol' => $this->getInvoiceCurrencySymbol(),
+                'customerRetailValueTotalNet' => $this->getCustomerRetailValueTotalNet(),
+                'customerRetailValueTotalGross' => $this->getCustomerRetailValueTotalGross()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -24,7 +25,12 @@ class PricedRequestData implements \JsonSerializable
     private $colCoCode;
 
     /**
-     * @var array
+     * @var int|null
+     */
+    private $colCoId;
+
+    /**
+     * @var string
      */
     private $invoiceStatus;
 
@@ -47,6 +53,11 @@ class PricedRequestData implements \JsonSerializable
      * @var array
      */
     private $driverName = [];
+
+    /**
+     * @var int|null
+     */
+    private $cardId;
 
     /**
      * @var array
@@ -204,9 +215,9 @@ class PricedRequestData implements \JsonSerializable
     private $transactionId = [];
 
     /**
-     * @param array $invoiceStatus
+     * @param string $invoiceStatus
      */
-    public function __construct(array $invoiceStatus)
+    public function __construct(string $invoiceStatus)
     {
         $this->invoiceStatus = $invoiceStatus;
     }
@@ -232,20 +243,45 @@ class PricedRequestData implements \JsonSerializable
     }
 
     /**
-     * Returns Invoice Status.
+     * Returns Col Co Id.
+     * The Collecting Company Id in the Shell Card Platform.
      */
-    public function getInvoiceStatus(): array
+    public function getColCoId(): ?int
+    {
+        return $this->colCoId;
+    }
+
+    /**
+     * Sets Col Co Id.
+     * The Collecting Company Id in the Shell Card Platform.
+     *
+     * @maps ColCoId
+     */
+    public function setColCoId(?int $colCoId): void
+    {
+        $this->colCoId = $colCoId;
+    }
+
+    /**
+     * Returns Invoice Status.
+     * Invoice status of the transactions. Mandatory Possible options:I - Invoiced, U – Un-Invoiced, A –
+     * All
+     */
+    public function getInvoiceStatus(): string
     {
         return $this->invoiceStatus;
     }
 
     /**
      * Sets Invoice Status.
+     * Invoice status of the transactions. Mandatory Possible options:I - Invoiced, U – Un-Invoiced, A –
+     * All
      *
      * @required
      * @maps InvoiceStatus
+     * @factory \ShellDataReportingAPIsLib\Models\PricedTransactionReqV2InvoiceStatusEnum::checkValue
      */
-    public function setInvoiceStatus(array $invoiceStatus): void
+    public function setInvoiceStatus(string $invoiceStatus): void
     {
         $this->invoiceStatus = $invoiceStatus;
     }
@@ -364,6 +400,26 @@ class PricedRequestData implements \JsonSerializable
     public function unsetDriverName(): void
     {
         $this->driverName = [];
+    }
+
+    /**
+     * Returns Card Id.
+     * Unique Card Id in the Shell Card Platform
+     */
+    public function getCardId(): ?int
+    {
+        return $this->cardId;
+    }
+
+    /**
+     * Sets Card Id.
+     * Unique Card Id in the Shell Card Platform
+     *
+     * @maps CardId
+     */
+    public function setCardId(?int $cardId): void
+    {
+        $this->cardId = $cardId;
     }
 
     /**
@@ -1338,6 +1394,59 @@ class PricedRequestData implements \JsonSerializable
     }
 
     /**
+     * Converts the PricedRequestData object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricedRequestData object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PricedRequestData',
+            [
+                'colCoCode' => $this->colCoCode,
+                'colCoId' => $this->colCoId,
+                'invoiceStatus' => $this->invoiceStatus,
+                'payerNumber' => $this->payerNumber,
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'driverName' => $this->getDriverName(),
+                'cardId' => $this->cardId,
+                'cardGroupId' => $this->getCardGroupId(),
+                'cardPAN' => $this->getCardPAN(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'siteCode' => $this->getSiteCode(),
+                'incomingSiteNumber' => $this->getIncomingSiteNumber(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'purchasedInCountryCode' => $this->getPurchasedInCountryCode(),
+                'purchasedInCountry' => $this->getPurchasedInCountry(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'vehicleRegistrationNumber' => $this->getVehicleRegistrationNumber(),
+                'feeTypeId' => $this->getFeeTypeId(),
+                'lineItemDescription' => $this->getLineItemDescription(),
+                'cards' => $this->cards,
+                'sortOrder' => $this->sortOrder,
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'period' => $this->period,
+                'postingDateFrom' => $this->getPostingDateFrom(),
+                'postingDateTo' => $this->getPostingDateTo(),
+                'transactionItemId' => $this->getTransactionItemId(),
+                'fuelOnly' => $this->getFuelOnly(),
+                'includeFees' => $this->getIncludeFees(),
+                'isMultipayer' => $this->isMultipayer,
+                'validInvoiceDateOnly' => $this->validInvoiceDateOnly,
+                'invoiceFromDate' => $this->getInvoiceFromDate(),
+                'invoiceToDate' => $this->getInvoiceToDate(),
+                'hostingCollectingCompanyNumber' => $this->getHostingCollectingCompanyNumber(),
+                'search' => $this->getSearch(),
+                'transactionId' => $this->getTransactionId()
+            ]
+        );
+    }
+
+    /**
      * Encode this object to JSON
      *
      * @param bool $asArrayWhenEmpty Whether to serialize this model as an array whenever no fields
@@ -1350,7 +1459,13 @@ class PricedRequestData implements \JsonSerializable
     {
         $json = [];
         $json['ColCoCode']                          = $this->colCoCode;
-        $json['InvoiceStatus']                      = $this->invoiceStatus;
+        if (isset($this->colCoId)) {
+            $json['ColCoId']                        = $this->colCoId;
+        }
+        $json['InvoiceStatus']                      =
+            PricedTransactionReqV2InvoiceStatusEnum::checkValue(
+                $this->invoiceStatus
+            );
         $json['PayerNumber']                        = $this->payerNumber;
         if (!empty($this->accountId)) {
             $json['AccountId']                      = $this->accountId['value'];
@@ -1360,6 +1475,9 @@ class PricedRequestData implements \JsonSerializable
         }
         if (!empty($this->driverName)) {
             $json['DriverName']                     = $this->driverName['value'];
+        }
+        if (isset($this->cardId)) {
+            $json['CardId']                         = $this->cardId;
         }
         if (!empty($this->cardGroupId)) {
             $json['CardGroupId']                    = $this->cardGroupId['value'];

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FuelConsumptionCard implements \JsonSerializable
@@ -95,6 +96,19 @@ class FuelConsumptionCard implements \JsonSerializable
     public function setExpiryDate(?string $expiryDate): void
     {
         $this->expiryDate = $expiryDate;
+    }
+
+    /**
+     * Converts the FuelConsumptionCard object to a human-readable string representation.
+     *
+     * @return string The string representation of the FuelConsumptionCard object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FuelConsumptionCard',
+            ['cardId' => $this->cardId, 'pAN' => $this->pAN, 'expiryDate' => $this->expiryDate]
+        );
     }
 
     /**

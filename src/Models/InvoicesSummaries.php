@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoicesSummaries implements \JsonSerializable
@@ -539,6 +540,34 @@ class InvoicesSummaries implements \JsonSerializable
     public function unsetTotalVATAmountBillingCurrency(): void
     {
         $this->totalVATAmountBillingCurrency = [];
+    }
+
+    /**
+     * Converts the InvoicesSummaries object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoicesSummaries object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoicesSummaries',
+            [
+                'amountDue' => $this->getAmountDue(),
+                'amountNotOverdue' => $this->getAmountNotOverdue(),
+                'amountOverdue' => $this->getAmountOverdue(),
+                'amountPaid' => $this->getAmountPaid(),
+                'billingCurrencyCode' => $this->getBillingCurrencyCode(),
+                'billingCurrencySymbol' => $this->getBillingCurrencySymbol(),
+                'outstandingBalance' => $this->getOutstandingBalance(),
+                'paymentDueDate' => $this->getPaymentDueDate(),
+                'summaryDocumentDate' => $this->getSummaryDocumentDate(),
+                'totalBillingDocuments' => $this->getTotalBillingDocuments(),
+                'totalGrossAmountBillingCurrency' => $this->getTotalGrossAmountBillingCurrency(),
+                'totalNetAmountBillingCurrency' => $this->getTotalNetAmountBillingCurrency(),
+                'totalSummaryDocuments' => $this->getTotalSummaryDocuments(),
+                'totalVATAmountBillingCurrency' => $this->getTotalVATAmountBillingCurrency()
+            ]
+        );
     }
 
     /**

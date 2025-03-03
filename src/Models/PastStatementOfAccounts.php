@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PastStatementOfAccounts implements \JsonSerializable
@@ -1342,6 +1343,54 @@ class PastStatementOfAccounts implements \JsonSerializable
     public function unsetLocalCurrencyExchangeRate(): void
     {
         $this->localCurrencyExchangeRate = [];
+    }
+
+    /**
+     * Converts the PastStatementOfAccounts object to a human-readable string representation.
+     *
+     * @return string The string representation of the PastStatementOfAccounts object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PastStatementOfAccounts',
+            [
+                'amountDue' => $this->getAmountDue(),
+                'amountNotOverdue' => $this->getAmountNotOverdue(),
+                'amountOverdue' => $this->getAmountOverdue(),
+                'amountOverdueFromUnallocated' => $this->getAmountOverdueFromUnallocated(),
+                'amountPaid' => $this->getAmountPaid(),
+                'balanceOnThisStatement' => $this->getBalanceOnThisStatement(),
+                'billingCurrencyCode' => $this->getBillingCurrencyCode(),
+                'billingCurrencySymbol' => $this->getBillingCurrencySymbol(),
+                'creditLimit' => $this->getCreditLimit(),
+                'creditLimitCurrencyCode' => $this->getCreditLimitCurrencyCode(),
+                'creditLimitCurrencySymbol' => $this->getCreditLimitCurrencySymbol(),
+                'creditLimitInCustomerCurrency' => $this->getCreditLimitInCustomerCurrency(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'fullyPaid' => $this->getFullyPaid(),
+                'lastPaymentCurrencyCode' => $this->getLastPaymentCurrencyCode(),
+                'lastPaymentCurrencySymbol' => $this->getLastPaymentCurrencySymbol(),
+                'lastPaymentDate' => $this->getLastPaymentDate(),
+                'lastPaymentValue' => $this->getLastPaymentValue(),
+                'outstandingBalance' => $this->getOutstandingBalance(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'paymentDueDate' => $this->getPaymentDueDate(),
+                'soAReferenceNumber' => $this->getSoAReferenceNumber(),
+                'statementDate' => $this->getStatementDate(),
+                'statementOfAccountId' => $this->getStatementOfAccountId(),
+                'totalBillingDocuments' => $this->getTotalBillingDocuments(),
+                'totalNetAmountBillingCurrency' => $this->getTotalNetAmountBillingCurrency(),
+                'totalSummaryBillingDocuments' => $this->getTotalSummaryBillingDocuments(),
+                'totalVATAmountBillingCurrency' => $this->getTotalVATAmountBillingCurrency(),
+                'unallocatedPayment' => $this->getUnallocatedPayment(),
+                'localCurrencyCode' => $this->getLocalCurrencyCode(),
+                'localCurrencySymbol' => $this->getLocalCurrencySymbol(),
+                'localCurrencyExchangeRate' => $this->getLocalCurrencyExchangeRate()
+            ]
+        );
     }
 
     /**

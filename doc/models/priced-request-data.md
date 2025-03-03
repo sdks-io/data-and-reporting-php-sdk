@@ -12,11 +12,13 @@ This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbi
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
 | `colCoCode` | `?string` | Required | Collecting Company Code (Shell Code) of the selected payer. | getColCoCode(): ?string | setColCoCode(?string colCoCode): void |
-| `invoiceStatus` | `array` | Required | - | getInvoiceStatus(): array | setInvoiceStatus(array invoiceStatus): void |
+| `colCoId` | `?int` | Optional | The Collecting Company Id in the Shell Card Platform. | getColCoId(): ?int | setColCoId(?int colCoId): void |
+| `invoiceStatus` | [`string(PricedTransactionReqV2InvoiceStatusEnum)`](../../doc/models/priced-transaction-req-v2-invoice-status-enum.md) | Required | Invoice status of the transactions. Mandatory Possible options:I - Invoiced, U – Un-Invoiced, A – All<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getInvoiceStatus(): string | setInvoiceStatus(string invoiceStatus): void |
 | `payerNumber` | `?string` | Required | Payer Number of the selected payer.<br>**Constraints**: *Minimum Length*: `1` | getPayerNumber(): ?string | setPayerNumber(?string payerNumber): void |
 | `accountId` | `?int` | Optional | Account Id (GFN customer id) | getAccountId(): ?int | setAccountId(?int accountId): void |
 | `accountNumber` | `?string` | Optional | Account Number of the selected account. | getAccountNumber(): ?string | setAccountNumber(?string accountNumber): void |
 | `driverName` | `?string` | Optional | Driver Name (of Card record)<br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `40` | getDriverName(): ?string | setDriverName(?string driverName): void |
+| `cardId` | `?int` | Optional | Unique Card Id in the Shell Card Platform | getCardId(): ?int | setCardId(?int cardId): void |
 | `cardGroupId` | `?int` | Optional | Card Group Id in GFN | getCardGroupId(): ?int | setCardGroupId(?int cardGroupId): void |
 | `cardPAN` | `?string` | Optional | Full Card PAN | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
 | `productCode` | `?string` | Optional | Product Code – Global as per GFN configuration<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `8` | getProductCode(): ?string | setProductCode(?string productCode): void |
@@ -54,14 +56,13 @@ This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbi
 ```json
 {
   "ColCoCode": "032",
-  "InvoiceStatus": {
-    "key1": "val1",
-    "key2": "val2"
-  },
+  "ColCoId": 32,
+  "InvoiceStatus": "A",
   "PayerNumber": "DE26685263",
   "AccountId": 29484,
   "AccountNumber": "DE26667080",
   "DriverName": "HH NX 508",
+  "CardId": 12435,
   "CardGroupId": 40000,
   "CardPAN": "7002051006629890645",
   "ProductCode": "10",

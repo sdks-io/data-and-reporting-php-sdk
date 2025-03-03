@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class MultiPricedTransactionRequest implements \JsonSerializable
@@ -892,6 +893,40 @@ class MultiPricedTransactionRequest implements \JsonSerializable
     public function setPageSize(?int $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the MultiPricedTransactionRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the MultiPricedTransactionRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'MultiPricedTransactionRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'accounts' => $this->accounts,
+                'invoiceStatus' => $this->invoiceStatus,
+                'purchasedInCountry' => $this->purchasedInCountry,
+                'fromDate' => $this->fromDate,
+                'toDate' => $this->toDate,
+                'period' => $this->period,
+                'postingDateFrom' => $this->postingDateFrom,
+                'postingDateTo' => $this->postingDateTo,
+                'invoiceDate' => $this->invoiceDate,
+                'invoiceNumber' => $this->invoiceNumber,
+                'validInvoiceDateOnly' => $this->validInvoiceDateOnly,
+                'invoiceFromDate' => $this->invoiceFromDate,
+                'invoiceToDate' => $this->invoiceToDate,
+                'fuelOnly' => $this->fuelOnly,
+                'includeFees' => $this->includeFees,
+                'sortOrder' => $this->sortOrder,
+                'currentPage' => $this->currentPage,
+                'pageSize' => $this->pageSize
+            ]
+        );
     }
 
     /**

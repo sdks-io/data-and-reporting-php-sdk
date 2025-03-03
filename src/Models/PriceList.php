@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PriceList implements \JsonSerializable
@@ -1418,6 +1419,56 @@ class PriceList implements \JsonSerializable
     public function setTiers(?array $tiers): void
     {
         $this->tiers = $tiers;
+    }
+
+    /**
+     * Converts the PriceList object to a human-readable string representation.
+     *
+     * @return string The string representation of the PriceList object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PriceList',
+            [
+                'date' => $this->getDate(),
+                'day' => $this->getDay(),
+                'type' => $this->getType(),
+                'priceListId' => $this->getPriceListId(),
+                'priceListDescription' => $this->getPriceListDescription(),
+                'priceRuleId' => $this->getPriceRuleId(),
+                'priceRuleName' => $this->getPriceRuleName(),
+                'delCoId' => $this->getDelCoId(),
+                'countryCode' => $this->getCountryCode(),
+                'country' => $this->getCountry(),
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'productCode' => $this->getProductCode(),
+                'productId' => $this->getProductId(),
+                'productName' => $this->getProductName(),
+                'pricePerUnit' => $this->getPricePerUnit(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'priceType' => $this->getPriceType(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'siteGroupName' => $this->getSiteGroupName(),
+                'siteCode' => $this->getSiteCode(),
+                'siteId' => $this->getSiteId(),
+                'siteName' => $this->getSiteName(),
+                'fuelNetworkId' => $this->getFuelNetworkId(),
+                'networkName' => $this->getNetworkName(),
+                'priceRuleDelcoId' => $this->getPriceRuleDelcoId(),
+                'priceRuleDelcoName' => $this->getPriceRuleDelcoName(),
+                'priceRuleCountry' => $this->getPriceRuleCountry(),
+                'priceRuleCountryCode' => $this->getPriceRuleCountryCode(),
+                'priceRuleBasisId' => $this->getPriceRuleBasisId(),
+                'discountValue' => $this->getDiscountValue(),
+                'pricePerUnitAfterDiscount' => $this->getPricePerUnitAfterDiscount(),
+                'vATPercentage' => $this->getVATPercentage(),
+                'priceRuleCategoryId' => $this->getPriceRuleCategoryId(),
+                'tiers' => $this->tiers
+            ]
+        );
     }
 
     /**

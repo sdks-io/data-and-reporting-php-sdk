@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeesFeeRuleTiers implements \JsonSerializable
@@ -250,6 +251,27 @@ class FeesFeeRuleTiers implements \JsonSerializable
     public function unsetFeeRuleBasisDescription(): void
     {
         $this->feeRuleBasisDescription = [];
+    }
+
+    /**
+     * Converts the FeesFeeRuleTiers object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeesFeeRuleTiers object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeesFeeRuleTiers',
+            [
+                'tierMin' => $this->getTierMin(),
+                'tierMax' => $this->getTierMax(),
+                'dateEffective' => $this->getDateEffective(),
+                'dateTerminated' => $this->getDateTerminated(),
+                'tierValue' => $this->getTierValue(),
+                'feeRuleBasisID' => $this->getFeeRuleBasisID(),
+                'feeRuleBasisDescription' => $this->getFeeRuleBasisDescription()
+            ]
+        );
     }
 
     /**

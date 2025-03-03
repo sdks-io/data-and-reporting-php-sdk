@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -857,6 +858,41 @@ class PaymentsSinceLastSOA implements \JsonSerializable
     public function unsetLocalCurrencyExchangeRate(): void
     {
         $this->localCurrencyExchangeRate = [];
+    }
+
+    /**
+     * Converts the PaymentsSinceLastSOA object to a human-readable string representation.
+     *
+     * @return string The string representation of the PaymentsSinceLastSOA object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PaymentsSinceLastSOA',
+            [
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountShortName' => $this->getAccountShortName(),
+                'summaryDocumentId' => $this->getSummaryDocumentId(),
+                'summaryDocumentNumber' => $this->getSummaryDocumentNumber(),
+                'summaryDocumentDate' => $this->getSummaryDocumentDate(),
+                'summaryDocumentPaymentDueDate' => $this->getSummaryDocumentPaymentDueDate(),
+                'summaryDocumentTotalValue' => $this->getSummaryDocumentTotalValue(),
+                'summaryDocumentTotalVAT' => $this->getSummaryDocumentTotalVAT(),
+                'summaryDocumentDDAmount' => $this->getSummaryDocumentDDAmount(),
+                'paymentDate' => $this->getPaymentDate(),
+                'paymentReference' => $this->getPaymentReference(),
+                'paymentCurrencyCode' => $this->getPaymentCurrencyCode(),
+                'paymentCurrencySymbol' => $this->getPaymentCurrencySymbol(),
+                'amountPaid' => $this->getAmountPaid(),
+                'balance' => $this->getBalance(),
+                'truePayment' => $this->getTruePayment(),
+                'prepaidBalance' => $this->getPrepaidBalance(),
+                'localCurrencyCode' => $this->getLocalCurrencyCode(),
+                'localCurrencySymbol' => $this->getLocalCurrencySymbol(),
+                'localCurrencyExchangeRate' => $this->getLocalCurrencyExchangeRate()
+            ]
+        );
     }
 
     /**

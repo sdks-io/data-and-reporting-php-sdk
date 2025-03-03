@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class TransactionExceptionsResponse implements \JsonSerializable
@@ -125,6 +126,24 @@ class TransactionExceptionsResponse implements \JsonSerializable
     public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
+    }
+
+    /**
+     * Converts the TransactionExceptionsResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the TransactionExceptionsResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'TransactionExceptionsResponse',
+            [
+                'cardExceptions' => $this->cardExceptions,
+                'transactionExceptions' => $this->getTransactionExceptions(),
+                'error' => $this->error,
+                'requestId' => $this->requestId
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchSOAReq implements \JsonSerializable
@@ -500,6 +501,31 @@ class SearchSOAReq implements \JsonSerializable
     public function unsetPayerId(): void
     {
         $this->payerId = [];
+    }
+
+    /**
+     * Converts the SearchSOAReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchSOAReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchSOAReq',
+            [
+                'colCoCode' => $this->getColCoCode(),
+                'payerNumber' => $this->getPayerNumber(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'period' => $this->getPeriod(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'invoiceStatus' => $this->invoiceStatus,
+                'sortBy' => $this->sortBy,
+                'colCoId' => $this->getColCoId(),
+                'payerId' => $this->getPayerId()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,8 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Exceptions;
 
+use ShellDataReportingAPIsLib\ApiHelper;
+
 class ErrorUserAccessError1Exception extends ApiException
 {
     /**
@@ -33,5 +35,19 @@ class ErrorUserAccessError1Exception extends ApiException
     public function setError(?\ShellDataReportingAPIsLib\Models\ErrorUserAccessError $error): void
     {
         $this->error = $error;
+    }
+
+    /**
+     * Converts the ErrorUserAccessError1Exception object to a human-readable string representation.
+     *
+     * @return string The string representation of the ErrorUserAccessError1Exception object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'ErrorUserAccessError1Exception',
+            ['error' => $this->error],
+            parent::__toString()
+        );
     }
 }

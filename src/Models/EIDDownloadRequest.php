@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDDownloadRequest implements \JsonSerializable
@@ -35,6 +36,16 @@ class EIDDownloadRequest implements \JsonSerializable
     public function setFilters(?EIDDownloadReq $filters): void
     {
         $this->filters = $filters;
+    }
+
+    /**
+     * Converts the EIDDownloadRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDDownloadRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('EIDDownloadRequest', ['filters' => $this->filters]);
     }
 
     /**

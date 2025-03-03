@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchDocumentsInvoice implements \JsonSerializable
@@ -519,6 +520,34 @@ class SearchDocumentsInvoice implements \JsonSerializable
     public function unsetVATCountryISOCode(): void
     {
         $this->vATCountryISOCode = [];
+    }
+
+    /**
+     * Converts the SearchDocumentsInvoice object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchDocumentsInvoice object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchDocumentsInvoice',
+            [
+                'documentReference' => $this->documentReference,
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'payerName' => $this->getPayerName(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountName' => $this->getAccountName(),
+                'documentType' => $this->getDocumentType(),
+                'grossAmount' => $this->getGrossAmount(),
+                'netAmount' => $this->getNetAmount(),
+                'taxAmount' => $this->getTaxAmount(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'dueDate' => $this->getDueDate(),
+                'vATCountryISOCode' => $this->getVATCountryISOCode()
+            ]
+        );
     }
 
     /**

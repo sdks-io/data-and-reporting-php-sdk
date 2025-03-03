@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class AuditRequest implements \JsonSerializable
@@ -693,6 +694,34 @@ class AuditRequest implements \JsonSerializable
     public function unsetToDate(): void
     {
         $this->toDate = [];
+    }
+
+    /**
+     * Converts the AuditRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the AuditRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'AuditRequest',
+            [
+                'status' => $this->status,
+                'payerNumber' => $this->getPayerNumber(),
+                'payerId' => $this->getPayerId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'colCoCode' => $this->getColCoCode(),
+                'colCoId' => $this->getColCoId(),
+                'accounts' => $this->accounts,
+                'pageSize' => $this->pageSize,
+                'requestedOperation' => $this->requestedOperation,
+                'sortOrder' => $this->getSortOrder(),
+                'searchText' => $this->getSearchText(),
+                'currentPage' => $this->getCurrentPage(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate()
+            ]
+        );
     }
 
     /**

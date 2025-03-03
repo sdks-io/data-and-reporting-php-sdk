@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class CustomerPriceListRequest implements \JsonSerializable
@@ -491,6 +492,32 @@ class CustomerPriceListRequest implements \JsonSerializable
     public function unsetIncludePumpPriceDiscounts(): void
     {
         $this->includePumpPriceDiscounts = [];
+    }
+
+    /**
+     * Converts the CustomerPriceListRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CustomerPriceListRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CustomerPriceListRequest',
+            [
+                'colCoId' => $this->getColCoId(),
+                'colCoCode' => $this->getColCoCode(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'customerSpecificList' => $this->getCustomerSpecificList(),
+                'priceListType' => $this->getPriceListType(),
+                'delCoId' => $this->getDelCoId(),
+                'fromDate' => $this->fromDate,
+                'toDate' => $this->toDate,
+                'includePumpPriceDiscounts' => $this->getIncludePumpPriceDiscounts()
+            ]
+        );
     }
 
     /**

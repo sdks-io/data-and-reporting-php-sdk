@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchDocReq implements \JsonSerializable
@@ -720,6 +721,36 @@ class SearchDocReq implements \JsonSerializable
     public function setColCoCode(?int $colCoCode): void
     {
         $this->colCoCode = $colCoCode;
+    }
+
+    /**
+     * Converts the SearchDocReq object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchDocReq object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchDocReq',
+            [
+                'payerNumber' => $this->payerNumber,
+                'accountNumber' => $this->getAccountNumber(),
+                'accountNumberList' => $this->accountNumberList,
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'invoiceNumberList' => $this->invoiceNumberList,
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'issuingDateFrom' => $this->getIssuingDateFrom(),
+                'issuingDateTo' => $this->getIssuingDateTo(),
+                'dueDateFrom' => $this->getDueDateFrom(),
+                'dueDateTo' => $this->getDueDateTo(),
+                'grossAmount' => $this->getGrossAmount(),
+                'grossAmountOperator' => $this->getGrossAmountOperator(),
+                'documentType' => $this->getDocumentType(),
+                'vATIssuerCountry' => $this->getVATIssuerCountry(),
+                'sortyBy' => $this->sortyBy,
+                'colCoCode' => $this->colCoCode
+            ]
+        );
     }
 
     /**

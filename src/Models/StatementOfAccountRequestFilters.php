@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class StatementOfAccountRequestFilters implements \JsonSerializable
@@ -420,6 +421,30 @@ class StatementOfAccountRequestFilters implements \JsonSerializable
     public function setAccounts(?array $accounts): void
     {
         $this->accounts = $accounts;
+    }
+
+    /**
+     * Converts the StatementOfAccountRequestFilters object to a human-readable string representation.
+     *
+     * @return string The string representation of the StatementOfAccountRequestFilters object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'StatementOfAccountRequestFilters',
+            [
+                'colCoCode' => $this->getColCoCode(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'includeMonthlyInvoiceTrend' => $this->getIncludeMonthlyInvoiceTrend(),
+                'includePastStatementOfAccounts' => $this->getIncludePastStatementOfAccounts(),
+                'dueOrOverDueSOADocumentsOnly' => $this->getDueOrOverDueSOADocumentsOnly(),
+                'numberOfSOADocuments' => $this->getNumberOfSOADocuments(),
+                'includeAccountInvoicesSummary' => $this->getIncludeAccountInvoicesSummary(),
+                'colCoId' => $this->getColCoId(),
+                'accounts' => $this->accounts
+            ]
+        );
     }
 
     /**

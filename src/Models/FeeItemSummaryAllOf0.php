@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class FeeItemSummaryAllOf0 implements \JsonSerializable
@@ -493,6 +494,33 @@ class FeeItemSummaryAllOf0 implements \JsonSerializable
     public function unsetInvoiceCurrencySymbol(): void
     {
         $this->invoiceCurrencySymbol = [];
+    }
+
+    /**
+     * Converts the FeeItemSummaryAllOf0 object to a human-readable string representation.
+     *
+     * @return string The string representation of the FeeItemSummaryAllOf0 object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'FeeItemSummaryAllOf0',
+            [
+                'feeTypeGroup' => $this->getFeeTypeGroup(),
+                'feeTypeId' => $this->getFeeTypeId(),
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'productName' => $this->getProductName(),
+                'productGroupId' => $this->getProductGroupId(),
+                'productGroupName' => $this->getProductGroupName(),
+                'totalQuantity' => $this->getTotalQuantity(),
+                'totalInvoiceNetAmount' => $this->getTotalInvoiceNetAmount(),
+                'totalInvoiceGrossAmount' => $this->getTotalInvoiceGrossAmount(),
+                'totalInvoiceVATAmount' => $this->getTotalInvoiceVATAmount(),
+                'invoiceCurrencyCode' => $this->getInvoiceCurrencyCode(),
+                'invoiceCurrencySymbol' => $this->getInvoiceCurrencySymbol()
+            ]
+        );
     }
 
     /**

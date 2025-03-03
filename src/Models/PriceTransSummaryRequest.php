@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PriceTransSummaryRequest implements \JsonSerializable
@@ -1140,6 +1141,50 @@ class PriceTransSummaryRequest implements \JsonSerializable
     public function setIncludeFees(?bool $includeFees): void
     {
         $this->includeFees = $includeFees;
+    }
+
+    /**
+     * Converts the PriceTransSummaryRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the PriceTransSummaryRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PriceTransSummaryRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'accounts' => $this->accounts,
+                'cardId' => $this->cardId,
+                'cardPAN' => $this->cardPAN,
+                'driverName' => $this->driverName,
+                'vehicleRegistrationNumber' => $this->vehicleRegistrationNumber,
+                'invoiceStatus' => $this->invoiceStatus,
+                'productId' => $this->productId,
+                'productCode' => $this->productCode,
+                'purchasedInCountry' => $this->purchasedInCountry,
+                'cardGroupId' => $this->cardGroupId,
+                'fromDate' => $this->fromDate,
+                'toDate' => $this->toDate,
+                'period' => $this->period,
+                'siteCode' => $this->siteCode,
+                'siteGroupId' => $this->siteGroupId,
+                'postingDateFrom' => $this->postingDateFrom,
+                'postingDateTo' => $this->postingDateTo,
+                'salesItemId' => $this->salesItemId,
+                'transactionId' => $this->transactionId,
+                'invoiceDate' => $this->invoiceDate,
+                'invoiceNumber' => $this->invoiceNumber,
+                'validInvoiceDateOnly' => $this->validInvoiceDateOnly,
+                'invoiceFromDate' => $this->invoiceFromDate,
+                'invoiceToDate' => $this->invoiceToDate,
+                'fuelOnly' => $this->fuelOnly,
+                'includeFees' => $this->includeFees
+            ]
+        );
     }
 
     /**

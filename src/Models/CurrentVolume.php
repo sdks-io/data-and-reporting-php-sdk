@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class CurrentVolume implements \JsonSerializable
@@ -197,6 +198,25 @@ class CurrentVolume implements \JsonSerializable
     public function unsetTotalVolume(): void
     {
         $this->totalVolume = [];
+    }
+
+    /**
+     * Converts the CurrentVolume object to a human-readable string representation.
+     *
+     * @return string The string representation of the CurrentVolume object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CurrentVolume',
+            [
+                'feeRuleId' => $this->getFeeRuleId(),
+                'feeRuleDescription' => $this->getFeeRuleDescription(),
+                'month' => $this->getMonth(),
+                'year' => $this->getYear(),
+                'totalVolume' => $this->getTotalVolume()
+            ]
+        );
     }
 
     /**

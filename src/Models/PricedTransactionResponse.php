@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PricedTransactionResponse implements \JsonSerializable
@@ -39,6 +40,16 @@ class PricedTransactionResponse implements \JsonSerializable
     public function setTransactions(?array $transactions): void
     {
         $this->transactions = $transactions;
+    }
+
+    /**
+     * Converts the PricedTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the PricedTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('PricedTransactionResponse', ['transactions' => $this->transactions]);
     }
 
     /**

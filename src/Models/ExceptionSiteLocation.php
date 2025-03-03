@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 /**
@@ -89,6 +90,16 @@ class ExceptionSiteLocation implements \JsonSerializable
     public function unsetLng(): void
     {
         $this->lng = [];
+    }
+
+    /**
+     * Converts the ExceptionSiteLocation object to a human-readable string representation.
+     *
+     * @return string The string representation of the ExceptionSiteLocation object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('ExceptionSiteLocation', ['lat' => $this->getLat(), 'lng' => $this->getLng()]);
     }
 
     /**

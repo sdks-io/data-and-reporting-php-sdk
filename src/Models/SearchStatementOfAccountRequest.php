@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchStatementOfAccountRequest implements \JsonSerializable
@@ -85,6 +86,19 @@ class SearchStatementOfAccountRequest implements \JsonSerializable
     public function setPageSize(?int $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the SearchStatementOfAccountRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchStatementOfAccountRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchStatementOfAccountRequest',
+            ['filters' => $this->filters, 'page' => $this->page, 'pageSize' => $this->pageSize]
+        );
     }
 
     /**

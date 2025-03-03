@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDDocumentResponse implements \JsonSerializable
@@ -241,6 +242,29 @@ class EIDDocumentResponse implements \JsonSerializable
     public function setIsLastPage(?bool $isLastPage): void
     {
         $this->isLastPage = $isLastPage;
+    }
+
+    /**
+     * Converts the EIDDocumentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDDocumentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'EIDDocumentResponse',
+            [
+                'requestId' => $this->requestId,
+                'status' => $this->status,
+                'data' => $this->data,
+                'pageSize' => $this->pageSize,
+                'page' => $this->page,
+                'totalPages' => $this->totalPages,
+                'totalRecords' => $this->totalRecords,
+                'isFirstPage' => $this->isFirstPage,
+                'isLastPage' => $this->isLastPage
+            ]
+        );
     }
 
     /**

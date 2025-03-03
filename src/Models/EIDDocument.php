@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class EIDDocument implements \JsonSerializable
@@ -412,6 +413,30 @@ class EIDDocument implements \JsonSerializable
     public function unsetDocumentName(): void
     {
         $this->documentName = [];
+    }
+
+    /**
+     * Converts the EIDDocument object to a human-readable string representation.
+     *
+     * @return string The string representation of the EIDDocument object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'EIDDocument',
+            [
+                'documentId' => $this->getDocumentId(),
+                'accountGroupId' => $this->getAccountGroupId(),
+                'accountGroupName' => $this->getAccountGroupName(),
+                'documentType' => $this->getDocumentType(),
+                'documentFormat' => $this->getDocumentFormat(),
+                'documentDate' => $this->getDocumentDate(),
+                'numberOfInvoices' => $this->getNumberOfInvoices(),
+                'fileSize' => $this->getFileSize(),
+                'documentStatus' => $this->getDocumentStatus(),
+                'documentName' => $this->getDocumentName()
+            ]
+        );
     }
 
     /**

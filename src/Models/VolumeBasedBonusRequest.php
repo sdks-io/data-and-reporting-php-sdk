@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class VolumeBasedBonusRequest implements \JsonSerializable
@@ -204,6 +205,26 @@ class VolumeBasedBonusRequest implements \JsonSerializable
     public function setIncludeCurrentPeriodVolume(?bool $includeCurrentPeriodVolume): void
     {
         $this->includeCurrentPeriodVolume = $includeCurrentPeriodVolume;
+    }
+
+    /**
+     * Converts the VolumeBasedBonusRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the VolumeBasedBonusRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'VolumeBasedBonusRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'includeHistory' => $this->includeHistory,
+                'includeCurrentPeriodVolume' => $this->includeCurrentPeriodVolume
+            ]
+        );
     }
 
     /**

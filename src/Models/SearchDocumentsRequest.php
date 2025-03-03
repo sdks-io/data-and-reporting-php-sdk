@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class SearchDocumentsRequest implements \JsonSerializable
@@ -85,6 +86,19 @@ class SearchDocumentsRequest implements \JsonSerializable
     public function setPageSize(?string $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the SearchDocumentsRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the SearchDocumentsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'SearchDocumentsRequest',
+            ['filters' => $this->filters, 'page' => $this->page, 'pageSize' => $this->pageSize]
+        );
     }
 
     /**

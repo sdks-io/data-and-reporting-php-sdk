@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class InvoiceSearchResponse implements \JsonSerializable
@@ -261,6 +262,27 @@ class InvoiceSearchResponse implements \JsonSerializable
     public function unsetTotalPages(): void
     {
         $this->totalPages = [];
+    }
+
+    /**
+     * Converts the InvoiceSearchResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the InvoiceSearchResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'InvoiceSearchResponse',
+            [
+                'requestId' => $this->getRequestId(),
+                'status' => $this->getStatus(),
+                'data' => $this->data,
+                'page' => $this->getPage(),
+                'pageSize' => $this->getPageSize(),
+                'totalRecords' => $this->getTotalRecords(),
+                'totalPages' => $this->getTotalPages()
+            ]
+        );
     }
 
     /**

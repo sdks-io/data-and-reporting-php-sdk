@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class CardUsageSummaryResponse implements \JsonSerializable
@@ -87,6 +88,19 @@ class CardUsageSummaryResponse implements \JsonSerializable
     public function setError(?ErrorStatus $error): void
     {
         $this->error = $error;
+    }
+
+    /**
+     * Converts the CardUsageSummaryResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the CardUsageSummaryResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CardUsageSummaryResponse',
+            ['usageSummary' => $this->usageSummary, 'requestId' => $this->requestId, 'error' => $this->error]
+        );
     }
 
     /**

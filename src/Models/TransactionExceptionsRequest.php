@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class TransactionExceptionsRequest implements \JsonSerializable
@@ -557,6 +558,35 @@ class TransactionExceptionsRequest implements \JsonSerializable
     public function setUseFieldId(?bool $useFieldId): void
     {
         $this->useFieldId = $useFieldId;
+    }
+
+    /**
+     * Converts the TransactionExceptionsRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the TransactionExceptionsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'TransactionExceptionsRequest',
+            [
+                'colCoId' => $this->colCoId,
+                'colCoCode' => $this->colCoCode,
+                'payerId' => $this->payerId,
+                'payerNumber' => $this->payerNumber,
+                'accounts' => $this->accounts,
+                'transactionsFromDate' => $this->transactionsFromDate,
+                'transactionsToDate' => $this->transactionsToDate,
+                'value' => $this->value,
+                'condition' => $this->condition,
+                'products' => $this->products,
+                'exceptionPeriod' => $this->exceptionPeriod,
+                'outputType' => $this->outputType,
+                'fuelOnly' => $this->fuelOnly,
+                'siteGroupIds' => $this->siteGroupIds,
+                'useFieldId' => $this->useFieldId
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class StatementOfAccountResp implements \JsonSerializable
@@ -178,6 +179,25 @@ class StatementOfAccountResp implements \JsonSerializable
     public function unsetInvoicesSummaries(): void
     {
         $this->invoicesSummaries = [];
+    }
+
+    /**
+     * Converts the StatementOfAccountResp object to a human-readable string representation.
+     *
+     * @return string The string representation of the StatementOfAccountResp object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'StatementOfAccountResp',
+            [
+                'lastStatementOfAccount' => $this->lastStatementOfAccount,
+                'monthlyInvoiceTrend' => $this->getMonthlyInvoiceTrend(),
+                'pastStatementOfAccounts' => $this->pastStatementOfAccounts,
+                'paymentsSinceLastSOA' => $this->getPaymentsSinceLastSOA(),
+                'invoicesSummaries' => $this->getInvoicesSummaries()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class CardExceptions implements \JsonSerializable
@@ -755,6 +756,40 @@ class CardExceptions implements \JsonSerializable
     public function unsetYear(): void
     {
         $this->year = [];
+    }
+
+    /**
+     * Converts the CardExceptions object to a human-readable string representation.
+     *
+     * @return string The string representation of the CardExceptions object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CardExceptions',
+            [
+                'accountId' => $this->getAccountId(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountShortName' => $this->getAccountShortName(),
+                'cardId' => $this->getCardId(),
+                'currencyCode' => $this->getCurrencyCode(),
+                'currencySymbol' => $this->getCurrencySymbol(),
+                'day' => $this->getDay(),
+                'driverName' => $this->getDriverName(),
+                'month' => $this->getMonth(),
+                'pAN' => $this->getPAN(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'payerShortName' => $this->getPayerShortName(),
+                'totalAmount' => $this->getTotalAmount(),
+                'totalQuantity' => $this->getTotalQuantity(),
+                'totalSalesItems' => $this->getTotalSalesItems(),
+                'totalTransactions' => $this->getTotalTransactions(),
+                'vRN' => $this->getVRN(),
+                'week' => $this->getWeek(),
+                'year' => $this->getYear()
+            ]
+        );
     }
 
     /**

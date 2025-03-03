@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace ShellDataReportingAPIsLib\Models;
 
+use ShellDataReportingAPIsLib\ApiHelper;
 use stdClass;
 
 class PriceTransactionRequest implements \JsonSerializable
@@ -1866,6 +1867,54 @@ class PriceTransactionRequest implements \JsonSerializable
     public function setPageSize(?int $pageSize): void
     {
         $this->pageSize = $pageSize;
+    }
+
+    /**
+     * Converts the PriceTransactionRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the PriceTransactionRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'PriceTransactionRequest',
+            [
+                'colCoId' => $this->getColCoId(),
+                'colCoCode' => $this->getColCoCode(),
+                'payerId' => $this->getPayerId(),
+                'payerNumber' => $this->getPayerNumber(),
+                'accounts' => $this->accounts,
+                'cardId' => $this->getCardId(),
+                'cardPAN' => $this->getCardPAN(),
+                'driverName' => $this->getDriverName(),
+                'vehicleRegistrationNumber' => $this->getVehicleRegistrationNumber(),
+                'invoiceStatus' => $this->getInvoiceStatus(),
+                'productId' => $this->getProductId(),
+                'productCode' => $this->getProductCode(),
+                'purchasedInCountry' => $this->getPurchasedInCountry(),
+                'cardGroupId' => $this->getCardGroupId(),
+                'sortOrder' => $this->getSortOrder(),
+                'fromDate' => $this->getFromDate(),
+                'toDate' => $this->getToDate(),
+                'period' => $this->getPeriod(),
+                'siteCode' => $this->getSiteCode(),
+                'siteGroupId' => $this->getSiteGroupId(),
+                'postingDateFrom' => $this->getPostingDateFrom(),
+                'postingDateTo' => $this->getPostingDateTo(),
+                'salesItemId' => $this->getSalesItemId(),
+                'transactionId' => $this->getTransactionId(),
+                'invoiceDate' => $this->getInvoiceDate(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'validInvoiceDateOnly' => $this->getValidInvoiceDateOnly(),
+                'invoiceFromDate' => $this->getInvoiceFromDate(),
+                'invoiceToDate' => $this->getInvoiceToDate(),
+                'fuelOnly' => $this->getFuelOnly(),
+                'includeFees' => $this->getIncludeFees(),
+                'useFieldId' => $this->getUseFieldId(),
+                'currentPage' => $this->getCurrentPage(),
+                'pageSize' => $this->pageSize
+            ]
+        );
     }
 
     /**
