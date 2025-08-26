@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\ExceptionSiteLocation;
+use ShellDataReportingAPIsLib\Models\Location;
 use ShellDataReportingAPIsLib\Models\TransactionExceptions;
 
 /**
@@ -862,9 +862,9 @@ class TransactionExceptionsBuilder
     /**
      * Sets Location field.
      *
-     * @param ExceptionSiteLocation|null $value
+     * @param Location|null $value
      */
-    public function location(?ExceptionSiteLocation $value): self
+    public function location(?Location $value): self
     {
         $this->instance->setLocation($value);
         return $this;

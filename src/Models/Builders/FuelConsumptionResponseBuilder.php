@@ -11,9 +11,9 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\FuelConsumptionData;
 use ShellDataReportingAPIsLib\Models\FuelConsumptionResponse;
+use ShellDataReportingAPIsLib\Models\Warning;
 
 /**
  * Builder for model FuelConsumptionResponse
@@ -41,28 +41,6 @@ class FuelConsumptionResponseBuilder
     }
 
     /**
-     * Sets Fuel Consumption field.
-     *
-     * @param FuelConsumptionData[]|null $value
-     */
-    public function fuelConsumption(?array $value): self
-    {
-        $this->instance->setFuelConsumption($value);
-        return $this;
-    }
-
-    /**
-     * Sets Error field.
-     *
-     * @param ErrorStatus|null $value
-     */
-    public function error(?ErrorStatus $value): self
-    {
-        $this->instance->setError($value);
-        return $this;
-    }
-
-    /**
      * Sets Request Id field.
      *
      * @param string|null $value
@@ -70,6 +48,39 @@ class FuelConsumptionResponseBuilder
     public function requestId(?string $value): self
     {
         $this->instance->setRequestId($value);
+        return $this;
+    }
+
+    /**
+     * Sets Status field.
+     *
+     * @param string|null $value
+     */
+    public function status(?string $value): self
+    {
+        $this->instance->setStatus($value);
+        return $this;
+    }
+
+    /**
+     * Sets Data field.
+     *
+     * @param FuelConsumptionData[]|null $value
+     */
+    public function data(?array $value): self
+    {
+        $this->instance->setData($value);
+        return $this;
+    }
+
+    /**
+     * Sets Warnings field.
+     *
+     * @param Warning[]|null $value
+     */
+    public function warnings(?array $value): self
+    {
+        $this->instance->setWarnings($value);
         return $this;
     }
 

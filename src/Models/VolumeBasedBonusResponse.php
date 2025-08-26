@@ -31,16 +31,6 @@ class VolumeBasedBonusResponse implements \JsonSerializable
     private $historicalBonusPaid;
 
     /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
      * Returns Configuration.
      *
      * @return BonusConfiguration[]|null
@@ -107,44 +97,6 @@ class VolumeBasedBonusResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
      * Converts the VolumeBasedBonusResponse object to a human-readable string representation.
      *
      * @return string The string representation of the VolumeBasedBonusResponse object.
@@ -156,9 +108,7 @@ class VolumeBasedBonusResponse implements \JsonSerializable
             [
                 'configuration' => $this->configuration,
                 'currentPeriodConsumption' => $this->currentPeriodConsumption,
-                'historicalBonusPaid' => $this->historicalBonusPaid,
-                'error' => $this->error,
-                'requestId' => $this->requestId
+                'historicalBonusPaid' => $this->historicalBonusPaid
             ]
         );
     }
@@ -183,12 +133,6 @@ class VolumeBasedBonusResponse implements \JsonSerializable
         }
         if (isset($this->historicalBonusPaid)) {
             $json['HistoricalBonusPaid']      = $this->historicalBonusPaid;
-        }
-        if (isset($this->error)) {
-            $json['Error']                    = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']                = $this->requestId;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

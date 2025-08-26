@@ -41,9 +41,9 @@ class ColCoAccessBuilder
     /**
      * Sets Col Co Id field.
      *
-     * @param string|null $value
+     * @param int|null $value
      */
-    public function colCoId(?string $value): self
+    public function colCoId(?int $value): self
     {
         $this->instance->setColCoId($value);
         return $this;
@@ -61,9 +61,9 @@ class ColCoAccessBuilder
     /**
      * Sets Col Co Code field.
      *
-     * @param string|null $value
+     * @param int|null $value
      */
-    public function colCoCode(?string $value): self
+    public function colCoCode(?int $value): self
     {
         $this->instance->setColCoCode($value);
         return $this;

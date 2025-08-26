@@ -31,14 +31,9 @@ class VolumeBasedPricingResponse implements \JsonSerializable
     private $history;
 
     /**
-     * @var ErrorStatus|null
+     * @var Warning[]|null
      */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
+    private $warnings;
 
     /**
      * Returns Configuration.
@@ -107,41 +102,39 @@ class VolumeBasedPricingResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
+     * Returns Warnings.
+     * A list of Warning entity.
      *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
      *
-     * @maps RequestId
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @return Warning[]|null
      */
-    public function setRequestId(?string $requestId): void
+    public function getWarnings(): ?array
     {
-        $this->requestId = $requestId;
+        return $this->warnings;
+    }
+
+    /**
+     * Sets Warnings.
+     * A list of Warning entity.
+     *
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
+     *
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @maps Warnings
+     *
+     * @param Warning[]|null $warnings
+     */
+    public function setWarnings(?array $warnings): void
+    {
+        $this->warnings = $warnings;
     }
 
     /**
@@ -157,8 +150,7 @@ class VolumeBasedPricingResponse implements \JsonSerializable
                 'configuration' => $this->configuration,
                 'currentPeriodConsumption' => $this->currentPeriodConsumption,
                 'history' => $this->history,
-                'error' => $this->error,
-                'requestId' => $this->requestId
+                'warnings' => $this->warnings
             ]
         );
     }
@@ -184,11 +176,8 @@ class VolumeBasedPricingResponse implements \JsonSerializable
         if (isset($this->history)) {
             $json['History']                  = $this->history;
         }
-        if (isset($this->error)) {
-            $json['Error']                    = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']                = $this->requestId;
+        if (isset($this->warnings)) {
+            $json['Warnings']                 = $this->warnings;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

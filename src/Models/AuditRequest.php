@@ -51,11 +51,6 @@ class AuditRequest implements \JsonSerializable
     private $accounts;
 
     /**
-     * @var int|null
-     */
-    private $pageSize;
-
-    /**
      * @var string[]|null
      */
     private $requestedOperation;
@@ -69,11 +64,6 @@ class AuditRequest implements \JsonSerializable
      * @var array
      */
     private $searchText = [];
-
-    /**
-     * @var array
-     */
-    private $currentPage = [];
 
     /**
      * @var array
@@ -361,42 +351,27 @@ class AuditRequest implements \JsonSerializable
     }
 
     /**
-     * Returns Page Size.
-     * Page Size – Number of records to show on a page
-     * Optional
-     * Default value 50
-     */
-    public function getPageSize(): ?int
-    {
-        return $this->pageSize;
-    }
-
-    /**
-     * Sets Page Size.
-     * Page Size – Number of records to show on a page
-     * Optional
-     * Default value 50
-     *
-     * @maps PageSize
-     */
-    public function setPageSize(?int $pageSize): void
-    {
-        $this->pageSize = $pageSize;
-    }
-
-    /**
      * Returns Requested Operation.
-     * To search for requests submitted until this date.
-     *
+     * Type of requests to be fetched.
      * Optional
-     *
-     * Format: yyyyMMdd
-     *
-     * Example: 20200130
-     *
-     * If ToDate is not provided and FromDate is provided, then ToDate will be considered as current date
-     * or 30 days from FromDate, whichever is earlier. However, when both FromDate and ToDate is not
-     * provided then last 30 days will be considered for filtering.
+     * Allowed values:
+     * •    OrderCard
+     * •    CreateCardGroup
+     * •    PINReminder
+     * •    MoveCard
+     * •    UpdateCardStatus
+     * •    UpdateCardGroup
+     * •    AutoRenew
+     * •    BulkCardOrder
+     * •    BulkCardBlock
+     * •    BulkCardOrderMultiAccount
+     * •    MobilePaymentRegistration
+     * •    UpdateCompanyInfo
+     * •    BCOSummary
+     * •    BCOMultiAccountSummary
+     * •    BCBSummary
+     * •    FundTransfer
+     * •    DeliveryAddressUpdate
      *
      * @return string[]|null
      */
@@ -407,17 +382,26 @@ class AuditRequest implements \JsonSerializable
 
     /**
      * Sets Requested Operation.
-     * To search for requests submitted until this date.
-     *
+     * Type of requests to be fetched.
      * Optional
-     *
-     * Format: yyyyMMdd
-     *
-     * Example: 20200130
-     *
-     * If ToDate is not provided and FromDate is provided, then ToDate will be considered as current date
-     * or 30 days from FromDate, whichever is earlier. However, when both FromDate and ToDate is not
-     * provided then last 30 days will be considered for filtering.
+     * Allowed values:
+     * •    OrderCard
+     * •    CreateCardGroup
+     * •    PINReminder
+     * •    MoveCard
+     * •    UpdateCardStatus
+     * •    UpdateCardGroup
+     * •    AutoRenew
+     * •    BulkCardOrder
+     * •    BulkCardBlock
+     * •    BulkCardOrderMultiAccount
+     * •    MobilePaymentRegistration
+     * •    UpdateCompanyInfo
+     * •    BCOSummary
+     * •    BCOMultiAccountSummary
+     * •    BCBSummary
+     * •    FundTransfer
+     * •    DeliveryAddressUpdate
      *
      * @maps RequestedOperation
      *
@@ -538,44 +522,6 @@ class AuditRequest implements \JsonSerializable
     public function unsetSearchText(): void
     {
         $this->searchText = [];
-    }
-
-    /**
-     * Returns Current Page.
-     * Page Number (as shown to the users)
-     * Optional
-     * Default value 1
-     */
-    public function getCurrentPage(): ?int
-    {
-        if (count($this->currentPage) == 0) {
-            return null;
-        }
-        return $this->currentPage['value'];
-    }
-
-    /**
-     * Sets Current Page.
-     * Page Number (as shown to the users)
-     * Optional
-     * Default value 1
-     *
-     * @maps CurrentPage
-     */
-    public function setCurrentPage(?int $currentPage): void
-    {
-        $this->currentPage['value'] = $currentPage;
-    }
-
-    /**
-     * Unsets Current Page.
-     * Page Number (as shown to the users)
-     * Optional
-     * Default value 1
-     */
-    public function unsetCurrentPage(): void
-    {
-        $this->currentPage = [];
     }
 
     /**
@@ -713,11 +659,9 @@ class AuditRequest implements \JsonSerializable
                 'colCoCode' => $this->getColCoCode(),
                 'colCoId' => $this->getColCoId(),
                 'accounts' => $this->accounts,
-                'pageSize' => $this->pageSize,
                 'requestedOperation' => $this->requestedOperation,
                 'sortOrder' => $this->getSortOrder(),
                 'searchText' => $this->getSearchText(),
-                'currentPage' => $this->getCurrentPage(),
                 'fromDate' => $this->getFromDate(),
                 'toDate' => $this->getToDate()
             ]
@@ -757,9 +701,6 @@ class AuditRequest implements \JsonSerializable
         if (isset($this->accounts)) {
             $json['Accounts']           = $this->accounts;
         }
-        if (isset($this->pageSize)) {
-            $json['PageSize']           = $this->pageSize;
-        }
         if (isset($this->requestedOperation)) {
             $json['RequestedOperation'] = $this->requestedOperation;
         }
@@ -768,9 +709,6 @@ class AuditRequest implements \JsonSerializable
         }
         if (!empty($this->searchText)) {
             $json['SearchText']         = $this->searchText['value'];
-        }
-        if (!empty($this->currentPage)) {
-            $json['CurrentPage']        = $this->currentPage['value'];
         }
         if (!empty($this->fromDate)) {
             $json['FromDate']           = $this->fromDate['value'];

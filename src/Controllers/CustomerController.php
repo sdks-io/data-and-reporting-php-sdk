@@ -15,52 +15,46 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\DefaultErrorException;
-use ShellDataReportingAPIsLib\Exceptions\ErrorUserAccessError1Exception;
-use ShellDataReportingAPIsLib\Models\AccountRequest;
-use ShellDataReportingAPIsLib\Models\AccountResponse;
-use ShellDataReportingAPIsLib\Models\AuditRequest;
+use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
+use ShellDataReportingAPIsLib\Models\AccountReq;
+use ShellDataReportingAPIsLib\Models\AccountRes;
+use ShellDataReportingAPIsLib\Models\AuditReq;
 use ShellDataReportingAPIsLib\Models\AuditResponse;
-use ShellDataReportingAPIsLib\Models\CardGroupRequest;
-use ShellDataReportingAPIsLib\Models\CardGroupResponse;
-use ShellDataReportingAPIsLib\Models\CardTypeRequest;
-use ShellDataReportingAPIsLib\Models\CardTypeResponse;
-use ShellDataReportingAPIsLib\Models\CustomerDetailRequest;
-use ShellDataReportingAPIsLib\Models\CustomerDetailResponse;
-use ShellDataReportingAPIsLib\Models\CustomerPriceListRequest;
-use ShellDataReportingAPIsLib\Models\CustomerPriceListResponse;
-use ShellDataReportingAPIsLib\Models\FleetmanagementV1UserLoggedinuserRequest;
-use ShellDataReportingAPIsLib\Models\LoggedInUserResponse;
-use ShellDataReportingAPIsLib\Models\PayerRequest;
-use ShellDataReportingAPIsLib\Models\PayerResponse;
+use ShellDataReportingAPIsLib\Models\CardGroupReq;
+use ShellDataReportingAPIsLib\Models\CardGroupRes;
+use ShellDataReportingAPIsLib\Models\CardTypeReq;
+use ShellDataReportingAPIsLib\Models\CardTypeRes;
+use ShellDataReportingAPIsLib\Models\CustomerPriceListReq;
+use ShellDataReportingAPIsLib\Models\CustomerPriceListRes;
+use ShellDataReportingAPIsLib\Models\CustomerReq;
+use ShellDataReportingAPIsLib\Models\CustomerRes;
+use ShellDataReportingAPIsLib\Models\LoggedInUserReq;
+use ShellDataReportingAPIsLib\Models\LoggedInUserRes;
+use ShellDataReportingAPIsLib\Models\PayerReq;
+use ShellDataReportingAPIsLib\Models\PayerRes;
 
 class CustomerController extends BaseController
 {
     /**
-     * This API allows querying the user data of the logged in user.</br>
-     * This API will return the user access details such as payers and/or accounts. </br>
-     * This API will also validate that logged in user has access to the requested API, on failure it will
-     * return HasAPIAccess flag as false in response.</br>
+     * This operation allows querying the user data of the logged in user.
+     * This operation should be called only after successful authentication of the end user in client
+     * application. This operation will return the user access details such as payers and/or accounts.
+     * This operation will also validate that logged in user has access to the requested operation, on
+     * failure it will return HasAPIAccess flag as false in the response.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param FleetmanagementV1UserLoggedinuserRequest|null $body Logged in user request body
+     * @param LoggedInUserReq $body
      *
-     * @return LoggedInUserResponse Response from the API call
+     * @return LoggedInUserRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function loggedinUser(
-        string $apikey,
-        string $requestId,
-        ?FleetmanagementV1UserLoggedinuserRequest $body = null
-    ): LoggedInUserResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/user/loggedinuser')
-            ->auth('BasicAuth')
+    public function userLoggedinuser(string $requestId, LoggedInUserReq $body): LoggedInUserRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/user-management/v1/loggedinuser')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -70,89 +64,69 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->type(LoggedInUserResponse::class);
+            ->type(LoggedInUserRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
 
     /**
      * This API allows querying the payer accounts details from the Shell Cards
-     *
      * Platform. It provides flexible search criteria for searching payer
-     *
      * information and supports paging.
      *
-     *
-     *
      * Paging is applicable only when all the
-     *
      * payers passed in the input are from the same ColCo.
      *
-     *
-     *
      * However, paging will
-     *
      * be ignored and the API will return all the matching data by merging the
-     *
      * data queried from each ColCo when payers passed in the input are from
-     *
      * multiple ColCos.
      *
      *
-     *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param PayerRequest|null $body Serach payers request body
+     * @param PayerReq $body
      *
-     * @return PayerResponse Response from the API call
+     * @return PayerRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function payers(string $apikey, string $requestId, ?PayerRequest $body = null): PayerResponse
+    public function customerpayers(string $requestId, PayerReq $body): PayerRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/customer/payers')
-            ->auth('BasicAuth')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/payers')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -162,241 +136,60 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->type(PayerResponse::class);
+            ->type(PayerRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
 
     /**
      * This API allows querying the card delivery addresses of a given account from the Shell Cards
-     * Platform.
-     *
-     * Only active delivery addresses will be returned.
+     * Platform. Only active delivery addresses will be returned.
      *
      *
-     *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param CustomerDetailRequest|null $body Customerdetails request body
+     * @param CustomerReq $body
      *
-     * @return CustomerDetailResponse Response from the API call
+     * @return CustomerRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function customer(
-        string $apikey,
-        string $requestId,
-        ?CustomerDetailRequest $body = null
-    ): CustomerDetailResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/customer/customer')
-            ->auth('BasicAuth')
-            ->parameters(
-                HeaderParam::init('apikey', $apikey),
-                HeaderParam::init('RequestId', $requestId),
-                HeaderParam::init('Content-Type', 'application/json'),
-                BodyParam::init($body)
-            );
-
-        $_resHandler = $this->responseHandler()
-            ->throwErrorOn(
-                '400',
-                ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '401',
-                ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
-            ->throwErrorOn(
-                '404',
-                ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '500',
-                ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
-                )
-            )
-            ->type(CustomerDetailResponse::class);
-
-        return $this->execute($_reqBuilder, $_resHandler);
-    }
-
-    /**
-     * - This operation fetches the International and National Price List and discount values set on pump
-     * prices & List Prices
-     *
-     * - It allows searching price list and discount values set on pump prices that are applicable for a
-     * given customer
-     *
-     *
-     *
-     * **Note**: Accounts with cancelled status will not be considered for this operation for the
-     * configured
-     *
-     *
-     *
-     * - When the search is based on customer specific price list then the customer price list is returned
-     * based on the associated pricing customer.
-     *
-     * - The discount values set on pump prices, which are returned by the operation are always customer
-     * specific values based on the customer associated price rules.
-     *
-     *
-     *
-     *
-     *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
-     * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
-     *        responses. This will be played back in the response from the request.
-     * @param CustomerPriceListRequest|null $body Customerdetails request body
-     *
-     * @return CustomerPriceListResponse Response from the API call
-     *
-     * @throws ApiException Thrown if API call fails
-     */
-    public function customerPriceList(
-        string $apikey,
-        string $requestId,
-        ?CustomerPriceListRequest $body = null
-    ): CustomerPriceListResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v2/customer/pricelist')
-            ->auth('BasicAuth')
-            ->parameters(
-                HeaderParam::init('apikey', $apikey),
-                HeaderParam::init('RequestId', $requestId),
-                HeaderParam::init('Content-Type', 'application/json'),
-                BodyParam::init($body)
-            );
-
-        $_resHandler = $this->responseHandler()
-            ->throwErrorOn(
-                '400',
-                ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '401',
-                ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
-            ->throwErrorOn(
-                '404',
-                ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
-                )
-            )
-            ->throwErrorOn(
-                '500',
-                ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
-                )
-            )
-            ->type(CustomerPriceListResponse::class);
-
-        return $this->execute($_reqBuilder, $_resHandler);
-    }
-
-    /**
-     * This API allows querying the customer account details from the Shell Cards Platform.
-     *
-     * It provides a flexible search criterion and supports paging".
-     *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
-     * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
-     *        responses. This will be played back in the response from the request.
-     * @param AccountRequest|null $body
-     *
-     * @return AccountResponse Response from the API call
-     *
-     * @throws ApiException Thrown if API call fails
-     */
-    public function accounts(string $apikey, string $requestId, ?AccountRequest $body = null): AccountResponse
+    public function customerdetail(string $requestId, CustomerReq $body): CustomerRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/customer/accounts')
-            ->auth('BasicAuth')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/customer')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -406,68 +199,59 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->type(AccountResponse::class);
+            ->type(CustomerRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
 
     /**
-     * This operation allows querying card types that are associated to the given account and are allowed
-     * to be shown to users.
+     * This API allows querying the customer account details from the Shell Cards Platform. It provides a
+     * flexible search criterion and supports pagination.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param CardTypeRequest|null $body Get CardType Request Body
+     * @param AccountReq $body
      *
-     * @return CardTypeResponse Response from the API call
+     * @return AccountRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function cardType(string $apikey, string $requestId, ?CardTypeRequest $body = null): CardTypeResponse
+    public function postCardAccounts(string $requestId, AccountReq $body): AccountRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v2/customer/cardtype')
-            ->auth('BasicAuth')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/accounts')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -477,83 +261,62 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->type(CardTypeResponse::class);
+            ->type(AccountRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
 
     /**
-     * This operation allows querying the card group details . It provides flexible search criteria and
-     * supports paging.\
+     * This API provides allows querying the active card types that are associated to the given account.
+     *
+     * The API returns the card type configurations, purchase categories associated with the card type and
+     * the card type restriction limits.
      *
      *
-     * When the card group type is configured as ‘Vertical’ in cards platform, this operation will return
-     * all card groups from the given account or if no account is passed in the input, then will return
-     * card groups from all the accounts under the payer.
-     *
-     *
-     * When the card group type is configured as ‘Horizontal’ in cards platform, this API will return all
-     * card groups configured directly under the payer.
-     *
-     *
-     * Accounts with cancelled status will not be considered for cardgroups search for the configured (E.g.,
-     * SFH) set of client apps.
-     *
-     *
-     *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param CardGroupRequest|null $body Request Body
+     * @param CardTypeReq $body
      *
-     * @return CardGroupResponse Response from the API call
+     * @return CardTypeRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function cardGroups(string $apikey, string $requestId, ?CardGroupRequest $body = null): CardGroupResponse
+    public function customercardtypev(string $requestId, CardTypeReq $body): CardTypeRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/customer/cardgroups')
-            ->auth('BasicAuth')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/cardtype')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -563,44 +326,109 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    'The request has not been applied because it lacks valid  authentication cr' .
-                    'edentials for the target resource.',
-                    DefaultErrorException::class
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    'The origin server did not find a current representation  for the target re' .
-                    'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
                 )
             )
-            ->type(CardGroupResponse::class);
+            ->type(CardTypeRes::class);
+
+        return $this->execute($_reqBuilder, $_resHandler);
+    }
+
+    /**
+     * This API allows querying the card group details from the Shell Cards
+     * Platform. It provides flexible search criteria and supports paging.
+     *
+     * When the account is not passed in the input and card group type is configured as
+     * â€˜Verticalâ€™ in the cards platform, this API will return all card groups from
+     * the payer as well as from all the accounts under the payer.
+     *
+     * When the account is not passed in the input and card group type is configured as
+     * â€˜Horizontalâ€™ in cards platform, this API will return all card groups
+     * configured directly under the payer.
+     *
+     *
+     * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
+     *        responses. This will be played back in the response from the request.
+     * @param CardGroupReq $body
+     *
+     * @return CardGroupRes Response from the API call
+     *
+     * @throws ApiException Thrown if API call fails
+     */
+    public function cardgroups(string $requestId, CardGroupReq $body): CardGroupRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/cardgroups')
+            ->auth('BearerToken')
+            ->parameters(
+                HeaderParam::init('RequestId', $requestId),
+                HeaderParam::init('Content-Type', 'application/json'),
+                BodyParam::init($body)
+            );
+
+        $_resHandler = $this->responseHandler()
+            ->throwErrorOn(
+                '400',
+                ErrorType::init(
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn(
+                '401',
+                ErrorType::init(
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '404',
+                ErrorType::init(
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn(
+                '500',
+                ErrorType::init(
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->type(CardGroupRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -639,30 +467,25 @@ class CustomerController extends BaseController
      *
      * * BCBSummary
      *
-     * * Mobile Payment
-     *
-     * * Registration
+     * * Mobile Payment Registration
      *
      * * Fund Transfer (Scheduled & Realtime)
      *
      * * Delivery Address Update.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param AuditRequest|null $body request body
+     * @param AuditReq|null $body request body
      *
      * @return AuditResponse Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function auditReport(string $apikey, string $requestId, ?AuditRequest $body = null): AuditResponse
+    public function auditReport(string $requestId, ?AuditReq $body = null): AuditResponse
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/customer/auditreport')
-            ->auth('BasicAuth')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/auditreport')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -672,10 +495,92 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    "The server cannot or will not process the request due to something that is" .
+                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
+                    "quest message framing, or deceptive request routing).\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn(
+                '401',
+                ErrorType::init(
+                    "The request has not been applied because it lacks valid  authentication cr" .
+                    "edentials for the target resource.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '404',
+                ErrorType::init(
+                    "The origin server did not find a current representation  for the target re" .
+                    "source or is not willing to disclose  that one exists.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->throwErrorOn(
+                '500',
+                ErrorType::init(
+                    "The server encountered an unexpected condition that  prevented it from ful" .
+                    "filling the request.\n",
+                    ErrorObjectException::class
+                )
+            )
+            ->type(AuditResponse::class);
+
+        return $this->execute($_reqBuilder, $_resHandler);
+    }
+
+    /**
+     * - This operation fetches the International and National Price List and discount values set on pump
+     * prices & List Prices
+     *
+     * - It allows searching price list and discount values set on pump prices that are applicable for a
+     * given customer
+     *
+     *
+     *
+     * **Note**: Accounts with cancelled status will not be considered for this operation for the
+     * configured
+     *
+     *
+     *
+     * - When the search is based on customer specific price list then the customer price list is returned
+     * based on the associated pricing customer.
+     *
+     * - The discount values set on pump prices, which are returned by the operation are always customer
+     * specific values based on the customer associated price rules.
+     *
+     *
+     *
+     *
+     *
+     * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
+     *        responses. This will be played back in the response from the request.
+     * @param CustomerPriceListReq|null $body Customerdetails request body
+     *
+     * @return CustomerPriceListRes Response from the API call
+     *
+     * @throws ApiException Thrown if API call fails
+     */
+    public function customerPriceList(string $requestId, ?CustomerPriceListReq $body = null): CustomerPriceListRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/pricelist')
+            ->auth('BearerToken')
+            ->parameters(
+                HeaderParam::init('RequestId', $requestId),
+                HeaderParam::init('Content-Type', 'application/json'),
+                BodyParam::init($body)
+            );
+
+        $_resHandler = $this->responseHandler()
+            ->throwErrorOn(
+                '400',
+                ErrorType::init(
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -683,33 +588,27 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(AuditResponse::class);
+            ->type(CustomerPriceListRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }

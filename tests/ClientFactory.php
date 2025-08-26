@@ -11,8 +11,7 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Tests;
 
 use Core\Types\CallbackCatcher;
-use ShellDataReportingAPIsLib\Authentication\BasicAuthCredentialsBuilder;
-use ShellDataReportingAPIsLib\Authentication\BearerTokenCredentialsBuilder;
+use ShellDataReportingAPIsLib\Authentication\ClientCredentialsAuthCredentialsBuilder;
 use ShellDataReportingAPIsLib\ShellDataReportingAPIsClient;
 use ShellDataReportingAPIsLib\ShellDataReportingAPIsClientBuilder;
 
@@ -39,8 +38,6 @@ class ClientFactory
         $numberOfRetries = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_NUMBER_OF_RETRIES');
         $maximumRetryWaitTime = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_MAXIMUM_RETRY_WAIT_TIME');
         $environment = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_ENVIRONMENT');
-        $username = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_USERNAME');
-        $password = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_PASSWORD');
         $oAuthClientId = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_O_AUTH_CLIENT_ID');
         $oAuthClientSecret = getenv('SHELL_DATA_REPORTING_AP_IS_LIB_O_AUTH_CLIENT_SECRET');
 
@@ -60,13 +57,9 @@ class ClientFactory
             $builder->environment($environment);
         }
 
-        if (!empty($username) && !empty($password)) {
-            $builder->basicAuthCredentials(BasicAuthCredentialsBuilder::init($username, $password));
-        }
-
         if (!empty($oAuthClientId) && !empty($oAuthClientSecret)) {
-            $builder->bearerTokenCredentials(
-                BearerTokenCredentialsBuilder::init($oAuthClientId, $oAuthClientSecret)
+            $builder->clientCredentialsAuthCredentials(
+                ClientCredentialsAuthCredentialsBuilder::init($oAuthClientId, $oAuthClientSecret)
             );
         }
 

@@ -16,47 +16,28 @@ use stdClass;
 class FeeSummaryResponse implements \JsonSerializable
 {
     /**
-     * @var FeeItemSummaryAllOf0[]|null
-     */
-    private $feeItemsSummary;
-
-    /**
      * @var string|null
      */
     private $requestId;
 
     /**
-     * @var ErrorStatus|null
+     * @var string|null
      */
-    private $error;
+    private $status;
 
     /**
-     * Returns Fee Items Summary.
-     *
-     * @return FeeItemSummaryAllOf0[]|null
+     * @var FeeItemSummaryAllOf0[]|null
      */
-    public function getFeeItemsSummary(): ?array
-    {
-        return $this->feeItemsSummary;
-    }
+    private $data;
 
     /**
-     * Sets Fee Items Summary.
-     *
-     * @maps FeeItemsSummary
-     *
-     * @param FeeItemSummaryAllOf0[]|null $feeItemsSummary
+     * @var Warning[]|null
      */
-    public function setFeeItemsSummary(?array $feeItemsSummary): void
-    {
-        $this->feeItemsSummary = $feeItemsSummary;
-    }
+    private $warnings;
 
     /**
      * Returns Request Id.
-     * A unique request id in GUID format. The value is written to the Shell API Platform audit log for end
-     * to end traceability of a request. If a value is not provided by an API client, then a GUID is
-     * automatically populated by the Shell API Platform and returned in the API response.
+     * Unique identifier for the request. This will be played back in the response from the request.
      */
     public function getRequestId(): ?string
     {
@@ -65,9 +46,7 @@ class FeeSummaryResponse implements \JsonSerializable
 
     /**
      * Sets Request Id.
-     * A unique request id in GUID format. The value is written to the Shell API Platform audit log for end
-     * to end traceability of a request. If a value is not provided by an API client, then a GUID is
-     * automatically populated by the Shell API Platform and returned in the API response.
+     * Unique identifier for the request. This will be played back in the response from the request.
      *
      * @maps RequestId
      */
@@ -77,21 +56,81 @@ class FeeSummaryResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
+     * Returns Status.
+     * Status of the request
      */
-    public function getError(): ?ErrorStatus
+    public function getStatus(): ?string
     {
-        return $this->error;
+        return $this->status;
     }
 
     /**
-     * Sets Error.
+     * Sets Status.
+     * Status of the request
      *
-     * @maps Error
+     * @maps Status
      */
-    public function setError(?ErrorStatus $error): void
+    public function setStatus(?string $status): void
     {
-        $this->error = $error;
+        $this->status = $status;
+    }
+
+    /**
+     * Returns Data.
+     *
+     * @return FeeItemSummaryAllOf0[]|null
+     */
+    public function getData(): ?array
+    {
+        return $this->data;
+    }
+
+    /**
+     * Sets Data.
+     *
+     * @maps Data
+     *
+     * @param FeeItemSummaryAllOf0[]|null $data
+     */
+    public function setData(?array $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * Returns Warnings.
+     * A list of Warning entity.
+     *
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
+     *
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @return Warning[]|null
+     */
+    public function getWarnings(): ?array
+    {
+        return $this->warnings;
+    }
+
+    /**
+     * Sets Warnings.
+     * A list of Warning entity.
+     *
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
+     *
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @maps Warnings
+     *
+     * @param Warning[]|null $warnings
+     */
+    public function setWarnings(?array $warnings): void
+    {
+        $this->warnings = $warnings;
     }
 
     /**
@@ -103,7 +142,12 @@ class FeeSummaryResponse implements \JsonSerializable
     {
         return ApiHelper::stringify(
             'FeeSummaryResponse',
-            ['feeItemsSummary' => $this->feeItemsSummary, 'requestId' => $this->requestId, 'error' => $this->error]
+            [
+                'requestId' => $this->requestId,
+                'status' => $this->status,
+                'data' => $this->data,
+                'warnings' => $this->warnings
+            ]
         );
     }
 
@@ -119,14 +163,17 @@ class FeeSummaryResponse implements \JsonSerializable
     public function jsonSerialize(bool $asArrayWhenEmpty = false)
     {
         $json = [];
-        if (isset($this->feeItemsSummary)) {
-            $json['FeeItemsSummary'] = $this->feeItemsSummary;
-        }
         if (isset($this->requestId)) {
-            $json['RequestId']       = $this->requestId;
+            $json['RequestId'] = $this->requestId;
         }
-        if (isset($this->error)) {
-            $json['Error']           = $this->error;
+        if (isset($this->status)) {
+            $json['Status']    = $this->status;
+        }
+        if (isset($this->data)) {
+            $json['Data']      = $this->data;
+        }
+        if (isset($this->warnings)) {
+            $json['Warnings']  = $this->warnings;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

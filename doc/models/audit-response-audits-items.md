@@ -40,6 +40,8 @@
 | `submittedOn` | `?string` | Optional | Request submitted date.<br>Format: yyyyMMdd HH:mm: ss | getSubmittedOn(): ?string | setSubmittedOn(?string submittedOn): void |
 | `subRequestReference` | `?int` | Optional | Reference number for the individual request type. | getSubRequestReference(): ?int | setSubRequestReference(?int subRequestReference): void |
 | `userDisplayName` | `?string` | Optional | Display name of the user who submitted this request.<br>It will be the Display Name of the Driver in the case of “MobilePaymentRegistration” in the below format: | getUserDisplayName(): ?string | setUserDisplayName(?string userDisplayName): void |
+| `pANID` | `?string` | Optional | PAN ID of the card.<br>This will be null when the PAN is not available in the request. | getPANID(): ?string | setPANID(?string pANID): void |
+| `maskedPAN` | `?string` | Optional | Masked PAN of the card.<br>This will be null when the Masked PAN is not available in the request. | getMaskedPAN(): ?string | setMaskedPAN(?string maskedPAN): void |
 
 ## Example (as JSON)
 
@@ -75,7 +77,9 @@
   "Status": "Success",
   "SubmittedOn": "20240201 14:29:16",
   "SubRequestReference": 720061,
-  "UserDisplayName": "Supriya-ThridPartyAgent"
+  "UserDisplayName": "Supriya-ThridPartyAgent",
+  "PANID": "70020975",
+  "MaskedPAN": "70020975******0717"
 }
 ```
 

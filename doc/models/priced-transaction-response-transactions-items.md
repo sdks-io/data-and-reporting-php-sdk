@@ -133,8 +133,6 @@
 | `customerRetailValueTotalGross` | `?float` | Optional | Retail gross price (or gross pump price) in customer currency | getCustomerRetailValueTotalGross(): ?float | setCustomerRetailValueTotalGross(?float customerRetailValueTotalGross): void |
 | `customerRetailValueTotalNet` | `?float` | Optional | Retail gross price (or gross pump price) in customer currency<br>Retail net price (or net pump price) in customer currency | getCustomerRetailValueTotalNet(): ?float | setCustomerRetailValueTotalNet(?float customerRetailValueTotalNet): void |
 | `transactionTypeDescription` | `?string` | Optional | Transaction Type Description<br>Note: - The value could be null/blank for fees item | getTransactionTypeDescription(): ?string | setTransactionTypeDescription(?string transactionTypeDescription): void |
-| `error` | [`?ErrorStatus`](../../doc/models/error-status.md) | Optional | - | getError(): ?ErrorStatus | setError(?ErrorStatus error): void |
-| `requestId` | `?string` | Optional | API Request Id | getRequestId(): ?string | setRequestId(?string requestId): void |
 
 ## Example (as JSON)
 

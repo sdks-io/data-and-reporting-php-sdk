@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
-| `colCoId` | `?string` | Optional | Collecting company id. | getColCoId(): ?string | setColCoId(?string colCoId): void |
+| `colCoId` | `?int` | Optional | Collecting company id. | getColCoId(): ?int | setColCoId(?int colCoId): void |
 | `colCoCode` | `?int` | Optional | Collecting company Code | getColCoCode(): ?int | setColCoCode(?int colCoCode): void |
 | `accountGroupId` | `?string` | Optional | Identifier for the EID account group configured for the user. | getAccountGroupId(): ?string | setAccountGroupId(?string accountGroupId): void |
 
@@ -17,7 +17,7 @@
 
 ```json
 {
-  "ColCoId": "14",
+  "ColCoId": 14,
   "ColCoCode": 14,
   "AccountGroupId": "345"
 }

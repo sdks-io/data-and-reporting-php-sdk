@@ -636,16 +636,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     private $transactionTypeDescription = [];
 
     /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
      * Returns Type.
      * TransactionType is the type of transaction.
      * Example: SalesItem /FeeItem
@@ -5080,44 +5070,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
      * Converts the PricedTransactionResponseTransactionsItems object to a human-readable string
      * representation.
      *
@@ -5251,9 +5203,7 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
                 'customerRetailPriceUnitGross' => $this->getCustomerRetailPriceUnitGross(),
                 'customerRetailValueTotalGross' => $this->getCustomerRetailValueTotalGross(),
                 'customerRetailValueTotalNet' => $this->getCustomerRetailValueTotalNet(),
-                'transactionTypeDescription' => $this->getTransactionTypeDescription(),
-                'error' => $this->error,
-                'requestId' => $this->requestId
+                'transactionTypeDescription' => $this->getTransactionTypeDescription()
             ]
         );
     }
@@ -5645,12 +5595,6 @@ class PricedTransactionResponseTransactionsItems implements \JsonSerializable
         }
         if (!empty($this->transactionTypeDescription)) {
             $json['TransactionTypeDescription']              = $this->transactionTypeDescription['value'];
-        }
-        if (isset($this->error)) {
-            $json['Error']                                   = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']                               = $this->requestId;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

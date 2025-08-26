@@ -12,8 +12,7 @@
 | `configuration` | [`?(BonusConfiguration[])`](../../doc/models/bonus-configuration.md) | Optional | - | getConfiguration(): ?array | setConfiguration(?array configuration): void |
 | `currentPeriodConsumption` | [`?(PricingCurrentVolume[])`](../../doc/models/pricing-current-volume.md) | Optional | - | getCurrentPeriodConsumption(): ?array | setCurrentPeriodConsumption(?array currentPeriodConsumption): void |
 | `history` | [`?(PricingHistory[])`](../../doc/models/pricing-history.md) | Optional | - | getHistory(): ?array | setHistory(?array history): void |
-| `error` | [`?ErrorStatus`](../../doc/models/error-status.md) | Optional | - | getError(): ?ErrorStatus | setError(?ErrorStatus error): void |
-| `requestId` | `?string` | Optional | API Request Id | getRequestId(): ?string | setRequestId(?string requestId): void |
+| `warnings` | [`?(Warning[])`](../../doc/models/warning.md) | Optional | A list of Warning entity.<br>This entity will hold the details of the scheduled System Outages of any dependent applications of this service.<br>Note: If there is no scheduled outage information available, in the configuration in AMS, for this service, this parameter won’t be present in output. | getWarnings(): ?array | setWarnings(?array warnings): void |
 
 ## Example (as JSON)
 
@@ -67,11 +66,16 @@
       "TotalVolume": 24.18
     }
   ],
-  "Error": {
-    "Code": "Code4",
-    "Description": "Description2"
-  },
-  "RequestId": "RequestId6"
+  "Warnings": [
+    {
+      "Message": "Message0",
+      "Type": "Type4"
+    },
+    {
+      "Message": "Message0",
+      "Type": "Type4"
+    }
+  ]
 }
 ```
 

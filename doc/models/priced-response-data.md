@@ -9,36 +9,36 @@
 
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
-| `accountName` | `?string` | Optional | Name of the account<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `36` | getAccountName(): ?string | setAccountName(?string accountName): void |
+| `accountName` | `?string` | Optional | Name of the account<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `36` | getAccountName(): ?string | setAccountName(?string accountName): void |
 | `accountId` | `?int` | Optional | Account Id (i.e. Customer Id of the Sub Account in GFN) of the selected account. | getAccountId(): ?int | setAccountId(?int accountId): void |
 | `accountNumber` | `?string` | Optional | AccountNumber of the selected account. | getAccountNumber(): ?string | setAccountNumber(?string accountNumber): void |
-| `accountShortName` | `?string` | Optional | Nick name of the account<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getAccountShortName(): ?string | setAccountShortName(?string accountShortName): void |
-| `additional1` | `?string` | Optional | Addtional SerialId or endpoint Id<br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional1(): ?string | setAdditional1(?string additional1): void |
-| `additional2` | `?string` | Optional | Addtional SerialId or endpoint Id<br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional2(): ?string | setAdditional2(?string additional2): void |
-| `additional3` | `?string` | Optional | Addtional SerialId or endpoint Id<br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional3(): ?string | setAdditional3(?string additional3): void |
-| `additional4` | `?string` | Optional | Addtional SerialId or endpoint Id<br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional4(): ?string | setAdditional4(?string additional4): void |
-| `allowClearing` | `?string` | Optional | Allow clearings<br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `25` | getAllowClearing(): ?string | setAllowClearing(?string allowClearing): void |
-| `authorisationCode` | `?int` | Optional | Autorization code<br>**Constraints**: `>= 1`, `<= 999999` | getAuthorisationCode(): ?int | setAuthorisationCode(?int authorisationCode): void |
-| `transactionStatus` | `?string` | Optional | Status of the transaction<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getTransactionStatus(): ?string | setTransactionStatus(?string transactionStatus): void |
-| `driverName` | `?string` | Optional | Driver Name of Card record<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getDriverName(): ?string | setDriverName(?string driverName): void |
-| `cardExpiryPeriod` | `?int` | Optional | Expiry period of the card<br>**Constraints**: `>= 1`, `<= 9999` | getCardExpiryPeriod(): ?int | setCardExpiryPeriod(?int cardExpiryPeriod): void |
+| `accountShortName` | `?string` | Optional | Nick name of the account<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getAccountShortName(): ?string | setAccountShortName(?string accountShortName): void |
+| `additional1` | `?string` | Optional | Addtional SerialId or endpoint Id<br><br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional1(): ?string | setAdditional1(?string additional1): void |
+| `additional2` | `?string` | Optional | Addtional SerialId or endpoint Id<br><br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional2(): ?string | setAdditional2(?string additional2): void |
+| `additional3` | `?string` | Optional | Addtional SerialId or endpoint Id<br><br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional3(): ?string | setAdditional3(?string additional3): void |
+| `additional4` | `?string` | Optional | Addtional SerialId or endpoint Id<br><br>**Constraints**: *Minimum Length*: `14`, *Maximum Length*: `20` | getAdditional4(): ?string | setAdditional4(?string additional4): void |
+| `allowClearing` | `?string` | Optional | Allow clearings<br><br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `25` | getAllowClearing(): ?string | setAllowClearing(?string allowClearing): void |
+| `authorisationCode` | `?int` | Optional | Autorization code<br><br>**Constraints**: `>= 1`, `<= 999999` | getAuthorisationCode(): ?int | setAuthorisationCode(?int authorisationCode): void |
+| `transactionStatus` | `?string` | Optional | Status of the transaction<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getTransactionStatus(): ?string | setTransactionStatus(?string transactionStatus): void |
+| `driverName` | `?string` | Optional | Driver Name of Card record<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getDriverName(): ?string | setDriverName(?string driverName): void |
+| `cardExpiryPeriod` | `?int` | Optional | Expiry period of the card<br><br>**Constraints**: `>= 1`, `<= 9999` | getCardExpiryPeriod(): ?int | setCardExpiryPeriod(?int cardExpiryPeriod): void |
 | `cardExpiry` | `?string` | Optional | Card Expiry Date | getCardExpiry(): ?string | setCardExpiry(?string cardExpiry): void |
-| `cardGroupId` | `?int` | Optional | Card Group Code<br>**Constraints**: `>= 1`, `<= 99999` | getCardGroupId(): ?int | setCardGroupId(?int cardGroupId): void |
+| `cardGroupId` | `?int` | Optional | Card Group Code<br><br>**Constraints**: `>= 1`, `<= 99999` | getCardGroupId(): ?int | setCardGroupId(?int cardGroupId): void |
 | `cardGroupName` | `?string` | Optional | Group nmae of the card | getCardGroupName(): ?string | setCardGroupName(?string cardGroupName): void |
-| `issuerCode` | `?int` | Optional | Issuer code<br>**Constraints**: `>= 1`, `<= 9999` | getIssuerCode(): ?int | setIssuerCode(?int issuerCode): void |
-| `cardPAN` | `?string` | Optional | Full Card PAN<br>**Constraints**: *Minimum Length*: `19`, *Maximum Length*: `19` | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
-| `releaseCode` | `?int` | Optional | Release code<br>**Constraints**: `>= 1`, `<= 10` | getReleaseCode(): ?int | setReleaseCode(?int releaseCode): void |
-| `cardSequenceNumber` | `?int` | Optional | Sequesnce number of the card<br>**Constraints**: `>= 1`, `<= 999` | getCardSequenceNumber(): ?int | setCardSequenceNumber(?int cardSequenceNumber): void |
-| `cardType` | `?string` | Optional | Type of card<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `50` | getCardType(): ?string | setCardType(?string cardType): void |
-| `colCoCode` | `?string` | Optional | Collecting Company Code (Shell Code) of the selected payer.<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getColCoCode(): ?string | setColCoCode(?string colCoCode): void |
+| `issuerCode` | `?int` | Optional | Issuer code<br><br>**Constraints**: `>= 1`, `<= 9999` | getIssuerCode(): ?int | setIssuerCode(?int issuerCode): void |
+| `cardPAN` | `?string` | Optional | Full Card PAN<br><br>**Constraints**: *Minimum Length*: `19`, *Maximum Length*: `19` | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
+| `releaseCode` | `?int` | Optional | Release code<br><br>**Constraints**: `>= 1`, `<= 10` | getReleaseCode(): ?int | setReleaseCode(?int releaseCode): void |
+| `cardSequenceNumber` | `?int` | Optional | Sequesnce number of the card<br><br>**Constraints**: `>= 1`, `<= 999` | getCardSequenceNumber(): ?int | setCardSequenceNumber(?int cardSequenceNumber): void |
+| `cardType` | `?string` | Optional | Type of card<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `50` | getCardType(): ?string | setCardType(?string cardType): void |
+| `colCoCode` | `?string` | Optional | Collecting Company Code (Shell Code) of the selected payer.<br><br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getColCoCode(): ?string | setColCoCode(?string colCoCode): void |
 | `unitDiscountInvoiceCurrency` | `?float` | Optional | Unit discount Invoice currency | getUnitDiscountInvoiceCurrency(): ?float | setUnitDiscountInvoiceCurrency(?float unitDiscountInvoiceCurrency): void |
 | `colCoExchangeRate` | `?float` | Optional | Colco exchange rate | getColCoExchangeRate(): ?float | setColCoExchangeRate(?float colCoExchangeRate): void |
-| `invoiceCurrencySymbol` | `?string` | Optional | Currency symbol on which the invoice was raised<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getInvoiceCurrencySymbol(): ?string | setInvoiceCurrencySymbol(?string invoiceCurrencySymbol): void |
+| `invoiceCurrencySymbol` | `?string` | Optional | Currency symbol on which the invoice was raised<br><br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getInvoiceCurrencySymbol(): ?string | setInvoiceCurrencySymbol(?string invoiceCurrencySymbol): void |
 | `correctionFlag` | `?bool` | Optional | Is there any correction | getCorrectionFlag(): ?bool | setCorrectionFlag(?bool correctionFlag): void |
-| `cRMNumber` | `?float` | Optional | CRM number<br>**Constraints**: `>= 10`, `<= 10` | getCRMNumber(): ?float | setCRMNumber(?float cRMNumber): void |
-| `customerCountry` | `?string` | Optional | Customer country<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `30` | getCustomerCountry(): ?string | setCustomerCountry(?string customerCountry): void |
-| `customerCurrencyCode` | `?string` | Optional | Curreny which customer uses to transact.<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getCustomerCurrencyCode(): ?string | setCustomerCurrencyCode(?string customerCurrencyCode): void |
-| `customerCurrencySymbol` | `?string` | Optional | Custome currency symbol<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getCustomerCurrencySymbol(): ?string | setCustomerCurrencySymbol(?string customerCurrencySymbol): void |
+| `cRMNumber` | `?float` | Optional | CRM number<br><br>**Constraints**: `>= 10`, `<= 10` | getCRMNumber(): ?float | setCRMNumber(?float cRMNumber): void |
+| `customerCountry` | `?string` | Optional | Customer country<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `30` | getCustomerCountry(): ?string | setCustomerCountry(?string customerCountry): void |
+| `customerCurrencyCode` | `?string` | Optional | Curreny which customer uses to transact.<br><br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getCustomerCurrencyCode(): ?string | setCustomerCurrencyCode(?string customerCurrencyCode): void |
+| `customerCurrencySymbol` | `?string` | Optional | Custome currency symbol<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getCustomerCurrencySymbol(): ?string | setCustomerCurrencySymbol(?string customerCurrencySymbol): void |
 | `rebateonNetAmountInCustomerCurrency` | `?float` | Optional | Rebate on net amount in customer currency | getRebateonNetAmountInCustomerCurrency(): ?float | setRebateonNetAmountInCustomerCurrency(?float rebateonNetAmountInCustomerCurrency): void |
 | `effectiveDiscountInCustomerCurrency` | `?float` | Optional | Effective discount in customers currency | getEffectiveDiscountInCustomerCurrency(): ?float | setEffectiveDiscountInCustomerCurrency(?float effectiveDiscountInCustomerCurrency): void |
 | `effectiveUnitDiscountInCustomerCurrency` | `?float` | Optional | effectiive unit discount in customers currency | getEffectiveUnitDiscountInCustomerCurrency(): ?float | setEffectiveUnitDiscountInCustomerCurrency(?float effectiveUnitDiscountInCustomerCurrency): void |
@@ -68,42 +68,42 @@
 | `delcoRetailValueTotalNet` | `?float` | Optional | Delco per unit price after tax | getDelcoRetailValueTotalNet(): ?float | setDelcoRetailValueTotalNet(?float delcoRetailValueTotalNet): void |
 | `transactionCurrencySymbol` | `?string` | Optional | Currency used for transaction. | getTransactionCurrencySymbol(): ?string | setTransactionCurrencySymbol(?string transactionCurrencySymbol): void |
 | `discountType` | `?string` | Optional | Type of discount available | getDiscountType(): ?string | setDiscountType(?string discountType): void |
-| `disputeStatus` | `?bool` | Optional | Is there any dispute status?True or False<br>**Default**: `false` | getDisputeStatus(): ?bool | setDisputeStatus(?bool disputeStatus): void |
-| `isShellSite` | `?bool` | Optional | Is it a shell sites?True or False<br>**Default**: `false` | getIsShellSite(): ?bool | setIsShellSite(?bool isShellSite): void |
+| `disputeStatus` | `?bool` | Optional | Is there any dispute status?True or False<br><br>**Default**: `false` | getDisputeStatus(): ?bool | setDisputeStatus(?bool disputeStatus): void |
+| `isShellSite` | `?bool` | Optional | Is it a shell sites?True or False<br><br>**Default**: `false` | getIsShellSite(): ?bool | setIsShellSite(?bool isShellSite): void |
 | `fleetIdInput` | `?string` | Optional | Fleet identifier | getFleetIdInput(): ?string | setFleetIdInput(?string fleetIdInput): void |
 | `incomingProductCode` | `?int` | Optional | In coming product code | getIncomingProductCode(): ?int | setIncomingProductCode(?int incomingProductCode): void |
 | `postingDate` | `?string` | Optional | Date of Posting | getPostingDate(): ?string | setPostingDate(?string postingDate): void |
 | `postingTime` | `?string` | Optional | Time whern posting happened | getPostingTime(): ?string | setPostingTime(?string postingTime): void |
 | `productCode` | `?int` | Optional | Product Code - 21 Unleaded - High octane,22 Unleaded - Medium octane,23 Unleaded - Low octane,24 Unleaded Environmental | getProductCode(): ?int | setProductCode(?int productCode): void |
-| `productName` | `?string` | Optional | Name of the product<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `30` | getProductName(): ?string | setProductName(?string productName): void |
+| `productName` | `?string` | Optional | Name of the product<br><br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `30` | getProductName(): ?string | setProductName(?string productName): void |
 | `productGroupId` | `?int` | Optional | Id of the product to which group it belongs | getProductGroupId(): ?int | setProductGroupId(?int productGroupId): void |
-| `incomingCurrencyCode` | `?string` | Optional | In coming currecncy code<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getIncomingCurrencyCode(): ?string | setIncomingCurrencyCode(?string incomingCurrencyCode): void |
+| `incomingCurrencyCode` | `?string` | Optional | In coming currecncy code<br><br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getIncomingCurrencyCode(): ?string | setIncomingCurrencyCode(?string incomingCurrencyCode): void |
 | `incomingSiteDescription` | `?string` | Optional | In coming Site description | getIncomingSiteDescription(): ?string | setIncomingSiteDescription(?string incomingSiteDescription): void |
-| `location` | `?string` | Optional | Location of the Shell site<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getLocation(): ?string | setLocation(?string location): void |
-| `siteName` | `?string` | Optional | Shell site name<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getSiteName(): ?string | setSiteName(?string siteName): void |
+| `location` | `?string` | Optional | Location of the Shell site<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getLocation(): ?string | setLocation(?string location): void |
+| `siteName` | `?string` | Optional | Shell site name<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getSiteName(): ?string | setSiteName(?string siteName): void |
 | `siteCode` | `?int` | Optional | Shell site code | getSiteCode(): ?int | setSiteCode(?int siteCode): void |
 | `incomingSiteNumber` | `?int` | Optional | In coming site number | getIncomingSiteNumber(): ?int | setIncomingSiteNumber(?int incomingSiteNumber): void |
-| `invoiceCurrencyCode` | `?string` | Optional | Currency code on which the invoice is raised<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getInvoiceCurrencyCode(): ?string | setInvoiceCurrencyCode(?string invoiceCurrencyCode): void |
+| `invoiceCurrencyCode` | `?string` | Optional | Currency code on which the invoice is raised<br><br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` | getInvoiceCurrencyCode(): ?string | setInvoiceCurrencyCode(?string invoiceCurrencyCode): void |
 | `invoiceDate` | `?string` | Optional | Date on which the invoice was raised | getInvoiceDate(): ?string | setInvoiceDate(?string invoiceDate): void |
 | `invoiceNumber` | `?float` | Optional | Invoice number | getInvoiceNumber(): ?float | setInvoiceNumber(?float invoiceNumber): void |
 | `fuelProduct` | `?bool` | Optional | Is it a fuel product? True or False | getFuelProduct(): ?bool | setFuelProduct(?bool fuelProduct): void |
-| `vATApplicable` | `?string` | Optional | Is VAT applicable?Y or N<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getVATApplicable(): ?string | setVATApplicable(?string vATApplicable): void |
-| `payerName` | `?string` | Optional | Name of the payer<br>**Constraints**: *Minimum Length*: `20`, *Maximum Length*: `50` | getPayerName(): ?string | setPayerName(?string payerName): void |
-| `payerNumber` | `?string` | Optional | Payer account number<br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `15` | getPayerNumber(): ?string | setPayerNumber(?string payerNumber): void |
-| `parentCustomerNumber` | `?string` | Optional | Parent account number of the payer<br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `15` | getParentCustomerNumber(): ?string | setParentCustomerNumber(?string parentCustomerNumber): void |
+| `vATApplicable` | `?string` | Optional | Is VAT applicable?Y or N<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getVATApplicable(): ?string | setVATApplicable(?string vATApplicable): void |
+| `payerName` | `?string` | Optional | Name of the payer<br><br>**Constraints**: *Minimum Length*: `20`, *Maximum Length*: `50` | getPayerName(): ?string | setPayerName(?string payerName): void |
+| `payerNumber` | `?string` | Optional | Payer account number<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `15` | getPayerNumber(): ?string | setPayerNumber(?string payerNumber): void |
+| `parentCustomerNumber` | `?string` | Optional | Parent account number of the payer<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `15` | getParentCustomerNumber(): ?string | setParentCustomerNumber(?string parentCustomerNumber): void |
 | `payerGroup` | `?string` | Optional | The group which the payer belongs to | getPayerGroup(): ?string | setPayerGroup(?string payerGroup): void |
-| `payerGroupName` | `?string` | Optional | Name of the group to which the payer belongs to.<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPayerGroupName(): ?string | setPayerGroupName(?string payerGroupName): void |
+| `payerGroupName` | `?string` | Optional | Name of the group to which the payer belongs to.<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPayerGroupName(): ?string | setPayerGroupName(?string payerGroupName): void |
 | `checkDigit` | `?int` | Optional | Check digit | getCheckDigit(): ?int | setCheckDigit(?int checkDigit): void |
 | `netInvoiceIndicator` | `?string` | Optional | After tax net invoice number | getNetInvoiceIndicator(): ?string | setNetInvoiceIndicator(?string netInvoiceIndicator): void |
 | `delcoCode` | `?int` | Optional | Delco code | getDelcoCode(): ?int | setDelcoCode(?int delcoCode): void |
-| `networkCode` | `?int` | Optional | Network  code of the payer<br>**Constraints**: `>= 3`, `<= 3` | getNetworkCode(): ?int | setNetworkCode(?int networkCode): void |
-| `purchasedInCountry` | `?string` | Optional | Country of purchase<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPurchasedInCountry(): ?string | setPurchasedInCountry(?string purchasedInCountry): void |
-| `siteCountry` | `?string` | Optional | Country where the site exists<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getSiteCountry(): ?string | setSiteCountry(?string siteCountry): void |
-| `vATCountry` | `?string` | Optional | Country where VAT is applicable<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getVATCountry(): ?string | setVATCountry(?string vATCountry): void |
-| `delcoName` | `?string` | Optional | Name of the delivery company<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getDelcoName(): ?string | setDelcoName(?string delcoName): void |
-| `network` | `?string` | Optional | Network of the Delivery company<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getNetwork(): ?string | setNetwork(?string network): void |
+| `networkCode` | `?int` | Optional | Network  code of the payer<br><br>**Constraints**: `>= 3`, `<= 3` | getNetworkCode(): ?int | setNetworkCode(?int networkCode): void |
+| `purchasedInCountry` | `?string` | Optional | Country of purchase<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPurchasedInCountry(): ?string | setPurchasedInCountry(?string purchasedInCountry): void |
+| `siteCountry` | `?string` | Optional | Country where the site exists<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getSiteCountry(): ?string | setSiteCountry(?string siteCountry): void |
+| `vATCountry` | `?string` | Optional | Country where VAT is applicable<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getVATCountry(): ?string | setVATCountry(?string vATCountry): void |
+| `delcoName` | `?string` | Optional | Name of the delivery company<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getDelcoName(): ?string | setDelcoName(?string delcoName): void |
+| `network` | `?string` | Optional | Network of the Delivery company<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` | getNetwork(): ?string | setNetwork(?string network): void |
 | `odometerInput` | `?int` | Optional | Odometet input | getOdometerInput(): ?int | setOdometerInput(?int odometerInput): void |
-| `originalSalesItemId` | `?string` | Optional | Original item identifier for sales<br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `25` | getOriginalSalesItemId(): ?string | setOriginalSalesItemId(?string originalSalesItemId): void |
+| `originalSalesItemId` | `?string` | Optional | Original item identifier for sales<br><br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `25` | getOriginalSalesItemId(): ?string | setOriginalSalesItemId(?string originalSalesItemId): void |
 | `fleetIDDescription` | `?string` | Optional | Fleet identifier description | getFleetIDDescription(): ?string | setFleetIDDescription(?string fleetIDDescription): void |
 | `parentCustomerId` | `?int` | Optional | Identifier of parent customer | getParentCustomerId(): ?int | setParentCustomerId(?int parentCustomerId): void |
 | `pINIndicator` | `?string` | Optional | PIN indicator | getPINIndicator(): ?string | setPINIndicator(?string pINIndicator): void |
@@ -121,8 +121,8 @@
 | `euroRebateAmount` | `?float` | Optional | Rebate amount in Euros | getEuroRebateAmount(): ?float | setEuroRebateAmount(?float euroRebateAmount): void |
 | `netEuroAmount` | `?float` | Optional | Net amount in Euros | getNetEuroAmount(): ?float | setNetEuroAmount(?float netEuroAmount): void |
 | `euroVATAmount` | `?float` | Optional | Vat amount in Euros | getEuroVATAmount(): ?float | setEuroVATAmount(?float euroVATAmount): void |
-| `parentCustomerName` | `?string` | Optional | Customers parent name<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getParentCustomerName(): ?string | setParentCustomerName(?string parentCustomerName): void |
-| `isInvoiced` | `?bool` | Optional | Is invoice raised<br>**Default**: `false` | getIsInvoiced(): ?bool | setIsInvoiced(?bool isInvoiced): void |
+| `parentCustomerName` | `?string` | Optional | Customers parent name<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getParentCustomerName(): ?string | setParentCustomerName(?string parentCustomerName): void |
+| `isInvoiced` | `?bool` | Optional | Is invoice raised<br><br>**Default**: `false` | getIsInvoiced(): ?bool | setIsInvoiced(?bool isInvoiced): void |
 | `transactionCurrencyCode` | `?string` | Optional | Transaction currency code | getTransactionCurrencyCode(): ?string | setTransactionCurrencyCode(?string transactionCurrencyCode): void |
 | `creditDebitCode` | `?string` | Optional | Is it Credit or debit C for credit D for Debit | getCreditDebitCode(): ?string | setCreditDebitCode(?string creditDebitCode): void |
 | `transactionDate` | `?string` | Optional | Date of transaction | getTransactionDate(): ?string | setTransactionDate(?string transactionDate): void |
@@ -136,37 +136,37 @@
 | `vATCategory` | `?string` | Optional | To which category and counry does the  VAT come under | getVATCategory(): ?string | setVATCategory(?string vATCategory): void |
 | `vATRate` | `?float` | Optional | VAT rate | getVATRate(): ?float | setVATRate(?float vATRate): void |
 | `vehicleRegistration` | `?string` | Optional | Vehicle registration number | getVehicleRegistration(): ?string | setVehicleRegistration(?string vehicleRegistration): void |
-| `isCancelled` | `?string` | Optional | Check if the pruchase is cancelled<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getIsCancelled(): ?string | setIsCancelled(?string isCancelled): void |
+| `isCancelled` | `?string` | Optional | Check if the pruchase is cancelled<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getIsCancelled(): ?string | setIsCancelled(?string isCancelled): void |
 | `colCoGrossAmount` | `?float` | Optional | Gross amount from Colco | getColCoGrossAmount(): ?float | setColCoGrossAmount(?float colCoGrossAmount): void |
 | `colCoNetAmount` | `?float` | Optional | Net amount from Colco | getColCoNetAmount(): ?float | setColCoNetAmount(?float colCoNetAmount): void |
 | `colCoVATAmount` | `?float` | Optional | Colco VAT amount | getColCoVATAmount(): ?float | setColCoVATAmount(?float colCoVATAmount): void |
-| `originalCurrencySymbol` | `?string` | Optional | Original currency code<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalCurrencySymbol(): ?string | setOriginalCurrencySymbol(?string originalCurrencySymbol): void |
-| `originalCurrencyCode` | `?string` | Optional | Original currency code<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalCurrencyCode(): ?string | setOriginalCurrencyCode(?string originalCurrencyCode): void |
+| `originalCurrencySymbol` | `?string` | Optional | Original currency code<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalCurrencySymbol(): ?string | setOriginalCurrencySymbol(?string originalCurrencySymbol): void |
+| `originalCurrencyCode` | `?string` | Optional | Original currency code<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalCurrencyCode(): ?string | setOriginalCurrencyCode(?string originalCurrencyCode): void |
 | `originalVATAmount` | `?float` | Optional | Original VAT amount | getOriginalVATAmount(): ?float | setOriginalVATAmount(?float originalVATAmount): void |
-| `embossText` | `?string` | Optional | Comapany name embosses in text<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEmbossText(): ?string | setEmbossText(?string embossText): void |
+| `embossText` | `?string` | Optional | Comapany name embosses in text<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEmbossText(): ?string | setEmbossText(?string embossText): void |
 | `originalExchangeRate` | `?float` | Optional | Orginal exchange rate | getOriginalExchangeRate(): ?float | setOriginalExchangeRate(?float originalExchangeRate): void |
 | `originalTransactionItemInvoiceDate` | `?string` | Optional | Original treansaction date | getOriginalTransactionItemInvoiceDate(): ?string | setOriginalTransactionItemInvoiceDate(?string originalTransactionItemInvoiceDate): void |
-| `feeTypeId` | `?int` | Optional | Fee type identifier<br>**Constraints**: `>= 1`, `<= 1` | getFeeTypeId(): ?int | setFeeTypeId(?int feeTypeId): void |
-| `lineItemDescription` | `?bool` | Optional | Line item identifier of the product<br>**Default**: `false` | getLineItemDescription(): ?bool | setLineItemDescription(?bool lineItemDescription): void |
-| `feeRuleDescription` | `?string` | Optional | Fee rule description<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `25` | getFeeRuleDescription(): ?string | setFeeRuleDescription(?string feeRuleDescription): void |
-| `frequency` | `?int` | Optional | Frequency of transaction<br>**Constraints**: `>= 1`, `<= 1` | getFrequency(): ?int | setFrequency(?int frequency): void |
-| `feeRuleId` | `?int` | Optional | Fee rule identifier<br>**Constraints**: `>= 1`, `<= 1` | getFeeRuleId(): ?int | setFeeRuleId(?int feeRuleId): void |
+| `feeTypeId` | `?int` | Optional | Fee type identifier<br><br>**Constraints**: `>= 1`, `<= 1` | getFeeTypeId(): ?int | setFeeTypeId(?int feeTypeId): void |
+| `lineItemDescription` | `?bool` | Optional | Line item identifier of the product<br><br>**Default**: `false` | getLineItemDescription(): ?bool | setLineItemDescription(?bool lineItemDescription): void |
+| `feeRuleDescription` | `?string` | Optional | Fee rule description<br><br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `25` | getFeeRuleDescription(): ?string | setFeeRuleDescription(?string feeRuleDescription): void |
+| `frequency` | `?int` | Optional | Frequency of transaction<br><br>**Constraints**: `>= 1`, `<= 1` | getFrequency(): ?int | setFrequency(?int frequency): void |
+| `feeRuleId` | `?int` | Optional | Fee rule identifier<br><br>**Constraints**: `>= 1`, `<= 1` | getFeeRuleId(): ?int | setFeeRuleId(?int feeRuleId): void |
 | `systemEntryDate` | `?string` | Optional | Entry date in the system | getSystemEntryDate(): ?string | setSystemEntryDate(?string systemEntryDate): void |
 | `systemEntryTime` | `?string` | Optional | Entry time in the system | getSystemEntryTime(): ?string | setSystemEntryTime(?string systemEntryTime): void |
-| `isManual` | `?string` | Optional | Checking if its manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getIsManual(): ?string | setIsManual(?string isManual): void |
-| `originalTransactionItemId` | `?string` | Optional | Is it manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalTransactionItemId(): ?string | setOriginalTransactionItemId(?string originalTransactionItemId): void |
+| `isManual` | `?string` | Optional | Checking if its manual<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getIsManual(): ?string | setIsManual(?string isManual): void |
+| `originalTransactionItemId` | `?string` | Optional | Is it manual<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getOriginalTransactionItemId(): ?string | setOriginalTransactionItemId(?string originalTransactionItemId): void |
 | `originalTransactionItemInvoiceNumber` | `?int` | Optional | Original invoice transaction number | getOriginalTransactionItemInvoiceNumber(): ?int | setOriginalTransactionItemInvoiceNumber(?int originalTransactionItemInvoiceNumber): void |
 | `originalTransactionItemInvoiceId` | `?int` | Optional | Original Invoice transaction Identifier | getOriginalTransactionItemInvoiceId(): ?int | setOriginalTransactionItemInvoiceId(?int originalTransactionItemInvoiceId): void |
-| `payerShortName` | `?string` | Optional | Payers short name<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPayerShortName(): ?string | setPayerShortName(?string payerShortName): void |
-| `reverseCharge` | `?string` | Optional | Is reverse charge?<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getReverseCharge(): ?string | setReverseCharge(?string reverseCharge): void |
+| `payerShortName` | `?string` | Optional | Payers short name<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getPayerShortName(): ?string | setPayerShortName(?string payerShortName): void |
+| `reverseCharge` | `?string` | Optional | Is reverse charge?<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getReverseCharge(): ?string | setReverseCharge(?string reverseCharge): void |
 | `originalGrossAmount` | `?float` | Optional | Original gross amount | getOriginalGrossAmount(): ?float | setOriginalGrossAmount(?float originalGrossAmount): void |
 | `originalNetAmount` | `?float` | Optional | Original Net amount | getOriginalNetAmount(): ?float | setOriginalNetAmount(?float originalNetAmount): void |
-| `unitOfMeasure` | `?string` | Optional | Unit of measure<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getUnitOfMeasure(): ?string | setUnitOfMeasure(?string unitOfMeasure): void |
-| `roadType` | `?string` | Optional | Type of road<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getRoadType(): ?string | setRoadType(?string roadType): void |
-| `customerCountryIsoCode` | `?string` | Optional | Customer country ISO Code<br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` | getCustomerCountryIsoCode(): ?string | setCustomerCountryIsoCode(?string customerCountryIsoCode): void |
-| `eVOperator` | `?string` | Optional | EvOperator Name<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `20` | getEVOperator(): ?string | setEVOperator(?string eVOperator): void |
-| `eVSerialId` | `?string` | Optional | Ev Operator identifier<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEVSerialId(): ?string | setEVSerialId(?string eVSerialId): void |
-| `eVChargePointSerial` | `?string` | Optional | EV Charging point iserial identifier<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEVChargePointSerial(): ?string | setEVChargePointSerial(?string eVChargePointSerial): void |
+| `unitOfMeasure` | `?string` | Optional | Unit of measure<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` | getUnitOfMeasure(): ?string | setUnitOfMeasure(?string unitOfMeasure): void |
+| `roadType` | `?string` | Optional | Type of road<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getRoadType(): ?string | setRoadType(?string roadType): void |
+| `customerCountryIsoCode` | `?string` | Optional | Customer country ISO Code<br><br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` | getCustomerCountryIsoCode(): ?string | setCustomerCountryIsoCode(?string customerCountryIsoCode): void |
+| `eVOperator` | `?string` | Optional | EvOperator Name<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `20` | getEVOperator(): ?string | setEVOperator(?string eVOperator): void |
+| `eVSerialId` | `?string` | Optional | Ev Operator identifier<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEVSerialId(): ?string | setEVSerialId(?string eVSerialId): void |
+| `eVChargePointSerial` | `?string` | Optional | EV Charging point iserial identifier<br><br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` | getEVChargePointSerial(): ?string | setEVChargePointSerial(?string eVChargePointSerial): void |
 | `eVChargePointConnectorType` | `?int` | Optional | Ev chariging connector type | getEVChargePointConnectorType(): ?int | setEVChargePointConnectorType(?int eVChargePointConnectorType): void |
 | `eVChargePointConnectorTypeDescription` | `?string` | Optional | EV charging point connector type description | getEVChargePointConnectorTypeDescription(): ?string | setEVChargePointConnectorTypeDescription(?string eVChargePointConnectorTypeDescription): void |
 | `eVChargeDuration` | `?string` | Optional | Ev charging Duration | getEVChargeDuration(): ?string | setEVChargeDuration(?string eVChargeDuration): void |

@@ -34,7 +34,7 @@ class EIDAccess implements \JsonSerializable
      * Returns Col Co Id.
      * Collecting company id.
      */
-    public function getColCoId(): ?string
+    public function getColCoId(): ?int
     {
         if (count($this->colCoId) == 0) {
             return null;
@@ -48,7 +48,7 @@ class EIDAccess implements \JsonSerializable
      *
      * @maps ColCoId
      */
-    public function setColCoId(?string $colCoId): void
+    public function setColCoId(?int $colCoId): void
     {
         $this->colCoId['value'] = $colCoId;
     }

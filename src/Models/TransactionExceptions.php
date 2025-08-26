@@ -221,7 +221,7 @@ class TransactionExceptions implements \JsonSerializable
     private $siteCountry = [];
 
     /**
-     * @var ExceptionSiteLocation|null
+     * @var Location|null
      */
     private $location;
 
@@ -1856,20 +1856,18 @@ class TransactionExceptions implements \JsonSerializable
 
     /**
      * Returns Location.
-     * Geography Location entity for Site Location
      */
-    public function getLocation(): ?ExceptionSiteLocation
+    public function getLocation(): ?Location
     {
         return $this->location;
     }
 
     /**
      * Sets Location.
-     * Geography Location entity for Site Location
      *
      * @maps Location
      */
-    public function setLocation(?ExceptionSiteLocation $location): void
+    public function setLocation(?Location $location): void
     {
         $this->location = $location;
     }

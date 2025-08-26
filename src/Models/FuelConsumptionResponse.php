@@ -16,63 +16,28 @@ use stdClass;
 class FuelConsumptionResponse implements \JsonSerializable
 {
     /**
-     * @var FuelConsumptionData[]|null
-     */
-    private $fuelConsumption;
-
-    /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
      * @var string|null
      */
     private $requestId;
 
     /**
-     * Returns Fuel Consumption.
-     *
-     * @return FuelConsumptionData[]|null
+     * @var string|null
      */
-    public function getFuelConsumption(): ?array
-    {
-        return $this->fuelConsumption;
-    }
+    private $status;
 
     /**
-     * Sets Fuel Consumption.
-     *
-     * @maps FuelConsumption
-     *
-     * @param FuelConsumptionData[]|null $fuelConsumption
+     * @var FuelConsumptionData[]|null
      */
-    public function setFuelConsumption(?array $fuelConsumption): void
-    {
-        $this->fuelConsumption = $fuelConsumption;
-    }
+    private $data;
 
     /**
-     * Returns Error.
+     * @var Warning[]|null
      */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
+    private $warnings;
 
     /**
      * Returns Request Id.
-     * API Request Id
+     * Unique identifier for the request. This will be played back in the response from the request.
      */
     public function getRequestId(): ?string
     {
@@ -81,13 +46,91 @@ class FuelConsumptionResponse implements \JsonSerializable
 
     /**
      * Sets Request Id.
-     * API Request Id
+     * Unique identifier for the request. This will be played back in the response from the request.
      *
      * @maps RequestId
      */
     public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
+    }
+
+    /**
+     * Returns Status.
+     * Status of the request
+     */
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    /**
+     * Sets Status.
+     * Status of the request
+     *
+     * @maps Status
+     */
+    public function setStatus(?string $status): void
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * Returns Data.
+     *
+     * @return FuelConsumptionData[]|null
+     */
+    public function getData(): ?array
+    {
+        return $this->data;
+    }
+
+    /**
+     * Sets Data.
+     *
+     * @maps Data
+     *
+     * @param FuelConsumptionData[]|null $data
+     */
+    public function setData(?array $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * Returns Warnings.
+     * A list of Warning entity.
+     *
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
+     *
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @return Warning[]|null
+     */
+    public function getWarnings(): ?array
+    {
+        return $this->warnings;
+    }
+
+    /**
+     * Sets Warnings.
+     * A list of Warning entity.
+     *
+     * This entity will hold the details of the scheduled System Outages of any dependent applications of
+     * this service.
+     *
+     * Note: If there is no scheduled outage information available, in the configuration in AMS, for this
+     * service, this parameter won’t be present in output.
+     *
+     * @maps Warnings
+     *
+     * @param Warning[]|null $warnings
+     */
+    public function setWarnings(?array $warnings): void
+    {
+        $this->warnings = $warnings;
     }
 
     /**
@@ -99,7 +142,12 @@ class FuelConsumptionResponse implements \JsonSerializable
     {
         return ApiHelper::stringify(
             'FuelConsumptionResponse',
-            ['fuelConsumption' => $this->fuelConsumption, 'error' => $this->error, 'requestId' => $this->requestId]
+            [
+                'requestId' => $this->requestId,
+                'status' => $this->status,
+                'data' => $this->data,
+                'warnings' => $this->warnings
+            ]
         );
     }
 
@@ -115,14 +163,17 @@ class FuelConsumptionResponse implements \JsonSerializable
     public function jsonSerialize(bool $asArrayWhenEmpty = false)
     {
         $json = [];
-        if (isset($this->fuelConsumption)) {
-            $json['FuelConsumption'] = $this->fuelConsumption;
-        }
-        if (isset($this->error)) {
-            $json['Error']           = $this->error;
-        }
         if (isset($this->requestId)) {
-            $json['RequestId']       = $this->requestId;
+            $json['RequestId'] = $this->requestId;
+        }
+        if (isset($this->status)) {
+            $json['Status']    = $this->status;
+        }
+        if (isset($this->data)) {
+            $json['Data']      = $this->data;
+        }
+        if (isset($this->warnings)) {
+            $json['Warnings']  = $this->warnings;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

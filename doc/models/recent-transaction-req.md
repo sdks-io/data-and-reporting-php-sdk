@@ -10,10 +10,10 @@
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
 | `colCoCode` | `?int` | Required | Three character Collecting Company Code (Shell Code) of the selected payer | getColCoCode(): ?int | setColCoCode(?int colCoCode): void |
-| `payerNumber` | `?string` | Required | Unique Identifier for the customer at payment point.<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `10` | getPayerNumber(): ?string | setPayerNumber(?string payerNumber): void |
+| `payerNumber` | `?string` | Required | Unique Identifier for the customer at payment point.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `10` | getPayerNumber(): ?string | setPayerNumber(?string payerNumber): void |
 | `accountNumber` | `?string` | Optional | Customer account number. | getAccountNumber(): ?string | setAccountNumber(?string accountNumber): void |
 | `productCode` | `?string` | Optional | Global product code | getProductCode(): ?string | setProductCode(?string productCode): void |
-| `purchasedInCountry` | `?string` | Optional | Delco country<br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` | getPurchasedInCountry(): ?string | setPurchasedInCountry(?string purchasedInCountry): void |
+| `purchasedInCountry` | `?string` | Optional | Delco country<br><br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` | getPurchasedInCountry(): ?string | setPurchasedInCountry(?string purchasedInCountry): void |
 | `cardPAN` | `?string` | Optional | Card identifier number masked | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
 | `fromDateTime` | `?string` | Optional | Start date and time of transactions | getFromDateTime(): ?string | setFromDateTime(?string fromDateTime): void |
 | `toDateTime` | `?string` | Optional | End date and time of transactions. Mandatory if FromDateTime is provided. | getToDateTime(): ?string | setToDateTime(?string toDateTime): void |

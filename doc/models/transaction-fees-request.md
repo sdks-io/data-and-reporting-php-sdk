@@ -27,8 +27,6 @@
 | `productCode` | `?string` | Optional | Product Code<br>Optional<br>Example:<br><br>1. Service fee<br>2. Invoice production fee<br>3. Account fee<br>4. Transaction fee<br>5. Card membership fee | getProductCode(): ?string | setProductCode(?string productCode): void |
 | `lineItemDescription` | `?string` | Optional | Line item description.<br>Optional<br>Minimum of 4 characters should be provided else not considered<br>Those fee items that have the entered value at any part of the line item description will be returned. | getLineItemDescription(): ?string | setLineItemDescription(?string lineItemDescription): void |
 | `sortOrder` | `?string` | Optional | Allowed Sorting Options:<br>•    FeeDateAscending<br>•    FeeDateDescending<br>•    NetAmountAscending<br>•    NetAmountDescending<br>Optional.<br>Default: 1 | getSortOrder(): ?string | setSortOrder(?string sortOrder): void |
-| `currentPage` | `?int` | Optional | Page Number | getCurrentPage(): ?int | setCurrentPage(?int currentPage): void |
-| `pageSize` | `?int` | Optional | Page Size – Number of records to show on a page | getPageSize(): ?int | setPageSize(?int pageSize): void |
 
 ## Example (as JSON)
 

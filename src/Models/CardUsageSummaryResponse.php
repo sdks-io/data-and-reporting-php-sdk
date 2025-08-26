@@ -21,16 +21,6 @@ class CardUsageSummaryResponse implements \JsonSerializable
     private $usageSummary;
 
     /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
      * Returns Usage Summary.
      *
      * @return UsageSummary[]|null
@@ -53,54 +43,13 @@ class CardUsageSummaryResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
      * Converts the CardUsageSummaryResponse object to a human-readable string representation.
      *
      * @return string The string representation of the CardUsageSummaryResponse object.
      */
     public function __toString(): string
     {
-        return ApiHelper::stringify(
-            'CardUsageSummaryResponse',
-            ['usageSummary' => $this->usageSummary, 'requestId' => $this->requestId, 'error' => $this->error]
-        );
+        return ApiHelper::stringify('CardUsageSummaryResponse', ['usageSummary' => $this->usageSummary]);
     }
 
     /**
@@ -117,12 +66,6 @@ class CardUsageSummaryResponse implements \JsonSerializable
         $json = [];
         if (isset($this->usageSummary)) {
             $json['UsageSummary'] = $this->usageSummary;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']    = $this->requestId;
-        }
-        if (isset($this->error)) {
-            $json['Error']        = $this->error;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

@@ -15,34 +15,33 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\DefaultErrorException;
 use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
-use ShellDataReportingAPIsLib\Exceptions\ErrorUserAccessError1Exception;
-use ShellDataReportingAPIsLib\Models\CardUsageSummaryRequest;
-use ShellDataReportingAPIsLib\Models\CardUsageSummaryResponse;
+use ShellDataReportingAPIsLib\Models\CardUsageSummaryReq;
+use ShellDataReportingAPIsLib\Models\CardUsageSummaryRes;
 use ShellDataReportingAPIsLib\Models\FeeSummaryResponse;
-use ShellDataReportingAPIsLib\Models\FuelConsumptionRequest;
+use ShellDataReportingAPIsLib\Models\FuelConsumptionReq;
 use ShellDataReportingAPIsLib\Models\FuelConsumptionResponse;
-use ShellDataReportingAPIsLib\Models\MultiPricedTransactionRequest;
-use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponse;
+use ShellDataReportingAPIsLib\Models\MultiPricedTransactionReq;
+use ShellDataReportingAPIsLib\Models\MultiPricedTransactionRes;
 use ShellDataReportingAPIsLib\Models\PricedTransactionRequestV2;
-use ShellDataReportingAPIsLib\Models\PricedTransactionResponse;
+use ShellDataReportingAPIsLib\Models\PricedTransactionRes;
 use ShellDataReportingAPIsLib\Models\PricedTransactionResponseV2;
-use ShellDataReportingAPIsLib\Models\PricedTransSummaryResponse;
-use ShellDataReportingAPIsLib\Models\PriceTransactionRequest;
-use ShellDataReportingAPIsLib\Models\PriceTransSummaryRequest;
+use ShellDataReportingAPIsLib\Models\PricedTransSummaryResp;
+use ShellDataReportingAPIsLib\Models\PriceTransactionReq;
+use ShellDataReportingAPIsLib\Models\PriceTransSummaryReq;
 use ShellDataReportingAPIsLib\Models\RecentTransactionRequest;
 use ShellDataReportingAPIsLib\Models\RecentTransactionsResponse;
-use ShellDataReportingAPIsLib\Models\TransactionExceptionsRequest;
-use ShellDataReportingAPIsLib\Models\TransactionExceptionsResponse;
-use ShellDataReportingAPIsLib\Models\TransactionFeesRequest;
-use ShellDataReportingAPIsLib\Models\TransactionFeesResponse;
+use ShellDataReportingAPIsLib\Models\TransactionExceptionsReq;
+use ShellDataReportingAPIsLib\Models\TransactionExceptionsRes;
+use ShellDataReportingAPIsLib\Models\TransactionFeesReq;
+use ShellDataReportingAPIsLib\Models\TransactionFeesRes;
+use ShellDataReportingAPIsLib\Models\TransactionFeesSummaryReq;
 use ShellDataReportingAPIsLib\Models\UpdateOdometerRequest;
-use ShellDataReportingAPIsLib\Models\UpdateOdometerResponse;
-use ShellDataReportingAPIsLib\Models\VolumeBasedBonusRequest;
-use ShellDataReportingAPIsLib\Models\VolumeBasedBonusResponse;
-use ShellDataReportingAPIsLib\Models\VolumeBasedPricingRequest;
-use ShellDataReportingAPIsLib\Models\VolumeBasedPricingResponse;
+use ShellDataReportingAPIsLib\Models\UpdateOdometerResp;
+use ShellDataReportingAPIsLib\Models\VolumeBasedBonusReq;
+use ShellDataReportingAPIsLib\Models\VolumeBasedBonusRes;
+use ShellDataReportingAPIsLib\Models\VolumeBasedPricingReq;
+use ShellDataReportingAPIsLib\Models\VolumeBasedPricingRes;
 
 class TransactionController extends BaseController
 {
@@ -121,28 +120,19 @@ class TransactionController extends BaseController
      *
      *
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param PriceTransactionRequest|null $body Priced Transaction Request Body
+     * @param PriceTransactionReq|null $body Priced Transaction Request Body
      *
-     * @return PricedTransactionResponse Response from the API call
+     * @return PricedTransactionRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function pricedTransactions(
-        string $apikey,
-        string $requestId,
-        ?PriceTransactionRequest $body = null
-    ): PricedTransactionResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/pricedtransactions'
-        )
-            ->auth('BasicAuth')
+    public function pricedTransactions(string $requestId, ?PriceTransactionReq $body = null): PricedTransactionRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/pricedtransaction')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -152,10 +142,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -163,33 +153,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(PricedTransactionResponse::class);
+            ->type(PricedTransactionRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -264,28 +248,21 @@ class TransactionController extends BaseController
      *
      * If none of the above parameters are provided then last 7 days transactions will be fetched.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param PriceTransSummaryRequest|null $body PricedSummary RequestBody
+     * @param PriceTransSummaryReq|null $body PricedSummary RequestBody
      *
-     * @return PricedTransSummaryResponse Response from the API call
+     * @return PricedTransSummaryResp Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
     public function pricedTransactionsSummary(
-        string $apikey,
         string $requestId,
-        ?PriceTransSummaryRequest $body = null
-    ): PricedTransSummaryResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/pricedtransactionssummary'
-        )
-            ->auth('BasicAuth')
+        ?PriceTransSummaryReq $body = null
+    ): PricedTransSummaryResp {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/pricedtransactionssummary')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -295,10 +272,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -306,33 +283,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(PricedTransSummaryResponse::class);
+            ->type(PricedTransSummaryResp::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -398,28 +369,24 @@ class TransactionController extends BaseController
      *
      * If none of the above parameters are provided then last 7 days transactions will be fetched.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param MultiPricedTransactionRequest|null $body MultiPayer RequestBody
+     * @param MultiPricedTransactionReq|null $body MultiPayer RequestBody
      *
-     * @return MultiPricedTransactionResponse Response from the API call
+     * @return MultiPricedTransactionRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
     public function multipricedTransactions(
-        string $apikey,
         string $requestId,
-        ?MultiPricedTransactionRequest $body = null
-    ): MultiPricedTransactionResponse {
+        ?MultiPricedTransactionReq $body = null
+    ): MultiPricedTransactionRes {
         $_reqBuilder = $this->requestBuilder(
             RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/multipayerspricedtransactions'
+            '/transaction-data/v1/multipayerspricedtransactions'
         )
-            ->auth('BasicAuth')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -429,10 +396,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -440,33 +407,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(MultiPricedTransactionResponse::class);
+            ->type(MultiPricedTransactionRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -476,28 +437,19 @@ class TransactionController extends BaseController
      * The response contains a daily summary of the transactions (billed & unbilled) from 1st of the last 7
      * months for the requested card grouped by card, site-group and product.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param CardUsageSummaryRequest|null $body Card Usage Summary RequestBody
+     * @param CardUsageSummaryReq|null $body Card Usage Summary RequestBody
      *
-     * @return CardUsageSummaryResponse Response from the API call
+     * @return CardUsageSummaryRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function cardUsageSummary(
-        string $apikey,
-        string $requestId,
-        ?CardUsageSummaryRequest $body = null
-    ): CardUsageSummaryResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/cardusagesummary'
-        )
-            ->auth('BasicAuth')
+    public function cardUsageSummary(string $requestId, ?CardUsageSummaryReq $body = null): CardUsageSummaryRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/cardusagesummary')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -507,10 +459,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -518,33 +470,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(CardUsageSummaryResponse::class);
+            ->type(CardUsageSummaryRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -557,28 +503,19 @@ class TransactionController extends BaseController
      *
      *
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param VolumeBasedBonusRequest|null $body VolumeBasedBonus RequestBody
+     * @param VolumeBasedBonusReq|null $body VolumeBasedBonus RequestBody
      *
-     * @return VolumeBasedBonusResponse Response from the API call
+     * @return VolumeBasedBonusRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function volumeBasedBonus(
-        string $apikey,
-        string $requestId,
-        ?VolumeBasedBonusRequest $body = null
-    ): VolumeBasedBonusResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/volumebasedbonus'
-        )
-            ->auth('BasicAuth')
+    public function volumeBasedBonus(string $requestId, ?VolumeBasedBonusReq $body = null): VolumeBasedBonusRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/volumebasedbonuss')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -588,10 +525,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -599,33 +536,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(VolumeBasedBonusResponse::class);
+            ->type(VolumeBasedBonusRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -639,28 +570,19 @@ class TransactionController extends BaseController
      *
      *
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param VolumeBasedPricingRequest|null $body VolumeBasedPricing RequestBody
+     * @param VolumeBasedPricingReq|null $body VolumeBasedPricing RequestBody
      *
-     * @return VolumeBasedPricingResponse Response from the API call
+     * @return VolumeBasedPricingRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function volumeBasedPricing(
-        string $apikey,
-        string $requestId,
-        ?VolumeBasedPricingRequest $body = null
-    ): VolumeBasedPricingResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/volumebasedpricing'
-        )
-            ->auth('BasicAuth')
+    public function volumeBasedPricing(string $requestId, ?VolumeBasedPricingReq $body = null): VolumeBasedPricingRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/volumebasedpricing')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -670,10 +592,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -681,33 +603,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(VolumeBasedPricingResponse::class);
+            ->type(VolumeBasedPricingRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -741,25 +657,19 @@ class TransactionController extends BaseController
      *
      * * Get fees by product
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param TransactionFeesRequest|null $body Transaction Fees RequestBody
+     * @param TransactionFeesReq|null $body Transaction Fees RequestBody
      *
-     * @return TransactionFeesResponse Response from the API call
+     * @return TransactionFeesRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function fees(
-        string $apikey,
-        string $requestId,
-        ?TransactionFeesRequest $body = null
-    ): TransactionFeesResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/transaction/fees')
-            ->auth('BasicAuth')
+    public function fees(string $requestId, ?TransactionFeesReq $body = null): TransactionFeesRes
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/fees')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -769,10 +679,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -780,33 +690,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(TransactionFeesResponse::class);
+            ->type(TransactionFeesRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -839,25 +743,19 @@ class TransactionController extends BaseController
      *
      * * Get fees by product
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param TransactionFeesRequest|null $body FeeSummary RequestBody
+     * @param TransactionFeesSummaryReq|null $body FeeSummary RequestBody
      *
      * @return FeeSummaryResponse Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function feeSummaryResponse(
-        string $apikey,
-        string $requestId,
-        ?TransactionFeesRequest $body = null
-    ): FeeSummaryResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/transaction/feessummary')
-            ->auth('BasicAuth')
+    public function feeSummaryResponse(string $requestId, ?TransactionFeesSummaryReq $body = null): FeeSummaryResponse
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/feessummary')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -867,10 +765,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -878,30 +776,24 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
             ->type(FeeSummaryResponse::class);
@@ -918,28 +810,19 @@ class TransactionController extends BaseController
      *
      *
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param FuelConsumptionRequest|null $body FuelConsumption RequestBody
+     * @param FuelConsumptionReq|null $body FuelConsumption RequestBody
      *
      * @return FuelConsumptionResponse Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function fuelConsumption(
-        string $apikey,
-        string $requestId,
-        ?FuelConsumptionRequest $body = null
-    ): FuelConsumptionResponse {
-        $_reqBuilder = $this->requestBuilder(
-            RequestMethod::POST,
-            '/fleetmanagement/v1/transaction/fuelconsumption'
-        )
-            ->auth('BasicAuth')
+    public function fuelConsumption(string $requestId, ?FuelConsumptionReq $body = null): FuelConsumptionResponse
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/fuelconsumption')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -949,10 +832,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -960,30 +843,24 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
             ->type(FuelConsumptionResponse::class);
@@ -996,25 +873,19 @@ class TransactionController extends BaseController
      *
      * - This is an asynchronous operation. If opted, the user will be notified on completion of processing.
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
      * @param UpdateOdometerRequest|null $body updateOdometer RequestBody
      *
-     * @return UpdateOdometerResponse Response from the API call
+     * @return UpdateOdometerResp Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
-    public function updateOdometer(
-        string $apikey,
-        string $requestId,
-        ?UpdateOdometerRequest $body = null
-    ): UpdateOdometerResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/transaction/updateodometer')
-            ->auth('BasicAuth')
+    public function updateOdometer(string $requestId, ?UpdateOdometerRequest $body = null): UpdateOdometerResp
+    {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/updateodometer')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -1024,10 +895,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1035,33 +906,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(UpdateOdometerResponse::class);
+            ->type(UpdateOdometerResp::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }
@@ -1074,25 +939,21 @@ class TransactionController extends BaseController
      *
      *
      *
-     * @param string $apikey This is the API key of the specific environment which needs to be
-     *        passed by the client.
      * @param string $requestId Mandatory UUID (according to RFC 4122 standards) for requests and
      *        responses. This will be played back in the response from the request.
-     * @param TransactionExceptionsRequest|null $body Transaction Exceptions RequestBody
+     * @param TransactionExceptionsReq|null $body Transaction Exceptions RequestBody
      *
-     * @return TransactionExceptionsResponse Response from the API call
+     * @return TransactionExceptionsRes Response from the API call
      *
      * @throws ApiException Thrown if API call fails
      */
     public function transactionExceptions(
-        string $apikey,
         string $requestId,
-        ?TransactionExceptionsRequest $body = null
-    ): TransactionExceptionsResponse {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/fleetmanagement/v1/transaction/exceptions')
-            ->auth('BasicAuth')
+        ?TransactionExceptionsReq $body = null
+    ): TransactionExceptionsRes {
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/exceptions')
+            ->auth('BearerToken')
             ->parameters(
-                HeaderParam::init('apikey', $apikey),
                 HeaderParam::init('RequestId', $requestId),
                 HeaderParam::init('Content-Type', 'application/json'),
                 BodyParam::init($body)
@@ -1102,10 +963,10 @@ class TransactionController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request  due to something that i" .
-                    "s perceived to be a client\r\n error (e.g., malformed request syntax, inval" .
-                    "id \r\n request message framing, or deceptive request routing).",
-                    DefaultErrorException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
@@ -1113,33 +974,27 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
-            ->throwErrorOn(
-                '403',
-                ErrorType::init(
-                    'The server understood the request but refuses to authorize it.',
-                    ErrorUserAccessError1Exception::class
-                )
-            )
+            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    DefaultErrorException::class
+                    ErrorObjectException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    'The server encountered an unexpected condition the prevented it from fulfi' .
-                    'lling the request.',
-                    DefaultErrorException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    ErrorObjectException::class
                 )
             )
-            ->type(TransactionExceptionsResponse::class);
+            ->type(TransactionExceptionsRes::class);
 
         return $this->execute($_reqBuilder, $_resHandler);
     }

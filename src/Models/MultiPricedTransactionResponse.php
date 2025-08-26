@@ -21,31 +21,6 @@ class MultiPricedTransactionResponse implements \JsonSerializable
     private $transactions;
 
     /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
-     * @var int|null
-     */
-    private $currentPage;
-
-    /**
-     * @var int|null
-     */
-    private $rowCount;
-
-    /**
-     * @var int|null
-     */
-    private $totalPages;
-
-    /**
      * Returns Transactions.
      *
      * @return MultiPricedTransactionResponseTransactionsItems[]|null
@@ -68,123 +43,13 @@ class MultiPricedTransactionResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
-     * Returns Current Page.
-     * Current Page
-     */
-    public function getCurrentPage(): ?int
-    {
-        return $this->currentPage;
-    }
-
-    /**
-     * Sets Current Page.
-     * Current Page
-     *
-     * @maps CurrentPage
-     */
-    public function setCurrentPage(?int $currentPage): void
-    {
-        $this->currentPage = $currentPage;
-    }
-
-    /**
-     * Returns Row Count.
-     * Total row count matched for the given input criteria
-     */
-    public function getRowCount(): ?int
-    {
-        return $this->rowCount;
-    }
-
-    /**
-     * Sets Row Count.
-     * Total row count matched for the given input criteria
-     *
-     * @maps RowCount
-     */
-    public function setRowCount(?int $rowCount): void
-    {
-        $this->rowCount = $rowCount;
-    }
-
-    /**
-     * Returns Total Pages.
-     * Calculated page count based on page size from the incoming API request and total number of rows
-     * matched for the given input criteria
-     */
-    public function getTotalPages(): ?int
-    {
-        return $this->totalPages;
-    }
-
-    /**
-     * Sets Total Pages.
-     * Calculated page count based on page size from the incoming API request and total number of rows
-     * matched for the given input criteria
-     *
-     * @maps TotalPages
-     */
-    public function setTotalPages(?int $totalPages): void
-    {
-        $this->totalPages = $totalPages;
-    }
-
-    /**
      * Converts the MultiPricedTransactionResponse object to a human-readable string representation.
      *
      * @return string The string representation of the MultiPricedTransactionResponse object.
      */
     public function __toString(): string
     {
-        return ApiHelper::stringify(
-            'MultiPricedTransactionResponse',
-            [
-                'transactions' => $this->transactions,
-                'error' => $this->error,
-                'requestId' => $this->requestId,
-                'currentPage' => $this->currentPage,
-                'rowCount' => $this->rowCount,
-                'totalPages' => $this->totalPages
-            ]
-        );
+        return ApiHelper::stringify('MultiPricedTransactionResponse', ['transactions' => $this->transactions]);
     }
 
     /**
@@ -201,21 +66,6 @@ class MultiPricedTransactionResponse implements \JsonSerializable
         $json = [];
         if (isset($this->transactions)) {
             $json['Transactions'] = $this->transactions;
-        }
-        if (isset($this->error)) {
-            $json['Error']        = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']    = $this->requestId;
-        }
-        if (isset($this->currentPage)) {
-            $json['CurrentPage']  = $this->currentPage;
-        }
-        if (isset($this->rowCount)) {
-            $json['RowCount']     = $this->rowCount;
-        }
-        if (isset($this->totalPages)) {
-            $json['TotalPages']   = $this->totalPages;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

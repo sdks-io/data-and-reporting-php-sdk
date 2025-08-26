@@ -16,41 +16,9 @@ use stdClass;
 class CustomerPriceListResponse implements \JsonSerializable
 {
     /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
      * @var PriceList[]|null
      */
     private $priceList;
-
-    /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * Returns Request Id.
-     * UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the
-     * response from the request.
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the
-     * response from the request.
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
 
     /**
      * Returns Price List.
@@ -75,34 +43,13 @@ class CustomerPriceListResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
      * Converts the CustomerPriceListResponse object to a human-readable string representation.
      *
      * @return string The string representation of the CustomerPriceListResponse object.
      */
     public function __toString(): string
     {
-        return ApiHelper::stringify(
-            'CustomerPriceListResponse',
-            ['requestId' => $this->requestId, 'priceList' => $this->priceList, 'error' => $this->error]
-        );
+        return ApiHelper::stringify('CustomerPriceListResponse', ['priceList' => $this->priceList]);
     }
 
     /**
@@ -117,14 +64,8 @@ class CustomerPriceListResponse implements \JsonSerializable
     public function jsonSerialize(bool $asArrayWhenEmpty = false)
     {
         $json = [];
-        if (isset($this->requestId)) {
-            $json['RequestId'] = $this->requestId;
-        }
         if (isset($this->priceList)) {
             $json['PriceList'] = $this->priceList;
-        }
-        if (isset($this->error)) {
-            $json['Error']     = $this->error;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

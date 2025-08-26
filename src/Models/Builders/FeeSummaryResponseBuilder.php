@@ -11,9 +11,9 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\FeeItemSummaryAllOf0;
 use ShellDataReportingAPIsLib\Models\FeeSummaryResponse;
+use ShellDataReportingAPIsLib\Models\Warning;
 
 /**
  * Builder for model FeeSummaryResponse
@@ -41,17 +41,6 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Sets Fee Items Summary field.
-     *
-     * @param FeeItemSummaryAllOf0[]|null $value
-     */
-    public function feeItemsSummary(?array $value): self
-    {
-        $this->instance->setFeeItemsSummary($value);
-        return $this;
-    }
-
-    /**
      * Sets Request Id field.
      *
      * @param string|null $value
@@ -63,13 +52,35 @@ class FeeSummaryResponseBuilder
     }
 
     /**
-     * Sets Error field.
+     * Sets Status field.
      *
-     * @param ErrorStatus|null $value
+     * @param string|null $value
      */
-    public function error(?ErrorStatus $value): self
+    public function status(?string $value): self
     {
-        $this->instance->setError($value);
+        $this->instance->setStatus($value);
+        return $this;
+    }
+
+    /**
+     * Sets Data field.
+     *
+     * @param FeeItemSummaryAllOf0[]|null $value
+     */
+    public function data(?array $value): self
+    {
+        $this->instance->setData($value);
+        return $this;
+    }
+
+    /**
+     * Sets Warnings field.
+     *
+     * @param Warning[]|null $value
+     */
+    public function warnings(?array $value): self
+    {
+        $this->instance->setWarnings($value);
         return $this;
     }
 

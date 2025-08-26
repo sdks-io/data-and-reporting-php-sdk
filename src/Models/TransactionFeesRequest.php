@@ -106,16 +106,6 @@ class TransactionFeesRequest implements \JsonSerializable
     private $sortOrder = [];
 
     /**
-     * @var array
-     */
-    private $currentPage = [];
-
-    /**
-     * @var array
-     */
-    private $pageSize = [];
-
-    /**
      * Returns Col Co Id.
      * Collecting Company Id  of the selected payer.
      *
@@ -1006,70 +996,6 @@ class TransactionFeesRequest implements \JsonSerializable
     }
 
     /**
-     * Returns Current Page.
-     * Page Number
-     */
-    public function getCurrentPage(): ?int
-    {
-        if (count($this->currentPage) == 0) {
-            return null;
-        }
-        return $this->currentPage['value'];
-    }
-
-    /**
-     * Sets Current Page.
-     * Page Number
-     *
-     * @maps CurrentPage
-     */
-    public function setCurrentPage(?int $currentPage): void
-    {
-        $this->currentPage['value'] = $currentPage;
-    }
-
-    /**
-     * Unsets Current Page.
-     * Page Number
-     */
-    public function unsetCurrentPage(): void
-    {
-        $this->currentPage = [];
-    }
-
-    /**
-     * Returns Page Size.
-     * Page Size – Number of records to show on a page
-     */
-    public function getPageSize(): ?int
-    {
-        if (count($this->pageSize) == 0) {
-            return null;
-        }
-        return $this->pageSize['value'];
-    }
-
-    /**
-     * Sets Page Size.
-     * Page Size – Number of records to show on a page
-     *
-     * @maps PageSize
-     */
-    public function setPageSize(?int $pageSize): void
-    {
-        $this->pageSize['value'] = $pageSize;
-    }
-
-    /**
-     * Unsets Page Size.
-     * Page Size – Number of records to show on a page
-     */
-    public function unsetPageSize(): void
-    {
-        $this->pageSize = [];
-    }
-
-    /**
      * Converts the TransactionFeesRequest object to a human-readable string representation.
      *
      * @return string The string representation of the TransactionFeesRequest object.
@@ -1096,9 +1022,7 @@ class TransactionFeesRequest implements \JsonSerializable
                 'productId' => $this->getProductId(),
                 'productCode' => $this->getProductCode(),
                 'lineItemDescription' => $this->getLineItemDescription(),
-                'sortOrder' => $this->getSortOrder(),
-                'currentPage' => $this->getCurrentPage(),
-                'pageSize' => $this->getPageSize()
+                'sortOrder' => $this->getSortOrder()
             ]
         );
     }
@@ -1168,12 +1092,6 @@ class TransactionFeesRequest implements \JsonSerializable
         }
         if (!empty($this->sortOrder)) {
             $json['SortOrder']             = $this->sortOrder['value'];
-        }
-        if (!empty($this->currentPage)) {
-            $json['CurrentPage']           = $this->currentPage['value'];
-        }
-        if (!empty($this->pageSize)) {
-            $json['PageSize']              = $this->pageSize['value'];
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

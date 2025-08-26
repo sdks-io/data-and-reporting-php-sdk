@@ -12,7 +12,7 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\InvoicesSummaries;
-use ShellDataReportingAPIsLib\Models\LastStatementOfAccount;
+use ShellDataReportingAPIsLib\Models\LastStatementOfAccount2;
 use ShellDataReportingAPIsLib\Models\MonthlyInvoiceTrend;
 use ShellDataReportingAPIsLib\Models\PastStatementOfAccounts;
 use ShellDataReportingAPIsLib\Models\PaymentsSinceLastSOA;
@@ -46,9 +46,9 @@ class StatementOfAccountRespBuilder
     /**
      * Sets Last Statement Of Account field.
      *
-     * @param LastStatementOfAccount|null $value
+     * @param LastStatementOfAccount2|null $value
      */
-    public function lastStatementOfAccount(?LastStatementOfAccount $value): self
+    public function lastStatementOfAccount(?LastStatementOfAccount2 $value): self
     {
         $this->instance->setLastStatementOfAccount($value);
         return $this;

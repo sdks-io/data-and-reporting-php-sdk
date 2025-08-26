@@ -12,7 +12,6 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\CustomerPriceListResponse;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\PriceList;
 
 /**
@@ -41,17 +40,6 @@ class CustomerPriceListResponseBuilder
     }
 
     /**
-     * Sets Request Id field.
-     *
-     * @param string|null $value
-     */
-    public function requestId(?string $value): self
-    {
-        $this->instance->setRequestId($value);
-        return $this;
-    }
-
-    /**
      * Sets Price List field.
      *
      * @param PriceList[]|null $value
@@ -59,17 +47,6 @@ class CustomerPriceListResponseBuilder
     public function priceList(?array $value): self
     {
         $this->instance->setPriceList($value);
-        return $this;
-    }
-
-    /**
-     * Sets Error field.
-     *
-     * @param ErrorStatus|null $value
-     */
-    public function error(?ErrorStatus $value): self
-    {
-        $this->instance->setError($value);
         return $this;
     }
 

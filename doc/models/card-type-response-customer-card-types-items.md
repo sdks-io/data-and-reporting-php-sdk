@@ -34,7 +34,7 @@
 | `tokenTypeId` | `?int` | Optional | Token type identifier. | getTokenTypeId(): ?int | setTokenTypeId(?int tokenTypeId): void |
 | `tokenTypeName` | `?string` | Optional | Token Type Name. | getTokenTypeName(): ?string | setTokenTypeName(?string tokenTypeName): void |
 | `usageRestrictions` | [`?CardUsageRestrictions`](../../doc/models/card-usage-restrictions.md) | Optional | - | getUsageRestrictions(): ?CardUsageRestrictions | setUsageRestrictions(?CardUsageRestrictions usageRestrictions): void |
-| `eMVContactless` | `?bool` | Optional | Is Europay, MasterCard, and Visa Contactless enabled or not | getEMVContactless(): ?bool | setEMVContactless(?bool eMVContactless): void |
+| `eMVContactless` | `?bool` | Optional | Is Europay, MasterCard, and Visa Contactless enabled or not. | getEMVContactless(): ?bool | setEMVContactless(?bool eMVContactless): void |
 | `rFID` | `?bool` | Optional | Whether the card type is enabled for RFID (Radio Frequency Identification) | getRFID(): ?bool | setRFID(?bool rFID): void |
 | `pINChangeSupported` | `?bool` | Optional | PIN change supported or not. | getPINChangeSupported(): ?bool | setPINChangeSupported(?bool pINChangeSupported): void |
 | `requirePIN` | `?bool` | Optional | Whether a PIN is mandatory for the cards of this card type. | getRequirePIN(): ?bool | setRequirePIN(?bool requirePIN): void |

@@ -9,42 +9,50 @@
 
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
-| `feeItemsSummary` | [`?(FeeItemSummaryAllOf0[])`](../../doc/models/fee-item-summary-all-of-0.md) | Optional | - | getFeeItemsSummary(): ?array | setFeeItemsSummary(?array feeItemsSummary): void |
-| `requestId` | `?string` | Optional | A unique request id in GUID format. The value is written to the Shell API Platform audit log for end to end traceability of a request. If a value is not provided by an API client, then a GUID is automatically populated by the Shell API Platform and returned in the API response. | getRequestId(): ?string | setRequestId(?string requestId): void |
-| `error` | [`?ErrorStatus`](../../doc/models/error-status.md) | Optional | - | getError(): ?ErrorStatus | setError(?ErrorStatus error): void |
+| `requestId` | `?string` | Optional | Unique identifier for the request. This will be played back in the response from the request. | getRequestId(): ?string | setRequestId(?string requestId): void |
+| `status` | `?string` | Optional | Status of the request | getStatus(): ?string | setStatus(?string status): void |
+| `data` | [`?(FeeItemSummaryAllOf0[])`](../../doc/models/fee-item-summary-all-of-0.md) | Optional | - | getData(): ?array | setData(?array data): void |
+| `warnings` | [`?(Warning[])`](../../doc/models/warning.md) | Optional | A list of Warning entity.<br>This entity will hold the details of the scheduled System Outages of any dependent applications of this service.<br>Note: If there is no scheduled outage information available, in the configuration in AMS, for this service, this parameter won’t be present in output. | getWarnings(): ?array | setWarnings(?array warnings): void |
 
 ## Example (as JSON)
 
 ```json
 {
-  "FeeItemsSummary": [
+  "RequestId": "0e6fb42a-51b0-43b2-f010-92f822657f6a",
+  "Status": "SUCCESS",
+  "Data": [
     {
-      "FeeTypeGroup": "FeeTypeGroup8",
-      "FeeTypeId": "FeeTypeId0",
-      "ProductId": 48,
+      "FeeTypeGroup": "FeeTypeGroup0",
+      "FeeTypeId": "FeeTypeId8",
+      "ProductId": 84,
       "ProductCode": "ProductCode4",
       "ProductName": "ProductName4"
     },
     {
-      "FeeTypeGroup": "FeeTypeGroup8",
-      "FeeTypeId": "FeeTypeId0",
-      "ProductId": 48,
+      "FeeTypeGroup": "FeeTypeGroup0",
+      "FeeTypeId": "FeeTypeId8",
+      "ProductId": 84,
       "ProductCode": "ProductCode4",
       "ProductName": "ProductName4"
     },
     {
-      "FeeTypeGroup": "FeeTypeGroup8",
-      "FeeTypeId": "FeeTypeId0",
-      "ProductId": 48,
+      "FeeTypeGroup": "FeeTypeGroup0",
+      "FeeTypeId": "FeeTypeId8",
+      "ProductId": 84,
       "ProductCode": "ProductCode4",
       "ProductName": "ProductName4"
     }
   ],
-  "RequestId": "RequestId2",
-  "Error": {
-    "Code": "Code4",
-    "Description": "Description2"
-  }
+  "Warnings": [
+    {
+      "Message": "Message0",
+      "Type": "Type4"
+    },
+    {
+      "Message": "Message0",
+      "Type": "Type4"
+    }
+  ]
 }
 ```
 

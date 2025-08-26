@@ -39,7 +39,7 @@ class ColCoAccess implements \JsonSerializable
      * Returns Col Co Id.
      * Collecting company ID.
      */
-    public function getColCoId(): ?string
+    public function getColCoId(): ?int
     {
         if (count($this->colCoId) == 0) {
             return null;
@@ -53,7 +53,7 @@ class ColCoAccess implements \JsonSerializable
      *
      * @maps ColCoId
      */
-    public function setColCoId(?string $colCoId): void
+    public function setColCoId(?int $colCoId): void
     {
         $this->colCoId['value'] = $colCoId;
     }
@@ -71,7 +71,7 @@ class ColCoAccess implements \JsonSerializable
      * Returns Col Co Code.
      * Collecting company code.
      */
-    public function getColCoCode(): ?string
+    public function getColCoCode(): ?int
     {
         if (count($this->colCoCode) == 0) {
             return null;
@@ -85,7 +85,7 @@ class ColCoAccess implements \JsonSerializable
      *
      * @maps ColCoCode
      */
-    public function setColCoCode(?string $colCoCode): void
+    public function setColCoCode(?int $colCoCode): void
     {
         $this->colCoCode['value'] = $colCoCode;
     }

@@ -817,7 +817,7 @@ class CardTypeResponseCustomerCardTypesItems implements \JsonSerializable
 
     /**
      * Returns E MV Contactless.
-     * Is Europay, MasterCard, and Visa Contactless enabled or not
+     * Is Europay, MasterCard, and Visa Contactless enabled or not.
      */
     public function getEMVContactless(): ?bool
     {
@@ -826,7 +826,7 @@ class CardTypeResponseCustomerCardTypesItems implements \JsonSerializable
 
     /**
      * Sets E MV Contactless.
-     * Is Europay, MasterCard, and Visa Contactless enabled or not
+     * Is Europay, MasterCard, and Visa Contactless enabled or not.
      *
      * @maps EMVContactless
      */

@@ -41,9 +41,9 @@ class EIDAccessBuilder
     /**
      * Sets Col Co Id field.
      *
-     * @param string|null $value
+     * @param int|null $value
      */
-    public function colCoId(?string $value): self
+    public function colCoId(?int $value): self
     {
         $this->instance->setColCoId($value);
         return $this;

@@ -26,16 +26,6 @@ class UpdateOdometerResponse implements \JsonSerializable
     private $updateOdometerReferences;
 
     /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
      * Returns Service Reference.
      * Main reference number for tracking.
      */
@@ -78,44 +68,6 @@ class UpdateOdometerResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
      * Converts the UpdateOdometerResponse object to a human-readable string representation.
      *
      * @return string The string representation of the UpdateOdometerResponse object.
@@ -126,9 +78,7 @@ class UpdateOdometerResponse implements \JsonSerializable
             'UpdateOdometerResponse',
             [
                 'serviceReference' => $this->serviceReference,
-                'updateOdometerReferences' => $this->updateOdometerReferences,
-                'error' => $this->error,
-                'requestId' => $this->requestId
+                'updateOdometerReferences' => $this->updateOdometerReferences
             ]
         );
     }
@@ -150,12 +100,6 @@ class UpdateOdometerResponse implements \JsonSerializable
         }
         if (isset($this->updateOdometerReferences)) {
             $json['UpdateOdometerReferences'] = $this->updateOdometerReferences;
-        }
-        if (isset($this->error)) {
-            $json['Error']                    = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']                = $this->requestId;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

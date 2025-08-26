@@ -11,7 +11,6 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\UpdateOdometerReference;
 use ShellDataReportingAPIsLib\Models\UpdateOdometerResponse;
 
@@ -59,28 +58,6 @@ class UpdateOdometerResponseBuilder
     public function updateOdometerReferences(?array $value): self
     {
         $this->instance->setUpdateOdometerReferences($value);
-        return $this;
-    }
-
-    /**
-     * Sets Error field.
-     *
-     * @param ErrorStatus|null $value
-     */
-    public function error(?ErrorStatus $value): self
-    {
-        $this->instance->setError($value);
-        return $this;
-    }
-
-    /**
-     * Sets Request Id field.
-     *
-     * @param string|null $value
-     */
-    public function requestId(?string $value): self
-    {
-        $this->instance->setRequestId($value);
         return $this;
     }
 

@@ -12,10 +12,10 @@ namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\BonusConfiguration;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\PricingCurrentVolume;
 use ShellDataReportingAPIsLib\Models\PricingHistory;
 use ShellDataReportingAPIsLib\Models\VolumeBasedPricingResponse;
+use ShellDataReportingAPIsLib\Models\Warning;
 
 /**
  * Builder for model VolumeBasedPricingResponse
@@ -76,24 +76,13 @@ class VolumeBasedPricingResponseBuilder
     }
 
     /**
-     * Sets Error field.
+     * Sets Warnings field.
      *
-     * @param ErrorStatus|null $value
+     * @param Warning[]|null $value
      */
-    public function error(?ErrorStatus $value): self
+    public function warnings(?array $value): self
     {
-        $this->instance->setError($value);
-        return $this;
-    }
-
-    /**
-     * Sets Request Id field.
-     *
-     * @param string|null $value
-     */
-    public function requestId(?string $value): self
-    {
-        $this->instance->setRequestId($value);
+        $this->instance->setWarnings($value);
         return $this;
     }
 

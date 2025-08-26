@@ -14,7 +14,7 @@ use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Models\Address;
 use ShellDataReportingAPIsLib\Models\BankAccount;
 use ShellDataReportingAPIsLib\Models\CustomerContract;
-use ShellDataReportingAPIsLib\Models\FinanceCurrency;
+use ShellDataReportingAPIsLib\Models\FinanceCurrency2;
 use ShellDataReportingAPIsLib\Models\InvoiceDistributionMethod;
 use ShellDataReportingAPIsLib\Models\PayerDetails;
 
@@ -1922,9 +1922,9 @@ class PayerDetailsBuilder
     /**
      * Sets Finance Currency field.
      *
-     * @param FinanceCurrency|null $value
+     * @param FinanceCurrency2|null $value
      */
-    public function financeCurrency(?FinanceCurrency $value): self
+    public function financeCurrency(?FinanceCurrency2 $value): self
     {
         $this->instance->setFinanceCurrency($value);
         return $this;

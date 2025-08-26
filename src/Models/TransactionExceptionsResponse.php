@@ -26,16 +26,6 @@ class TransactionExceptionsResponse implements \JsonSerializable
     private $transactionExceptions = [];
 
     /**
-     * @var ErrorStatus|null
-     */
-    private $error;
-
-    /**
-     * @var string|null
-     */
-    private $requestId;
-
-    /**
      * Returns Card Exceptions.
      *
      * @return CardExceptions[]|null
@@ -91,44 +81,6 @@ class TransactionExceptionsResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Error.
-     */
-    public function getError(): ?ErrorStatus
-    {
-        return $this->error;
-    }
-
-    /**
-     * Sets Error.
-     *
-     * @maps Error
-     */
-    public function setError(?ErrorStatus $error): void
-    {
-        $this->error = $error;
-    }
-
-    /**
-     * Returns Request Id.
-     * API Request Id
-     */
-    public function getRequestId(): ?string
-    {
-        return $this->requestId;
-    }
-
-    /**
-     * Sets Request Id.
-     * API Request Id
-     *
-     * @maps RequestId
-     */
-    public function setRequestId(?string $requestId): void
-    {
-        $this->requestId = $requestId;
-    }
-
-    /**
      * Converts the TransactionExceptionsResponse object to a human-readable string representation.
      *
      * @return string The string representation of the TransactionExceptionsResponse object.
@@ -139,9 +91,7 @@ class TransactionExceptionsResponse implements \JsonSerializable
             'TransactionExceptionsResponse',
             [
                 'cardExceptions' => $this->cardExceptions,
-                'transactionExceptions' => $this->getTransactionExceptions(),
-                'error' => $this->error,
-                'requestId' => $this->requestId
+                'transactionExceptions' => $this->getTransactionExceptions()
             ]
         );
     }
@@ -163,12 +113,6 @@ class TransactionExceptionsResponse implements \JsonSerializable
         }
         if (!empty($this->transactionExceptions)) {
             $json['TransactionExceptions'] = $this->transactionExceptions['value'];
-        }
-        if (isset($this->error)) {
-            $json['Error']                 = $this->error;
-        }
-        if (isset($this->requestId)) {
-            $json['RequestId']             = $this->requestId;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

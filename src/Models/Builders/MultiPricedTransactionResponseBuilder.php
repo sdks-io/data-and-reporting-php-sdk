@@ -11,7 +11,6 @@ declare(strict_types=1);
 namespace ShellDataReportingAPIsLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
-use ShellDataReportingAPIsLib\Models\ErrorStatus;
 use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponse;
 use ShellDataReportingAPIsLib\Models\MultiPricedTransactionResponseTransactionsItems;
 
@@ -48,61 +47,6 @@ class MultiPricedTransactionResponseBuilder
     public function transactions(?array $value): self
     {
         $this->instance->setTransactions($value);
-        return $this;
-    }
-
-    /**
-     * Sets Error field.
-     *
-     * @param ErrorStatus|null $value
-     */
-    public function error(?ErrorStatus $value): self
-    {
-        $this->instance->setError($value);
-        return $this;
-    }
-
-    /**
-     * Sets Request Id field.
-     *
-     * @param string|null $value
-     */
-    public function requestId(?string $value): self
-    {
-        $this->instance->setRequestId($value);
-        return $this;
-    }
-
-    /**
-     * Sets Current Page field.
-     *
-     * @param int|null $value
-     */
-    public function currentPage(?int $value): self
-    {
-        $this->instance->setCurrentPage($value);
-        return $this;
-    }
-
-    /**
-     * Sets Row Count field.
-     *
-     * @param int|null $value
-     */
-    public function rowCount(?int $value): self
-    {
-        $this->instance->setRowCount($value);
-        return $this;
-    }
-
-    /**
-     * Sets Total Pages field.
-     *
-     * @param int|null $value
-     */
-    public function totalPages(?int $value): self
-    {
-        $this->instance->setTotalPages($value);
         return $this;
     }
 
