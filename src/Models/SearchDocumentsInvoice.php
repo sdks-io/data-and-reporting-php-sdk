@@ -68,11 +68,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     /**
      * @var array
      */
-    private $invoiceStatus = [];
-
-    /**
-     * @var array
-     */
     private $invoiceDate = [];
 
     /**
@@ -84,6 +79,11 @@ class SearchDocumentsInvoice implements \JsonSerializable
      * @var array
      */
     private $vATCountryISOCode = [];
+
+    /**
+     * @var string|null
+     */
+    private $ksefDocumentReference;
 
     /**
      * Returns Document Reference.
@@ -407,35 +407,6 @@ class SearchDocumentsInvoice implements \JsonSerializable
     }
 
     /**
-     * Returns Invoice Status.
-     */
-    public function getInvoiceStatus(): ?string
-    {
-        if (count($this->invoiceStatus) == 0) {
-            return null;
-        }
-        return $this->invoiceStatus['value'];
-    }
-
-    /**
-     * Sets Invoice Status.
-     *
-     * @maps InvoiceStatus
-     */
-    public function setInvoiceStatus(?string $invoiceStatus): void
-    {
-        $this->invoiceStatus['value'] = $invoiceStatus;
-    }
-
-    /**
-     * Unsets Invoice Status.
-     */
-    public function unsetInvoiceStatus(): void
-    {
-        $this->invoiceStatus = [];
-    }
-
-    /**
      * Returns Invoice Date.
      */
     public function getInvoiceDate(): ?string
@@ -523,6 +494,28 @@ class SearchDocumentsInvoice implements \JsonSerializable
     }
 
     /**
+     * Returns Ksef Document Reference.
+     * Unique identifier for the invoice in KSeF system. This field is populated only when the invoice is
+     * registered in KSeF system.
+     */
+    public function getKsefDocumentReference(): ?string
+    {
+        return $this->ksefDocumentReference;
+    }
+
+    /**
+     * Sets Ksef Document Reference.
+     * Unique identifier for the invoice in KSeF system. This field is populated only when the invoice is
+     * registered in KSeF system.
+     *
+     * @maps KsefDocumentReference
+     */
+    public function setKsefDocumentReference(?string $ksefDocumentReference): void
+    {
+        $this->ksefDocumentReference = $ksefDocumentReference;
+    }
+
+    /**
      * Converts the SearchDocumentsInvoice object to a human-readable string representation.
      *
      * @return string The string representation of the SearchDocumentsInvoice object.
@@ -542,10 +535,10 @@ class SearchDocumentsInvoice implements \JsonSerializable
                 'netAmount' => $this->getNetAmount(),
                 'taxAmount' => $this->getTaxAmount(),
                 'currencyCode' => $this->getCurrencyCode(),
-                'invoiceStatus' => $this->getInvoiceStatus(),
                 'invoiceDate' => $this->getInvoiceDate(),
                 'dueDate' => $this->getDueDate(),
-                'vATCountryISOCode' => $this->getVATCountryISOCode()
+                'vATCountryISOCode' => $this->getVATCountryISOCode(),
+                'ksefDocumentReference' => $this->ksefDocumentReference
             ]
         );
     }
@@ -563,46 +556,46 @@ class SearchDocumentsInvoice implements \JsonSerializable
     {
         $json = [];
         if (isset($this->documentReference)) {
-            $json['DocumentReference'] = $this->documentReference;
+            $json['DocumentReference']     = $this->documentReference;
         }
         if (!empty($this->invoiceNumber)) {
-            $json['InvoiceNumber']     = $this->invoiceNumber['value'];
+            $json['InvoiceNumber']         = $this->invoiceNumber['value'];
         }
         if (!empty($this->payerName)) {
-            $json['PayerName']         = $this->payerName['value'];
+            $json['PayerName']             = $this->payerName['value'];
         }
         if (!empty($this->accountNumber)) {
-            $json['AccountNumber']     = $this->accountNumber['value'];
+            $json['AccountNumber']         = $this->accountNumber['value'];
         }
         if (!empty($this->accountName)) {
-            $json['AccountName']       = $this->accountName['value'];
+            $json['AccountName']           = $this->accountName['value'];
         }
         if (!empty($this->documentType)) {
-            $json['DocumentType']      = $this->documentType['value'];
+            $json['DocumentType']          = $this->documentType['value'];
         }
         if (!empty($this->grossAmount)) {
-            $json['GrossAmount']       = $this->grossAmount['value'];
+            $json['GrossAmount']           = $this->grossAmount['value'];
         }
         if (!empty($this->netAmount)) {
-            $json['NetAmount']         = $this->netAmount['value'];
+            $json['NetAmount']             = $this->netAmount['value'];
         }
         if (!empty($this->taxAmount)) {
-            $json['TaxAmount']         = $this->taxAmount['value'];
+            $json['TaxAmount']             = $this->taxAmount['value'];
         }
         if (!empty($this->currencyCode)) {
-            $json['CurrencyCode']      = $this->currencyCode['value'];
-        }
-        if (!empty($this->invoiceStatus)) {
-            $json['InvoiceStatus']     = $this->invoiceStatus['value'];
+            $json['CurrencyCode']          = $this->currencyCode['value'];
         }
         if (!empty($this->invoiceDate)) {
-            $json['InvoiceDate']       = $this->invoiceDate['value'];
+            $json['InvoiceDate']           = $this->invoiceDate['value'];
         }
         if (!empty($this->dueDate)) {
-            $json['DueDate']           = $this->dueDate['value'];
+            $json['DueDate']               = $this->dueDate['value'];
         }
         if (!empty($this->vATCountryISOCode)) {
-            $json['VATCountryISOCode'] = $this->vATCountryISOCode['value'];
+            $json['VATCountryISOCode']     = $this->vATCountryISOCode['value'];
+        }
+        if (isset($this->ksefDocumentReference)) {
+            $json['KsefDocumentReference'] = $this->ksefDocumentReference;
         }
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;

@@ -51,11 +51,6 @@ class EIDSearchReq implements \JsonSerializable
     private $invoiceType = [];
 
     /**
-     * @var array
-     */
-    private $invoiceStatus = [];
-
-    /**
      * @var string[]|null
      */
     private $sortBy;
@@ -294,74 +289,6 @@ class EIDSearchReq implements \JsonSerializable
     }
 
     /**
-     * Returns Invoice Status.
-     * Status of the document.
-     *
-     * Optional.
-     *
-     * Possible values:
-     *
-     * •    NEW
-     *
-     * •    VIEWED
-     *
-     * •    DOWNLOADED
-     *
-     * •    RESTORED
-     */
-    public function getInvoiceStatus(): ?string
-    {
-        if (count($this->invoiceStatus) == 0) {
-            return null;
-        }
-        return $this->invoiceStatus['value'];
-    }
-
-    /**
-     * Sets Invoice Status.
-     * Status of the document.
-     *
-     * Optional.
-     *
-     * Possible values:
-     *
-     * •    NEW
-     *
-     * •    VIEWED
-     *
-     * •    DOWNLOADED
-     *
-     * •    RESTORED
-     *
-     * @maps InvoiceStatus
-     */
-    public function setInvoiceStatus(?string $invoiceStatus): void
-    {
-        $this->invoiceStatus['value'] = $invoiceStatus;
-    }
-
-    /**
-     * Unsets Invoice Status.
-     * Status of the document.
-     *
-     * Optional.
-     *
-     * Possible values:
-     *
-     * •    NEW
-     *
-     * •    VIEWED
-     *
-     * •    DOWNLOADED
-     *
-     * •    RESTORED
-     */
-    public function unsetInvoiceStatus(): void
-    {
-        $this->invoiceStatus = [];
-    }
-
-    /**
      * Returns Sort By.
      * Sort option –
      * •    InvoiceNumber ASC
@@ -412,7 +339,6 @@ class EIDSearchReq implements \JsonSerializable
                 'fromDate' => $this->getFromDate(),
                 'toDate' => $this->getToDate(),
                 'invoiceType' => $this->getInvoiceType(),
-                'invoiceStatus' => $this->getInvoiceStatus(),
                 'sortBy' => $this->sortBy
             ]
         );
@@ -444,9 +370,6 @@ class EIDSearchReq implements \JsonSerializable
         }
         if (!empty($this->invoiceType)) {
             $json['InvoiceType']      = $this->invoiceType['value'];
-        }
-        if (!empty($this->invoiceStatus)) {
-            $json['InvoiceStatus']    = $this->invoiceStatus['value'];
         }
         if (isset($this->sortBy)) {
             $json['SortBy']           = $this->sortBy;

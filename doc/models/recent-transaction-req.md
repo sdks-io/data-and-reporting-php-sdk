@@ -14,7 +14,7 @@
 | `accountNumber` | `?string` | Optional | Customer account number. | getAccountNumber(): ?string | setAccountNumber(?string accountNumber): void |
 | `productCode` | `?string` | Optional | Global product code | getProductCode(): ?string | setProductCode(?string productCode): void |
 | `purchasedInCountry` | `?string` | Optional | Delco country<br><br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` | getPurchasedInCountry(): ?string | setPurchasedInCountry(?string purchasedInCountry): void |
-| `cardPAN` | `?string` | Optional | Card identifier number masked | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
+| `cardPAN` | `?string` | Optional | Card PAN Number without masked | getCardPAN(): ?string | setCardPAN(?string cardPAN): void |
 | `fromDateTime` | `?string` | Optional | Start date and time of transactions | getFromDateTime(): ?string | setFromDateTime(?string fromDateTime): void |
 | `toDateTime` | `?string` | Optional | End date and time of transactions. Mandatory if FromDateTime is provided. | getToDateTime(): ?string | setToDateTime(?string toDateTime): void |
 | `transactionStatus` | `?string` | Optional | Status of transaction. DO NOT pass the value if includeDeclines is passed | getTransactionStatus(): ?string | setTransactionStatus(?string transactionStatus): void |
@@ -34,7 +34,7 @@
   "AccountNumber": "GB00001233",
   "ProductCode": "22",
   "PurchasedInCountry": "GB",
-  "CardPAN": "700205******890645",
+  "CardPAN": "7002051006629890645",
   "FromDateTime": "2020-11-09 13:56:03.000",
   "ToDateTime": "2020-12-09 13:56:03.000",
   "TransactionStatus": "APPROVED",

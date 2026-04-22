@@ -58,11 +58,6 @@ class EIDDocument implements \JsonSerializable
     /**
      * @var array
      */
-    private $documentStatus = [];
-
-    /**
-     * @var array
-     */
     private $documentName = [];
 
     /**
@@ -337,53 +332,6 @@ class EIDDocument implements \JsonSerializable
     }
 
     /**
-     * Returns Document Status.
-     * Document status.
-     * Possible values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     */
-    public function getDocumentStatus(): ?string
-    {
-        if (count($this->documentStatus) == 0) {
-            return null;
-        }
-        return $this->documentStatus['value'];
-    }
-
-    /**
-     * Sets Document Status.
-     * Document status.
-     * Possible values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     *
-     * @maps DocumentStatus
-     */
-    public function setDocumentStatus(?string $documentStatus): void
-    {
-        $this->documentStatus['value'] = $documentStatus;
-    }
-
-    /**
-     * Unsets Document Status.
-     * Document status.
-     * Possible values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     */
-    public function unsetDocumentStatus(): void
-    {
-        $this->documentStatus = [];
-    }
-
-    /**
      * Returns Document Name.
      * Document file name.
      */
@@ -433,7 +381,6 @@ class EIDDocument implements \JsonSerializable
                 'documentDate' => $this->getDocumentDate(),
                 'numberOfInvoices' => $this->getNumberOfInvoices(),
                 'fileSize' => $this->getFileSize(),
-                'documentStatus' => $this->getDocumentStatus(),
                 'documentName' => $this->getDocumentName()
             ]
         );
@@ -474,9 +421,6 @@ class EIDDocument implements \JsonSerializable
         }
         if (!empty($this->fileSize)) {
             $json['FileSize']         = $this->fileSize['value'];
-        }
-        if (!empty($this->documentStatus)) {
-            $json['DocumentStatus']   = $this->documentStatus['value'];
         }
         if (!empty($this->documentName)) {
             $json['DocumentName']     = $this->documentName['value'];

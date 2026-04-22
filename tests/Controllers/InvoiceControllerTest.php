@@ -264,11 +264,10 @@ class InvoiceControllerTest extends BaseTestController
         $body = TestParam::object(
             '{"Filters":{"PayerNumber":"DE00000096","AccountNumber":"DE00000096","ColCoCode":14' .
             ',"AccountNumberList":["DE00000123","DE00000225"],"InvoiceNumber":"1234567","Invoice' .
-            'NumberList":["6400013693","9421000010"],"InvoiceStatus":"NEW","IssuingDateFrom":"20' .
-            '23/05/01","IssuingDateTo":"2023/06/30","DueDateFrom":"2023/05/04","DueDateTo":"2023' .
-            '/06/30","GrossAmount":"1000","GrossAmountOperator":"LT","DocumentType":"SOA","VATIs' .
-            'suerCountry":"DE","SortyBy":["InvoiceNumber ASC","InvoiceDate DESC"]},"Page":"1","P' .
-            'ageSize":"50"}',
+            'NumberList":["6400013693","9421000010"],"IssuingDateFrom":"2023/05/01","IssuingDate' .
+            'To":"2023/06/30","DueDateFrom":"2023/05/04","DueDateTo":"2023/06/30","GrossAmount":' .
+            '"1000","GrossAmountOperator":"LT","DocumentType":"SOA","VATIssuerCountry":"DE","Sor' .
+            'tyBy":["InvoiceNumber ASC","InvoiceDate DESC"]},"Page":"1","PageSize":"50"}',
             Models\SearchDocumentsRequest::class
         );
 
@@ -288,13 +287,12 @@ class InvoiceControllerTest extends BaseTestController
             ->allowExtraHeaders()
             ->expectHeaders($headers)
             ->bodyMatcher(KeysBodyMatcher::init(TestParam::object(
-                '{"RequestId":"a8b81c1d-f44a-4365-8113-8958061c0b7e","Status":"SUCCESS","Data":' .
-                '[{"DocumentReference":311161,"InvoiceNumber":"6400013693","PayerName":"DE000000' .
-                '96","AccountNumber":"DE00000096","AccountName":"DE00000096","DocumentType":"NAT' .
-                '","GrossAmount":-3141.93,"NetAmount":0,"TaxAmount":0,"CurrencyCode":"EUR","Invo' .
-                'iceStatus":"NEW","InvoiceDate":"2023/01/31","DueDate":"2023/02/07","VATCountryI' .
-                'SOCode":"DE"}],"TotalRecords":2,"TotalRecordsOnPage":2,"IsFirstPage":true,"IsLa' .
-                'stPage":true}'
+                '{"RequestId":"a8b81c1d-f44a-4365-8113-8958061c0b7e","Status":"SUCCESS","Invoic' .
+                'es":[{"DocumentReference":311161,"InvoiceNumber":"6400013693","PayerName":"DE00' .
+                '000096","AccountNumber":"DE00000096","AccountName":"DE00000096","DocumentType":' .
+                '"NAT","GrossAmount":-3141.93,"NetAmount":0,"TaxAmount":0,"CurrencyCode":"EUR","' .
+                'InvoiceDate":"2023/01/31","DueDate":"2023/02/07","VATCountryISOCode":"DE"}],"To' .
+                'talRecords":2,"TotalRecordsOnPage":2,"IsFirstPage":true,"IsLastPage":true}'
             )))
             ->assert();
     }
@@ -306,7 +304,7 @@ class InvoiceControllerTest extends BaseTestController
         $body = TestParam::object(
             '{"Filters":{"ColCoCode":32,"AccountGroupCountry":32,"AccountGroupId":["122"],"Acco' .
             'untGroupName":null,"FromDate":"2017/08/30","ToDate":"2017/10/31","InvoiceType":"NAT' .
-            '","InvoiceStatus":"NEW","SortBy":["DocumentDate ASC"]},"Page":1,"PageSize":10}',
+            '","SortBy":["DocumentDate ASC"]},"Page":1,"PageSize":10}',
             Models\EIDSearchRequest::class
         );
 
@@ -326,12 +324,12 @@ class InvoiceControllerTest extends BaseTestController
             ->allowExtraHeaders()
             ->expectHeaders($headers)
             ->bodyMatcher(KeysBodyMatcher::init(TestParam::object(
-                '{"RequestId":"a0a1596f-b242-4672-b513-66c5e5554195","Status":"SUCCESS","Data":' .
-                '[{"DocumentId":15029,"AccountGroupId":"122","AccountGroupName":"EID-122","Docum' .
-                'entType":"INT","DocumentFormat":"FLAT","DocumentDate":"2022/12/28","NumberOfInv' .
-                'oices":1,"FileSize":1624,"DocumentStatus":"DOWNLOADED","DocumentName":"032_122_' .
-                'INT_28122022.TXT"}],"PageSize":1,"Page":1,"TotalPages":12,"TotalRecords":120,"I' .
-                'sFirstPage":true,"IsLastPage":false}'
+                '{"RequestId":"a0a1596f-b242-4672-b513-66c5e5554195","Status":"SUCCESS","Docume' .
+                'nt":[{"DocumentId":15029,"AccountGroupId":"122","AccountGroupName":"EID-122","D' .
+                'ocumentType":"INT","DocumentFormat":"FLAT","DocumentDate":"2022/12/28","NumberO' .
+                'fInvoices":1,"FileSize":1624,"DocumentName":"032_122_INT_28122022.TXT"}],"PageS' .
+                'ize":1,"Page":1,"TotalPages":12,"TotalRecords":120,"IsFirstPage":true,"IsLastPa' .
+                'ge":false}'
             )))
             ->assert();
     }

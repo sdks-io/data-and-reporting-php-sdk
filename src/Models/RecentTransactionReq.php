@@ -228,7 +228,7 @@ class RecentTransactionReq implements \JsonSerializable
 
     /**
      * Returns Card PAN.
-     * Card identifier number masked
+     * Card PAN Number without masked
      */
     public function getCardPAN(): ?string
     {
@@ -240,7 +240,7 @@ class RecentTransactionReq implements \JsonSerializable
 
     /**
      * Sets Card PAN.
-     * Card identifier number masked
+     * Card PAN Number without masked
      *
      * @maps CardPAN
      */
@@ -251,7 +251,7 @@ class RecentTransactionReq implements \JsonSerializable
 
     /**
      * Unsets Card PAN.
-     * Card identifier number masked
+     * Card PAN Number without masked
      */
     public function unsetCardPAN(): void
     {

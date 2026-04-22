@@ -13,6 +13,7 @@ namespace ShellDataReportingAPIsLib;
 use Core\Types\Sdk\CoreCallback;
 use Core\Utils\CoreHelper;
 use ShellDataReportingAPIsLib\Authentication\ClientCredentialsAuthCredentialsBuilder;
+use ShellDataReportingAPIsLib\Models\OAuthToken;
 use ShellDataReportingAPIsLib\Proxy\ProxyConfigurationBuilder;
 
 class ShellDataReportingAPIsClientBuilder
@@ -106,6 +107,54 @@ class ShellDataReportingAPIsClientBuilder
     public function environment(string $environment): self
     {
         $this->config['environment'] = $environment;
+        return $this;
+    }
+
+    /**
+     * @see ShellDataReportingAPIsClientBuilder::clientCredentialsAuthCredentials
+     *
+     * @deprecated This builder setter is deprecated. Checkout the see also section for its
+     *             alternate.
+     *
+     * @param string $oAuthClientId
+     *
+     * @return $this
+     */
+    public function oAuthClientId(string $oAuthClientId): self
+    {
+        $this->config['oAuthClientId'] = $oAuthClientId;
+        return $this;
+    }
+
+    /**
+     * @see ShellDataReportingAPIsClientBuilder::clientCredentialsAuthCredentials
+     *
+     * @deprecated This builder setter is deprecated. Checkout the see also section for its
+     *             alternate.
+     *
+     * @param string $oAuthClientSecret
+     *
+     * @return $this
+     */
+    public function oAuthClientSecret(string $oAuthClientSecret): self
+    {
+        $this->config['oAuthClientSecret'] = $oAuthClientSecret;
+        return $this;
+    }
+
+    /**
+     * @see ShellDataReportingAPIsClientBuilder::clientCredentialsAuthCredentials
+     *
+     * @deprecated This builder setter is deprecated. Checkout the see also section for its
+     *             alternate.
+     *
+     * @param OAuthToken|null $oAuthToken
+     *
+     * @return $this
+     */
+    public function oAuthToken(?OAuthToken $oAuthToken): self
+    {
+        $this->config['oAuthToken'] = $oAuthToken;
         return $this;
     }
 

@@ -43,11 +43,6 @@ class SearchDocReq implements \JsonSerializable
     /**
      * @var array
      */
-    private $invoiceStatus = [];
-
-    /**
-     * @var array
-     */
     private $issuingDateFrom = [];
 
     /**
@@ -266,56 +261,6 @@ class SearchDocReq implements \JsonSerializable
     public function setInvoiceNumberList(?array $invoiceNumberList): void
     {
         $this->invoiceNumberList = $invoiceNumberList;
-    }
-
-    /**
-     * Returns Invoice Status.
-     * The status of the invoices
-     * Optional
-     * One of the following values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     */
-    public function getInvoiceStatus(): ?string
-    {
-        if (count($this->invoiceStatus) == 0) {
-            return null;
-        }
-        return $this->invoiceStatus['value'];
-    }
-
-    /**
-     * Sets Invoice Status.
-     * The status of the invoices
-     * Optional
-     * One of the following values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     *
-     * @maps InvoiceStatus
-     */
-    public function setInvoiceStatus(?string $invoiceStatus): void
-    {
-        $this->invoiceStatus['value'] = $invoiceStatus;
-    }
-
-    /**
-     * Unsets Invoice Status.
-     * The status of the invoices
-     * Optional
-     * One of the following values:
-     * •    NEW
-     * •    VIEWED
-     * •    DOWNLOADED
-     * •    RESTORED
-     */
-    public function unsetInvoiceStatus(): void
-    {
-        $this->invoiceStatus = [];
     }
 
     /**
@@ -738,7 +683,6 @@ class SearchDocReq implements \JsonSerializable
                 'accountNumberList' => $this->accountNumberList,
                 'invoiceNumber' => $this->getInvoiceNumber(),
                 'invoiceNumberList' => $this->invoiceNumberList,
-                'invoiceStatus' => $this->getInvoiceStatus(),
                 'issuingDateFrom' => $this->getIssuingDateFrom(),
                 'issuingDateTo' => $this->getIssuingDateTo(),
                 'dueDateFrom' => $this->getDueDateFrom(),
@@ -777,9 +721,6 @@ class SearchDocReq implements \JsonSerializable
         }
         if (isset($this->invoiceNumberList)) {
             $json['InvoiceNumberList']   = $this->invoiceNumberList;
-        }
-        if (!empty($this->invoiceStatus)) {
-            $json['InvoiceStatus']       = $this->invoiceStatus['value'];
         }
         if (!empty($this->issuingDateFrom)) {
             $json['IssuingDateFrom']     = $this->issuingDateFrom['value'];

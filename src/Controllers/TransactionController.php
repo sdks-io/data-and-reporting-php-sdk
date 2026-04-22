@@ -15,7 +15,71 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Cardusagesummary400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Cardusagesummary401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Cardusagesummary403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Cardusagesummary404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Cardusagesummary500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Exceptions400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Exceptions401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Exceptions403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Exceptions404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Exceptions500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fees400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fees401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fees403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fees404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fees500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Feessummary400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Feessummary401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Feessummary403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Feessummary404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Feessummary500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fuelconsumption400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fuelconsumption401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fuelconsumption403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fuelconsumption404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Fuelconsumption500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Multipayerspricedtransactions400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Multipayerspricedtransactions401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Multipayerspricedtransactions403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Multipayerspricedtransactions404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Multipayerspricedtransactions500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Priced500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransaction400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransaction401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransaction403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransaction404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransaction500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransactionssummary400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransactionssummary401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransactionssummary403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransactionssummary404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Pricedtransactionssummary500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Recent500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Updateodometer400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Updateodometer401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Updateodometer403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Updateodometer404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Updateodometer500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedbonus400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedbonus401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedbonus403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedbonus404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedbonus500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedpricing400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedpricing401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedpricing403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedpricing404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\TransactionDataV1Volumebasedpricing500ErrorException;
 use ShellDataReportingAPIsLib\Models\CardUsageSummaryReq;
 use ShellDataReportingAPIsLib\Models\CardUsageSummaryRes;
 use ShellDataReportingAPIsLib\Models\FeeSummaryResponse;
@@ -145,7 +209,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransaction400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -153,16 +217,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransaction401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Pricedtransaction403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransaction404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -170,7 +237,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransaction500ErrorException::class
                 )
             )
             ->type(PricedTransactionRes::class);
@@ -275,7 +342,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransactionssummary400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -283,16 +350,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransactionssummary401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Pricedtransactionssummary403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransactionssummary404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -300,7 +370,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Pricedtransactionssummary500ErrorException::class
                 )
             )
             ->type(PricedTransSummaryResp::class);
@@ -399,7 +469,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Multipayerspricedtransactions400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -407,16 +477,22 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Multipayerspricedtransactions401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init(
+                    'Forbidden',
+                    TransactionDataV1Multipayerspricedtransactions403ErrorException::class
+                )
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Multipayerspricedtransactions404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -424,7 +500,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Multipayerspricedtransactions500ErrorException::class
                 )
             )
             ->type(MultiPricedTransactionRes::class);
@@ -462,7 +538,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Cardusagesummary400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -470,16 +546,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Cardusagesummary401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Cardusagesummary403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Cardusagesummary404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -487,7 +566,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Cardusagesummary500ErrorException::class
                 )
             )
             ->type(CardUsageSummaryRes::class);
@@ -513,7 +592,7 @@ class TransactionController extends BaseController
      */
     public function volumeBasedBonus(string $requestId, ?VolumeBasedBonusReq $body = null): VolumeBasedBonusRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/volumebasedbonuss')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/transaction-data/v1/volumebasedbonus')
             ->auth('BearerToken')
             ->parameters(
                 HeaderParam::init('RequestId', $requestId),
@@ -528,7 +607,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedbonus400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -536,16 +615,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedbonus401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Volumebasedbonus403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedbonus404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -553,7 +635,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedbonus500ErrorException::class
                 )
             )
             ->type(VolumeBasedBonusRes::class);
@@ -595,7 +677,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedpricing400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -603,16 +685,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedpricing401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Volumebasedpricing403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedpricing404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -620,7 +705,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Volumebasedpricing500ErrorException::class
                 )
             )
             ->type(VolumeBasedPricingRes::class);
@@ -682,7 +767,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Fees400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -690,16 +775,16 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fees401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', TransactionDataV1Fees403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fees404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -707,7 +792,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fees500ErrorException::class
                 )
             )
             ->type(TransactionFeesRes::class);
@@ -768,7 +853,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Feessummary400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -776,16 +861,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Feessummary401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Feessummary403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Feessummary404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -793,7 +881,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Feessummary500ErrorException::class
                 )
             )
             ->type(FeeSummaryResponse::class);
@@ -835,7 +923,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Fuelconsumption400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -843,16 +931,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fuelconsumption401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Fuelconsumption403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fuelconsumption404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -860,7 +951,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Fuelconsumption500ErrorException::class
                 )
             )
             ->type(FuelConsumptionResponse::class);
@@ -898,7 +989,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Updateodometer400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -906,16 +997,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Updateodometer401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Updateodometer403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Updateodometer404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -923,7 +1017,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Updateodometer500ErrorException::class
                 )
             )
             ->type(UpdateOdometerResp::class);
@@ -966,7 +1060,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Exceptions400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -974,16 +1068,19 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Exceptions401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', TransactionDataV1Exceptions403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Exceptions404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -991,7 +1088,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Exceptions500ErrorException::class
                 )
             )
             ->type(TransactionExceptionsRes::class);
@@ -1051,7 +1148,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Recent400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1059,16 +1156,16 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Recent401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', TransactionDataV1Recent403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Recent404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1076,7 +1173,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Recent500ErrorException::class
                 )
             )
             ->type(RecentTransactionsResponse::class);
@@ -1177,7 +1274,7 @@ class TransactionController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    TransactionDataV1Priced400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1185,16 +1282,16 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    TransactionDataV1Priced401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', TransactionDataV1Priced403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    TransactionDataV1Priced404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -1202,7 +1299,7 @@ class TransactionController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    TransactionDataV1Priced500ErrorException::class
                 )
             )
             ->type(PricedTransactionResponseV2::class);

@@ -12,7 +12,7 @@ namespace ShellDataReportingAPIsLib\Exceptions;
 
 use ShellDataReportingAPIsLib\ApiHelper;
 
-class ErrorObjectException extends ApiException
+class TransactionDataV1Feessummary404ErrorException extends ApiException
 {
     /**
      * @var string|null
@@ -92,14 +92,15 @@ class ErrorObjectException extends ApiException
     }
 
     /**
-     * Converts the ErrorObjectException object to a human-readable string representation.
+     * Converts the TransactionDataV1Feessummary404ErrorException object to a human-readable string
+     * representation.
      *
-     * @return string The string representation of the ErrorObjectException object.
+     * @return string The string representation of the TransactionDataV1Feessummary404ErrorException object.
      */
     public function __toString(): string
     {
         return ApiHelper::stringify(
-            'ErrorObjectException',
+            'TransactionDataV1Feessummary404ErrorException',
             ['requestId' => $this->requestId, 'status' => $this->status, 'errors' => $this->errors],
             parent::__toString()
         );

@@ -90,21 +90,39 @@ $body = PriceTransactionReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $transactionController->pricedTransactions(
-    $requestId,
-    $body
-);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->pricedTransactions(
+        $requestId,
+        $body
+    );
+    echo 'PricedTransactionRes:';
+    var_dump($result);
+} catch (TransactionDataV1Pricedtransaction400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransaction400ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransaction401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransaction401ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransaction403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransaction403ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransaction404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransaction404ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransaction500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransaction500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Pricedtransaction400ErrorException`](../../doc/models/transaction-data-v1-pricedtransaction-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Pricedtransaction401ErrorException`](../../doc/models/transaction-data-v1-pricedtransaction-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Pricedtransaction403ErrorException`](../../doc/models/transaction-data-v1-pricedtransaction-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Pricedtransaction404ErrorException`](../../doc/models/transaction-data-v1-pricedtransaction-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Pricedtransaction500ErrorException`](../../doc/models/transaction-data-v1-pricedtransaction-500-error-exception.md) |
 
 
 # Priced Transactions Summary
@@ -167,18 +185,36 @@ function pricedTransactionsSummary(
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->pricedTransactionsSummary($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->pricedTransactionsSummary($requestId);
+    echo 'PricedTransSummaryResp:';
+    var_dump($result);
+} catch (TransactionDataV1Pricedtransactionssummary400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransactionssummary400ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransactionssummary401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransactionssummary401ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransactionssummary403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransactionssummary403ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransactionssummary404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransactionssummary404ErrorException:', $exp;
+} catch (TransactionDataV1Pricedtransactionssummary500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Pricedtransactionssummary500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Pricedtransactionssummary400ErrorException`](../../doc/models/transaction-data-v1-pricedtransactionssummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Pricedtransactionssummary401ErrorException`](../../doc/models/transaction-data-v1-pricedtransactionssummary-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Pricedtransactionssummary403ErrorException`](../../doc/models/transaction-data-v1-pricedtransactionssummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Pricedtransactionssummary404ErrorException`](../../doc/models/transaction-data-v1-pricedtransactionssummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Pricedtransactionssummary500ErrorException`](../../doc/models/transaction-data-v1-pricedtransactionssummary-500-error-exception.md) |
 
 
 # Multipriced Transactions
@@ -242,21 +278,39 @@ $body = MultiPricedTransactionReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $transactionController->multipricedTransactions(
-    $requestId,
-    $body
-);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->multipricedTransactions(
+        $requestId,
+        $body
+    );
+    echo 'MultiPricedTransactionRes:';
+    var_dump($result);
+} catch (TransactionDataV1Multipayerspricedtransactions400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Multipayerspricedtransactions400ErrorException:', $exp;
+} catch (TransactionDataV1Multipayerspricedtransactions401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Multipayerspricedtransactions401ErrorException:', $exp;
+} catch (TransactionDataV1Multipayerspricedtransactions403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Multipayerspricedtransactions403ErrorException:', $exp;
+} catch (TransactionDataV1Multipayerspricedtransactions404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Multipayerspricedtransactions404ErrorException:', $exp;
+} catch (TransactionDataV1Multipayerspricedtransactions500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Multipayerspricedtransactions500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Multipayerspricedtransactions400ErrorException`](../../doc/models/transaction-data-v1-multipayerspricedtransactions-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Multipayerspricedtransactions401ErrorException`](../../doc/models/transaction-data-v1-multipayerspricedtransactions-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Multipayerspricedtransactions403ErrorException`](../../doc/models/transaction-data-v1-multipayerspricedtransactions-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Multipayerspricedtransactions404ErrorException`](../../doc/models/transaction-data-v1-multipayerspricedtransactions-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Multipayerspricedtransactions500ErrorException`](../../doc/models/transaction-data-v1-multipayerspricedtransactions-500-error-exception.md) |
 
 
 # Card Usage Summary
@@ -284,7 +338,25 @@ function cardUsageSummary(string $requestId, ?CardUsageSummaryReq $body = null):
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->cardUsageSummary($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->cardUsageSummary($requestId);
+    echo 'CardUsageSummaryRes:';
+    var_dump($result);
+} catch (TransactionDataV1Cardusagesummary400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Cardusagesummary400ErrorException:', $exp;
+} catch (TransactionDataV1Cardusagesummary401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Cardusagesummary401ErrorException:', $exp;
+} catch (TransactionDataV1Cardusagesummary403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Cardusagesummary403ErrorException:', $exp;
+} catch (TransactionDataV1Cardusagesummary404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Cardusagesummary404ErrorException:', $exp;
+} catch (TransactionDataV1Cardusagesummary500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Cardusagesummary500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -328,11 +400,11 @@ $result = $transactionController->cardUsageSummary($requestId);
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Cardusagesummary400ErrorException`](../../doc/models/transaction-data-v1-cardusagesummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Cardusagesummary401ErrorException`](../../doc/models/transaction-data-v1-cardusagesummary-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Cardusagesummary403ErrorException`](../../doc/models/transaction-data-v1-cardusagesummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Cardusagesummary404ErrorException`](../../doc/models/transaction-data-v1-cardusagesummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Cardusagesummary500ErrorException`](../../doc/models/transaction-data-v1-cardusagesummary-500-error-exception.md) |
 
 
 # Volume Based Bonus
@@ -360,7 +432,25 @@ function volumeBasedBonus(string $requestId, ?VolumeBasedBonusReq $body = null):
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->volumeBasedBonus($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->volumeBasedBonus($requestId);
+    echo 'VolumeBasedBonusRes:';
+    var_dump($result);
+} catch (TransactionDataV1Volumebasedbonus400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedbonus400ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedbonus401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedbonus401ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedbonus403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedbonus403ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedbonus404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedbonus404ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedbonus500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedbonus500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -494,11 +584,11 @@ $result = $transactionController->volumeBasedBonus($requestId);
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Volumebasedbonus400ErrorException`](../../doc/models/transaction-data-v1-volumebasedbonus-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Volumebasedbonus401ErrorException`](../../doc/models/transaction-data-v1-volumebasedbonus-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Volumebasedbonus403ErrorException`](../../doc/models/transaction-data-v1-volumebasedbonus-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Volumebasedbonus404ErrorException`](../../doc/models/transaction-data-v1-volumebasedbonus-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Volumebasedbonus500ErrorException`](../../doc/models/transaction-data-v1-volumebasedbonus-500-error-exception.md) |
 
 
 # Volume Based Pricing
@@ -526,7 +616,25 @@ function volumeBasedPricing(string $requestId, ?VolumeBasedPricingReq $body = nu
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->volumeBasedPricing($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->volumeBasedPricing($requestId);
+    echo 'VolumeBasedPricingRes:';
+    var_dump($result);
+} catch (TransactionDataV1Volumebasedpricing400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedpricing400ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedpricing401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedpricing401ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedpricing403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedpricing403ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedpricing404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedpricing404ErrorException:', $exp;
+} catch (TransactionDataV1Volumebasedpricing500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Volumebasedpricing500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -626,11 +734,11 @@ $result = $transactionController->volumeBasedPricing($requestId);
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Volumebasedpricing400ErrorException`](../../doc/models/transaction-data-v1-volumebasedpricing-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Volumebasedpricing401ErrorException`](../../doc/models/transaction-data-v1-volumebasedpricing-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Volumebasedpricing403ErrorException`](../../doc/models/transaction-data-v1-volumebasedpricing-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Volumebasedpricing404ErrorException`](../../doc/models/transaction-data-v1-volumebasedpricing-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Volumebasedpricing500ErrorException`](../../doc/models/transaction-data-v1-volumebasedpricing-500-error-exception.md) |
 
 
 # Fees
@@ -675,21 +783,39 @@ $body = TransactionFeesReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $transactionController->fees(
-    $requestId,
-    $body
-);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->fees(
+        $requestId,
+        $body
+    );
+    echo 'TransactionFeesRes:';
+    var_dump($result);
+} catch (TransactionDataV1Fees400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fees400ErrorException:', $exp;
+} catch (TransactionDataV1Fees401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fees401ErrorException:', $exp;
+} catch (TransactionDataV1Fees403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fees403ErrorException:', $exp;
+} catch (TransactionDataV1Fees404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fees404ErrorException:', $exp;
+} catch (TransactionDataV1Fees500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fees500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Fees400ErrorException`](../../doc/models/transaction-data-v1-fees-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Fees401ErrorException`](../../doc/models/transaction-data-v1-fees-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Fees403ErrorException`](../../doc/models/transaction-data-v1-fees-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Fees404ErrorException`](../../doc/models/transaction-data-v1-fees-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Fees500ErrorException`](../../doc/models/transaction-data-v1-fees-500-error-exception.md) |
 
 
 # Fee Summary Response
@@ -729,18 +855,36 @@ function feeSummaryResponse(string $requestId, ?TransactionFeesSummaryReq $body 
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->feeSummaryResponse($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->feeSummaryResponse($requestId);
+    echo 'FeeSummaryResponse:';
+    var_dump($result);
+} catch (TransactionDataV1Feessummary400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Feessummary400ErrorException:', $exp;
+} catch (TransactionDataV1Feessummary401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Feessummary401ErrorException:', $exp;
+} catch (TransactionDataV1Feessummary403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Feessummary403ErrorException:', $exp;
+} catch (TransactionDataV1Feessummary404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Feessummary404ErrorException:', $exp;
+} catch (TransactionDataV1Feessummary500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Feessummary500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Feessummary400ErrorException`](../../doc/models/transaction-data-v1-feessummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Feessummary401ErrorException`](../../doc/models/transaction-data-v1-feessummary-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Feessummary403ErrorException`](../../doc/models/transaction-data-v1-feessummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Feessummary404ErrorException`](../../doc/models/transaction-data-v1-feessummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Feessummary500ErrorException`](../../doc/models/transaction-data-v1-feessummary-500-error-exception.md) |
 
 
 # Fuel Consumption
@@ -768,18 +912,36 @@ function fuelConsumption(string $requestId, ?FuelConsumptionReq $body = null): F
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->fuelConsumption($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->fuelConsumption($requestId);
+    echo 'FuelConsumptionResponse:';
+    var_dump($result);
+} catch (TransactionDataV1Fuelconsumption400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fuelconsumption400ErrorException:', $exp;
+} catch (TransactionDataV1Fuelconsumption401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fuelconsumption401ErrorException:', $exp;
+} catch (TransactionDataV1Fuelconsumption403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fuelconsumption403ErrorException:', $exp;
+} catch (TransactionDataV1Fuelconsumption404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fuelconsumption404ErrorException:', $exp;
+} catch (TransactionDataV1Fuelconsumption500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Fuelconsumption500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Fuelconsumption400ErrorException`](../../doc/models/transaction-data-v1-fuelconsumption-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Fuelconsumption401ErrorException`](../../doc/models/transaction-data-v1-fuelconsumption-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Fuelconsumption403ErrorException`](../../doc/models/transaction-data-v1-fuelconsumption-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Fuelconsumption404ErrorException`](../../doc/models/transaction-data-v1-fuelconsumption-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Fuelconsumption500ErrorException`](../../doc/models/transaction-data-v1-fuelconsumption-500-error-exception.md) |
 
 
 # Update Odometer
@@ -807,18 +969,36 @@ function updateOdometer(string $requestId, ?UpdateOdometerRequest $body = null):
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->updateOdometer($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->updateOdometer($requestId);
+    echo 'UpdateOdometerResp:';
+    var_dump($result);
+} catch (TransactionDataV1Updateodometer400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Updateodometer400ErrorException:', $exp;
+} catch (TransactionDataV1Updateodometer401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Updateodometer401ErrorException:', $exp;
+} catch (TransactionDataV1Updateodometer403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Updateodometer403ErrorException:', $exp;
+} catch (TransactionDataV1Updateodometer404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Updateodometer404ErrorException:', $exp;
+} catch (TransactionDataV1Updateodometer500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Updateodometer500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Updateodometer400ErrorException`](../../doc/models/transaction-data-v1-updateodometer-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Updateodometer401ErrorException`](../../doc/models/transaction-data-v1-updateodometer-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Updateodometer403ErrorException`](../../doc/models/transaction-data-v1-updateodometer-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Updateodometer404ErrorException`](../../doc/models/transaction-data-v1-updateodometer-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Updateodometer500ErrorException`](../../doc/models/transaction-data-v1-updateodometer-500-error-exception.md) |
 
 
 # Transaction Exceptions
@@ -849,18 +1029,36 @@ function transactionExceptions(
 ```php
 $requestId = 'RequestId8';
 
-$result = $transactionController->transactionExceptions($requestId);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->transactionExceptions($requestId);
+    echo 'TransactionExceptionsRes:';
+    var_dump($result);
+} catch (TransactionDataV1Exceptions400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Exceptions400ErrorException:', $exp;
+} catch (TransactionDataV1Exceptions401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Exceptions401ErrorException:', $exp;
+} catch (TransactionDataV1Exceptions403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Exceptions403ErrorException:', $exp;
+} catch (TransactionDataV1Exceptions404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Exceptions404ErrorException:', $exp;
+} catch (TransactionDataV1Exceptions500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Exceptions500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Exceptions400ErrorException`](../../doc/models/transaction-data-v1-exceptions-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Exceptions401ErrorException`](../../doc/models/transaction-data-v1-exceptions-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Exceptions403ErrorException`](../../doc/models/transaction-data-v1-exceptions-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Exceptions404ErrorException`](../../doc/models/transaction-data-v1-exceptions-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Exceptions500ErrorException`](../../doc/models/transaction-data-v1-exceptions-500-error-exception.md) |
 
 
 # Recent Transactions New
@@ -917,7 +1115,7 @@ $body = RecentTransactionRequestBuilder::init(
         ->accountNumber('GB00001233')
         ->productCode('22')
         ->purchasedInCountry('GB')
-        ->cardPAN('700205******890645')
+        ->cardPAN('7002051006629890645')
         ->fromDateTime('2020-11-09 13:56:03.000')
         ->toDateTime('2020-12-09 13:56:03.000')
         ->transactionStatus('APPROVED')
@@ -930,10 +1128,28 @@ $body = RecentTransactionRequestBuilder::init(
         ->build()
 )->build();
 
-$result = $transactionController->recentTransactionsNew(
-    $requestId,
-    $body
-);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->recentTransactionsNew(
+        $requestId,
+        $body
+    );
+    echo 'RecentTransactionsResponse:';
+    var_dump($result);
+} catch (TransactionDataV1Recent400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Recent400ErrorException:', $exp;
+} catch (TransactionDataV1Recent401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Recent401ErrorException:', $exp;
+} catch (TransactionDataV1Recent403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Recent403ErrorException:', $exp;
+} catch (TransactionDataV1Recent404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Recent404ErrorException:', $exp;
+} catch (TransactionDataV1Recent500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Recent500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -1028,11 +1244,11 @@ $result = $transactionController->recentTransactionsNew(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Recent400ErrorException`](../../doc/models/transaction-data-v1-recent-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Recent401ErrorException`](../../doc/models/transaction-data-v1-recent-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Recent403ErrorException`](../../doc/models/transaction-data-v1-recent-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Recent404ErrorException`](../../doc/models/transaction-data-v1-recent-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Recent500ErrorException`](../../doc/models/transaction-data-v1-recent-500-error-exception.md) |
 
 
 # Priced Transactions V2
@@ -1144,10 +1360,28 @@ $body = PricedTransactionRequestV2Builder::init()
     ->pageSize(1)
     ->build();
 
-$result = $transactionController->pricedTransactionsV2(
-    $requestId,
-    $body
-);
+$transactionController = $client->getTransactionController();
+
+try {
+    $result = $transactionController->pricedTransactionsV2(
+        $requestId,
+        $body
+    );
+    echo 'PricedTransactionResponseV2:';
+    var_dump($result);
+} catch (TransactionDataV1Priced400ErrorException $exp) {
+    echo 'Caught TransactionDataV1Priced400ErrorException:', $exp;
+} catch (TransactionDataV1Priced401ErrorException $exp) {
+    echo 'Caught TransactionDataV1Priced401ErrorException:', $exp;
+} catch (TransactionDataV1Priced403ErrorException $exp) {
+    echo 'Caught TransactionDataV1Priced403ErrorException:', $exp;
+} catch (TransactionDataV1Priced404ErrorException $exp) {
+    echo 'Caught TransactionDataV1Priced404ErrorException:', $exp;
+} catch (TransactionDataV1Priced500ErrorException $exp) {
+    echo 'Caught TransactionDataV1Priced500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -1340,9 +1574,9 @@ $result = $transactionController->pricedTransactionsV2(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Priced400ErrorException`](../../doc/models/transaction-data-v1-priced-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Priced401ErrorException`](../../doc/models/transaction-data-v1-priced-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Priced403ErrorException`](../../doc/models/transaction-data-v1-priced-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Priced404ErrorException`](../../doc/models/transaction-data-v1-priced-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Priced500ErrorException`](../../doc/models/transaction-data-v1-priced-500-error-exception.md) |
 

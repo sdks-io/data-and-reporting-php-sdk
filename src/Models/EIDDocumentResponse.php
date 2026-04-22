@@ -28,7 +28,7 @@ class EIDDocumentResponse implements \JsonSerializable
     /**
      * @var EIDDocument[]|null
      */
-    private $data;
+    private $document;
 
     /**
      * @var int|null
@@ -103,25 +103,25 @@ class EIDDocumentResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Data.
+     * Returns Document.
      *
      * @return EIDDocument[]|null
      */
-    public function getData(): ?array
+    public function getDocument(): ?array
     {
-        return $this->data;
+        return $this->document;
     }
 
     /**
-     * Sets Data.
+     * Sets Document.
      *
-     * @maps Data
+     * @maps Document
      *
-     * @param EIDDocument[]|null $data
+     * @param EIDDocument[]|null $document
      */
-    public function setData(?array $data): void
+    public function setDocument(?array $document): void
     {
-        $this->data = $data;
+        $this->document = $document;
     }
 
     /**
@@ -256,7 +256,7 @@ class EIDDocumentResponse implements \JsonSerializable
             [
                 'requestId' => $this->requestId,
                 'status' => $this->status,
-                'data' => $this->data,
+                'document' => $this->document,
                 'pageSize' => $this->pageSize,
                 'page' => $this->page,
                 'totalPages' => $this->totalPages,
@@ -285,8 +285,8 @@ class EIDDocumentResponse implements \JsonSerializable
         if (isset($this->status)) {
             $json['Status']       = $this->status;
         }
-        if (isset($this->data)) {
-            $json['Data']         = $this->data;
+        if (isset($this->document)) {
+            $json['Document']     = $this->document;
         }
         if (isset($this->pageSize)) {
             $json['PageSize']     = $this->pageSize;

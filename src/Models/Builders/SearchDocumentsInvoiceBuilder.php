@@ -230,26 +230,6 @@ class SearchDocumentsInvoiceBuilder
     }
 
     /**
-     * Sets Invoice Status field.
-     *
-     * @param string|null $value
-     */
-    public function invoiceStatus(?string $value): self
-    {
-        $this->instance->setInvoiceStatus($value);
-        return $this;
-    }
-
-    /**
-     * Unsets Invoice Status field.
-     */
-    public function unsetInvoiceStatus(): self
-    {
-        $this->instance->unsetInvoiceStatus();
-        return $this;
-    }
-
-    /**
      * Sets Invoice Date field.
      *
      * @param string|null $value
@@ -306,6 +286,17 @@ class SearchDocumentsInvoiceBuilder
     public function unsetVATCountryISOCode(): self
     {
         $this->instance->unsetVATCountryISOCode();
+        return $this;
+    }
+
+    /**
+     * Sets Ksef Document Reference field.
+     *
+     * @param string|null $value
+     */
+    public function ksefDocumentReference(?string $value): self
+    {
+        $this->instance->setKsefDocumentReference($value);
         return $this;
     }
 

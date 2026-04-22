@@ -14,7 +14,6 @@
 | `accountNumberList` | `?(string[])` | Optional | Account Number of the customers.<br>optional.<br>This input is a search criterion, if given.<br>Example: [“GB00000123”, “GB00000225”] | getAccountNumberList(): ?array | setAccountNumberList(?array accountNumberList): void |
 | `invoiceNumber` | `?string` | Optional | Invoice number.<br>Optional if InvoiceNumberList is passed else Mandatory<br>This input is a search criterion, if given.<br>Example: 0123456789 | getInvoiceNumber(): ?string | setInvoiceNumber(?string invoiceNumber): void |
 | `invoiceNumberList` | `?(string[])` | Optional | List of Invoice number.<br>Optional if InvoiceNumber is passed else Mandatory<br>Example: [“0123456789”, “0123459799”] | getInvoiceNumberList(): ?array | setInvoiceNumberList(?array invoiceNumberList): void |
-| `invoiceStatus` | `?string` | Optional | The status of the invoices<br>Optional<br>One of the following values:<br>•    NEW<br>•    VIEWED<br>•    DOWNLOADED<br>•    RESTORED | getInvoiceStatus(): ?string | setInvoiceStatus(?string invoiceStatus): void |
 | `issuingDateFrom` | `?string` | Optional | Invoice Issuing Date Range/From<br>Optional<br>Format: yyyy/MM/dd | getIssuingDateFrom(): ?string | setIssuingDateFrom(?string issuingDateFrom): void |
 | `issuingDateTo` | `?string` | Optional | Invoice Issuing Date Range/To<br>Optional<br>Format: yyyy/MM/dd | getIssuingDateTo(): ?string | setIssuingDateTo(?string issuingDateTo): void |
 | `dueDateFrom` | `?string` | Optional | Invoice Due Date Range/From<br>Optional<br>Format: yyyy/MM/dd | getDueDateFrom(): ?string | setDueDateFrom(?string dueDateFrom): void |
@@ -39,7 +38,7 @@
   "InvoiceNumberList": [
     "InvoiceNumberList5"
   ],
-  "InvoiceStatus": "InvoiceStatus4",
+  "IssuingDateFrom": "IssuingDateFrom2",
   "ColCoCode": 50
 }
 ```

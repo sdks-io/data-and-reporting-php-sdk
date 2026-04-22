@@ -58,6 +58,21 @@ class TransactionFeesRequest implements \JsonSerializable
     /**
      * @var array
      */
+    private $invoiceNumber = [];
+
+    /**
+     * @var array
+     */
+    private $postedDateFrom = [];
+
+    /**
+     * @var array
+     */
+    private $postedDateTo = [];
+
+    /**
+     * @var array
+     */
     private $feeTypeGroup = [];
 
     /**
@@ -454,6 +469,132 @@ class TransactionFeesRequest implements \JsonSerializable
     public function unsetInvoiceStatus(): void
     {
         $this->invoiceStatus = [];
+    }
+
+    /**
+     * Returns Invoice Number.
+     * Invoice Number
+     *
+     * Optional
+     */
+    public function getInvoiceNumber(): ?string
+    {
+        if (count($this->invoiceNumber) == 0) {
+            return null;
+        }
+        return $this->invoiceNumber['value'];
+    }
+
+    /**
+     * Sets Invoice Number.
+     * Invoice Number
+     *
+     * Optional
+     *
+     * @maps InvoiceNumber
+     */
+    public function setInvoiceNumber(?string $invoiceNumber): void
+    {
+        $this->invoiceNumber['value'] = $invoiceNumber;
+    }
+
+    /**
+     * Unsets Invoice Number.
+     * Invoice Number
+     *
+     * Optional
+     */
+    public function unsetInvoiceNumber(): void
+    {
+        $this->invoiceNumber = [];
+    }
+
+    /**
+     * Returns Posted Date From.
+     * Fee Item Posted Date From
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     */
+    public function getPostedDateFrom(): ?string
+    {
+        if (count($this->postedDateFrom) == 0) {
+            return null;
+        }
+        return $this->postedDateFrom['value'];
+    }
+
+    /**
+     * Sets Posted Date From.
+     * Fee Item Posted Date From
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     *
+     * @maps PostedDateFrom
+     */
+    public function setPostedDateFrom(?string $postedDateFrom): void
+    {
+        $this->postedDateFrom['value'] = $postedDateFrom;
+    }
+
+    /**
+     * Unsets Posted Date From.
+     * Fee Item Posted Date From
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     */
+    public function unsetPostedDateFrom(): void
+    {
+        $this->postedDateFrom = [];
+    }
+
+    /**
+     * Returns Posted Date To.
+     * Fee Item Posted Date To
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     */
+    public function getPostedDateTo(): ?string
+    {
+        if (count($this->postedDateTo) == 0) {
+            return null;
+        }
+        return $this->postedDateTo['value'];
+    }
+
+    /**
+     * Sets Posted Date To.
+     * Fee Item Posted Date To
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     *
+     * @maps PostedDateTo
+     */
+    public function setPostedDateTo(?string $postedDateTo): void
+    {
+        $this->postedDateTo['value'] = $postedDateTo;
+    }
+
+    /**
+     * Unsets Posted Date To.
+     * Fee Item Posted Date To
+     *
+     * Optional
+     *
+     * Format: yyyyMMdd
+     */
+    public function unsetPostedDateTo(): void
+    {
+        $this->postedDateTo = [];
     }
 
     /**
@@ -1013,6 +1154,9 @@ class TransactionFeesRequest implements \JsonSerializable
                 'cardId' => $this->getCardId(),
                 'cardPAN' => $this->getCardPAN(),
                 'invoiceStatus' => $this->getInvoiceStatus(),
+                'invoiceNumber' => $this->getInvoiceNumber(),
+                'postedDateFrom' => $this->getPostedDateFrom(),
+                'postedDateTo' => $this->getPostedDateTo(),
                 'feeTypeGroup' => $this->getFeeTypeGroup(),
                 'feeTypeId' => $this->getFeeTypeId(),
                 'fromDate' => $this->getFromDate(),
@@ -1062,6 +1206,15 @@ class TransactionFeesRequest implements \JsonSerializable
         }
         if (!empty($this->invoiceStatus)) {
             $json['InvoiceStatus']         = $this->invoiceStatus['value'];
+        }
+        if (!empty($this->invoiceNumber)) {
+            $json['InvoiceNumber']         = $this->invoiceNumber['value'];
+        }
+        if (!empty($this->postedDateFrom)) {
+            $json['PostedDateFrom']        = $this->postedDateFrom['value'];
+        }
+        if (!empty($this->postedDateTo)) {
+            $json['PostedDateTo']          = $this->postedDateTo['value'];
         }
         if (!empty($this->feeTypeGroup)) {
             $json['FeeTypeGroup']          = $this->feeTypeGroup['value'];

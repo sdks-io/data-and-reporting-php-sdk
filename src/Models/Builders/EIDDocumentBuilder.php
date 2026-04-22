@@ -199,26 +199,6 @@ class EIDDocumentBuilder
     }
 
     /**
-     * Sets Document Status field.
-     *
-     * @param string|null $value
-     */
-    public function documentStatus(?string $value): self
-    {
-        $this->instance->setDocumentStatus($value);
-        return $this;
-    }
-
-    /**
-     * Unsets Document Status field.
-     */
-    public function unsetDocumentStatus(): self
-    {
-        $this->instance->unsetDocumentStatus();
-        return $this;
-    }
-
-    /**
      * Sets Document Name field.
      *
      * @param string|null $value

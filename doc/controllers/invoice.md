@@ -86,10 +86,28 @@ $body = InvoiceSearchRequestBuilder::init()
     ->page(1)
     ->build();
 
-$result = $invoiceController->invoiceSearch(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->invoiceSearch(
+        $requestId,
+        $body
+    );
+    echo 'InvoiceSearchResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Search400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Search400ErrorException:', $exp;
+} catch (InvoiceManagementV1Search401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Search401ErrorException:', $exp;
+} catch (InvoiceManagementV1Search403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Search403ErrorException:', $exp;
+} catch (InvoiceManagementV1Search404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Search404ErrorException:', $exp;
+} catch (InvoiceManagementV1Search500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Search500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -170,11 +188,11 @@ $result = $invoiceController->invoiceSearch(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Search400ErrorException`](../../doc/models/invoice-management-v1-search-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Search401ErrorException`](../../doc/models/invoice-management-v1-search-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Search403ErrorException`](../../doc/models/invoice-management-v1-search-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Search404ErrorException`](../../doc/models/invoice-management-v1-search-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Search500ErrorException`](../../doc/models/invoice-management-v1-search-500-error-exception.md) |
 
 
 # Invoice Summary
@@ -236,10 +254,28 @@ $body = InvoiceSummaryRequestBuilder::init()
     )
     ->build();
 
-$result = $invoiceController->invoiceSummary(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->invoiceSummary(
+        $requestId,
+        $body
+    );
+    echo 'InvoiceSummaryResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Summary400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Summary400ErrorException:', $exp;
+} catch (InvoiceManagementV1Summary401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Summary401ErrorException:', $exp;
+} catch (InvoiceManagementV1Summary403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Summary403ErrorException:', $exp;
+} catch (InvoiceManagementV1Summary404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Summary404ErrorException:', $exp;
+} catch (InvoiceManagementV1Summary500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Summary500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -265,11 +301,11 @@ $result = $invoiceController->invoiceSummary(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Summary400ErrorException`](../../doc/models/invoice-management-v1-summary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Summary401ErrorException`](../../doc/models/invoice-management-v1-summary-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Summary403ErrorException`](../../doc/models/invoice-management-v1-summary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Summary404ErrorException`](../../doc/models/invoice-management-v1-summary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Summary500ErrorException`](../../doc/models/invoice-management-v1-summary-500-error-exception.md) |
 
 
 # Statement of Account
@@ -324,10 +360,28 @@ $body = StatementOfAccountRequestBuilder::init()
     )
     ->build();
 
-$result = $invoiceController->statementOfAccount(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->statementOfAccount(
+        $requestId,
+        $body
+    );
+    echo 'StatementOfAccountResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Statementofaccount400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Statementofaccount400ErrorException:', $exp;
+} catch (InvoiceManagementV1Statementofaccount401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Statementofaccount401ErrorException:', $exp;
+} catch (InvoiceManagementV1Statementofaccount403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Statementofaccount403ErrorException:', $exp;
+} catch (InvoiceManagementV1Statementofaccount404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Statementofaccount404ErrorException:', $exp;
+} catch (InvoiceManagementV1Statementofaccount500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Statementofaccount500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -417,11 +471,11 @@ $result = $invoiceController->statementOfAccount(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Statementofaccount400ErrorException`](../../doc/models/invoice-management-v1-statementofaccount-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Statementofaccount401ErrorException`](../../doc/models/invoice-management-v1-statementofaccount-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Statementofaccount403ErrorException`](../../doc/models/invoice-management-v1-statementofaccount-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Statementofaccount404ErrorException`](../../doc/models/invoice-management-v1-statementofaccount-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Statementofaccount500ErrorException`](../../doc/models/invoice-management-v1-statementofaccount-500-error-exception.md) |
 
 
 # Dates
@@ -467,10 +521,28 @@ $body = InvoiceDatesRequestBuilder::init()
     )
     ->build();
 
-$result = $invoiceController->dates(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->dates(
+        $requestId,
+        $body
+    );
+    echo 'InvoiceDatesResponseData:';
+    var_dump($result);
+} catch (InvoiceManagementV1Dates400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Dates400ErrorException:', $exp;
+} catch (InvoiceManagementV1Dates401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Dates401ErrorException:', $exp;
+} catch (InvoiceManagementV1Dates403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Dates403ErrorException:', $exp;
+} catch (InvoiceManagementV1Dates404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Dates404ErrorException:', $exp;
+} catch (InvoiceManagementV1Dates500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Dates500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -496,11 +568,11 @@ $result = $invoiceController->dates(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Dates400ErrorException`](../../doc/models/invoice-management-v1-dates-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Dates401ErrorException`](../../doc/models/invoice-management-v1-dates-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Dates403ErrorException`](../../doc/models/invoice-management-v1-dates-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Dates404ErrorException`](../../doc/models/invoice-management-v1-dates-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Dates500ErrorException`](../../doc/models/invoice-management-v1-dates-500-error-exception.md) |
 
 
 # Search Statement of Account
@@ -556,10 +628,28 @@ $body = SearchStatementOfAccountRequestBuilder::init()
     ->pageSize(10)
     ->build();
 
-$result = $invoiceController->searchStatementOfAccount(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->searchStatementOfAccount(
+        $requestId,
+        $body
+    );
+    echo 'SearchStatementOfAccountResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Searchstatementofaccount400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchstatementofaccount400ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchstatementofaccount401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchstatementofaccount401ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchstatementofaccount403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchstatementofaccount403ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchstatementofaccount404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchstatementofaccount404ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchstatementofaccount500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchstatementofaccount500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -597,11 +687,11 @@ $result = $invoiceController->searchStatementOfAccount(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Searchstatementofaccount400ErrorException`](../../doc/models/invoice-management-v1-searchstatementofaccount-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Searchstatementofaccount401ErrorException`](../../doc/models/invoice-management-v1-searchstatementofaccount-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Searchstatementofaccount403ErrorException`](../../doc/models/invoice-management-v1-searchstatementofaccount-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Searchstatementofaccount404ErrorException`](../../doc/models/invoice-management-v1-searchstatementofaccount-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Searchstatementofaccount500ErrorException`](../../doc/models/invoice-management-v1-searchstatementofaccount-500-error-exception.md) |
 
 
 # Search Documents
@@ -646,7 +736,6 @@ $body = SearchDocumentsRequestBuilder::init()
                     '9421000010'
                 ]
             )
-            ->invoiceStatus('NEW')
             ->issuingDateFrom('2023/05/01')
             ->issuingDateTo('2023/06/30')
             ->dueDateFrom('2023/05/04')
@@ -668,10 +757,28 @@ $body = SearchDocumentsRequestBuilder::init()
     ->pageSize('50')
     ->build();
 
-$result = $invoiceController->searchDocuments(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->searchDocuments(
+        $requestId,
+        $body
+    );
+    echo 'SearchDocumentsResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Searchdocuments400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchdocuments400ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchdocuments401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchdocuments401ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchdocuments403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchdocuments403ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchdocuments404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchdocuments404ErrorException:', $exp;
+} catch (InvoiceManagementV1Searchdocuments500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Searchdocuments500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -680,7 +787,7 @@ $result = $invoiceController->searchDocuments(
 {
   "RequestId": "a8b81c1d-f44a-4365-8113-8958061c0b7e",
   "Status": "SUCCESS",
-  "Data": [
+  "Invoices": [
     {
       "DocumentReference": 311161,
       "InvoiceNumber": "6400013693",
@@ -692,7 +799,6 @@ $result = $invoiceController->searchDocuments(
       "NetAmount": 0,
       "TaxAmount": 0,
       "CurrencyCode": "EUR",
-      "InvoiceStatus": "NEW",
       "InvoiceDate": "2023/01/31",
       "DueDate": "2023/02/07",
       "VATCountryISOCode": "DE"
@@ -709,11 +815,11 @@ $result = $invoiceController->searchDocuments(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Searchdocuments400ErrorException`](../../doc/models/invoice-management-v1-searchdocuments-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Searchdocuments401ErrorException`](../../doc/models/invoice-management-v1-searchdocuments-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Searchdocuments403ErrorException`](../../doc/models/invoice-management-v1-searchdocuments-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Searchdocuments404ErrorException`](../../doc/models/invoice-management-v1-searchdocuments-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Searchdocuments500ErrorException`](../../doc/models/invoice-management-v1-searchdocuments-500-error-exception.md) |
 
 
 # Eid Search
@@ -753,7 +859,6 @@ $body = EIDSearchRequestBuilder::init()
             ->fromDate('2017/08/30')
             ->toDate('2017/10/31')
             ->invoiceType('NAT')
-            ->invoiceStatus('NEW')
             ->sortBy(
                 [
                     'DocumentDate ASC'
@@ -765,10 +870,28 @@ $body = EIDSearchRequestBuilder::init()
     ->pageSize(10)
     ->build();
 
-$result = $invoiceController->eidSearch(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->eidSearch(
+        $requestId,
+        $body
+    );
+    echo 'EIDDocumentResponse:';
+    var_dump($result);
+} catch (InvoiceManagementV1Eidsearch400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eidsearch400ErrorException:', $exp;
+} catch (InvoiceManagementV1Eidsearch401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eidsearch401ErrorException:', $exp;
+} catch (InvoiceManagementV1Eidsearch403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eidsearch403ErrorException:', $exp;
+} catch (InvoiceManagementV1Eidsearch404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eidsearch404ErrorException:', $exp;
+} catch (InvoiceManagementV1Eidsearch500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eidsearch500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Example Response *(as JSON)*
@@ -777,7 +900,7 @@ $result = $invoiceController->eidSearch(
 {
   "RequestId": "a0a1596f-b242-4672-b513-66c5e5554195",
   "Status": "SUCCESS",
-  "Data": [
+  "Document": [
     {
       "DocumentId": 15029,
       "AccountGroupId": "122",
@@ -787,7 +910,6 @@ $result = $invoiceController->eidSearch(
       "DocumentDate": "2022/12/28",
       "NumberOfInvoices": 1,
       "FileSize": 1624,
-      "DocumentStatus": "DOWNLOADED",
       "DocumentName": "032_122_INT_28122022.TXT"
     }
   ],
@@ -804,11 +926,11 @@ $result = $invoiceController->eidSearch(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Eidsearch400ErrorException`](../../doc/models/invoice-management-v1-eidsearch-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Eidsearch401ErrorException`](../../doc/models/invoice-management-v1-eidsearch-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Eidsearch403ErrorException`](../../doc/models/invoice-management-v1-eidsearch-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Eidsearch404ErrorException`](../../doc/models/invoice-management-v1-eidsearch-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Eidsearch500ErrorException`](../../doc/models/invoice-management-v1-eidsearch-500-error-exception.md) |
 
 
 # Download
@@ -855,21 +977,39 @@ $body = InvoiceDownloadRequestBuilder::init()
     )
     ->build();
 
-$result = $invoiceController->download(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->download(
+        $requestId,
+        $body
+    );
+    echo 'string:';
+    var_dump($result);
+} catch (InvoiceManagementV1Download400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Download400ErrorException:', $exp;
+} catch (InvoiceManagementV1Download401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Download401ErrorException:', $exp;
+} catch (InvoiceManagementV1Download403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Download403ErrorException:', $exp;
+} catch (InvoiceManagementV1Download404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Download404ErrorException:', $exp;
+} catch (InvoiceManagementV1Download500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Download500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Download400ErrorException`](../../doc/models/invoice-management-v1-download-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Download401ErrorException`](../../doc/models/invoice-management-v1-download-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Download403ErrorException`](../../doc/models/invoice-management-v1-download-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Download404ErrorException`](../../doc/models/invoice-management-v1-download-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Download500ErrorException`](../../doc/models/invoice-management-v1-download-500-error-exception.md) |
 
 
 # Eid Download
@@ -914,19 +1054,37 @@ $body = EIDDownloadRequestBuilder::init()
     )
     ->build();
 
-$result = $invoiceController->eidDownload(
-    $requestId,
-    $body
-);
+$invoiceController = $client->getInvoiceController();
+
+try {
+    $result = $invoiceController->eidDownload(
+        $requestId,
+        $body
+    );
+    echo 'string:';
+    var_dump($result);
+} catch (InvoiceManagementV1Eiddownload400ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eiddownload400ErrorException:', $exp;
+} catch (InvoiceManagementV1Eiddownload401ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eiddownload401ErrorException:', $exp;
+} catch (InvoiceManagementV1Eiddownload403ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eiddownload403ErrorException:', $exp;
+} catch (InvoiceManagementV1Eiddownload404ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eiddownload404ErrorException:', $exp;
+} catch (InvoiceManagementV1Eiddownload500ErrorException $exp) {
+    echo 'Caught InvoiceManagementV1Eiddownload500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`InvoiceManagementV1Eiddownload400ErrorException`](../../doc/models/invoice-management-v1-eiddownload-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`InvoiceManagementV1Eiddownload401ErrorException`](../../doc/models/invoice-management-v1-eiddownload-401-error-exception.md) |
+| 403 | Forbidden | [`InvoiceManagementV1Eiddownload403ErrorException`](../../doc/models/invoice-management-v1-eiddownload-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`InvoiceManagementV1Eiddownload404ErrorException`](../../doc/models/invoice-management-v1-eiddownload-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`InvoiceManagementV1Eiddownload500ErrorException`](../../doc/models/invoice-management-v1-eiddownload-500-error-exception.md) |
 

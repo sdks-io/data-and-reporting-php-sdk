@@ -62,13 +62,13 @@ class SearchDocumentsResponseBuilder
     }
 
     /**
-     * Sets Data field.
+     * Sets Invoices field.
      *
      * @param SearchDocumentsInvoice[]|null $value
      */
-    public function data(?array $value): self
+    public function invoices(?array $value): self
     {
-        $this->instance->setData($value);
+        $this->instance->setInvoices($value);
         return $this;
     }
 

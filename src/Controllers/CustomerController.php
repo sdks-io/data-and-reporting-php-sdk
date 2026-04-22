@@ -15,7 +15,46 @@ use Core\Request\Parameters\HeaderParam;
 use Core\Response\Types\ErrorType;
 use CoreInterfaces\Core\Request\RequestMethod;
 use ShellDataReportingAPIsLib\Exceptions\ApiException;
-use ShellDataReportingAPIsLib\Exceptions\ErrorObjectException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Accounts400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Accounts401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Accounts403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Accounts404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Accounts500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Auditreport400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Auditreport401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Auditreport403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Auditreport404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Auditreport500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Cardgroups400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Cardgroups401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Cardgroups403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Cardgroups404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Cardgroups500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Customer400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Customer401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Customer403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Customer404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Customer500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Payers400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Payers401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Payers403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Payers404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Payers500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Pricelist400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Pricelist401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Pricelist403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Pricelist404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV1Pricelist500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV2Cardtype400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV2Cardtype401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV2Cardtype403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV2Cardtype404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\CustomerManagementV2Cardtype500ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\UserManagementV1Loggedinuser400ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\UserManagementV1Loggedinuser401ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\UserManagementV1Loggedinuser403ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\UserManagementV1Loggedinuser404ErrorException;
+use ShellDataReportingAPIsLib\Exceptions\UserManagementV1Loggedinuser500ErrorException;
 use ShellDataReportingAPIsLib\Models\AccountReq;
 use ShellDataReportingAPIsLib\Models\AccountRes;
 use ShellDataReportingAPIsLib\Models\AuditReq;
@@ -64,35 +103,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    UserManagementV1Loggedinuser400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    UserManagementV1Loggedinuser401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', UserManagementV1Loggedinuser403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    UserManagementV1Loggedinuser404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    UserManagementV1Loggedinuser500ErrorException::class
                 )
             )
             ->type(LoggedInUserRes::class);
@@ -136,35 +178,35 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV1Payers400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV1Payers401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn('403', ErrorType::init('Forbidden', CustomerManagementV1Payers403ErrorException::class))
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV1Payers404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV1Payers500ErrorException::class
                 )
             )
             ->type(PayerRes::class);
@@ -199,35 +241,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV1Customer400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV1Customer401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV1Customer403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV1Customer404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV1Customer500ErrorException::class
                 )
             )
             ->type(CustomerRes::class);
@@ -261,35 +306,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV1Accounts400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV1Accounts401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV1Accounts403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV1Accounts404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV1Accounts500ErrorException::class
                 )
             )
             ->type(AccountRes::class);
@@ -314,7 +362,7 @@ class CustomerController extends BaseController
      */
     public function customercardtypev(string $requestId, CardTypeReq $body): CardTypeRes
     {
-        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v1/cardtype')
+        $_reqBuilder = $this->requestBuilder(RequestMethod::POST, '/customer-management/v2/cardtype')
             ->auth('BearerToken')
             ->parameters(
                 HeaderParam::init('RequestId', $requestId),
@@ -326,35 +374,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV2Cardtype400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV2Cardtype401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV2Cardtype403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV2Cardtype404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV2Cardtype500ErrorException::class
                 )
             )
             ->type(CardTypeRes::class);
@@ -397,35 +448,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV1Cardgroups400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV1Cardgroups401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV1Cardgroups403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV1Cardgroups404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV1Cardgroups500ErrorException::class
                 )
             )
             ->type(CardGroupRes::class);
@@ -495,35 +549,38 @@ class CustomerController extends BaseController
             ->throwErrorOn(
                 '400',
                 ErrorType::init(
-                    "The server cannot or will not process the request due to something that is" .
-                    " perceived to be a client error (e.g., malformed request syntax, invalid re" .
-                    "quest message framing, or deceptive request routing).\n",
-                    ErrorObjectException::class
+                    'The server cannot or will not process the request due to something that is' .
+                    ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
+                    'quest message framing, or deceptive request routing).',
+                    CustomerManagementV1Auditreport400ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '401',
                 ErrorType::init(
-                    "The request has not been applied because it lacks valid  authentication cr" .
-                    "edentials for the target resource.\n",
-                    ErrorObjectException::class
+                    'The request has not been applied because it lacks valid  authentication cr' .
+                    'edentials for the target resource.',
+                    CustomerManagementV1Auditreport401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV1Auditreport403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
-                    "The origin server did not find a current representation  for the target re" .
-                    "source or is not willing to disclose  that one exists.\n",
-                    ErrorObjectException::class
+                    'The origin server did not find a current representation  for the target re' .
+                    'source or is not willing to disclose  that one exists.',
+                    CustomerManagementV1Auditreport404ErrorException::class
                 )
             )
             ->throwErrorOn(
                 '500',
                 ErrorType::init(
-                    "The server encountered an unexpected condition that  prevented it from ful" .
-                    "filling the request.\n",
-                    ErrorObjectException::class
+                    'The server encountered an unexpected condition that  prevented it from ful' .
+                    'filling the request.',
+                    CustomerManagementV1Auditreport500ErrorException::class
                 )
             )
             ->type(AuditResponse::class);
@@ -580,7 +637,7 @@ class CustomerController extends BaseController
                     'The server cannot or will not process the request due to something that is' .
                     ' perceived to be a client error (e.g., malformed request syntax, invalid re' .
                     'quest message framing, or deceptive request routing).',
-                    ErrorObjectException::class
+                    CustomerManagementV1Pricelist400ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -588,16 +645,19 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The request has not been applied because it lacks valid  authentication cr' .
                     'edentials for the target resource.',
-                    ErrorObjectException::class
+                    CustomerManagementV1Pricelist401ErrorException::class
                 )
             )
-            ->throwErrorOn('403', ErrorType::init('Forbidden', ErrorObjectException::class))
+            ->throwErrorOn(
+                '403',
+                ErrorType::init('Forbidden', CustomerManagementV1Pricelist403ErrorException::class)
+            )
             ->throwErrorOn(
                 '404',
                 ErrorType::init(
                     'The origin server did not find a current representation  for the target re' .
                     'source or is not willing to disclose  that one exists.',
-                    ErrorObjectException::class
+                    CustomerManagementV1Pricelist404ErrorException::class
                 )
             )
             ->throwErrorOn(
@@ -605,7 +665,7 @@ class CustomerController extends BaseController
                 ErrorType::init(
                     'The server encountered an unexpected condition that  prevented it from ful' .
                     'filling the request.',
-                    ErrorObjectException::class
+                    CustomerManagementV1Pricelist500ErrorException::class
                 )
             )
             ->type(CustomerPriceListRes::class);

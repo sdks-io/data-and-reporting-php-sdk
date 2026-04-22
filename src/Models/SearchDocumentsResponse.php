@@ -28,7 +28,7 @@ class SearchDocumentsResponse implements \JsonSerializable
     /**
      * @var SearchDocumentsInvoice[]|null
      */
-    private $data;
+    private $invoices;
 
     /**
      * @var int|null
@@ -93,25 +93,25 @@ class SearchDocumentsResponse implements \JsonSerializable
     }
 
     /**
-     * Returns Data.
+     * Returns Invoices.
      *
      * @return SearchDocumentsInvoice[]|null
      */
-    public function getData(): ?array
+    public function getInvoices(): ?array
     {
-        return $this->data;
+        return $this->invoices;
     }
 
     /**
-     * Sets Data.
+     * Sets Invoices.
      *
-     * @maps Data
+     * @maps Invoices
      *
-     * @param SearchDocumentsInvoice[]|null $data
+     * @param SearchDocumentsInvoice[]|null $invoices
      */
-    public function setData(?array $data): void
+    public function setInvoices(?array $invoices): void
     {
-        $this->data = $data;
+        $this->invoices = $invoices;
     }
 
     /**
@@ -206,7 +206,7 @@ class SearchDocumentsResponse implements \JsonSerializable
             [
                 'requestId' => $this->requestId,
                 'status' => $this->status,
-                'data' => $this->data,
+                'invoices' => $this->invoices,
                 'totalRecords' => $this->totalRecords,
                 'totalRecordsOnPage' => $this->totalRecordsOnPage,
                 'isFirstPage' => $this->isFirstPage,
@@ -233,8 +233,8 @@ class SearchDocumentsResponse implements \JsonSerializable
         if (isset($this->status)) {
             $json['Status']             = $this->status;
         }
-        if (isset($this->data)) {
-            $json['Data']               = $this->data;
+        if (isset($this->invoices)) {
+            $json['Invoices']           = $this->invoices;
         }
         if (isset($this->totalRecords)) {
             $json['TotalRecords']       = $this->totalRecords;

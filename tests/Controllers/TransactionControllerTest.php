@@ -38,11 +38,11 @@ class TransactionControllerTest extends BaseTestController
         $body = TestParam::object(
             '{"PageSize":1,"Page":1,"Filters":{"ColCoCode":14,"PayerNumber":"GB00001232","Accou' .
             'ntNumber":"GB00001233","ProductCode":"22","PurchasedInCountry":"GB","CardPAN":"7002' .
-            '05******890645","FromDateTime":"2020-11-09 13:56:03.000","ToDateTime":"2020-12-09 1' .
-            '3:56:03.000","TransactionStatus":"APPROVED","FuelOnly":"False","ProductGroupName":"' .
-            'Motor gasoline","VehicleRegistrationNumber":"YG67OUM","IncludeDeclines":true,"CardI' .
-            'ssuerName":"Mathew","ColumnList":"PayerNumber,AccountNumber,ProductName,FuelVolume,' .
-            'PAN"}}',
+            '051006629890645","FromDateTime":"2020-11-09 13:56:03.000","ToDateTime":"2020-12-09 ' .
+            '13:56:03.000","TransactionStatus":"APPROVED","FuelOnly":"False","ProductGroupName":' .
+            '"Motor gasoline","VehicleRegistrationNumber":"YG67OUM","IncludeDeclines":true,"Card' .
+            'IssuerName":"Mathew","ColumnList":"PayerNumber,AccountNumber,ProductName,FuelVolume' .
+            ',PAN"}}',
             Models\RecentTransactionRequest::class
         );
 

@@ -16,7 +16,6 @@
 | `fromDate` | `?string` | Optional | EID date searched from this date.<br>Optional. | getFromDate(): ?string | setFromDate(?string fromDate): void |
 | `toDate` | `?string` | Optional | Invoice date searched until this date.<br>Optional. | getToDate(): ?string | setToDate(?string toDate): void |
 | `invoiceType` | `?string` | Optional | Invoice type.<br>Optional.<br>Possible values:<br>•    NAT (National)<br>•    INT (International) | getInvoiceType(): ?string | setInvoiceType(?string invoiceType): void |
-| `invoiceStatus` | `?string` | Optional | Status of the document.<br>Optional.<br>Possible values:<br>•    NEW<br>•    VIEWED<br>•    DOWNLOADED<br>•    RESTORED | getInvoiceStatus(): ?string | setInvoiceStatus(?string invoiceStatus): void |
 | `sortBy` | `?(string[])` | Optional | Sort option –<br>•    InvoiceNumber ASC<br>•    InvoiceDate ASC<br>•    InvoiceNumber DESC<br>•    InvoiceDate DESC<br>Optional | getSortBy(): ?array | setSortBy(?array sortBy): void |
 
 ## Example (as JSON)
@@ -33,7 +32,9 @@
   "FromDate": "FromDate4",
   "ToDate": "ToDate4",
   "InvoiceType": "InvoiceType6",
-  "InvoiceStatus": "InvoiceStatus2"
+  "SortBy": [
+    "SortBy1"
+  ]
 }
 ```
 

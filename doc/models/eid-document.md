@@ -17,7 +17,6 @@
 | `documentDate` | `?string` | Optional | Document date.<br>Example: 20170101 | getDocumentDate(): ?string | setDocumentDate(?string documentDate): void |
 | `numberOfInvoices` | `?int` | Optional | Number of invoices | getNumberOfInvoices(): ?int | setNumberOfInvoices(?int numberOfInvoices): void |
 | `fileSize` | `?int` | Optional | Document size | getFileSize(): ?int | setFileSize(?int fileSize): void |
-| `documentStatus` | `?string` | Optional | Document status.<br>Possible values:<br>•    NEW<br>•    VIEWED<br>•    DOWNLOADED<br>•    RESTORED | getDocumentStatus(): ?string | setDocumentStatus(?string documentStatus): void |
 | `documentName` | `?string` | Optional | Document file name. | getDocumentName(): ?string | setDocumentName(?string documentName): void |
 
 ## Example (as JSON)

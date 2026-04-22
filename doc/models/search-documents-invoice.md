@@ -19,15 +19,16 @@
 | `netAmount` | `?float` | Optional | - | getNetAmount(): ?float | setNetAmount(?float netAmount): void |
 | `taxAmount` | `?float` | Optional | - | getTaxAmount(): ?float | setTaxAmount(?float taxAmount): void |
 | `currencyCode` | `?string` | Optional | - | getCurrencyCode(): ?string | setCurrencyCode(?string currencyCode): void |
-| `invoiceStatus` | `?string` | Optional | - | getInvoiceStatus(): ?string | setInvoiceStatus(?string invoiceStatus): void |
 | `invoiceDate` | `?string` | Optional | - | getInvoiceDate(): ?string | setInvoiceDate(?string invoiceDate): void |
 | `dueDate` | `?string` | Optional | - | getDueDate(): ?string | setDueDate(?string dueDate): void |
 | `vATCountryISOCode` | `?string` | Optional | - | getVATCountryISOCode(): ?string | setVATCountryISOCode(?string vATCountryISOCode): void |
+| `ksefDocumentReference` | `?string` | Optional | Unique identifier for the invoice in KSeF system. This field is populated only when the invoice is registered in KSeF system. | getKsefDocumentReference(): ?string | setKsefDocumentReference(?string ksefDocumentReference): void |
 
 ## Example (as JSON)
 
 ```json
 {
+  "KsefDocumentReference": "1234567890123456",
   "DocumentReference": 10,
   "InvoiceNumber": "InvoiceNumber0",
   "PayerName": "PayerName0",

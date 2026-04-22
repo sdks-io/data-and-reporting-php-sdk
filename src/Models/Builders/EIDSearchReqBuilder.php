@@ -143,26 +143,6 @@ class EIDSearchReqBuilder
     }
 
     /**
-     * Sets Invoice Status field.
-     *
-     * @param string|null $value
-     */
-    public function invoiceStatus(?string $value): self
-    {
-        $this->instance->setInvoiceStatus($value);
-        return $this;
-    }
-
-    /**
-     * Unsets Invoice Status field.
-     */
-    public function unsetInvoiceStatus(): self
-    {
-        $this->instance->unsetInvoiceStatus();
-        return $this;
-    }
-
-    /**
      * Sets Sort By field.
      *
      * @param string[]|null $value

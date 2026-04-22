@@ -50,21 +50,39 @@ $requestId = 'RequestId8';
 
 $body = LoggedInUserReqBuilder::init()->build();
 
-$result = $customerController->userLoggedinuser(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->userLoggedinuser(
+        $requestId,
+        $body
+    );
+    echo 'LoggedInUserRes:';
+    var_dump($result);
+} catch (UserManagementV1Loggedinuser400ErrorException $exp) {
+    echo 'Caught UserManagementV1Loggedinuser400ErrorException:', $exp;
+} catch (UserManagementV1Loggedinuser401ErrorException $exp) {
+    echo 'Caught UserManagementV1Loggedinuser401ErrorException:', $exp;
+} catch (UserManagementV1Loggedinuser403ErrorException $exp) {
+    echo 'Caught UserManagementV1Loggedinuser403ErrorException:', $exp;
+} catch (UserManagementV1Loggedinuser404ErrorException $exp) {
+    echo 'Caught UserManagementV1Loggedinuser404ErrorException:', $exp;
+} catch (UserManagementV1Loggedinuser500ErrorException $exp) {
+    echo 'Caught UserManagementV1Loggedinuser500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`UserManagementV1Loggedinuser400ErrorException`](../../doc/models/user-management-v1-loggedinuser-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`UserManagementV1Loggedinuser401ErrorException`](../../doc/models/user-management-v1-loggedinuser-401-error-exception.md) |
+| 403 | Forbidden | [`UserManagementV1Loggedinuser403ErrorException`](../../doc/models/user-management-v1-loggedinuser-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`UserManagementV1Loggedinuser404ErrorException`](../../doc/models/user-management-v1-loggedinuser-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`UserManagementV1Loggedinuser500ErrorException`](../../doc/models/user-management-v1-loggedinuser-500-error-exception.md) |
 
 
 # Customerpayers
@@ -106,21 +124,39 @@ $body = PayerReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $customerController->customerpayers(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->customerpayers(
+        $requestId,
+        $body
+    );
+    echo 'PayerRes:';
+    var_dump($result);
+} catch (CustomerManagementV1Payers400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Payers400ErrorException:', $exp;
+} catch (CustomerManagementV1Payers401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Payers401ErrorException:', $exp;
+} catch (CustomerManagementV1Payers403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Payers403ErrorException:', $exp;
+} catch (CustomerManagementV1Payers404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Payers404ErrorException:', $exp;
+} catch (CustomerManagementV1Payers500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Payers500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Payers400ErrorException`](../../doc/models/customer-management-v1-payers-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Payers401ErrorException`](../../doc/models/customer-management-v1-payers-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Payers403ErrorException`](../../doc/models/customer-management-v1-payers-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Payers404ErrorException`](../../doc/models/customer-management-v1-payers-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Payers500ErrorException`](../../doc/models/customer-management-v1-payers-500-error-exception.md) |
 
 
 # Customerdetail
@@ -149,21 +185,39 @@ $requestId = 'RequestId8';
 
 $body = CustomerReqBuilder::init()->build();
 
-$result = $customerController->customerdetail(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->customerdetail(
+        $requestId,
+        $body
+    );
+    echo 'CustomerRes:';
+    var_dump($result);
+} catch (CustomerManagementV1Customer400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Customer400ErrorException:', $exp;
+} catch (CustomerManagementV1Customer401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Customer401ErrorException:', $exp;
+} catch (CustomerManagementV1Customer403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Customer403ErrorException:', $exp;
+} catch (CustomerManagementV1Customer404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Customer404ErrorException:', $exp;
+} catch (CustomerManagementV1Customer500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Customer500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Customer400ErrorException`](../../doc/models/customer-management-v1-customer-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Customer401ErrorException`](../../doc/models/customer-management-v1-customer-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Customer403ErrorException`](../../doc/models/customer-management-v1-customer-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Customer404ErrorException`](../../doc/models/customer-management-v1-customer-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Customer500ErrorException`](../../doc/models/customer-management-v1-customer-500-error-exception.md) |
 
 
 # Post-Card-Accounts
@@ -195,21 +249,39 @@ $body = AccountReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $customerController->postCardAccounts(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->postCardAccounts(
+        $requestId,
+        $body
+    );
+    echo 'AccountRes:';
+    var_dump($result);
+} catch (CustomerManagementV1Accounts400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Accounts400ErrorException:', $exp;
+} catch (CustomerManagementV1Accounts401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Accounts401ErrorException:', $exp;
+} catch (CustomerManagementV1Accounts403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Accounts403ErrorException:', $exp;
+} catch (CustomerManagementV1Accounts404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Accounts404ErrorException:', $exp;
+} catch (CustomerManagementV1Accounts500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Accounts500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Accounts400ErrorException`](../../doc/models/customer-management-v1-accounts-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Accounts401ErrorException`](../../doc/models/customer-management-v1-accounts-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Accounts403ErrorException`](../../doc/models/customer-management-v1-accounts-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Accounts404ErrorException`](../../doc/models/customer-management-v1-accounts-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Accounts500ErrorException`](../../doc/models/customer-management-v1-accounts-500-error-exception.md) |
 
 
 # Customercardtypev
@@ -240,21 +312,39 @@ $requestId = 'RequestId8';
 
 $body = CardTypeReqBuilder::init()->build();
 
-$result = $customerController->customercardtypev(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->customercardtypev(
+        $requestId,
+        $body
+    );
+    echo 'CardTypeRes:';
+    var_dump($result);
+} catch (CustomerManagementV2Cardtype400ErrorException $exp) {
+    echo 'Caught CustomerManagementV2Cardtype400ErrorException:', $exp;
+} catch (CustomerManagementV2Cardtype401ErrorException $exp) {
+    echo 'Caught CustomerManagementV2Cardtype401ErrorException:', $exp;
+} catch (CustomerManagementV2Cardtype403ErrorException $exp) {
+    echo 'Caught CustomerManagementV2Cardtype403ErrorException:', $exp;
+} catch (CustomerManagementV2Cardtype404ErrorException $exp) {
+    echo 'Caught CustomerManagementV2Cardtype404ErrorException:', $exp;
+} catch (CustomerManagementV2Cardtype500ErrorException $exp) {
+    echo 'Caught CustomerManagementV2Cardtype500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV2Cardtype400ErrorException`](../../doc/models/customer-management-v2-cardtype-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV2Cardtype401ErrorException`](../../doc/models/customer-management-v2-cardtype-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV2Cardtype403ErrorException`](../../doc/models/customer-management-v2-cardtype-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV2Cardtype404ErrorException`](../../doc/models/customer-management-v2-cardtype-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV2Cardtype500ErrorException`](../../doc/models/customer-management-v2-cardtype-500-error-exception.md) |
 
 
 # Cardgroups
@@ -295,21 +385,39 @@ $body = CardGroupReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $customerController->cardgroups(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->cardgroups(
+        $requestId,
+        $body
+    );
+    echo 'CardGroupRes:';
+    var_dump($result);
+} catch (CustomerManagementV1Cardgroups400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Cardgroups400ErrorException:', $exp;
+} catch (CustomerManagementV1Cardgroups401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Cardgroups401ErrorException:', $exp;
+} catch (CustomerManagementV1Cardgroups403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Cardgroups403ErrorException:', $exp;
+} catch (CustomerManagementV1Cardgroups404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Cardgroups404ErrorException:', $exp;
+} catch (CustomerManagementV1Cardgroups500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Cardgroups500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Cardgroups400ErrorException`](../../doc/models/customer-management-v1-cardgroups-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Cardgroups401ErrorException`](../../doc/models/customer-management-v1-cardgroups-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Cardgroups403ErrorException`](../../doc/models/customer-management-v1-cardgroups-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Cardgroups404ErrorException`](../../doc/models/customer-management-v1-cardgroups-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Cardgroups500ErrorException`](../../doc/models/customer-management-v1-cardgroups-500-error-exception.md) |
 
 
 # Audit Report
@@ -359,21 +467,39 @@ $body = AuditReqBuilder::init()
     ->pageSize(100)
     ->build();
 
-$result = $customerController->auditReport(
-    $requestId,
-    $body
-);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->auditReport(
+        $requestId,
+        $body
+    );
+    echo 'AuditResponse:';
+    var_dump($result);
+} catch (CustomerManagementV1Auditreport400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Auditreport400ErrorException:', $exp;
+} catch (CustomerManagementV1Auditreport401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Auditreport401ErrorException:', $exp;
+} catch (CustomerManagementV1Auditreport403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Auditreport403ErrorException:', $exp;
+} catch (CustomerManagementV1Auditreport404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Auditreport404ErrorException:', $exp;
+} catch (CustomerManagementV1Auditreport500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Auditreport500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Auditreport400ErrorException`](../../doc/models/customer-management-v1-auditreport-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Auditreport401ErrorException`](../../doc/models/customer-management-v1-auditreport-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Auditreport403ErrorException`](../../doc/models/customer-management-v1-auditreport-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Auditreport404ErrorException`](../../doc/models/customer-management-v1-auditreport-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Auditreport500ErrorException`](../../doc/models/customer-management-v1-auditreport-500-error-exception.md) |
 
 
 # Customer Price List
@@ -406,16 +532,34 @@ function customerPriceList(string $requestId, ?CustomerPriceListReq $body = null
 ```php
 $requestId = 'RequestId8';
 
-$result = $customerController->customerPriceList($requestId);
+$customerController = $client->getCustomerController();
+
+try {
+    $result = $customerController->customerPriceList($requestId);
+    echo 'CustomerPriceListRes:';
+    var_dump($result);
+} catch (CustomerManagementV1Pricelist400ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Pricelist400ErrorException:', $exp;
+} catch (CustomerManagementV1Pricelist401ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Pricelist401ErrorException:', $exp;
+} catch (CustomerManagementV1Pricelist403ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Pricelist403ErrorException:', $exp;
+} catch (CustomerManagementV1Pricelist404ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Pricelist404ErrorException:', $exp;
+} catch (CustomerManagementV1Pricelist500ErrorException $exp) {
+    echo 'Caught CustomerManagementV1Pricelist500ErrorException:', $exp;
+} catch (ApiException $exp) {
+    echo 'Caught:', $exp;
+}
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`CustomerManagementV1Pricelist400ErrorException`](../../doc/models/customer-management-v1-pricelist-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`CustomerManagementV1Pricelist401ErrorException`](../../doc/models/customer-management-v1-pricelist-401-error-exception.md) |
+| 403 | Forbidden | [`CustomerManagementV1Pricelist403ErrorException`](../../doc/models/customer-management-v1-pricelist-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`CustomerManagementV1Pricelist404ErrorException`](../../doc/models/customer-management-v1-pricelist-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`CustomerManagementV1Pricelist500ErrorException`](../../doc/models/customer-management-v1-pricelist-500-error-exception.md) |
 

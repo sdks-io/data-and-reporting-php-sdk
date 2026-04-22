@@ -62,13 +62,13 @@ class EIDDocumentResponseBuilder
     }
 
     /**
-     * Sets Data field.
+     * Sets Document field.
      *
      * @param EIDDocument[]|null $value
      */
-    public function data(?array $value): self
+    public function document(?array $value): self
     {
-        $this->instance->setData($value);
+        $this->instance->setDocument($value);
         return $this;
     }
 

@@ -191,6 +191,66 @@ class TransactionFeesRequestBuilder
     }
 
     /**
+     * Sets Invoice Number field.
+     *
+     * @param string|null $value
+     */
+    public function invoiceNumber(?string $value): self
+    {
+        $this->instance->setInvoiceNumber($value);
+        return $this;
+    }
+
+    /**
+     * Unsets Invoice Number field.
+     */
+    public function unsetInvoiceNumber(): self
+    {
+        $this->instance->unsetInvoiceNumber();
+        return $this;
+    }
+
+    /**
+     * Sets Posted Date From field.
+     *
+     * @param string|null $value
+     */
+    public function postedDateFrom(?string $value): self
+    {
+        $this->instance->setPostedDateFrom($value);
+        return $this;
+    }
+
+    /**
+     * Unsets Posted Date From field.
+     */
+    public function unsetPostedDateFrom(): self
+    {
+        $this->instance->unsetPostedDateFrom();
+        return $this;
+    }
+
+    /**
+     * Sets Posted Date To field.
+     *
+     * @param string|null $value
+     */
+    public function postedDateTo(?string $value): self
+    {
+        $this->instance->setPostedDateTo($value);
+        return $this;
+    }
+
+    /**
+     * Unsets Posted Date To field.
+     */
+    public function unsetPostedDateTo(): self
+    {
+        $this->instance->unsetPostedDateTo();
+        return $this;
+    }
+
+    /**
      * Sets Fee Type Group field.
      *
      * @param string|null $value
